@@ -1,0 +1,190 @@
+/* GLP-1 Plateau Calculator - scoped styles.
+   Shared tokens, .accent-gradient, and @keyframes toolFadeIn are in tool-shared.css */
+
+/* Soft-green active pill for connected chip groups (unit toggle) inside the
+   plateau calculator card. Dark green is reserved for primary CTAs. */
+.pc-calculator-card .tool-chip--active {
+  background: var(--brand-subtle);
+  color: var(--brand-primary);
+  border-color: var(--brand-primary);
+  font-weight: 400;
+}
+
+.pc-calculator-card .tool-chip-group--connected {
+  border-radius: 10px;
+}
+
+.pc-calculator-card .tool-chip-group--connected .tool-chip {
+  padding: 9px 16px;
+  font-size: 13px;
+  min-height: 38px;
+  border-radius: 0;
+}
+
+/* Plateau badge */
+.pc-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 16px;
+  border-radius: 9999px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.pc-badge--true {
+  background: var(--danger-50, #F7E5E3);
+  color: var(--danger-700, #802F28);
+}
+.pc-badge--likely {
+  background: var(--warning-50, #FAF2DE);
+  color: var(--warning-700, #8A621D);
+}
+.pc-badge--not-yet {
+  background: var(--success-50, #E8F2ED);
+  color: var(--success-700, #2A5A48);
+}
+
+
+/* Stats grid */
+.pc-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 24px 0;
+}
+@media (max-width: 600px) {
+  .pc-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Stat card */
+.pc-stat-card {
+  background: var(--surface-page, #FAF9F5);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 16px;
+  animation: toolFadeIn 0.4s ease both;
+}
+.pc-stat-card:nth-child(2) { animation-delay: 0.05s; }
+.pc-stat-card:nth-child(3) { animation-delay: 0.1s; }
+.pc-stat-card:nth-child(4) { animation-delay: 0.15s; }
+.pc-stat-card:nth-child(5) { animation-delay: 0.2s; }
+.pc-stat-card:nth-child(6) { animation-delay: 0.25s; }
+
+.pc-stat-label {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  color: var(--text-tertiary);
+  margin-bottom: 6px;
+}
+.pc-stat-value {
+  font-size: 1.375rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+.pc-stat-context {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  margin-top: 2px;
+}
+
+.pc-on-track { color: var(--success, #3D8168); }
+.pc-off-track { color: var(--danger, #B8453C); }
+
+/* Action plan */
+.pc-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+}
+.pc-actions-title {
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.pc-action-card {
+  background: var(--surface-elevated);
+  border: 1px solid var(--border-subtle);
+  border-left: 3px solid var(--brand-primary);
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  animation: toolFadeIn 0.4s ease both;
+}
+.pc-action-card:nth-child(2) { animation-delay: 0.05s; }
+.pc-action-card:nth-child(3) { animation-delay: 0.1s; }
+.pc-action-card:nth-child(4) { animation-delay: 0.15s; }
+.pc-action-card:nth-child(5) { animation-delay: 0.2s; }
+.pc-action-card:nth-child(6) { animation-delay: 0.25s; }
+
+.pc-action-icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  background: var(--brand-subtle, #E8F2ED);
+  color: var(--brand-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pc-action-content {
+  flex: 1;
+  min-width: 0;
+}
+.pc-action-title {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+.pc-action-desc {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+/* Reassurance box */
+.pc-reassurance {
+  background: var(--success-50, #E8F2ED);
+  color: var(--success-700, #2A5A48);
+  border-radius: 12px;
+  padding: 16px 20px;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  margin: 16px 0;
+  border: 1px solid var(--border-subtle);
+}
+
+/* Result container */
+.pc-results {
+  animation: toolFadeIn 0.4s ease both;
+}
+.pc-results-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.pc-results-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .pc-stat-card,
+  .pc-action-card,
+  .pc-results { animation: none; }
+}

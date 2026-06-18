@@ -1,0 +1,898 @@
+/* GLP-1 Dose Calculator - scoped styles.
+   Shared tokens, .accent-gradient, and @keyframes accentShine are in tool-shared.css */
+
+/* glp1FadeIn and glp1WarnIn replaced by toolFadeIn (translateY(6px)); consumers set --tool-fade-y: 6px */
+
+/* Route-scoped override: landing sections are fully centered on this tool.
+   !important needed - the shared FaqAccordion sets textAlign:left via inline style. */
+.tl-content-wrapper .tl-section-heading { text-align: center !important; }
+
+/* Mobile: tighten hero/content spacing. Inline styles require !important to override. */
+@media (max-width: 480px) {
+  .tl-hero-overlay {
+    padding: 96px 16px 24px !important;
+  }
+  .glp1-page-content {
+    padding: 32px 0 !important;
+  }
+  .tl-content-wrapper {
+    padding: 0 16px !important;
+  }
+  .tl-content-wrapper .tl-section-heading {
+    font-size: 1.625rem !important;
+    margin: 0 0 16px !important;
+  }
+  /* Shrink the 80px block margins inside the content section on mobile. */
+  .glp1-page-content .tl-content-wrapper > div[class="scroll-reveal"] {
+    margin-bottom: 40px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .tl-hero-headline {
+    font-size: 2.5rem !important;
+  }
+}
+@media (max-width: 480px) {
+  .tl-hero-headline {
+    font-size: 2rem !important;
+  }
+  .tl-hero-tagline {
+    font-size: 1rem !important;
+    margin-bottom: 24px !important;
+  }
+}
+
+/* ---------- Utilities ---------- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- Top-level layout (calculator screen) ---------- */
+/* NOTE: body is already #FAF9F5 from globals.css; do not restyle body/canvas here. */
+.glp1-calc-page {
+  min-height: 100vh;
+  padding: 64px 24px 48px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .glp1-calc-page {
+    padding: 40px 16px 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .glp1-calc-page {
+    padding: 32px 12px 24px;
+  }
+}
+
+.glp1-calc-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Allow grid items to shrink below their content width so no-wrap chip rows
+   can scroll horizontally inside the card instead of forcing the card wider
+   than the viewport. */
+.glp1-calc-layout > .glp1-calc,
+.glp1-calc-layout > .glp1-result-card {
+  min-width: 0;
+}
+
+@media (max-width: 480px) {
+  .glp1-calc-layout {
+    gap: 16px;
+  }
+}
+
+@media (min-width: 960px) {
+  .glp1-calc-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 24px;
+    align-items: start;
+  }
+}
+
+/* Sticky result card at laptop+ widths so it stays in view while the input
+   column scrolls (input help text, chips, etc.). */
+@media (min-width: 1024px) {
+  .glp1-calc-layout > .glp1-result-card {
+    position: sticky;
+    top: 24px;
+  }
+}
+
+/* ---------- Calculator inputs card ---------- */
+.glp1-calc-card {
+  /* tool-card + tool-calc-card provide chrome; allow it to expand to fill
+     its grid column rather than the default 640px max-width centering. */
+  max-width: none;
+  margin: 0;
+  align-self: start;
+}
+
+/* Match input fields to the height of the native <select> next to them.
+   Default .tool-calc-card .tool-input is 38px / padding 8px 12px / 15px font;
+   we slim the inputs inside this calculator so the input and dropdown rows
+   sit at the same height. */
+.glp1-calc-card .tool-input {
+  min-height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+}
+.glp1-calc-card select.tool-input {
+  padding-right: 36px;
+}
+
+/* Inline row used inside <label> so the WhyWeAsk button sits next to the
+   label text rather than starting a new line. */
+.glp1-label-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.glp1-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.glp1-field-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--glp1-text-secondary);
+  letter-spacing: 0.1em;
+}
+
+.glp1-field-help {
+  font-size: 13px;
+  color: var(--glp1-text-muted);
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.glp1-input {
+  appearance: none;
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: var(--glp1-radius-sm);
+  border: 1px solid var(--glp1-border);
+  background: var(--glp1-surface);
+  color: var(--glp1-text);
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  font-family: inherit;
+  transition:
+    border-color var(--glp1-dur-fast) var(--glp1-ease),
+    box-shadow var(--glp1-dur-fast) var(--glp1-ease);
+  min-height: 44px;
+}
+
+.glp1-input:focus {
+  outline: none;
+  border-color: var(--glp1-accent);
+  box-shadow: 0 0 0 3px rgba(32, 110, 85, 0.18);
+}
+
+.glp1-input[aria-invalid="true"] {
+  border-color: var(--glp1-error);
+}
+
+.glp1-error {
+  font-size: 13px;
+  color: var(--glp1-error);
+  background: rgba(220, 80, 60, 0.08);
+  border: 1px solid rgba(220, 80, 60, 0.4);
+  padding: 8px 12px;
+  border-radius: var(--glp1-radius-sm);
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+/* ---------- Medication toggle ---------- */
+.glp1-med-toggle {
+  display: flex;
+  gap: 6px;
+  padding: 4px;
+  background: var(--glp1-surface);
+  border: 1px solid var(--glp1-border);
+  border-radius: var(--glp1-radius-pill);
+}
+
+.glp1-med-btn {
+  flex: 1;
+  min-height: 44px;
+  padding: 12px 16px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--glp1-text-muted);
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  border-radius: var(--glp1-radius-pill);
+  cursor: pointer;
+  transition:
+    background var(--glp1-dur-fast) var(--glp1-ease),
+    color var(--glp1-dur-fast) var(--glp1-ease),
+    border-color var(--glp1-dur-fast) var(--glp1-ease);
+}
+
+.glp1-med-btn:hover {
+  background: var(--glp1-accent-light);
+  color: var(--glp1-text);
+}
+
+.glp1-med-btn:focus-visible {
+  outline: 2px solid var(--glp1-accent);
+  outline-offset: 2px;
+}
+
+.glp1-med-btn-active {
+  background: var(--glp1-accent);
+  color: var(--text-inverse);
+  border-color: var(--glp1-accent);
+}
+
+.glp1-med-btn-active:hover {
+  background: var(--glp1-accent-dark);
+  color: var(--text-inverse);
+}
+
+/* At small phone widths, keep the 2-column toggle but tighten padding so
+   both medication labels fit at 360px without truncation. */
+@media (max-width: 480px) {
+  .glp1-med-btn {
+    padding: 12px 8px;
+    font-size: 13px;
+  }
+}
+
+/* ---------- Chips ---------- */
+.glp1-chips {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 6px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.glp1-chips::-webkit-scrollbar { display: none; }
+
+.glp1-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  min-width: 96px;
+  padding: 8px 12px;
+  border-radius: var(--glp1-radius-pill);
+  border: 1px solid var(--glp1-border);
+  background: var(--glp1-surface);
+  color: var(--glp1-text);
+  font-size: 13px;
+  font-weight: 500;
+  font-family: inherit;
+  white-space: nowrap;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition:
+    background var(--glp1-dur-fast) var(--glp1-ease),
+    border-color var(--glp1-dur-fast) var(--glp1-ease),
+    color var(--glp1-dur-fast) var(--glp1-ease);
+}
+
+.glp1-chip:hover {
+  border-color: var(--glp1-accent);
+  background: var(--glp1-accent-light);
+}
+
+.glp1-chip:focus-visible {
+  outline: 2px solid var(--glp1-accent);
+  outline-offset: 2px;
+}
+
+.glp1-chip-active {
+  background: var(--glp1-accent);
+  color: var(--text-inverse);
+  border-color: var(--glp1-accent);
+}
+
+.glp1-chip-active:hover {
+  background: var(--glp1-accent-dark);
+  border-color: var(--glp1-accent-dark);
+  color: var(--text-inverse);
+}
+
+/* Tactile press on chips + barrel + med buttons */
+.glp1-chip:active,
+.glp1-barrel-option:active,
+.glp1-med-btn:active {
+  transform: scale(0.98);
+  transition: transform 80ms var(--glp1-ease);
+}
+
+/* ---------- Why-we-ask tooltip ---------- */
+.glp1-field-label-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.glp1-why-wrap {
+  position: relative;
+  display: inline-flex;
+}
+
+.glp1-why-btn {
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid var(--glp1-border);
+  background: var(--glp1-surface);
+  color: var(--glp1-text-secondary);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    background var(--glp1-dur-fast) var(--glp1-ease),
+    border-color var(--glp1-dur-fast) var(--glp1-ease),
+    color var(--glp1-dur-fast) var(--glp1-ease);
+}
+
+.glp1-why-btn:hover,
+.glp1-why-btn[aria-expanded="true"] {
+  background: var(--glp1-accent-light);
+  border-color: var(--glp1-accent);
+  color: var(--glp1-accent);
+}
+
+.glp1-why-btn:focus-visible {
+  outline: 2px solid var(--glp1-accent);
+  outline-offset: 2px;
+}
+
+.glp1-why-panel {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  min-width: 220px;
+  max-width: 280px;
+  width: max-content;
+  padding: 10px 12px;
+  border-radius: var(--glp1-radius-sm);
+  background: var(--glp1-surface);
+  border: 1px solid var(--glp1-border);
+  box-shadow: var(--glp1-shadow-card);
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--glp1-text);
+  z-index: 20;
+  --tool-fade-y: 6px;
+  animation: toolFadeIn var(--glp1-dur-med) var(--glp1-ease);
+}
+
+/* ---------- Barrel radio group ---------- */
+.glp1-barrel-group {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.glp1-barrel-option {
+  flex: 1 1 0;
+  min-width: 88px;
+  min-height: 44px;
+  padding: 12px 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--glp1-border);
+  border-radius: var(--glp1-radius-pill);
+  background: var(--glp1-surface);
+  color: var(--glp1-text);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background var(--glp1-dur-fast) var(--glp1-ease),
+    border-color var(--glp1-dur-fast) var(--glp1-ease),
+    color var(--glp1-dur-fast) var(--glp1-ease);
+}
+
+.glp1-barrel-option:hover {
+  border-color: var(--glp1-accent);
+  background: var(--glp1-accent-light);
+}
+
+.glp1-barrel-option:focus-within {
+  outline: 2px solid var(--glp1-accent);
+  outline-offset: 2px;
+}
+
+.glp1-barrel-option-active {
+  background: var(--glp1-accent);
+  color: var(--text-inverse);
+  border-color: var(--glp1-accent);
+}
+
+.glp1-barrel-option-active:hover {
+  background: var(--glp1-accent-dark);
+  border-color: var(--glp1-accent-dark);
+  color: var(--text-inverse);
+}
+
+/* ---------- Result card ---------- */
+.glp1-card {
+  background: var(--glp1-surface);
+  border: 1px solid var(--glp1-border);
+  border-radius: var(--glp1-radius-card);
+  box-shadow: var(--glp1-shadow-card);
+}
+
+.glp1-result-card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+  /* Clears the fixed navbar when scrollIntoView lands here on mobile. */
+  scroll-margin-top: 104px;
+  --tool-fade-y: 6px;
+  animation: toolFadeIn var(--glp1-dur-entrance) var(--glp1-ease);
+}
+
+@media (max-width: 480px) {
+  .glp1-result-card {
+    padding: 20px;
+    gap: 20px;
+  }
+}
+
+.glp1-warnings {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.glp1-warnings > [role="alert"] {
+  --tool-fade-y: 6px;
+  animation: toolFadeIn var(--glp1-dur-med) var(--glp1-ease);
+}
+
+.glp1-warning-red {
+  background: rgba(220, 80, 60, 0.06);
+  border: 1px solid rgba(220, 80, 60, 0.35);
+  color: var(--glp1-error);
+  border-radius: var(--glp1-radius-sm);
+}
+
+.glp1-warning-orange {
+  background: rgba(250, 216, 45, 0.10);
+  border: 1px solid rgba(250, 216, 45, 0.45);
+  color: #6b5000;
+  border-radius: var(--glp1-radius-sm);
+}
+
+/* Composed result block - unifies hero + syringe + metrics.
+   ≤767px: single column. ≥768px: 2 columns with left=hero+syringe, right=2x2 metrics. */
+.glp1-result-block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border-radius: var(--glp1-radius-card);
+  background: linear-gradient(
+    180deg,
+    rgba(32, 110, 85, 0.035) 0%,
+    rgba(32, 110, 85, 0.01) 100%
+  );
+  border: 1px solid rgba(32, 110, 85, 0.08);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    rgba(150, 150, 150, 0.05) 0 6px 18px;
+}
+
+.glp1-result-left {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+}
+
+.glp1-result-right {
+  align-self: start;
+}
+
+/* Composed block stays a single column (hero + syringe stacked, metrics row
+   below) so the metric pills always have room to show full values. Two-column
+   compositions were too tight at viewports under ~1100px. */
+
+.glp1-hero {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.glp1-hero-number {
+  font-size: clamp(56px, 9vw, 88px);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  color: var(--glp1-text);
+}
+
+.glp1-hero-invalid {
+  color: var(--glp1-text-muted);
+}
+
+.glp1-hero-label {
+  font-size: 18px;
+  color: var(--glp1-text-muted);
+  font-weight: 400;
+}
+
+.glp1-syringe-wrap {
+  width: 100%;
+  max-width: 560px;
+  margin: 8px auto 4px;
+  padding: 4px 0;
+}
+
+.glp1-syringe {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 480px) {
+  .glp1-syringe-wrap {
+    margin-top: 4px;
+    max-width: 100%;
+  }
+}
+
+.glp1-echo {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--glp1-text-muted);
+  font-weight: 300;
+  margin: 0;
+  text-wrap: pretty;
+  /* Graceful overflow on long concentration strings */
+  overflow-wrap: anywhere;
+}
+
+.glp1-metrics {
+  display: grid;
+  /* Always 2 equal columns - with 2 items they land side-by-side,
+     with 4 items they form a 2x2 grid. auto-fit was creating 6 phantom
+     columns in wide containers and leaving the 2 real items clumped left. */
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+@media (max-width: 480px) {
+  .glp1-metrics {
+    gap: 8px;
+  }
+}
+
+.glp1-metric-card {
+  padding: 16px 18px;
+  border-radius: var(--glp1-radius-card);
+  background: var(--glp1-accent-light);
+  border: 1px solid rgba(32, 110, 85, 0.10);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+@media (max-width: 480px) {
+  .glp1-metric-card {
+    padding: 14px 16px;
+  }
+}
+
+.glp1-metric-label {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--glp1-text-secondary);
+}
+
+.glp1-metric-value {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--glp1-text);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  /* Show full value. Values here are short (e.g., "0.10 mL", "1.0 mL"); if a
+     value is ever longer it can wrap to 2 lines rather than ellipsis-truncate. */
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.glp1-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Full-width stacked CTAs on small phones so the primary action is always
+   easy to hit and doesn't collide with the copy-confirm live region. */
+@media (max-width: 480px) {
+  .glp1-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .glp1-actions .glp1-btn-primary,
+  .glp1-actions .glp1-btn-ghost {
+    width: 100%;
+  }
+}
+
+.glp1-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  min-width: 200px;
+  padding: 14px 28px;
+  border-radius: var(--glp1-radius-pill);
+  border: none;
+  background: var(--glp1-accent);
+  color: var(--text-inverse);
+  font-size: 16px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  box-shadow: var(--glp1-shadow-glass-btn);
+  transition:
+    background var(--glp1-dur-fast) var(--glp1-ease),
+    transform var(--glp1-dur-med) var(--glp1-ease),
+    filter var(--glp1-dur-med) var(--glp1-ease);
+}
+
+.glp1-btn-primary:hover:not(:disabled) {
+  background: var(--glp1-accent-dark);
+  transform: scale(1.02);
+  filter: brightness(1.1);
+}
+
+.glp1-btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.glp1-btn-primary:focus-visible {
+  outline: 2px solid var(--glp1-accent);
+  outline-offset: 2px;
+}
+
+.glp1-btn-ghost {
+  min-height: 44px;
+  padding: 12px 24px;
+  border-radius: var(--glp1-radius-pill);
+  border: 1px solid var(--glp1-border);
+  background: transparent;
+  color: var(--glp1-text);
+  font-size: 16px;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition:
+    background var(--glp1-dur-fast) var(--glp1-ease),
+    border-color var(--glp1-dur-fast) var(--glp1-ease),
+    transform var(--glp1-dur-med) var(--glp1-ease);
+}
+
+.glp1-btn-ghost:hover {
+  background: var(--glp1-accent-light);
+  border-color: var(--glp1-accent);
+  transform: scale(1.02);
+}
+
+.glp1-btn-ghost:focus-visible {
+  outline: 2px solid var(--glp1-accent);
+  outline-offset: 2px;
+}
+
+/* Live-region confirmation next to copy action */
+.glp1-copy-live {
+  font-size: 13px;
+  color: var(--glp1-accent);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  opacity: 0;
+  transition: opacity 200ms var(--glp1-ease);
+}
+
+.glp1-copy-live[data-visible="true"] {
+  opacity: 1;
+}
+
+/* Clinical footnote on result card footer */
+.glp1-clinical-footnote {
+  margin: 0;
+  padding-top: 8px;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--glp1-text-secondary);
+  letter-spacing: 0.02em;
+  border-top: 1px solid var(--glp1-border);
+}
+
+/* ---------- Dosing schedule tables ---------- */
+.glp1-dose-schedule {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.glp1-dose-schedule-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .glp1-dose-schedule-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.glp1-dose-table-wrap {
+  background: var(--glp1-surface);
+  border: 1px solid var(--glp1-border);
+  border-radius: var(--glp1-radius-card);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: var(--glp1-shadow-card);
+}
+
+@media (max-width: 480px) {
+  .glp1-dose-table-wrap {
+    padding: 20px 16px;
+  }
+}
+
+.glp1-dose-table-title {
+  font-size: clamp(20px, 3vw, 24px);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--glp1-text);
+  margin: 0;
+  text-wrap: balance;
+}
+
+.glp1-dose-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.glp1-dose-table th,
+.glp1-dose-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--glp1-border);
+  color: var(--glp1-text);
+  font-weight: 400;
+}
+
+/* Keep the first column (week range) on one line at small phone widths. */
+.glp1-dose-table th:first-child,
+.glp1-dose-table td:first-child {
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .glp1-dose-table th,
+  .glp1-dose-table td,
+  .glp1-dose-table thead th {
+    padding: 10px 12px;
+  }
+}
+
+.glp1-dose-table thead th {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--glp1-text-secondary);
+  background: var(--glp1-accent-light);
+  border-bottom: 1px solid var(--glp1-border);
+  padding: 12px 16px;
+}
+
+.glp1-dose-table tbody tr:last-child th,
+.glp1-dose-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.glp1-dose-table-notes {
+  font-size: 13px;
+  color: var(--glp1-text-muted);
+  line-height: 1.5;
+  font-weight: 300;
+  margin: 0;
+}
+
+.glp1-dose-schedule-disclaimer {
+  font-size: 13px;
+  color: var(--glp1-text-secondary);
+  line-height: 1.5;
+  font-weight: 300;
+  margin: 0;
+  text-align: center;
+}
+
+/* ---------- Reduced motion (scoped to dose-calc root) ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .glp1-result-card { animation: none; }
+  .glp1-calc-page *,
+  .glp1-calc-page *::before,
+  .glp1-calc-page *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+  .glp1-btn-primary:hover:not(:disabled),
+  .glp1-btn-ghost:hover {
+    transform: none;
+    filter: none;
+  }
+  .glp1-chip:active,
+  .glp1-barrel-option:active,
+  .glp1-med-btn:active {
+    transform: none;
+  }
+}
+
+/* ---------- High contrast (prefers-contrast: more) ---------- */
+@media (prefers-contrast: more) {
+  .glp1-chip-active,
+  .glp1-barrel-option-active,
+  .glp1-med-btn-active {
+    outline: 2px solid var(--glp1-accent-darkest);
+    outline-offset: 1px;
+  }
+  .glp1-input:focus {
+    box-shadow: 0 0 0 3px var(--glp1-accent-darkest);
+  }
+}

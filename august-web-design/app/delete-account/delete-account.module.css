@@ -1,0 +1,197 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  justify-content: center;
+  background-color: var(--mui-palette-background-default);
+}
+
+.paper {
+  padding: 2rem;
+  border-radius: 16px !important;
+  background-color: var(--mui-palette-background-paper);
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 1rem !important;
+  font-weight: 600 !important;
+  color: var(--mui-palette-text-primary);
+}
+
+.description {
+  text-align: center;
+  margin-bottom: 2rem !important;
+  color: var(--mui-palette-text-secondary);
+}
+
+.confirmationText {
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin: 1.5rem 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.inputLabel {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.phoneInputContainer {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid;
+  border-color: rgb(231,231,233);
+  transition: background-color 200ms, outline 200ms, color 200ms, box-shadow 200ms, -webkit-box-shadow 200ms;
+}
+
+.phoneInputWrapper {
+  border: 2px solid;
+  border-color: rgb(231,231,233);
+  border-radius: 14px;
+  height: 56px;
+}
+
+.phoneInput {
+  width: 100%;
+  text-align: left;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.phoneDropdownButton {
+  background-color: var(--mui-palette-background-default);
+  border: none !important;
+  border-radius: 14px;
+}
+
+.checkbox {
+  margin-top: 0.5rem;
+}
+
+.alert {
+  margin-top: 1rem;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 1rem;
+}
+
+.centeredButtonGroup {
+  display: flex;
+  justify-content: center;
+}
+
+.cancelButton {
+  flex: 1;
+  padding: 0.75rem !important;
+  border-radius: 25px !important;
+  text-transform: none !important;
+  font-size: 1rem !important;
+  height: 56px;
+  border-color: #ddd !important;
+  color: #666 !important;
+}
+
+.cancelButton:hover {
+  background-color: #f5f5f5 !important;
+  border-color: #bbb !important;
+}
+
+.deleteButton {
+  flex: 2;
+  padding: 0.75rem !important;
+  border-radius: 25px !important;
+  text-transform: none !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  height: 56px;
+  background-color: #dc3545 !important;
+  border-color: #dc3545 !important;
+  box-shadow: 0 2px 8px rgba(220, 53, 69, 0.3) !important;
+  transition: all 0.2s ease !important;
+}
+
+.deleteButton:hover:not(:disabled) {
+  background-color: #c82333 !important;
+  border-color: #bd2130 !important;
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.4) !important;
+  transform: translateY(-1px);
+}
+
+.deleteButton:disabled {
+  background-color: #e9ecef !important;
+  border-color: #e9ecef !important;
+  color: #6c757d !important;
+  box-shadow: none !important;
+  cursor: not-allowed;
+}
+
+.backButton {
+  flex: initial;
+  width: auto;
+  margin: 0 auto;
+  padding: 0.75rem !important;
+  border-radius: 25px !important;
+  text-transform: none !important;
+  font-size: 1rem !important;
+  height: 56px;
+}
+
+.buttonContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem 0.5rem;
+  }
+  
+  .paper {
+    padding: 1.5rem;
+  }
+  
+  .buttonGroup {
+    flex-direction: column;
+  }
+  
+  .cancelButton, .deleteButton, .backButton {
+    width: 100%;
+  }
+  
+  .deleteButton {
+    flex: 1;
+  }
+
+  .centeredButtonGroup > * {
+    width: 100%;
+  }
+}

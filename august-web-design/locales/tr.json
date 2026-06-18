@@ -1,0 +1,140 @@
+{
+  "common": {
+    "loadingChats": "Sohbetleriniz yükleniyor...",
+    "refreshPage": "Sayfayı yenile",
+    "signUp": "Kayıt Ol",
+    "openMenu": "Menüyü aç",
+    "menu": "Menü",
+    "downloadApp": "Uygulamayı İndir",
+    "termsOfService": "Hizmet Şartları",
+    "privacyPolicy": "Gizlilik Politikası",
+    "loggingOut": "Çıkış yapılıyor...",
+    "logout": "Çıkış yap",
+    "back": "Geri",
+    "continue": "Devam et",
+    "edit": "Düzenle",
+    "legalPrefix": "Devam ederek şunları kabul etmiş olursunuz:",
+    "and": "ve",
+    "termsShort": "terimler",
+    "privacyShort": "gizlilik politikası",
+    "error": "Hata",
+    "tryAgain": "Tekrar Dene",
+    "loginRequired": "Lütfen sohbet etmeye devam etmek için giriş yapın.",
+    "language": "Dil",
+    "languageEnglish": "İngilizce",
+    "languageFrench": "Fransızca",
+    "changeLanguage": "Dili değiştir",
+    "profile": "Profil",
+    "login": "Giriş yap"
+  },
+  "chat": {
+    "initFailed": "Oturum başlatılamadı. Lütfen sayfayı yenileyin.",
+    "genericError": "Bir şeyler ters gitti. Lütfen sayfayı yenileyin.",
+    "emptyStateHeading": "Nasılsın?",
+    "processing": {
+      "reading": "Belgenizi okuyor...",
+      "understanding": "Ayrıntıları anlamak...",
+      "summarising": "Özetle her şey..."
+    },
+    "scrollToBottom": "Aşağı kaydır",
+    "input": {
+      "placeholder": "Herhangi bir şey sor",
+      "disclaimer": "Ağustos hatalar yapabilir. Bir doktorla teyit edin",
+      "invalidFileType": "Lütfen geçerli bir resim (JPEG, PNG, GIF, WebP) veya PDF dosyası seçin.",
+      "waitForUploads": "Dosyaların yüklenmesinin bitmesini bekleyin.",
+      "removeFailedUploads": "Bazı dosyalar yüklenemedi. Lütfen bunları kaldırın ve tekrar deneyin.",
+      "uploadFailed": "Yükleme başarısız oldu"
+    },
+    "attachments": {
+      "imageAlt": "Ek",
+      "pdfDefault": "PDF Belgesi",
+      "pdfCta": "Görüntülemek için tıkla",
+      "defaultCta": "Ekli dosyayı görüntüle",
+      "audioFallback": "Tarayıcınız ses öğesini desteklemiyor."
+    }
+  },
+  "auth": {
+    "heroAlt": "Ağustos'u dene, ücretsiz",
+    "welcomeAlt": "Ağustos'a tekrar hoş geldiniz",
+    "signup": {
+      "description": "Doktorlar tarafından geliştirilmiş yapay zeka sağlık arkadaşınız. Anında yanıt alın, laboratuvar raporlarını anlayın ve netliğe kavuşun.",
+      "trusted": "Dünya çapında 6 Milyon kullanıcı tarafından güveniliyor.",
+      "memoryTransferSuccess": "Belleğini güncelledim. Benim hakkımda az önce ne öğrendin?"
+    },
+    "welcome": {
+      "copy": "Tekrar hoş geldiniz!\nAugust'a devam etmek için giriş yapın"
+    },
+    "continueWithPhone": "Telefonla Devam Et",
+    "phoneStep": {
+      "title": "Telefon numaranızı girin",
+      "subtitle": "Doğrulama kodu göndereceğiz",
+      "searchPlaceholder": "Ülke ara...",
+      "phonePlaceholder": "Telefon numarası"
+    },
+    "otpStep": {
+      "title": "Telefonunuzu doğrulayın",
+      "subtitle": "Gönderilen doğrulama kodunu girin",
+      "resendWithTimer": "Kod almadınız mı? Yeniden gönder ({{seconds}})",
+      "resend": "Kod almadınız mı? Yeniden gönder"
+    },
+    "errors": {
+      "enterPhone": "Telefon numaranızı girin",
+      "sendOtp": "OTP gönderilemedi. Lütfen tekrar deneyin.",
+      "sendOtpInvalid": "OTP gönderilemedi. Lütfen telefon numaranızı kontrol edin.",
+      "enterOtp": "Lütfen 6 haneli kodu girin",
+      "invalidOtp": "Geçersiz kod. Lütfen tekrar deneyin.",
+      "oauthGeneric": "Giriş başarısız oldu. Lütfen tekrar deneyin.",
+      "googleUserInfo": "Google kullanıcı bilgileri alınamadı",
+      "googleCancelled": "Google oturum açma işlemi iptal edildi veya başarısız oldu.",
+      "appleUnavailable": "Apple ile Giriş Yapılamıyor",
+      "appleUnavailableSdk": "Apple ile Giriş Yap kullanılamıyor. Apple JS SDK yüklenmedi.",
+      "appleCredential": "Apple kimlik bilgileri alınamadı",
+      "appleFailed": "Apple oturum açma başarısız oldu. Lütfen tekrar deneyin."
+    },
+    "oauth": {
+      "google": "Google ile Devam Et",
+      "apple": "Apple ile Devam Et"
+    },
+    "tryOtherOptions": "Diğer seçenekleri dene"
+  },
+  "errorBoundary": {
+    "title": "Bir şeyler ters gitti",
+    "description": "Beklenmeyen bir hata oluştu. Lütfen tekrar deneyin.",
+    "tryAgain": "Tekrar Dene",
+    "refreshPage": "Sayfayı Yenile"
+  },
+  "sidebar": {
+    "tabs": {
+      "chat": "Sohbet",
+      "records": "Kayıtlar",
+      "explore": "Sağlık Kütüphanesi",
+      "nutrition": "Beslenme"
+    },
+    "download": {
+      "title": "Erişim için uygulamayı indirin",
+      "cta": "Şimdi Uygulamayı İndir",
+      "chatDescription": "Ağustos uygulamasında yapay zeka sağlık rehberinizle sohbeti sürdürün.",
+      "recordsDescription": "August Mobil Uygulaması ile:\n• Kayıtlarınızı görüntüleyin ve yönetin\n• Doktorunuzla paylaşın\n• Doğru sağlık içgörüleri edinin",
+      "exploreDescription": "Ağustos, sizin için kişiselleştirilmiş sağlık makaleleri, bloglar ve diğer bilgileri derler.",
+      "nutritionDescription": "Alışkanlıkları takip edin. Yaşam belirtilerini izleyin. İlerlemenizi tek bir yerde görün.",
+      "chatTitle": "Erişim için uygulamayı indirin",
+      "recordsTitle": "Tüm Sağlık Kayıtları tek bir yerde",
+      "exploreTitle": "Özenle Seçilmiş Sağlık Makaleleri ve Bloglar",
+      "nutritionTitle": "Önemli olanı takip et, sayılanları iyileştir"
+    },
+    "downloadAppButton": "Uygulamayı İndir",
+    "tooltips": {
+      "chat": "August ile sohbet et",
+      "records": "Sağlık kayıtlarınızı yönetin",
+      "explore": "Sağlık Kütüphanesini Keşfedin",
+      "nutrition": "Diyet ve beslenmeyi yönetin",
+      "insurance": "Dosya sigorta itirazı",
+      "costEstimator": "Sağlık hizmetleri için en düşük fiyatı bulun",
+      "billAnalyser": "Faturamı Görüntüle",
+      "showFullMenu": "Tüm menüyü göster",
+      "hideFullMenu": "Tüm menüyü gizle",
+      "manageAccount": "Hesap ayarlarını yönet"
+    },
+    "takeAugustWithYou": "Ağustos'u yanına al"
+  }
+}

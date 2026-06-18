@@ -1,0 +1,141 @@
+{
+  "common": {
+    "loadingChats": "جارٍ تحميل محادثاتك...",
+    "refreshPage": "تحديث الصفحة",
+    "signUp": "تسجيل",
+    "openMenu": "فتح القائمة",
+    "menu": "قائمة",
+    "downloadApp": "تنزيل التطبيق",
+    "termsOfService": "شروط الخدمة",
+    "privacyPolicy": "سياسة الخصوصية",
+    "loggingOut": "جارٍ تسجيل الخروج...",
+    "logout": "تسجيل الخروج",
+    "back": "رجوع",
+    "continue": "متابعة",
+    "edit": "تعديل",
+    "legalPrefix": "بمتابعتك توافق على",
+    "and": "و",
+    "termsShort": "شروط",
+    "privacyShort": "سياسة الخصوصية",
+    "error": "خطأ",
+    "tryAgain": "حاول مرة أخرى",
+    "loginRequired": "الرجاء تسجيل الدخول للمتابعة في الدردشة.",
+    "language": "اللغة",
+    "languageEnglish": "الإنجليزية",
+    "languageFrench": "فرنسي",
+    "changeLanguage": "تغيير اللغة",
+    "profile": "ملف شخصي",
+    "login": "تسجيل الدخول"
+  },
+  "chat": {
+    "initFailed": "فشل في تهيئة الجلسة. يرجى تحديث الصفحة.",
+    "genericError": "حدث خطأ ما. يرجى تحديث الصفحة.",
+    "emptyStateHeading": "كيف تشعر؟",
+    "processing": {
+      "reading": "جارٍ قراءة مستندك...",
+      "understanding": "فهم التفاصيل...",
+      "summarising": "تلخيص كل شيء..."
+    },
+    "scrollToBottom": "انتقل إلى الأسفل",
+    "input": {
+      "placeholder": "اسأل أي شيء",
+      "disclaimer": "قد يرتكب أغسطس أخطاء. استشر طبيباً",
+      "invalidFileType": "الرجاء تحديد ملف صورة صالح (JPEG، PNG، GIF، WebP) أو ملف PDF.",
+      "waitForUploads": "الرجاء الانتظار حتى اكتمال تحميل الملفات.",
+      "removeFailedUploads": "فشل تحميل بعض الملفات. يرجى إزالتها والمحاولة مرة أخرى.",
+      "uploadFailed": "فشل التحميل"
+    },
+    "attachments": {
+      "imageAlt": "مرفق",
+      "pdfDefault": "مستند PDF",
+      "pdfCta": "انقر للعرض",
+      "defaultCta": "عرض المرفق",
+      "audioFallback": "متصفحك لا يدعم عنصر الصوت."
+    }
+  },
+  "auth": {
+    "heroAlt": "جرب أغسطس، مجانًا",
+    "welcomeAlt": "أهلاً بك مرة أخرى في أغسطس",
+    "signup": {
+      "description": "رفيقك الصحي بالذكاء الاصطناعي، بناه أطباء. احصل على إجابات فورية، وافهم تقارير المختبر، وابحث عن الوضوح.",
+      "trusted": "يثق به 6 ملايين مستخدم حول العالم.",
+      "memoryTransfer": "تسجيل الدخول لاستيراد ذكرياتك الصحية",
+      "memoryTransferSuccess": "لقد قمت بتحديث ذاكرتك. ماذا تعلمت عني للتو؟"
+    },
+    "welcome": {
+      "copy": "أهلاً بعودتك!\nسجّل الدخول للمتابعة إلى أغسطس"
+    },
+    "continueWithPhone": "متابعة بالهاتف",
+    "phoneStep": {
+      "title": "أدخل رقم هاتفك",
+      "subtitle": "سنرسل لك رمز تحقق",
+      "searchPlaceholder": "ابحث عن بلد...",
+      "phonePlaceholder": "رقم الهاتف"
+    },
+    "otpStep": {
+      "title": "تحقق من هاتفك",
+      "subtitle": "أدخل رمز التحقق المرسل إلى",
+      "resendWithTimer": "لم تستلم الرمز؟ أعد الإرسال ({{seconds}})",
+      "resend": "لم تستلم الرمز؟ أعد الإرسال"
+    },
+    "errors": {
+      "enterPhone": "الرجاء إدخال رقم هاتفك",
+      "sendOtp": "فشل إرسال رمز التحقق لمرة واحدة. يرجى المحاولة مرة أخرى.",
+      "sendOtpInvalid": "فشل إرسال رمز التحقق لمرة واحدة. يرجى التحقق من رقم هاتفك.",
+      "enterOtp": "الرجاء إدخال الرمز المكون من 6 أرقام",
+      "invalidOtp": "رمز غير صالح. يرجى المحاولة مرة أخرى.",
+      "oauthGeneric": "فشل تسجيل الدخول. يرجى المحاولة مرة أخرى.",
+      "googleUserInfo": "فشل في الحصول على معلومات مستخدم جوجل",
+      "googleCancelled": "تم إلغاء تسجيل الدخول إلى جوجل أو فشل.",
+      "appleUnavailable": "تسجيل الدخول باستخدام Apple غير متاح",
+      "appleUnavailableSdk": "تسجيل الدخول باستخدام Apple غير متاح. لم يتم تحميل Apple JS SDK.",
+      "appleCredential": "فشل في الحصول على بيانات اعتماد Apple",
+      "appleFailed": "فشل تسجيل الدخول إلى Apple. يرجى المحاولة مرة أخرى."
+    },
+    "oauth": {
+      "google": "متابعة باستخدام جوجل",
+      "apple": "متابعة باستخدام Apple"
+    },
+    "tryOtherOptions": "جرب خيارات أخرى"
+  },
+  "errorBoundary": {
+    "title": "حدث خطأ ما",
+    "description": "لقد واجهنا خطأ غير متوقع. يرجى المحاولة مرة أخرى.",
+    "tryAgain": "حاول مرة أخرى",
+    "refreshPage": "تحديث الصفحة"
+  },
+  "sidebar": {
+    "tabs": {
+      "chat": "دردشة",
+      "records": "السجلات",
+      "explore": "مكتبة الصحة",
+      "nutrition": "التغذية"
+    },
+    "download": {
+      "title": "تنزيل التطبيق للوصول",
+      "cta": "نزّل التطبيق الآن",
+      "chatDescription": "حافظ على استمرار المحادثة مع مرشدك الصحي بالذكاء الاصطناعي في تطبيق August.",
+      "recordsDescription": "مع تطبيق August Mobile:\n• عرض وإدارة سجلاتك\n• المشاركة مع طبيبك\n• الحصول على رؤى صحية دقيقة",
+      "exploreDescription": "يقوم أغسطس بتنسيق مقالات صحية ومدونات ومعلومات أخرى مخصصة لك.",
+      "nutritionDescription": "تتبع العادات. راقب العلامات الحيوية. شاهد تقدمك - كل ذلك في مكان واحد.",
+      "chatTitle": "تنزيل التطبيق للوصول",
+      "recordsTitle": "جميع السجلات الصحية في مكان واحد",
+      "exploreTitle": "مقالات صحية مختارة ومدونات",
+      "nutritionTitle": "تتبع ما يهم، حسّن ما يُحتسب"
+    },
+    "downloadAppButton": "تنزيل التطبيق",
+    "tooltips": {
+      "chat": "الدردشة مع أغسطس",
+      "records": "إدارة سجلاتك الصحية",
+      "explore": "استكشف مكتبة الصحة",
+      "nutrition": "إدارة النظام الغذائي والتغذية",
+      "insurance": "تقديم استئناف تأمين الملف",
+      "costEstimator": "ابحث عن أقل سعر للخدمات الصحية",
+      "billAnalyser": "مراجعة فاتورتي",
+      "showFullMenu": "عرض القائمة الكاملة",
+      "hideFullMenu": "إخفاء القائمة الكاملة",
+      "manageAccount": "إدارة إعدادات الحساب"
+    },
+    "takeAugustWithYou": "خذ أغسطس معك"
+  }
+}

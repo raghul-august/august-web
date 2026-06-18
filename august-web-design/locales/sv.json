@@ -1,0 +1,140 @@
+{
+  "common": {
+    "loadingChats": "Laddar dina chattar...",
+    "refreshPage": "Uppdatera sidan",
+    "signUp": "Registrera dig",
+    "openMenu": "Öppna meny",
+    "menu": "Meny",
+    "downloadApp": "Ladda ner app",
+    "termsOfService": "Användarvillkor",
+    "privacyPolicy": "Integritetspolicy",
+    "loggingOut": "Loggar ut...",
+    "logout": "Logga ut",
+    "back": "Tillbaka",
+    "continue": "Fortsätt",
+    "edit": "Redigera",
+    "legalPrefix": "Genom att fortsätta godkänner du våra",
+    "and": "och",
+    "termsShort": "villkor",
+    "privacyShort": "integritetspolicy",
+    "error": "Fel",
+    "tryAgain": "Försök igen",
+    "loginRequired": "Vänligen logga in för att fortsätta chatta.",
+    "language": "Språk",
+    "languageEnglish": "Engelska",
+    "languageFrench": "Franska",
+    "changeLanguage": "Byt språk",
+    "profile": "Profil",
+    "login": "Logga in"
+  },
+  "chat": {
+    "initFailed": "Kunde inte initiera sessionen. Uppdatera sidan.",
+    "genericError": "Något gick fel. Vänligen uppdatera sidan.",
+    "emptyStateHeading": "Hur mår du?",
+    "processing": {
+      "reading": "Läser ditt dokument...",
+      "understanding": "Förstå detaljerna...",
+      "summarising": "Sammanfattningsvis..."
+    },
+    "scrollToBottom": "Skrolla till botten",
+    "input": {
+      "placeholder": "Fråga vad som helst",
+      "disclaimer": "August kan göra misstag. Bekräfta med en läkare",
+      "invalidFileType": "Vänligen välj en giltig bildfil (JPEG, PNG, GIF, WebP) eller PDF-fil.",
+      "waitForUploads": "Vänligen vänta tills filerna har laddats upp.",
+      "removeFailedUploads": "Vissa filer kunde inte laddas upp. Ta bort dem och försök igen.",
+      "uploadFailed": "Uppladdning misslyckades"
+    },
+    "attachments": {
+      "imageAlt": "Bilaga",
+      "pdfDefault": "PDF-dokument",
+      "pdfCta": "Klicka för att visa",
+      "defaultCta": "Visa bilaga",
+      "audioFallback": "Din webbläsare stöder inte ljudelementet."
+    }
+  },
+  "auth": {
+    "heroAlt": "Prova augusti, gratis",
+    "welcomeAlt": "Välkommen tillbaka till augusti",
+    "signup": {
+      "description": "Din AI-hälsokompanjon, byggd av läkare. Få omedelbara svar, förstå labbrapporter och få klarhet.",
+      "trusted": "Betrodd av 6 miljoner användare världen över.",
+      "memoryTransfer": "Logga in för att importera dina hälsominnesanteckningar",
+      "memoryTransferSuccess": "Jag uppdaterade ditt minne. Vad lärde du dig just om mig?"
+    },
+    "welcome": {
+      "copy": "Välkommen tillbaka!\nLogga in för att fortsätta till August"
+    },
+    "continueWithPhone": "Fortsätt med telefon",
+    "phoneStep": {
+      "title": "Ange ditt telefonnummer",
+      "subtitle": "Vi skickar dig en verifieringskod",
+      "searchPlaceholder": "Sök land...",
+      "phonePlaceholder": "Telefonnummer"
+    },
+    "otpStep": {
+      "title": "Verifiera din telefon",
+      "subtitle": "Ange verifieringskoden som skickades till",
+      "resendWithTimer": "Fick du inte en kod? Skicka igen ({{sekunder}})",
+      "resend": "Fick du inte en kod? Skicka igen"
+    },
+    "errors": {
+      "enterPhone": "Vänligen ange ditt telefonnummer",
+      "sendOtp": "Kunde inte skicka OTP. Försök igen.",
+      "sendOtpInvalid": "Kunde inte skicka OTP. Kontrollera ditt telefonnummer.",
+      "enterOtp": "Vänligen ange 6-siffrig kod",
+      "invalidOtp": "Ogiltig kod. Försök igen.",
+      "oauthGeneric": "Inloggning misslyckades. Försök igen.",
+      "googleUserInfo": "Kunde inte hämta Google-användarinformation",
+      "googleCancelled": "Google-inloggning avbröts eller misslyckades.",
+      "appleUnavailable": "Apple-inloggning är inte tillgänglig",
+      "appleUnavailableSdk": "Apple Sign In är inte tillgängligt. Apple JS SDK har inte laddats.",
+      "appleCredential": "Kunde inte hämta Apple-uppgifter",
+      "appleFailed": "Apple-inloggning misslyckades. Försök igen."
+    },
+    "oauth": {
+      "google": "Fortsätt med Google",
+      "apple": "Fortsätt med Apple"
+    },
+    "tryOtherOptions": "Prova andra alternativ"
+  },
+  "errorBoundary": {
+    "title": "Något gick fel",
+    "description": "Vi stötte på ett oväntat fel. Försök igen.",
+    "tryAgain": "Försök igen",
+    "refreshPage": "Uppdatera sidan"
+  },
+  "sidebar": {
+    "tabs": {
+      "chat": "Chatt",
+      "records": "Poster",
+      "explore": "Hälsoteket",
+      "nutrition": "Näring"
+    },
+    "download": {
+      "title": "Ladda ner appen för att få åtkomst",
+      "cta": "Ladda ner appen nu",
+      "chatDescription": "Håll samtalet igång med din AI-hälsoguide i August-appen.",
+      "recordsDescription": "Med August mobilapp:\n• Visa och hantera dina journaler\n• Dela med din läkare\n• Få exakta hälsorelaterade insikter",
+      "exploreDescription": "August kuraterar hälsorelaterade artiklar, blogginlägg och annan information anpassad för dig.",
+      "nutritionDescription": "Följ vanor. Övervaka vitala tecken. Se dina framsteg – allt på ett ställe.",
+      "chatTitle": "Ladda ner appen för att få åtkomst",
+      "recordsTitle": "Alla hälsodata på ett ställe",
+      "exploreTitle": "Curated hälsoartiklar och bloggar",
+      "nutritionTitle": "Spåra det som är viktigt, förbättra det som räknas"
+    },
+    "downloadAppButton": "Ladda ner app",
+    "tooltips": {
+      "chat": "Chatta med August",
+      "records": "Hantera dina hälsouppgifter",
+      "explore": "Utforska hälsoteket",
+      "insurance": "Arkivera försäkringsöverklagande",
+      "costEstimator": "Hitta lägsta pris för hälsotjänster",
+      "billAnalyser": "Granska min faktura",
+      "showFullMenu": "Visa hela menyn",
+      "hideFullMenu": "Dölj hela menyn",
+      "manageAccount": "Hantera kontoinställningar"
+    },
+    "takeAugustWithYou": "Ta med dig augusti"
+  }
+}

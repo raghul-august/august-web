@@ -1,0 +1,143 @@
+/* Scoped design tokens ported from Telehealth-august/src/app/globals.css.
+   Everything is namespaced under `.consult-theme` so it does not leak into
+   the rest of the webapp. The chat-app shell's overflow lock is opted out
+   for the consult subtree directly in app/chat-app.css. */
+
+.consult-theme {
+  --color-neutral-0: #FFFFFF;
+  --color-neutral-50: #FAFAF8;
+  --color-neutral-100: #F3F1EB;
+  --color-neutral-200: #E8E5DD;
+  --color-neutral-300: #D1CDC2;
+  --color-neutral-400: #A8A39A;
+  --color-neutral-500: #7A7468;
+  --color-neutral-600: #5A554A;
+  --color-neutral-700: #3C3830;
+  --color-neutral-800: #252321;
+  --color-neutral-900: #1A1A1A;
+
+  --color-sage-50: #EDF5F1;
+  --color-sage-500: #206E55;
+
+  --color-success-50: #EAF1ED;
+  --color-success-700: #2A5B49;
+  --color-warning-50: #FDF6E8;
+  --color-warning-700: #8A611B;
+  --color-danger-500: #B8453C;
+  --color-danger: #B8453C;
+
+  --color-surface-page: #FAF9F5;
+  --color-surface-elevated: #FFFFFF;
+  --color-surface-subtle: #F5F4EF;
+
+  --color-text-primary: #1C1917;
+  --color-text-secondary: rgba(28, 25, 23, 0.7);
+  --color-text-tertiary: #A8A29E;
+  --color-text-disabled: rgba(28, 25, 23, 0.3);
+  --color-text-inverse: #FFFFFF;
+  --color-text-brand: #206E55;
+
+  --color-brand-primary: #206E55;
+  --color-brand-primary-hover: #2D8A6C;
+  --color-brand-primary-pressed: #1A5A46;
+  --color-brand-subtle: #E8F5E9;
+  --color-brand-soft: #A8D5BA;
+
+  --color-border-subtle: rgba(28, 25, 23, 0.06);
+  --color-border-default: rgba(28, 25, 23, 0.12);
+  --color-border-strong: rgba(28, 25, 23, 0.24);
+
+  font-family: 'Inter Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  background-color: var(--color-surface-page);
+  color: var(--color-text-primary);
+}
+
+/* ── Background utility shims ── */
+.consult-theme .bg-surface-page { background-color: var(--color-surface-page); }
+.consult-theme .bg-surface-elevated { background-color: var(--color-surface-elevated); }
+.consult-theme .bg-surface-subtle { background-color: var(--color-surface-subtle); }
+.consult-theme .bg-brand-primary { background-color: var(--color-brand-primary); }
+.consult-theme .bg-brand-primary:disabled { background-color: var(--color-brand-primary); }
+.consult-theme .hover\:bg-brand-primary-hover:hover { background-color: var(--color-brand-primary-hover); }
+.consult-theme .disabled\:hover\:bg-brand-primary:disabled:hover { background-color: var(--color-brand-primary); }
+.consult-theme .bg-brand-subtle { background-color: var(--color-brand-subtle); }
+.consult-theme .hover\:bg-surface-subtle:hover { background-color: var(--color-surface-subtle); }
+
+/* ── Text utility shims ── */
+.consult-theme .text-text-primary { color: var(--color-text-primary); }
+.consult-theme .text-text-secondary { color: var(--color-text-secondary); }
+.consult-theme .text-text-tertiary { color: var(--color-text-tertiary); }
+.consult-theme .text-text-inverse { color: var(--color-text-inverse); }
+.consult-theme .text-text-brand { color: var(--color-text-brand); }
+.consult-theme .hover\:text-text-primary:hover { color: var(--color-text-primary); }
+.consult-theme .hover\:text-brand-primary-hover:hover { color: var(--color-brand-primary-hover); }
+.consult-theme .text-danger { color: var(--color-danger); }
+
+.consult-theme .placeholder\:text-text-tertiary::placeholder { color: var(--color-text-tertiary); }
+
+/* ── Ring / border shims ── */
+.consult-theme .ring-border-subtle { --tw-ring-color: var(--color-border-subtle); }
+.consult-theme .ring-border-default { --tw-ring-color: var(--color-border-default); }
+.consult-theme .ring-border-strong { --tw-ring-color: var(--color-border-strong); }
+.consult-theme .ring-brand-primary { --tw-ring-color: var(--color-brand-primary); }
+.consult-theme .group:hover .group-hover\:ring-text-primary,
+.consult-theme .group:hover .group-hover\:ring-text-primary { --tw-ring-color: var(--color-text-primary); }
+.consult-theme .hover\:ring-border-default:hover { --tw-ring-color: var(--color-border-default); }
+.consult-theme .hover\:ring-border-strong:hover { --tw-ring-color: var(--color-border-strong); }
+.consult-theme .border-border-subtle { border-color: var(--color-border-subtle); }
+.consult-theme .border-border-default { border-color: var(--color-border-default); }
+
+/* ── Typography classes ── */
+.consult-theme .t-display-md { font-size: 36px; line-height: 1.1; font-weight: 400; letter-spacing: -1.5px; }
+.consult-theme .t-heading-lg { font-size: 24px; line-height: 1.2; font-weight: 400; letter-spacing: -0.5px; }
+.consult-theme .t-heading-md { font-size: 20px; line-height: 1.25; font-weight: 400; letter-spacing: -0.4px; }
+.consult-theme .t-paragraph-lg { font-size: 17px; line-height: 1.55; font-weight: 400; }
+.consult-theme .t-paragraph-md { font-size: 15px; line-height: 1.6; font-weight: 400; }
+.consult-theme .t-paragraph-sm { font-size: 13px; line-height: 1.5; font-weight: 400; }
+.consult-theme .t-label-lg { font-size: 16px; line-height: 1.25; font-weight: 500; }
+.consult-theme .t-label-md { font-size: 14px; line-height: 1.3; font-weight: 500; }
+.consult-theme .t-label-sm { font-size: 12px; line-height: 1.35; font-weight: 500; }
+
+/* ── Stripe-style input ── */
+.consult-theme .input-stripe {
+  background: var(--color-surface-subtle);
+  border-radius: 5px;
+  box-shadow: inset 0 0 0 1px rgba(28, 25, 23, 0.08);
+  transition:
+    background-color 180ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 180ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.consult-theme .input-stripe::placeholder { color: var(--color-text-tertiary); }
+.consult-theme .input-stripe:hover:not(:focus):not([aria-expanded='true']) {
+  box-shadow: inset 0 0 0 1px rgba(28, 25, 23, 0.16);
+}
+.consult-theme .input-stripe:focus,
+.consult-theme .input-stripe:focus-within,
+.consult-theme .input-stripe[aria-expanded='true'] {
+  outline: none;
+  background: var(--color-surface-elevated);
+  box-shadow:
+    0 1px 1px 0 rgba(0, 0, 0, 0.03),
+    inset 0 0 0 1px var(--color-brand-primary),
+    0 0 0 4px rgba(32, 110, 85, 0.2);
+}
+
+/* Native select chevron room */
+.consult-theme select.input-stripe {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23A8A29E' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 38px;
+}
+
+/* Calendar popover animation */
+@keyframes consultPopoverIn {
+  from { opacity: 0; transform: translateY(-6px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes consultCellFadeIn {
+  from { opacity: 0; transform: translateY(2px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

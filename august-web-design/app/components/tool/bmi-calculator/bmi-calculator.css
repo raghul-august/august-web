@@ -1,0 +1,245 @@
+.bmi-section-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  letter-spacing: 0.04em;
+}
+
+.bmi-form-root {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.bmi-unit-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Soft-green active pill for connected chip groups (Units, Sex) inside the
+   BMI card. Dark green is reserved for primary CTAs. */
+.bmi-calculator-card .tool-chip--active {
+  background: var(--brand-subtle);
+  color: var(--brand-primary);
+  border-color: var(--brand-primary);
+  font-weight: 400;
+}
+
+.bmi-calculator-card .tool-chip-group--connected {
+  border-radius: 10px;
+}
+
+.bmi-calculator-card .tool-chip-group--connected .tool-chip {
+  padding: 9px 16px;
+  font-size: 13px;
+  min-height: 38px;
+  border-radius: 0;
+}
+
+@media (max-width: 520px) {
+  .bmi-calculator-card .tool-chip-group--connected .tool-chip {
+    padding: 8px 14px;
+    font-size: 13px;
+    min-height: 36px;
+  }
+}
+
+/* ── Card-level layout: form left, results right ─────────────────────── */
+
+.bmi-calculator-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  align-items: start;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .bmi-calculator-card {
+    grid-template-columns: minmax(260px, 1fr) minmax(280px, 1.1fr);
+    gap: 32px;
+  }
+}
+
+.bmi-result-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  --tool-fade-y: 6px;
+  animation: toolFadeIn 0.35s ease;
+  opacity: 1;
+  transition: opacity 0.25s ease;
+}
+
+.bmi-result-stack[data-preview="true"] {
+  opacity: 0.45;
+}
+
+.bmi-result-card {
+  background: var(--surface-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.bmi-result-primary {
+  gap: 8px;
+}
+
+.bmi-result-primary .bmi-category-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  align-self: auto;
+}
+
+.bmi-value {
+  font-size: 3rem;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.bmi-category-badge {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.bmi-result-row {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tool-result-stack[data-preview="true"] {
+  opacity: 0.85;
+}
+
+.bmi-result-card {
+  background: var(--surface-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+
+.bmi-scale-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px 18px;
+  background: var(--surface-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+}
+
+.bmi-scale-vertical-row {
+  display: flex;
+  align-items: stretch;
+  gap: 80px;
+  min-height: 240px;
+}
+
+.bmi-scale-vbar {
+  position: relative;
+  width: 14px;
+  height: 240px;
+  border-radius: 999px;
+  background: var(--border-subtle);
+  overflow: visible;
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+
+.bmi-scale-vsegment {
+  position: absolute;
+  left: 0;
+  right: 0;
+  opacity: 0.95;
+}
+
+.bmi-scale-vsegment:first-of-type {
+  border-top-left-radius: 999px;
+  border-top-right-radius: 999px;
+}
+
+.bmi-scale-vsegment:last-of-type {
+  border-bottom-left-radius: 999px;
+  border-bottom-right-radius: 999px;
+}
+
+.bmi-scale-vmarker {
+  position: absolute;
+  left: 100%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+  pointer-events: none;
+  padding-left: 6px;
+}
+
+.bmi-scale-vmarker-pin {
+  width: 22px;
+  height: 2px;
+  background: var(--text-primary);
+  border-radius: 1px;
+}
+
+.bmi-scale-vmarker-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  background: var(--surface-elevated);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0px 6px;
+  white-space: nowrap;
+}
+
+.bmi-scale-vlegend {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 6px;
+  flex: 1;
+  min-width: 0;
+}
+
+.bmi-scale-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.bmi-scale-legend-swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.bmi-scale-legend-text {
+  white-space: nowrap;
+}
+
+.bmi-scale-legend-range {
+  color: var(--text-tertiary);
+}

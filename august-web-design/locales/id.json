@@ -1,0 +1,140 @@
+{
+  "common": {
+    "loadingChats": "Memuat obrolan Anda...",
+    "refreshPage": "Segarkan halaman",
+    "signUp": "Daftar",
+    "openMenu": "Buka menu",
+    "menu": "Menu",
+    "downloadApp": "Unduh Aplikasi",
+    "termsOfService": "Syarat dan Ketentuan Layanan",
+    "privacyPolicy": "Kebijakan Privasi",
+    "loggingOut": "Keluar...",
+    "logout": "Keluar",
+    "back": "Kembali",
+    "continue": "Lanjutkan",
+    "edit": "Edit",
+    "legalPrefix": "Dengan melanjutkan, Anda menyetujui",
+    "and": "dan",
+    "termsShort": "syarat",
+    "privacyShort": "kebijakan privasi",
+    "error": "Kesalahan",
+    "tryAgain": "Coba Lagi",
+    "loginRequired": "Silakan masuk untuk melanjutkan obrolan.",
+    "language": "Bahasa",
+    "languageEnglish": "Bahasa Inggris",
+    "languageFrench": "Prancis",
+    "changeLanguage": "Ubah bahasa",
+    "profile": "Profil",
+    "login": "Masuk"
+  },
+  "chat": {
+    "initFailed": "Gagal menginisialisasi sesi. Silakan segarkan halaman.",
+    "genericError": "Terjadi kesalahan. Silakan segarkan halaman.",
+    "emptyStateHeading": "Bagaimana perasaanmu?",
+    "processing": {
+      "reading": "Membaca dokumen Anda...",
+      "understanding": "Memahami detailnya...",
+      "summarising": "Merangkum semuanya..."
+    },
+    "scrollToBottom": "Gulir ke bawah",
+    "input": {
+      "placeholder": "Tanyakan apa saja",
+      "disclaimer": "Agustus mungkin membuat kesalahan. Konfirmasikan dengan dokter",
+      "invalidFileType": "Silakan pilih file gambar (JPEG, PNG, GIF, WebP) atau PDF yang valid.",
+      "waitForUploads": "Mohon tunggu hingga unggahan file selesai.",
+      "removeFailedUploads": "Beberapa berkas gagal diunggah. Silakan hapus berkas tersebut dan coba lagi.",
+      "uploadFailed": "Unggah gagal"
+    },
+    "attachments": {
+      "imageAlt": "Lampiran",
+      "pdfDefault": "Dokumen PDF",
+      "pdfCta": "Klik untuk melihat",
+      "defaultCta": "Lihat lampiran",
+      "audioFallback": "Peramban Anda tidak mendukung elemen audio."
+    }
+  },
+  "auth": {
+    "heroAlt": "Coba Agustus, gratis",
+    "welcomeAlt": "Selamat datang kembali di bulan Agustus",
+    "signup": {
+      "description": "Pendamping kesehatan AI Anda, dibuat oleh dokter. Dapatkan jawaban instan, pahami laporan lab, dan temukan kejelasan.",
+      "trusted": "Dipercaya oleh 6 Juta pengguna di seluruh dunia.",
+      "memoryTransfer": "Masuk untuk mengimpor kenangan kesehatan Anda",
+      "memoryTransferSuccess": "Saya telah memperbarui ingatan Anda. Apa yang baru saja Anda pelajari tentang saya?"
+    },
+    "welcome": {
+      "copy": "Selamat datang kembali!\nMasuk untuk melanjutkan ke August"
+    },
+    "continueWithPhone": "Lanjutkan dengan Telepon",
+    "phoneStep": {
+      "title": "Masukkan nomor telepon Anda",
+      "subtitle": "Kami akan mengirimkan kode verifikasi kepada Anda",
+      "searchPlaceholder": "Cari negara...",
+      "phonePlaceholder": "Nomor telepon"
+    },
+    "otpStep": {
+      "title": "Verifikasi ponsel Anda",
+      "subtitle": "Masukkan kode verifikasi yang dikirim ke",
+      "resendWithTimer": "Tidak menerima kode? Kirim ulang ({{seconds}})",
+      "resend": "Tidak menerima kode? Kirim ulang"
+    },
+    "errors": {
+      "enterPhone": "Silakan masukkan nomor telepon Anda",
+      "sendOtp": "Gagal mengirim OTP. Silakan coba lagi.",
+      "sendOtpInvalid": "Gagal mengirim OTP. Silakan periksa nomor telepon Anda.",
+      "enterOtp": "Silakan masukkan kode 6 digit",
+      "invalidOtp": "Kode tidak valid. Silakan coba lagi.",
+      "oauthGeneric": "Gagal masuk. Silakan coba lagi.",
+      "googleUserInfo": "Gagal mendapatkan info pengguna Google",
+      "googleCancelled": "Login Google dibatalkan atau gagal.",
+      "appleUnavailable": "Masuk dengan Apple tidak tersedia",
+      "appleUnavailableSdk": "Masuk dengan Apple tidak tersedia. SDK JavaScript Apple belum dimuat.",
+      "appleCredential": "Gagal mendapatkan kredensial Apple",
+      "appleFailed": "Masuk Apple gagal. Silakan coba lagi."
+    },
+    "oauth": {
+      "google": "Lanjutkan dengan Google",
+      "apple": "Lanjutkan dengan Apple"
+    },
+    "tryOtherOptions": "Coba opsi lain"
+  },
+  "errorBoundary": {
+    "title": "Terjadi kesalahan",
+    "description": "Terjadi kesalahan yang tidak terduga. Silakan coba lagi.",
+    "tryAgain": "Coba Lagi",
+    "refreshPage": "Segarkan Halaman"
+  },
+  "sidebar": {
+    "tabs": {
+      "chat": "Obrolan",
+      "records": "Rekaman",
+      "explore": "Perpustakaan Kesehatan",
+      "nutrition": "Nutrisi"
+    },
+    "download": {
+      "title": "Unduh aplikasi untuk mengakses",
+      "cta": "Unduh Aplikasi Sekarang",
+      "chatDescription": "Lanjutkan percakapan dengan pemandu kesehatan AI Anda di aplikasi August.",
+      "recordsDescription": "Dengan Aplikasi Seluler August:\n• Lihat dan kelola catatan Anda\n• Bagikan dengan dokter Anda\n• Dapatkan wawasan kesehatan yang akurat",
+      "exploreDescription": "August mengkurasi artikel kesehatan, blog, dan info lain yang dipersonalisasi untuk Anda.",
+      "nutritionDescription": "Lacak kebiasaan. Pantau tanda-tanda vital. Lihat kemajuan Anda - semua dalam satu tempat.",
+      "chatTitle": "Unduh aplikasi untuk mengakses",
+      "recordsTitle": "Semua Catatan Kesehatan di satu tempat",
+      "exploreTitle": "Artikel Kesehatan Pilihan, dan Blog",
+      "nutritionTitle": "Lacak apa yang penting, tingkatkan apa yang berharga"
+    },
+    "downloadAppButton": "Unduh Aplikasi",
+    "tooltips": {
+      "records": "Kelola catatan kesehatan Anda",
+      "explore": "Jelajahi Perpustakaan Kesehatan",
+      "nutrition": "Kelola diet & nutrisi",
+      "insurance": "Ajukan banding asuransi file",
+      "costEstimator": "Temukan harga terendah untuk layanan kesehatan",
+      "billAnalyser": "Tinjau Tagihan Saya",
+      "showFullMenu": "Tampilkan menu lengkap",
+      "hideFullMenu": "Sembunyikan menu lengkap",
+      "manageAccount": "Kelola pengaturan akun"
+    },
+    "takeAugustWithYou": "Bawa Agustus bersamamu"
+  }
+}

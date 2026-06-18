@@ -1,0 +1,889 @@
+/* GLP-1 Coverage Check - scoped styles.
+   Shared tokens, .accent-gradient, and @keyframes accentShine are in tool-shared.css */
+
+:root {
+  --glp1-accent-vibrant: var(--brand-primary);
+  --glp1-caution: var(--warning);
+  --glp1-info: var(--info);
+  --glp1-radius-card-lg: 24px;
+  --glp1-dur-slow: 0.6s;
+}
+
+/* glp1FadeIn replaced by toolFadeIn; consumers set --tool-fade-y: 6px */
+
+/* Shell responsive */
+@media (max-width: 768px) {
+  .glp1-shell {
+    align-items: flex-start !important;
+    padding: 0 !important;
+    min-height: 100dvh !important;
+  }
+  .glp1-shell-card {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto 1fr !important;
+    min-height: 100dvh !important;
+    border-radius: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  .glp1-shell-sidebar {
+    padding: 12px 16px !important;
+    border-bottom: 1px solid var(--glp1-accent-light);
+  }
+  .glp1-shell-divider {
+    display: none !important;
+  }
+  .glp1-shell-main {
+    padding: 24px 20px !important;
+    grid-row: 2 !important;
+  }
+}
+
+/* Tablet portrait: keep sidebar but tighter */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .glp1-shell {
+    padding: 16px !important;
+  }
+  .glp1-shell-card {
+    grid-template-columns: 240px 1px 1fr !important;
+    min-height: 600px !important;
+  }
+  .glp1-shell-main {
+    padding: 40px 40px !important;
+  }
+}
+
+/* Small phone squeezes */
+@media (max-width: 480px) {
+  .glp1-shell-main {
+    padding: 20px 16px !important;
+  }
+  .glp1-shell-sidebar {
+    padding: 10px 12px !important;
+  }
+}
+
+/* Side item styles */
+.glp1-side-item {
+  position: relative;
+  padding: 12px 12px 12px 16px;
+  border-radius: var(--glp1-radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color var(--glp1-dur-fast) var(--glp1-ease);
+}
+
+.glp1-side-item--current {
+  background: rgba(32,110,85,0.04);
+}
+
+.glp1-side-item--current::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  bottom: 6px;
+  width: 3px;
+  border-radius: 2px;
+  background: var(--glp1-accent);
+}
+
+/* Option rows */
+.glp1-option-row {
+  border: 1px solid rgba(28,25,23,0.12);
+  border-radius: 12px;
+  padding: 16px 20px;
+  cursor: pointer;
+  /* Wave 6: add border-left-color to transition so selected-state transition
+     smoothly animates the accent stripe instead of snapping. */
+  transition:
+    border-color 100ms var(--glp1-ease),
+    background-color 100ms var(--glp1-ease),
+    border-left-color 100ms var(--glp1-ease);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.glp1-option-row:hover {
+  border-color: rgba(28,25,23,0.22);
+}
+
+.glp1-option-row:focus-visible {
+  outline: 2px solid var(--glp1-accent);
+  outline-offset: 2px;
+}
+
+.glp1-option-row--selected {
+  border-color: rgba(28,25,23,0.12);
+  border-left: 2px solid var(--glp1-accent);
+  background: rgba(32,110,85,0.04);
+  padding-left: 18px;
+}
+
+/* Input styles */
+.glp1-input {
+  border: 1px solid rgba(28,25,23,0.15);
+  border-radius: 12px;
+  height: 52px;
+  padding: 0 16px;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--glp1-text);
+  background: var(--glp1-surface);
+  outline: none;
+  width: 100%;
+  transition: border-color var(--glp1-dur-fast) var(--glp1-ease), box-shadow var(--glp1-dur-fast) var(--glp1-ease);
+}
+
+.glp1-input:focus {
+  border-color: var(--glp1-accent);
+  box-shadow: 0 0 0 3px rgba(32,110,85,0.12);
+}
+
+.glp1-input[aria-invalid="true"] {
+  border-color: var(--glp1-error);
+}
+
+/* Buttons */
+.glp1-btn-primary {
+  background: var(--glp1-accent);
+  color: #fff;
+  border-radius: var(--glp1-radius-pill);
+  padding: 12px 24px;
+  font-weight: 500;
+  font-size: 14px;
+  border: 1px solid var(--glp1-accent);
+  cursor: pointer;
+  transition: background-color var(--glp1-dur-fast) var(--glp1-ease), border-color var(--glp1-dur-fast) var(--glp1-ease);
+}
+
+.glp1-btn-primary:hover {
+  background: var(--glp1-accent-dark);
+  border-color: var(--glp1-accent-dark);
+}
+
+.glp1-btn-primary:focus-visible {
+  outline: 2px solid var(--glp1-accent);
+  outline-offset: 2px;
+}
+
+.glp1-btn-glass {
+  background: var(--glp1-accent);
+  color: #fff;
+  border-radius: var(--glp1-radius-pill);
+  padding: 14px 28px;
+  font-weight: 500;
+  font-size: 14px;
+  border: 1px solid var(--glp1-accent);
+  cursor: pointer;
+  box-shadow: var(--glp1-shadow-glass-btn);
+  transition: transform var(--glp1-dur-med) var(--glp1-ease), filter var(--glp1-dur-med) var(--glp1-ease);
+}
+
+.glp1-btn-glass:hover {
+  transform: scale(1.02);
+  filter: brightness(1.1);
+}
+
+.glp1-btn-glass:focus-visible {
+  outline: 2px solid var(--glp1-accent);
+  outline-offset: 2px;
+}
+
+.glp1-btn-ghost {
+  border: 1px solid rgba(28,25,23,0.15);
+  background: var(--glp1-surface);
+  color: var(--glp1-text);
+  border-radius: var(--glp1-radius-pill);
+  padding: 12px 20px;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: border-color var(--glp1-dur-fast) var(--glp1-ease);
+}
+
+.glp1-btn-ghost:hover {
+  border-color: rgba(28,25,23,0.30);
+}
+
+.glp1-btn-ghost:focus-visible {
+  outline: 2px solid var(--glp1-accent);
+  outline-offset: 2px;
+}
+
+/* Question transitions */
+.glp1-question-enter {
+  --tool-fade-y: 6px;
+  animation: toolFadeIn var(--glp1-dur-entrance) var(--glp1-ease);
+}
+
+/* Generic fade-in helper (replaces framer-motion fade on BMIPreview). */
+.glp1-fade-in {
+  --tool-fade-y: 6px;
+  animation: toolFadeIn var(--glp1-dur-med) var(--glp1-ease);
+}
+
+/* Results screen stagger (replaces framer-motion container/item variants).
+   Each direct child animates in with a small incremental delay. */
+.glp1-results-stagger > .glp1-results-stagger-item {
+  --tool-fade-y: 6px;
+  animation: toolFadeIn var(--glp1-dur-med) var(--glp1-ease) both;
+}
+.glp1-results-stagger > .glp1-results-stagger-item:nth-child(1) { animation-delay: 0s; }
+.glp1-results-stagger > .glp1-results-stagger-item:nth-child(2) { animation-delay: 0.08s; }
+.glp1-results-stagger > .glp1-results-stagger-item:nth-child(3) { animation-delay: 0.16s; }
+.glp1-results-stagger > .glp1-results-stagger-item:nth-child(4) { animation-delay: 0.24s; }
+.glp1-results-stagger > .glp1-results-stagger-item:nth-child(5) { animation-delay: 0.32s; }
+.glp1-results-stagger > .glp1-results-stagger-item:nth-child(6) { animation-delay: 0.40s; }
+.glp1-results-stagger > .glp1-results-stagger-item:nth-child(7) { animation-delay: 0.48s; }
+.glp1-results-stagger > .glp1-results-stagger-item:nth-child(8) { animation-delay: 0.56s; }
+
+/* BMI preview band */
+.glp1-bmi-preview {
+  border: 1px solid rgba(28,25,23,0.10);
+  border-radius: 12px;
+  padding: 16px 20px;
+  background: rgba(28,25,23,0.04);
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.glp1-bmi-preview-divider {
+  width: 1px;
+  align-self: stretch;
+  background: rgba(28,25,23,0.10);
+}
+
+/* Compact medication row for the redesigned results page. Replaces
+   the tall card layout with a single-line row (name + meta + badge). */
+.glp1-med-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 12px 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(28,25,23,0.06);
+}
+.glp1-med-row:last-child { border-bottom: none; }
+.glp1-med-row-main {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.glp1-med-row-name {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--glp1-text);
+  letter-spacing: -0.01em;
+}
+.glp1-med-row-meta {
+  font-size: 12px;
+  color: var(--glp1-text-secondary);
+  line-height: 1.4;
+}
+.glp1-med-row-pa {
+  grid-column: 1 / -1;
+  font-size: 12px;
+  color: var(--glp1-text-muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.glp1-med-row-pa-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  flex-shrink: 0;
+}
+
+/* Two-column factor lists */
+.glp1-factors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+.glp1-factor-col h4 {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--glp1-text);
+  margin: 0 0 10px;
+}
+.glp1-factor-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.glp1-factor-col li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--glp1-text-muted);
+  line-height: 1.5;
+}
+.glp1-factor-col li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  flex-shrink: 0;
+  margin-top: 8px;
+}
+.glp1-factor-col--favor li::before { background: var(--glp1-accent); }
+.glp1-factor-col--concern li::before { background: var(--glp1-caution); }
+
+/* Status badges */
+.glp1-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: var(--glp1-radius-pill);
+}
+
+.glp1-badge-likely {
+  background: rgba(32,110,85,0.10);
+  color: var(--glp1-accent);
+}
+
+.glp1-badge-possible {
+  background: var(--warning-50);
+  color: var(--warning-700);
+}
+
+.glp1-badge-unlikely {
+  background: rgba(220,80,60,0.10);
+  color: var(--glp1-error);
+}
+
+.glp1-badge-not-recommended {
+  background: rgba(28,25,23,0.08);
+  color: rgba(28,25,23,0.55);
+}
+
+/* Dropdown */
+.glp1-select {
+  appearance: none;
+  border: 1px solid rgba(28,25,23,0.15);
+  border-radius: 12px;
+  height: 52px;
+  padding: 0 40px 0 16px;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--glp1-text);
+  background: var(--glp1-surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%231C1917' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E") no-repeat right 16px center;
+  outline: none;
+  width: 100%;
+  transition: border-color var(--glp1-dur-fast) var(--glp1-ease), box-shadow var(--glp1-dur-fast) var(--glp1-ease);
+  cursor: pointer;
+}
+
+.glp1-select:focus {
+  border-color: var(--glp1-accent);
+  box-shadow: 0 0 0 3px rgba(32,110,85,0.12);
+}
+
+/* Checkbox indicator */
+.glp1-checkbox {
+  width: 20px;
+  height: 20px;
+  border-radius: var(--glp1-radius-xs, 4px);
+  border: 1px solid rgba(28,25,23,0.20);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background-color var(--glp1-dur-fast) var(--glp1-ease), border-color var(--glp1-dur-fast) var(--glp1-ease);
+}
+
+.glp1-checkbox--checked {
+  background: var(--glp1-accent);
+  border-color: var(--glp1-accent);
+}
+
+/* Mobile sidebar (horizontal progress strip) */
+@media (max-width: 768px) {
+  .glp1-sidebar {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    gap: 8px !important;
+    padding: 12px 16px !important;
+    height: auto !important;
+    border-radius: 0 !important;
+  }
+
+  .glp1-sidebar ol {
+    flex-direction: row !important;
+    gap: 8px !important;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Step dots strip: only render the circle, hide label + meta for all but current */
+  .glp1-sidebar .glp1-side-item {
+    padding: 0 !important;
+    flex-direction: row;
+    gap: 0;
+    background: none !important;
+    flex: 0 0 auto;
+  }
+
+  .glp1-sidebar .glp1-side-item::before {
+    display: none !important;
+  }
+
+  .glp1-sidebar-footer {
+    display: none !important;
+  }
+
+  .glp1-sidebar-header {
+    display: none !important;
+  }
+
+  /* Hide all labels + meta on mobile - we use a synthesized caption instead */
+  .glp1-sidebar-label,
+  .glp1-sidebar-meta {
+    display: none !important;
+  }
+}
+
+/* Mobile-only synthesized caption (rendered only below 768px) */
+.glp1-sidebar-mobile-caption {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .glp1-sidebar-mobile-caption {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 2px 4px 6px;
+  }
+}
+
+/* Option rows - tighter padding on small phones */
+@media (max-width: 480px) {
+  .glp1-option-row {
+    padding: 14px 16px;
+  }
+  .glp1-option-row--selected {
+    padding-left: 14px;
+  }
+  .glp1-option-row span {
+    word-break: break-word;
+  }
+}
+
+/* BMI preview - stack on small phones, hide dividers */
+@media (max-width: 480px) {
+  .glp1-bmi-preview {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+    padding: 16px !important;
+  }
+  .glp1-bmi-preview-divider {
+    display: none !important;
+  }
+}
+
+/* Height-dual - stack ft/in on small phones */
+@media (max-width: 480px) {
+  .glp1-height-dual {
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+}
+
+/* Results stats grid: 2-col ≥769, 1-col ≤768 */
+.glp1-results-stats {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .glp1-results-stats {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .glp1-results-stats > * {
+    flex-basis: auto !important;
+  }
+}
+
+/* Results action buttons full-width on small phones */
+@media (max-width: 480px) {
+  .glp1-results-actions {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  .glp1-results-actions .glp1-btn-glass,
+  .glp1-results-actions .glp1-btn-ghost,
+  .glp1-results-actions .glp1-btn-primary {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Question screen footer stacks cleanly on small phones */
+@media (max-width: 480px) {
+  .glp1-question-footer {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .glp1-question-footer-hint {
+    display: none;
+  }
+}
+
+/* Wave 6: BMI preview first-render pulse (scale 0.98 -> 1, opacity 0 -> 1). */
+@keyframes glp1BmiPulse {
+  from { opacity: 0; transform: scale(0.98); }
+  to   { opacity: 1; transform: scale(1); }
+}
+.glp1-bmi-pulse {
+  animation: glp1BmiPulse 500ms var(--glp1-ease) both;
+}
+
+/* Wave 8: profile hero strip */
+.glp1-profile-hero {
+  background: var(--glp1-accent-light);
+  border-radius: var(--glp1-radius-card-lg);
+  box-shadow: var(--glp1-shadow-card);
+  padding: 24px 28px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 20px 32px;
+  align-items: center;
+  margin-bottom: 32px;
+}
+.glp1-profile-hero-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(120px, max-content));
+  gap: 20px 40px;
+}
+.glp1-profile-hero-stat-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--glp1-text-muted);
+  margin-bottom: 4px;
+}
+.glp1-profile-hero-stat-value {
+  font-size: clamp(20px, 3vw, 24px);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: var(--glp1-text);
+  line-height: 1.15;
+  font-variant-numeric: tabular-nums;
+}
+.glp1-profile-hero-verdict {
+  text-align: right;
+  padding-left: 24px;
+  border-left: 1px solid rgba(28,25,23,0.08);
+}
+.glp1-profile-hero-verdict-cap {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--glp1-text-muted);
+  margin-bottom: 6px;
+}
+.glp1-profile-hero-verdict-word {
+  font-size: clamp(24px, 4vw, 32px);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+@media (max-width: 768px) {
+  .glp1-profile-hero {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .glp1-profile-hero-verdict {
+    text-align: left;
+    padding-left: 0;
+    padding-top: 16px;
+    border-left: none;
+    border-top: 1px solid rgba(28,25,23,0.08);
+  }
+}
+
+/* Reduced motion: null quiz-scoped animations and transitions (tool-specific) */
+@media (prefers-reduced-motion: reduce) {
+  .glp1-shell *,
+  .glp1-shell *::before,
+  .glp1-shell *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  .glp1-bmi-pulse { animation: none !important; }
+}
+
+/* Route-scoped override: landing sections are fully centered on this tool.
+   !important needed - the shared FaqAccordion sets textAlign:left via inline style. */
+.tl-content-wrapper .tl-section-heading { text-align: center !important; }
+
+/* Inline loading state inside the quiz card - shown after the last
+   question is answered, before results render. Replaces the old
+   full-screen LoadingScreen takeover. */
+.glp1-inline-loading {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 32px 0;
+  text-align: center;
+  --tool-fade-y: 6px;
+  animation: toolFadeIn var(--glp1-dur-entrance) var(--glp1-ease);
+}
+.glp1-inline-loading-spinner {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 3px solid var(--glp1-border);
+  border-top-color: var(--glp1-accent);
+  animation: glp1Spin 0.9s linear infinite;
+}
+@keyframes glp1Spin {
+  to { transform: rotate(360deg); }
+}
+.glp1-inline-loading-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--glp1-text);
+  letter-spacing: -0.01em;
+}
+.glp1-inline-loading-sub {
+  font-size: 14px;
+  color: var(--glp1-text-muted);
+  margin-top: 4px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .glp1-inline-loading-spinner { animation: none; }
+}
+
+/* Thin progress bar at the top of the inline quiz card. Fills as the user
+   answers questions across all sections. */
+.glp1-progress {
+  height: 4px;
+  background: var(--glp1-border);
+  border-radius: 9999px;
+  overflow: hidden;
+  margin-bottom: 28px;
+  flex-shrink: 0;
+}
+.glp1-progress-fill {
+  height: 100%;
+  background: var(--glp1-accent);
+  border-radius: inherit;
+  transition: width 400ms var(--glp1-ease);
+}
+@media (prefers-reduced-motion: reduce) {
+  .glp1-progress-fill { transition: none; }
+}
+
+/* Inline quiz card with built-in progress sidebar. Uses CSS grid on
+   desktop (sidebar | divider | main) and collapses to single-column
+   on mobile where the thin progress bar takes over. */
+.glp1-landing-quiz-card {
+  background: var(--glp1-surface);
+  border: 1px solid var(--glp1-border);
+  border-radius: var(--glp1-radius-card-lg);
+  box-shadow: var(--glp1-shadow-card);
+  max-width: 900px;
+  text-align: left;
+  min-height: 520px;
+  display: grid;
+  grid-template-columns: 210px 1px 1fr;
+  margin: 40px auto 0;
+  width: 100%;
+  overflow: hidden;
+}
+.glp1-card-progress {
+  padding: 40px 24px 40px 32px;
+  display: flex;
+  flex-direction: column;
+}
+.glp1-card-divider {
+  background: var(--glp1-border);
+  margin: 32px 0;
+}
+.glp1-card-main {
+  padding: 48px 56px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  grid-column: 3;
+}
+@media (max-width: 960px) {
+  .glp1-landing-quiz-card {
+    grid-template-columns: 1fr;
+    max-width: 760px;
+  }
+  .glp1-card-progress {
+    display: none;
+  }
+  .glp1-card-divider {
+    display: none;
+  }
+  .glp1-card-main {
+    grid-column: 1;
+  }
+}
+@media (max-width: 768px) {
+  .glp1-landing-quiz-card {
+    margin-top: 24px;
+    min-height: 460px;
+    border-radius: var(--glp1-radius-card);
+  }
+  .glp1-card-main {
+    padding: 32px 24px;
+  }
+}
+@media (max-width: 480px) {
+  .glp1-landing-quiz-card {
+    margin-top: 20px;
+    border-radius: var(--glp1-radius-card);
+  }
+  .glp1-card-main {
+    padding: 24px 18px;
+  }
+}
+.glp1-landing-progress-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 2px;
+  margin-bottom: 16px;
+}
+.glp1-landing-progress-eyebrow {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  color: var(--glp1-text-secondary);
+}
+.glp1-landing-progress-count {
+  font-size: 12px;
+  color: var(--glp1-text-secondary);
+  font-variant-numeric: tabular-nums;
+}
+.glp1-landing-progress-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.glp1-landing-progress-item {
+  display: grid;
+  grid-template-columns: 14px 1fr auto;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 2px;
+}
+.glp1-landing-progress-marker {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1.5px solid rgba(28,25,23,0.18);
+  color: transparent;
+  transition: background-color var(--glp1-dur-fast) var(--glp1-ease),
+    border-color var(--glp1-dur-fast) var(--glp1-ease),
+    color var(--glp1-dur-fast) var(--glp1-ease);
+}
+.glp1-landing-progress-item--complete .glp1-landing-progress-marker {
+  background: var(--glp1-accent);
+  border-color: var(--glp1-accent);
+  color: #fff;
+}
+.glp1-landing-progress-item--current .glp1-landing-progress-marker {
+  border-color: var(--glp1-accent);
+}
+.glp1-landing-progress-label {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--glp1-text-muted);
+  letter-spacing: -0.005em;
+  line-height: 1.3;
+}
+.glp1-landing-progress-item--current .glp1-landing-progress-label {
+  color: var(--glp1-text);
+  font-weight: 500;
+}
+.glp1-landing-progress-count-small {
+  font-size: 12px;
+  color: var(--glp1-text-secondary);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+
+/* The sidebar already shows section + per-section progress on desktop, so
+   the in-card "BASICS / Question X of N" header is redundant there. */
+@media (min-width: 961px) {
+  .glp1-question-meta {
+    display: none !important;
+  }
+}
+
+/* Thin progress bar is desktop-hidden now that the sidebar shows section
+   progress. Keep it visible on mobile where the sidebar is hidden. */
+.glp1-progress--mobile-only {
+  display: none;
+}
+@media (max-width: 960px) {
+  .glp1-progress--mobile-only {
+    display: block;
+  }
+}
+
+/* Mobile: tighten hero/content spacing. Inline styles require !important to override. */
+@media (max-width: 480px) {
+  .tl-hero-overlay {
+    padding: 96px 16px 24px !important;
+  }
+  .tl-content-wrapper {
+    padding: 0 16px !important;
+  }
+  .tl-content-wrapper .tl-section-heading {
+    font-size: 1.625rem !important;
+    margin: 0 0 16px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .tl-hero-headline {
+    font-size: 2.5rem !important;
+  }
+}
+@media (max-width: 480px) {
+  .tl-hero-headline {
+    font-size: 2rem !important;
+  }
+  .tl-hero-tagline {
+    font-size: 1rem !important;
+    margin-bottom: 24px !important;
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "common": {
+    "loadingChats": "載入您的對話中...",
+    "refreshPage": "重新整理頁面",
+    "signUp": "註冊",
+    "openMenu": "開啟選單",
+    "menu": "選單",
+    "downloadApp": "下載應用程式",
+    "termsOfService": "服務條款",
+    "privacyPolicy": "隱私權政策",
+    "loggingOut": "正在登出...",
+    "logout": "登出",
+    "back": "返回",
+    "continue": "繼續",
+    "edit": "編輯",
+    "legalPrefix": "繼續即表示您同意我們的",
+    "and": "和",
+    "termsShort": "條款",
+    "privacyShort": "隱私權政策",
+    "error": "錯誤",
+    "tryAgain": "再試一次",
+    "loginRequired": "請登入以繼續聊天。",
+    "language": "語言",
+    "languageEnglish": "英文",
+    "languageFrench": "法語",
+    "changeLanguage": "更改語言",
+    "profile": "個人資料",
+    "login": "登入"
+  },
+  "chat": {
+    "initFailed": "無法初始化會話。請重新整理頁面。",
+    "genericError": "發生了錯誤。請重新整理頁面。",
+    "emptyStateHeading": "你感覺如何？",
+    "processing": {
+      "reading": "正在讀取您的文件...",
+      "understanding": "了解細節...",
+      "summarising": "總結一下……"
+    },
+    "scrollToBottom": "捲動至底部",
+    "input": {
+      "placeholder": "隨便問",
+      "disclaimer": "八月可能會犯錯。請諮詢醫生確認。",
+      "invalidFileType": "請選擇有效的圖片 (JPEG, PNG, GIF, WebP) 或 PDF 檔案。",
+      "waitForUploads": "請等待檔案上傳完成。",
+      "removeFailedUploads": "部分檔案上傳失敗。請移除這些檔案後再試一次。",
+      "uploadFailed": "上傳失敗"
+    },
+    "attachments": {
+      "imageAlt": "附件",
+      "pdfDefault": "PDF 文件",
+      "pdfCta": "點擊查看",
+      "defaultCta": "查看附件",
+      "audioFallback": "您的瀏覽器不支援音訊元素。"
+    }
+  },
+  "auth": {
+    "heroAlt": "試用八月，免費",
+    "welcomeAlt": "歡迎回到八月",
+    "signup": {
+      "description": "您的 AI 健康助手，由醫生打造。立即獲得解答、理解檢驗報告，並獲得清晰指引。",
+      "trusted": "全球有 600 萬用戶信賴。",
+      "memoryTransfer": "登入以匯入您的健康回憶",
+      "memoryTransferSuccess": "我更新了你的記憶。你剛剛學到了我什麼？"
+    },
+    "welcome": {
+      "copy": "歡迎回來！\n請登入以繼續前往 August"
+    },
+    "continueWithPhone": "繼續使用電話",
+    "phoneStep": {
+      "title": "請輸入您的電話號碼",
+      "subtitle": "我們將寄送驗證碼給您",
+      "searchPlaceholder": "搜尋國家...",
+      "phonePlaceholder": "電話號碼"
+    },
+    "otpStep": {
+      "title": "驗證您的手機",
+      "subtitle": "請輸入已發送至",
+      "resendWithTimer": "未收到驗證碼？重新發送 ({{seconds}})",
+      "resend": "未收到驗證碼？重新發送"
+    },
+    "errors": {
+      "enterPhone": "請輸入您的電話號碼",
+      "sendOtp": "無法傳送一次性密碼。請再試一次。",
+      "sendOtpInvalid": "無法傳送一次性密碼。請檢查您的電話號碼。",
+      "enterOtp": "請輸入 6 位數字驗證碼",
+      "invalidOtp": "無效的代碼。請再試一次。",
+      "oauthGeneric": "登入失敗。請再試一次。",
+      "googleUserInfo": "無法取得 Google 使用者資訊",
+      "googleCancelled": "Google 登入已取消或失敗。",
+      "appleUnavailable": "Apple 登入無法使用",
+      "appleUnavailableSdk": "Apple 登入無法使用。Apple JS SDK 未載入。",
+      "appleCredential": "無法取得 Apple 憑證",
+      "appleFailed": "Apple 登入失敗。請再試一次。"
+    },
+    "oauth": {
+      "google": "以 Google 帳戶繼續",
+      "apple": "繼續使用 Apple"
+    },
+    "tryOtherOptions": "試試其他選項"
+  },
+  "errorBoundary": {
+    "title": "發生了錯誤",
+    "description": "我們遇到了一個意外的錯誤。請再試一次。",
+    "tryAgain": "再試一次",
+    "refreshPage": "重新整理頁面"
+  },
+  "sidebar": {
+    "tabs": {
+      "chat": "聊天",
+      "records": "記錄",
+      "explore": "健康圖書館",
+      "nutrition": "營養"
+    },
+    "download": {
+      "title": "下載應用程式以存取",
+      "cta": "立即下載應用程式",
+      "chatDescription": "在 August app 中，與您的 AI 健康指南持續對話。",
+      "recordsDescription": "使用 August 行動應用程式：\n• 查看與管理您的紀錄\n• 分享給您的醫師\n• 獲得準確的健康洞察",
+      "exploreDescription": "August 為您精選個人化的健康文章、部落格及其他資訊。",
+      "nutritionDescription": "追蹤習慣。監測生命體徵。一站式查看您的進度。",
+      "chatTitle": "下載應用程式以存取",
+      "recordsTitle": "所有健康紀錄，一站式整合",
+      "exploreTitle": "精選健康文章與部落格",
+      "nutritionTitle": "追蹤重要事項，改進關鍵指標"
+    },
+    "downloadAppButton": "下載應用程式",
+    "tooltips": {
+      "chat": "與 August 聊天",
+      "records": "管理您的健康記錄",
+      "explore": "探索健康圖書館",
+      "nutrition": "管理飲食與營養",
+      "insurance": "檔案保險上訴",
+      "costEstimator": "尋找最低價的健康服務",
+      "billAnalyser": "檢視我的帳單",
+      "showFullMenu": "顯示完整選單",
+      "hideFullMenu": "隱藏完整選單",
+      "manageAccount": "管理帳戶設定"
+    },
+    "takeAugustWithYou": "將八月帶在身邊"
+  }
+}

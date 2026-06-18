@@ -1,0 +1,141 @@
+{
+  "common": {
+    "loadingChats": "Načítání vašich chatů...",
+    "refreshPage": "Obnovit stránku",
+    "signUp": "Registrovat se",
+    "openMenu": "Otevřít menu",
+    "menu": "Menu",
+    "downloadApp": "Stáhnout aplikaci",
+    "termsOfService": "Podmínky služby",
+    "privacyPolicy": "Zásady ochrany osobních údajů",
+    "loggingOut": "Odhlášení...",
+    "logout": "Odhlásit se",
+    "back": "Zpět",
+    "continue": "Pokračovat",
+    "edit": "Upravit",
+    "legalPrefix": "Pokračováním souhlasíte s našimi",
+    "and": "a",
+    "termsShort": "podmínky",
+    "privacyShort": "zásady ochrany osobních údajů",
+    "error": "Chyba",
+    "tryAgain": "Zkusit znovu",
+    "loginRequired": "Prosím, přihlaste se pro pokračování v chatu.",
+    "language": "Jazyk",
+    "languageEnglish": "Angličtina",
+    "languageFrench": "Francouzsky",
+    "changeLanguage": "Změnit jazyk",
+    "profile": "Profil",
+    "login": "Přihlásit se"
+  },
+  "chat": {
+    "initFailed": "Nepodařilo se inicializovat relaci. Obnovte stránku.",
+    "genericError": "Něco se pokazilo. Obnovte stránku.",
+    "emptyStateHeading": "Jak se cítíš?",
+    "processing": {
+      "reading": "Čtení vašeho dokumentu...",
+      "understanding": "Porozumění detailům...",
+      "summarising": "Shrnutí všeho..."
+    },
+    "scrollToBottom": "Přejít dolů",
+    "input": {
+      "placeholder": "Zeptejte se na cokoliv",
+      "disclaimer": "Srpen může udělat chyby. Poraďte se s lékařem",
+      "invalidFileType": "Prosím, vyberte platný obrázek (JPEG, PNG, GIF, WebP) nebo soubor PDF.",
+      "waitForUploads": "Prosím, počkejte na dokončení nahrávání souborů.",
+      "removeFailedUploads": "Některé soubory se nepodařilo nahrát. Odeberte je a zkuste to znovu.",
+      "uploadFailed": "Nahrání selhalo"
+    },
+    "attachments": {
+      "imageAlt": "Příloha",
+      "pdfDefault": "Dokument PDF",
+      "pdfCta": "Klikněte pro zobrazení",
+      "defaultCta": "Zobrazit přílohu",
+      "audioFallback": "Váš prohlížeč nepodporuje zvukový prvek."
+    }
+  },
+  "auth": {
+    "heroAlt": "Vyzkoušejte srpen, zdarma",
+    "welcomeAlt": "Vítejte zpět v srpnu",
+    "signup": {
+      "description": "Váš AI zdravotní společník, vytvořený lékaři. Získejte okamžité odpovědi, porozumějte laboratorním výsledkům a najděte jasnost.",
+      "trusted": "Důvěřuje nám 6 milionů uživatelů po celém světě.",
+      "memoryTransfer": "Přihlaste se pro import svých zdravotních vzpomínek",
+      "memoryTransferSuccess": "Aktualizoval jsem tvoji paměť. Co ses o mně právě dozvěděl?"
+    },
+    "welcome": {
+      "copy": "Vítejte zpět!\nPřihlaste se pro pokračování do srpna"
+    },
+    "continueWithPhone": "Pokračovat telefonem",
+    "phoneStep": {
+      "title": "Zadejte své telefonní číslo",
+      "subtitle": "Pošleme vám ověřovací kód",
+      "searchPlaceholder": "Vyhledat zemi...",
+      "phonePlaceholder": "Telefonní číslo"
+    },
+    "otpStep": {
+      "title": "Ověřte svůj telefon",
+      "subtitle": "Zadejte ověřovací kód odeslaný na",
+      "resendWithTimer": "Nepřijali jste kód? Znovu odeslat ({{seconds}})",
+      "resend": "Nepřišel vám kód? Znovu odeslat"
+    },
+    "errors": {
+      "enterPhone": "Zadejte prosím své telefonní číslo",
+      "sendOtp": "Nepodařilo se odeslat OTP. Zkuste to prosím znovu.",
+      "sendOtpInvalid": "Nepodařilo se odeslat OTP. Zkontrolujte prosím své telefonní číslo.",
+      "enterOtp": "Zadejte 6místný kód",
+      "invalidOtp": "Neplatný kód. Zkuste to znovu.",
+      "oauthGeneric": "Přihlášení selhalo. Zkuste to prosím znovu.",
+      "googleUserInfo": "Nepodařilo se získat informace o uživateli Google",
+      "googleCancelled": "Přihlášení přes Google bylo zrušeno nebo selhalo.",
+      "appleUnavailable": "Přihlášení přes Apple není k dispozici",
+      "appleUnavailableSdk": "Přihlášení přes Apple není k dispozici. SDK Apple JS se nenahrálo.",
+      "appleCredential": "Nepodařilo se získat pověření Apple",
+      "appleFailed": "Přihlášení přes Apple selhalo. Zkuste to prosím znovu."
+    },
+    "oauth": {
+      "google": "Pokračovat s Googlem",
+      "apple": "Pokračovat s Apple"
+    },
+    "tryOtherOptions": "Zkusit jiné možnosti"
+  },
+  "errorBoundary": {
+    "title": "Došlo k chybě",
+    "description": "Došlo k neočekávané chybě. Zkuste to prosím znovu.",
+    "tryAgain": "Zkusit znovu",
+    "refreshPage": "Obnovit stránku"
+  },
+  "sidebar": {
+    "tabs": {
+      "chat": "Chat",
+      "records": "Záznamy",
+      "explore": "Knihovna zdraví",
+      "nutrition": "Výživa"
+    },
+    "download": {
+      "title": "Stáhnout aplikaci pro přístup",
+      "cta": "Stáhnout aplikaci nyní",
+      "chatDescription": "Udržujte konverzaci se svým AI zdravotním průvodcem v aplikaci August.",
+      "recordsDescription": "S mobilní aplikací August:\n• Zobrazujte a spravujte své záznamy\n• Sdílejte s lékařem\n• Získejte přesné zdravotní poznatky",
+      "exploreDescription": "Srpen pro vás vybírá zdravotní články, blogy a další informace na míru.",
+      "nutritionDescription": "Sledujte návyky. Monitorujte životní funkce. Sledujte svůj pokrok – vše na jednom místě.",
+      "chatTitle": "Stáhnout aplikaci pro přístup",
+      "recordsTitle": "Všechny zdravotní záznamy na jednom místě",
+      "exploreTitle": "Kurátorované zdravotnické články a blogy",
+      "nutritionTitle": "Sledujte, na čem záleží, zlepšujte to, na čem záleží"
+    },
+    "downloadAppButton": "Stáhnout aplikaci",
+    "tooltips": {
+      "chat": "Chat s Augustem",
+      "records": "Spravujte své zdravotní záznamy",
+      "explore": "Prozkoumejte knihovnu zdraví",
+      "nutrition": "Spravovat stravu a výživu",
+      "insurance": "Podat odvolání proti zamítnutí pojistné události",
+      "costEstimator": "Najít nejnižší cenu za zdravotnické služby",
+      "billAnalyser": "Zkontrolovat můj účet",
+      "showFullMenu": "Zobrazit celé menu",
+      "hideFullMenu": "Skrýt celé menu",
+      "manageAccount": "Správa nastavení účtu"
+    },
+    "takeAugustWithYou": "Vezměte si srpen s sebou"
+  }
+}

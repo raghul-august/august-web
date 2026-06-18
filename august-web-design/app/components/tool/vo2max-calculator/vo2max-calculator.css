@@ -1,0 +1,188 @@
+/*
+ * VO2-max-only styles. Shared layout, form-grid, result panel, and table
+ * styles live in /app/styles/tool-calculator.css. Only the pieces unique to
+ * the VO2 max calculator stay here: the side-by-side card layout, the
+ * population "where you land" scale with norm band + marker, and the pace
+ * row.
+ */
+
+/* ── Card-level layout: form on top, results below (single column) ────── */
+
+.tool-calc-card.vo2-calculator-card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: stretch;
+  max-width: 640px;
+}
+
+.vo2-form-col,
+.vo2-result-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+
+/* ── Result tone pill ─────────────────────────────────────────────────── */
+
+.vo2-band-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  width: fit-content;
+}
+
+.vo2-band-pill--info {
+  background: var(--info-50);
+  color: var(--info-700);
+}
+
+.vo2-band-pill--success {
+  background: var(--success-50);
+  color: var(--success-700);
+}
+
+.vo2-band-pill--neutral {
+  background: var(--surface-subtle);
+  color: var(--text-secondary);
+}
+
+.vo2-band-pill--caution {
+  background: var(--warning-50);
+  color: var(--warning-700);
+}
+
+.vo2-band-pill--warning {
+  background: var(--danger-50);
+  color: var(--danger-700);
+}
+
+/* ── Where-you-land scale ─────────────────────────────────────────────── */
+
+.vo2-scale-card {
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.vo2-scale {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.vo2-scale-track {
+  position: relative;
+  height: 12px;
+  border-radius: 9999px;
+  background: linear-gradient(
+    90deg,
+    var(--danger) 0%,
+    var(--warning) 35%,
+    var(--success) 65%,
+    var(--info) 100%
+  );
+  margin: 20px 0 4px;
+}
+
+.vo2-scale-norm-band {
+  position: absolute;
+  top: -4px;
+  bottom: -4px;
+  border: 1.5px dashed rgba(28, 25, 23, 0.45);
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.12);
+  pointer-events: none;
+}
+
+.vo2-scale-marker {
+  position: absolute;
+  top: -14px;
+  bottom: -14px;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+}
+
+.vo2-scale-marker-pin {
+  width: 3px;
+  height: 32px;
+  background: var(--text-primary);
+  border-radius: 9999px;
+}
+
+.vo2-scale-marker-label {
+  position: absolute;
+  top: -18px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  background: var(--surface-elevated);
+  padding: 1px 6px;
+  border-radius: 4px;
+  border: 1px solid var(--border-subtle);
+  white-space: nowrap;
+}
+
+.vo2-scale-axis {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  color: var(--text-tertiary);
+  padding: 0 2px;
+}
+
+.vo2-scale-legend {
+  margin: 0;
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  line-height: 1.5;
+}
+
+/* ── Pace row (race-time method) ──────────────────────────────────────── */
+
+.vo2-pace-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.vo2-pace-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 12px;
+  background: var(--surface-subtle);
+  border-radius: 10px;
+}
+
+.vo2-pace-value {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.vo2-pace-unit {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+}
+
+/* ── Preview-mode dimming (when inputs are blank, sample shows) ───────── */
+
+.tool-calc-result-stack[data-preview="true"] {
+  opacity: 0.55;
+  pointer-events: none;
+  user-select: none;
+}

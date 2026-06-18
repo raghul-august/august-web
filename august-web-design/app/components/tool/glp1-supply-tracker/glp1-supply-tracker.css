@@ -1,0 +1,410 @@
+/* GLP-1 Match tool styles */
+
+.gm-filter-bar {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+  position: sticky;
+  top: 80px;
+  z-index: 40;
+  background: var(--surface-page);
+  padding: 16px 0 12px;
+}
+
+.gm-filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.gm-filter-group--price {
+  flex: 1;
+  min-width: 180px;
+  max-width: 260px;
+}
+
+.gm-filter-group-label {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--text-tertiary);
+}
+
+.gm-pill-select {
+  height: 40px;
+  padding: 0 32px 0 16px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: inherit;
+  background: var(--surface-elevated);
+  color: var(--text-primary);
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M3 4.5L6 7.5L9 4.5' fill='none' stroke='%23626a67' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  transition: border-color 0.2s;
+}
+
+.gm-pill-select:hover {
+  border-color: var(--border);
+}
+
+.gm-pill-select:focus {
+  border-color: var(--brand-primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(32,110,85,0.12);
+}
+
+/* Results status line */
+.gm-results-status {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.gm-results-count {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.gm-results-meta {
+  font-size: 0.8125rem;
+  color: var(--text-tertiary);
+}
+
+/* Clear filters */
+.gm-clear-btn {
+  margin-left: auto;
+  padding: 0;
+  border: none;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  font-family: inherit;
+  color: var(--text-brand);
+  background: transparent;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.15s;
+}
+
+.gm-clear-btn:hover {
+  color: var(--brand-primary-hover);
+}
+
+/* Price range */
+.gm-price-range {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 40px;
+}
+
+.gm-price-bound {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  min-width: 32px;
+  white-space: nowrap;
+}
+
+.gm-price-slider-wrap {
+  position: relative;
+  flex: 1;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  min-width: 80px;
+}
+
+.gm-price-track-bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--border-subtle);
+  border-radius: 9999px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.gm-price-track-fill {
+  position: absolute;
+  height: 3px;
+  background: var(--brand-primary);
+  border-radius: 9999px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.gm-price-thumb {
+  position: absolute;
+  width: 100%;
+  height: 28px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  pointer-events: none;
+  margin: 0;
+}
+
+.gm-price-thumb::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--brand-primary);
+  border: 2px solid #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.gm-price-thumb::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--brand-primary);
+  border: 2px solid #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+/* Medication toggle */
+.gm-med-toggle {
+  display: inline-flex;
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--surface-elevated);
+}
+
+.gm-med-toggle button {
+  padding: 0 16px;
+  height: 40px;
+  border: none;
+  border-radius: 0;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  cursor: pointer;
+  background: transparent;
+  color: var(--text-secondary);
+  transition: background 0.2s, color 0.2s;
+  position: relative;
+}
+
+.gm-med-toggle button + button {
+  border-left: 1px solid var(--border-subtle);
+}
+
+.gm-med-toggle button:hover:not([aria-checked="true"]) {
+  background: var(--surface-subtle);
+}
+
+.gm-med-toggle button[aria-checked="true"] {
+  background: var(--brand-subtle);
+  color: var(--brand-primary);
+  font-weight: 400;
+}
+
+.gm-med-toggle button:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 2px;
+}
+
+/* Results grid */
+.gm-results-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.gm-provider-card {
+  animation: toolFadeIn 0.3s ease-out;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.gm-top-pick {
+  border-left: 3px solid var(--brand-primary);
+}
+
+.gm-top-pick-label {
+  position: absolute;
+  top: -1px;
+  right: 16px;
+  background: var(--brand-primary);
+  color: var(--text-inverse, #fff);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  padding: 4px 12px;
+  border-radius: 0 0 8px 8px;
+}
+
+.gm-lowest-price {
+  font-size: 0.9375rem;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.gm-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.gm-provider-name {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.gm-badge-text {
+  font-size: 0.75rem;
+  color: var(--text-brand);
+  background: var(--brand-subtle);
+  padding: 2px 10px;
+  border-radius: 9999px;
+  font-weight: 500;
+}
+
+.gm-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.gm-card-pricing {
+  min-width: 0;
+}
+
+.gm-pricing-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px;
+}
+
+.gm-dose-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: var(--surface-subtle);
+  border-radius: 8px;
+  font-size: 0.875rem;
+}
+
+.gm-dose-label {
+  color: var(--text-secondary);
+}
+
+.gm-dose-price {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.gm-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: auto;
+}
+
+.gm-empty-state {
+  text-align: center;
+  padding: 48px 24px;
+  color: var(--text-secondary);
+}
+
+.gm-no-pricing {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  margin: 0 0 16px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .gm-results-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .gm-filter-bar {
+    top: 72px;
+    gap: 12px;
+  }
+
+  .gm-filter-group--price {
+    max-width: 100%;
+    flex-basis: 100%;
+  }
+
+  .gm-results-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gm-card-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .gm-card-actions .tool-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Selection card (phase 1) */
+.gm-select-card {
+  padding: 40px 32px;
+  animation: toolFadeIn 0.3s ease-out;
+}
+
+.gm-select-heading {
+  font-size: 1.375rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 0 0 8px;
+}
+
+.gm-select-subtitle {
+  font-size: 0.9375rem;
+  color: var(--text-secondary);
+  margin: 0 0 28px;
+  line-height: 1.5;
+}
+
+.gm-select-step {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.gm-select-step .gm-state-select {
+  align-self: stretch;
+}
+
+.gm-submit-btn {
+  margin-top: 8px;
+  border-radius: 12px;
+}

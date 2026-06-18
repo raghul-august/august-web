@@ -1,0 +1,16 @@
+.quiz-question-enter {
+  --tool-fade-y: 20px;
+  animation: toolFadeIn 0.5s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+.quiz-row-border {
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.quiz-row-border:first-child {
+  border-top: 1px solid transparent;
+  padding-top: 0;
+  padding-bottom: 0;
+}

@@ -1,0 +1,486 @@
+/* ══════════════════════════════════════
+   Nature Medicine Benchmark Article
+   Light-mode only, scoped styles
+   ══════════════════════════════════════ */
+
+.benchmark-nature-medicine {
+  --bnm-ink: #1a1a2e;
+  --bnm-ink-light: #3d3d56;
+  --bnm-ink-muted: #555566;
+  --bnm-surface: #fafaf8;
+  --bnm-surface-warm: #f5f3ef;
+  --bnm-surface-card: #ffffff;
+  --bnm-accent: #0a5c42;
+  --bnm-accent-light: #e8f5ef;
+  --bnm-danger: #b5332a;
+  --bnm-danger-light: #fdf0ef;
+  --bnm-blue: #2e5ea3;
+  --bnm-blue-light: #eef3fa;
+  --bnm-border: #e5e3de;
+  --bnm-shadow: rgba(0, 0, 0, 0.06);
+  --bnm-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --bnm-mono: 'JetBrains Mono', monospace;
+  --bnm-body-size: 19px;
+  --bnm-body-lh: 1.8;
+  --bnm-h1-size: clamp(32px, 5vw, 48px);
+  --bnm-subtitle-size: 21px;
+
+  font-family: var(--bnm-sans);
+  background: var(--bnm-surface);
+  color: var(--bnm-ink);
+  -webkit-font-smoothing: antialiased;
+  line-height: var(--bnm-body-lh);
+}
+
+/* ── Hero ── */
+.benchmark-nature-medicine .hero {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 128px clamp(20px, 5vw, 40px) clamp(32px, 5vw, 40px);
+}
+.benchmark-nature-medicine .hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--bnm-mono);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--bnm-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 24px;
+  padding: 6px 14px;
+  background: var(--bnm-accent-light);
+  border-radius: 4px;
+}
+.benchmark-nature-medicine .hero-tag::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--bnm-accent);
+  border-radius: 50%;
+}
+.benchmark-nature-medicine .hero h1 {
+  font-family: var(--bnm-sans);
+  font-size: var(--bnm-h1-size);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  color: var(--bnm-ink);
+  margin-bottom: 24px;
+}
+.benchmark-nature-medicine .hero-subtitle {
+  font-family: var(--bnm-sans);
+  font-size: var(--bnm-subtitle-size);
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--bnm-ink-light);
+  margin-bottom: 32px;
+}
+.benchmark-nature-medicine .hero-meta {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 14px;
+  color: var(--bnm-ink-muted);
+  padding-top: 24px;
+  border-top: 1px solid var(--bnm-border);
+  flex-wrap: wrap;
+}
+.benchmark-nature-medicine .hero-meta .author {
+  font-weight: 600;
+  color: var(--bnm-ink);
+}
+.benchmark-nature-medicine .hero-meta .separator {
+  width: 3px;
+  height: 3px;
+  background: var(--bnm-ink-muted);
+  border-radius: 50%;
+}
+
+/* ── Article body ── */
+.benchmark-nature-medicine .article {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 5vw, 40px) clamp(60px, 8vw, 80px);
+}
+.benchmark-nature-medicine .article p {
+  font-family: var(--bnm-sans);
+  font-size: var(--bnm-body-size);
+  line-height: var(--bnm-body-lh);
+  color: var(--bnm-ink-light);
+  margin-bottom: 28px;
+  max-width: 65ch;
+}
+.benchmark-nature-medicine .article p strong {
+  color: var(--bnm-ink);
+  font-weight: 600;
+}
+.benchmark-nature-medicine .article h2 {
+  font-family: var(--bnm-sans);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--bnm-ink-muted);
+  margin-top: 56px;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--bnm-border);
+}
+.benchmark-nature-medicine .article a {
+  color: var(--bnm-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(13, 110, 79, 0.3);
+  transition: text-decoration-color 0.2s;
+}
+.benchmark-nature-medicine .article a:hover {
+  text-decoration-color: var(--bnm-accent);
+}
+
+/* ── Stat callout ── */
+.benchmark-nature-medicine .stat-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 48px 0;
+}
+.benchmark-nature-medicine .stat-card {
+  padding: clamp(24px, 4vw, 32px);
+  border-radius: 12px;
+  border: 1px solid var(--bnm-border);
+  text-align: center;
+}
+.benchmark-nature-medicine .stat-card.success {
+  background: var(--bnm-accent-light);
+  border-color: rgba(13, 110, 79, 0.15);
+}
+.benchmark-nature-medicine .stat-card.danger {
+  background: var(--bnm-danger-light);
+  border-color: rgba(192, 57, 43, 0.12);
+}
+.benchmark-nature-medicine .stat-card .stat-label {
+  font-family: var(--bnm-mono);
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 8px;
+}
+.benchmark-nature-medicine .stat-card.success .stat-label {
+  color: var(--bnm-accent);
+}
+.benchmark-nature-medicine .stat-card.danger .stat-label {
+  color: var(--bnm-danger);
+}
+.benchmark-nature-medicine .stat-card .stat-number {
+  font-family: var(--bnm-sans);
+  font-size: clamp(40px, 8vw, 56px);
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.benchmark-nature-medicine .stat-card.success .stat-number {
+  color: var(--bnm-accent);
+}
+.benchmark-nature-medicine .stat-card.danger .stat-number {
+  color: var(--bnm-danger);
+}
+.benchmark-nature-medicine .stat-card .stat-detail {
+  font-size: 14px;
+  color: var(--bnm-ink-muted);
+  line-height: 1.5;
+}
+
+/* ── Image figure ── */
+.benchmark-nature-medicine .figure {
+  margin: 48px calc(-1 * clamp(0px, 3vw, 60px));
+  position: relative;
+}
+.benchmark-nature-medicine .figure img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--bnm-border);
+  box-shadow: 0 4px 24px var(--bnm-shadow);
+}
+.benchmark-nature-medicine .figure figcaption {
+  font-size: 13px;
+  color: var(--bnm-ink-muted);
+  text-align: center;
+  margin-top: 14px;
+  line-height: 1.6;
+  font-style: italic;
+  padding: 0 clamp(0px, 3vw, 60px);
+}
+.benchmark-nature-medicine .figure figcaption a {
+  color: var(--bnm-ink-muted);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* ── Pullquote ── */
+.benchmark-nature-medicine .pullquote {
+  margin: 48px 0;
+  padding: clamp(24px, 4vw, 32px) clamp(24px, 4vw, 36px);
+  border-left: 3px solid var(--bnm-accent);
+  background: var(--bnm-accent-light);
+  border-radius: 0 8px 8px 0;
+}
+.benchmark-nature-medicine .pullquote p {
+  font-family: var(--bnm-sans);
+  font-size: clamp(17px, 2.5vw, 20px);
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--bnm-ink);
+  margin-bottom: 0;
+  max-width: none;
+}
+
+/* ── Key findings box ── */
+.benchmark-nature-medicine .findings-box {
+  margin: 48px 0;
+  padding: clamp(24px, 4vw, 36px);
+  background: var(--bnm-surface-card);
+  border: 1px solid var(--bnm-border);
+  border-radius: 12px;
+}
+.benchmark-nature-medicine .findings-box h3 {
+  font-family: var(--bnm-sans);
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--bnm-ink-muted);
+  margin-bottom: 20px;
+}
+.benchmark-nature-medicine .finding-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+.benchmark-nature-medicine .finding-item:last-child {
+  margin-bottom: 0;
+}
+.benchmark-nature-medicine .finding-icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  margin-top: 2px;
+}
+.benchmark-nature-medicine .finding-icon.check {
+  background: var(--bnm-accent-light);
+  color: var(--bnm-accent);
+}
+.benchmark-nature-medicine .finding-icon.cross {
+  background: var(--bnm-danger-light);
+  color: var(--bnm-danger);
+}
+.benchmark-nature-medicine .finding-text {
+  font-family: var(--bnm-sans);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--bnm-ink-light);
+}
+.benchmark-nature-medicine .finding-text strong {
+  color: var(--bnm-ink);
+}
+
+/* ── Methodology note ── */
+.benchmark-nature-medicine .methodology-note {
+  margin: 48px 0;
+  padding: clamp(22px, 4vw, 28px) clamp(24px, 4vw, 32px);
+  background: var(--bnm-blue-light);
+  border: 1px solid rgba(46, 94, 163, 0.1);
+  border-radius: 8px;
+}
+.benchmark-nature-medicine .methodology-note h3 {
+  font-family: var(--bnm-sans);
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--bnm-blue);
+  margin-bottom: 12px;
+}
+.benchmark-nature-medicine .methodology-note p {
+  font-family: var(--bnm-sans);
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--bnm-ink-light);
+  margin-bottom: 0;
+  max-width: none;
+}
+
+/* ── References ── */
+.benchmark-nature-medicine .references {
+  margin-top: 56px;
+  padding-top: 32px;
+  border-top: 1px solid var(--bnm-border);
+}
+.benchmark-nature-medicine .references h2 {
+  font-family: var(--bnm-sans);
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--bnm-ink-muted);
+  margin-top: 0;
+  margin-bottom: 16px;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.benchmark-nature-medicine .references p {
+  font-family: var(--bnm-mono);
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--bnm-ink-muted);
+  word-break: break-word;
+}
+
+/* ── Fade-in animation ── */
+.benchmark-nature-medicine .fade-in {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: bnmFadeUp 0.6s ease forwards;
+}
+.benchmark-nature-medicine .fade-in:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.benchmark-nature-medicine .fade-in:nth-child(3) {
+  animation-delay: 0.2s;
+}
+@keyframes bnmFadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  .benchmark-nature-medicine .fade-in {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
+
+/* ── Mobile (<=600px) ── */
+@media (max-width: 600px) {
+  .benchmark-nature-medicine .stat-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .benchmark-nature-medicine .hero-meta .separator {
+    display: none;
+  }
+  .benchmark-nature-medicine .hero-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  .benchmark-nature-medicine .figure {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .benchmark-nature-medicine .figure img {
+    border-radius: 8px;
+  }
+}
+
+/* ── Tablet (601-1024px) ── */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .benchmark-nature-medicine .figure {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* ── Desktop readability (1025px+) ── */
+@media (min-width: 1025px) {
+  .benchmark-nature-medicine .article p {
+    max-width: 62ch;
+  }
+  .benchmark-nature-medicine .finding-text,
+  .benchmark-nature-medicine .methodology-note p {
+    max-width: 62ch;
+  }
+}
+
+/* ── AIChatWidget overrides (hide built-in heading, reduce top padding) ── */
+.bnm-chat-widget .MuiContainer-root > div:first-child,
+.bnm-chat-widget .MuiContainer-root > p:first-of-type {
+  display: none;
+}
+.bnm-chat-widget > .MuiBox-root {
+  padding-top: 0 !important;
+}
+
+/* ── Image zoom modal ── */
+.bnm-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: bnmFadeIn 0.2s ease;
+}
+@keyframes bnmFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.bnm-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  z-index: 1;
+}
+.bnm-modal-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+.bnm-modal-img-wrap {
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bnm-modal-img {
+  max-width: 100%;
+  max-height: 85vh;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  transform-origin: center center;
+  user-select: none;
+}
+
+/* ── Focus states ── */
+.benchmark-nature-medicine a:focus-visible {
+  outline: 2px solid var(--bnm-accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}

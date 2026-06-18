@@ -1,0 +1,22 @@
+# https://www.meetaugust.ai
+
+User-agent: *
+Allow: /
+
+# Old URL patterns that now redirect — don't waste crawl budget
+Disallow: /*/library/symptoms
+Disallow: /*/library/medications
+Disallow: /*/library/diseases-conditions
+Disallow: /*/library/tests-procedures
+Disallow: /*/library/blog
+Disallow: /*/library/author
+Disallow: /*/library/search
+Disallow: /*/view/
+
+# Internal API routes
+Disallow: /api/
+
+# Next.js internals
+Disallow: /_next/
+
+Sitemap: https://www.meetaugust.ai/sitemap.xml

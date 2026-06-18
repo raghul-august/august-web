@@ -1,0 +1,283 @@
+{
+  "common": {
+    "profile": "Profile",
+    "augustLogo": "August logo",
+    "loadingChats": "Loading...",
+    "refreshPage": "Refresh page",
+    "signUp": "Sign Up",
+    "openMenu": "Open menu",
+    "menu": "Menu",
+    "downloadApp": "Download App",
+    "termsOfService": "Terms of Service",
+    "privacyPolicy": "Privacy Policy",
+    "loggingOut": "Logging out...",
+    "logout": "Logout",
+    "login": "Log in",
+    "or": "OR",
+    "back": "Back",
+    "continue": "Continue",
+    "edit": "Edit",
+    "legalPrefix": "By continuing you agree to our",
+    "and": "and",
+    "termsShort": "terms",
+    "privacyShort": "privacy policy",
+    "error": "Error",
+    "tryAgain": "Try Again",
+    "loginRequired": "Please log in to continue chatting.",
+    "language": "Language",
+    "languageEnglish": "English",
+    "languageFrench": "French",
+    "languageArabic": "Arabic",
+    "languageBengali": "Bengali",
+    "languageCzech": "Czech",
+    "languageGerman": "German",
+    "languageGreek": "Greek",
+    "languageSpanish": "Spanish",
+    "languageFilipino": "Filipino",
+    "languageGujarati": "Gujarati",
+    "languageHebrew": "Hebrew",
+    "languageHindi": "Hindi",
+    "languageHungarian": "Hungarian",
+    "languageIndonesian": "Indonesian",
+    "languageItalian": "Italian",
+    "languageJapanese": "Japanese",
+    "languageKannada": "Kannada",
+    "languageKorean": "Korean",
+    "languageMarathi": "Marathi",
+    "languageMalay": "Malay",
+    "languageDutch": "Dutch",
+    "languagePunjabi": "Punjabi",
+    "languagePolish": "Polish",
+    "languagePortugueseBrazil": "Brazilian Portuguese",
+    "languagePortuguesePortugal": "European Portuguese",
+    "languageRomanian": "Romanian",
+    "languageRussian": "Russian",
+    "languageSwedish": "Swedish",
+    "languageTamil": "Tamil",
+    "languageTelugu": "Telugu",
+    "languageThai": "Thai",
+    "languageTurkish": "Turkish",
+    "languageUkrainian": "Ukrainian",
+    "languageUrdu": "Urdu",
+    "languageVietnamese": "Vietnamese",
+    "languageChineseSimplified": "Simplified Chinese",
+    "languageChineseTraditional": "Traditional Chinese",
+    "changeLanguage": "Change language"
+  },
+  "sidebar": {
+    "tabs": {
+      "chat": "Chat with august",
+      "explore": "Health Library",
+      "nutrition": "Track Nutrition"
+         },
+    "tooltips": {
+      "chat": "Chat with August",
+      "records": "Manage your health records",
+      "explore": "Explore Health Library",
+      "nutrition": "Manage diet & nutrition",
+      "insurance": "File insurance appeal",
+      "consults": "Start your telehealth consult", 
+      "costEstimator": "Find lowest price for health services",
+      "billAnalyser": "Review My Bill",
+      "showFullMenu": "Show full menu",
+      "hideFullMenu": "Hide full menu",
+      "manageAccount": "Manage account settings"
+    },
+    "takeAugustWithYou": "Take August with you",
+    "download": {
+      "chatTitle": "Download app to access",
+      "recordsTitle": "All Health Records in one place",
+      "exploreTitle": "Curated Health Articles, and Blogs",
+      "nutritionTitle": "Track what matters, improve what counts",
+      "chatDescription": "Keep the conversation going with your AI health guide in the August app.",
+      "recordsDescription": "With August Mobile App:\n• View and manage your records\n• Share with your physician\n• Get accurate health insights",
+      "exploreDescription": "August curates health articles, blogs and other info personalized for you.",
+      "nutritionDescription": "Track habits. Monitor vitals. See your progress - all in one place.",
+      "insuranceDescription": "Manage your insurance and appeals in the August app.",
+      "cta": "Download App Now"
+    },
+    "downloadAppButton": "Download App"
+  },
+  "chat": {
+    "initFailed": "Failed to initialize session. Please refresh the page.",
+    "genericError": "Something went wrong. Please refresh the page.",
+    "verificationFailed": "Verification failed. If this keeps happening, try clearing your cookies or switching browsers.",
+    "timeout": "Connection timed out. Please check your internet and try again.",
+    "connectionError": {
+      "title": "Having difficulty connecting",
+      "subtitle": "Please check your connection and try again",
+      "retry": "Retry"
+    },
+    "emptyStateHeading": "How are you feeling?",
+    "processing": {
+      "reading": "Reading your document...",
+      "understanding": "Understanding the details...",
+      "summarising": "Summarising everything..."
+    },
+    "scrollToBottom": "Scroll to bottom",
+    "input": {
+      "placeholder": "Ask anything",
+      "disclaimer": "August may make mistakes. Confirm with a doctor",
+      "invalidFileType": "Please select a valid image (JPEG, PNG, GIF, WebP) or PDF file.",
+      "waitForUploads": "Please wait for files to finish uploading.",
+      "removeFailedUploads": "Some files failed to upload. Please remove them and try again.",
+      "uploadFailed": "Upload failed",
+      "attachTooltip": "Attach health records with your message",
+      "sendTooltip": "Ask August",
+      "voiceTooltip": "Send Voice Note to August"
+    },
+    "attachments": {
+      "imageAlt": "Attachment",
+      "pdfDefault": "PDF Document",
+      "pdfCta": "Click to view",
+      "defaultCta": "View attachment",
+      "audioFallback": "Your browser does not support the audio element."
+    },
+    "incognito": {
+      "title": "Incognito chats",
+      "mode": "Incognito Mode",
+      "description": "This conversation won't appear in your chat history and won't update my memory. Everything disappears when you close this session.",
+      "sessionExpiredTitle": "Session Expired",
+      "sessionExpiredDescription": "Your incognito session has expired. Please start a new session to continue chatting in incognito mode.",
+      "exitConfirmTitle": "Exit Incognito",
+      "exitConfirmDescription": "Are you sure you want to exit?",
+      "exitConfirmButton": "Exit"
+    },
+    "feedback": {
+      "copy": "Copy",
+      "copied": "Copied!",
+      "copyMessage": "Copy message",
+      "share": "Share",
+      "shareConversation": "Share conversation",
+      "helpfulAnswer": "Helpful Answer",
+      "notHelpful": "Not helpful",
+      "readAloud": "Read aloud",
+      "stopReading": "Stop reading",
+      "stop": "Stop"
+    }
+  },
+  "navbar": {
+    "incognitoMode": "Incognito mode",
+    "exitIncognito": "Exit incognito",
+    "textSize": "Text size",
+    "enableIncognito": "Enable off-the-record mode",
+    "adjustTextSize": "Adjust text size"
+  },
+  "auth": {
+    "heroAlt": "Try August, free",
+    "welcomeAlt": "Welcome back to August",
+    "signup": {
+      "description": "Your AI health companion, built by doctors. Get instant answers, understand lab reports, and find clarity.",
+      "memoryTransfer": "Log in to import your health memories",
+      "memoryTransferSuccess": "I updated your memory. What did you just learn about me?",
+      "trusted": "Trusted by 6 Million users."
+    },
+    "welcome": {
+      "copy": "Welcome back!\nSign in to continue to August"
+    },
+    "continueWithPhone": "Continue with Phone",
+    "continueWithEmail": "Continue with Email",
+    "phone": "Phone",
+    "email": "Email",
+    "phoneStep": {
+      "title": "Enter your phone number",
+      "subtitle": "We'll send you a verification code",
+      "searchPlaceholder": "Search country...",
+      "phonePlaceholder": "Phone number"
+    },
+    "emailStep": {
+      "title": "Enter your email",
+      "subtitle": "We'll send you a verification code",
+      "emailPlaceholder": "Email address"
+    },
+    "otpStep": {
+      "title": "Verify your identity",
+      "subtitle": "Enter the verification code sent to",
+      "subtitleEmail": "Enter the verification code sent to",
+      "resendWithTimer": "Didn't receive a code? Resend ({{seconds}})",
+      "resend": "Didn't receive a code? Resend"
+    },
+    "tryOtherOptions": "Try other options",
+    "errors": {
+      "enterPhone": "Please enter your phone number",
+      "enterEmail": "Please enter your email address",
+      "invalidEmail": "Please enter a valid email address",
+      "sendOtp": "Failed to send OTP. Please try again.",
+      "sendOtpInvalid": "Failed to send OTP. Please check your phone number.",
+      "enterOtp": "Please enter the 6-digit code",
+      "invalidOtp": "Invalid code. Please try again.",
+      "oauthGeneric": "Sign in failed. Please try again.",
+      "googleUserInfo": "Failed to get Google user info",
+      "googleCancelled": "Google sign in was cancelled or failed.",
+      "appleUnavailable": "Apple Sign In is not available",
+      "appleUnavailableSdk": "Apple Sign In is not available. Apple JS SDK not loaded.",
+      "appleCredential": "Failed to get Apple credential",
+      "appleFailed": "Apple sign in failed. Please try again."
+    },
+    "oauth": {
+      "google": "Continue with Google",
+      "apple": "Continue with Apple"
+    }
+  },
+  "errorBoundary": {
+    "title": "Something went wrong",
+    "description": "We encountered an unexpected error. Please try again.",
+    "tryAgain": "Try Again",
+    "refreshPage": "Refresh Page"
+  },
+  "account": {
+    "title": "Account",
+    "editProfile": "Edit profile",
+    "updateProfile": "Update profile",
+    "section": {
+      "account": "ACCOUNT",
+      "otherInfo": "Other Information"
+    },
+    "changeLanguagePreference": "Change language preference",
+    "PrivacyOptions": "Privacy Options",
+    "shareTheGoodness": "Share the goodness",
+    "aboutAugust": "About August",
+    "termsOfService": "Terms of Service",
+    "logMeOut": "Log me out",
+    "appLanguage": "App language",
+    "shareApp": "Share the app",
+    "aboutUs": "About Us",
+    "accountPrivacy": "Account privacy",
+    "logout": "Logout",
+    "logoutConfirm": {
+      "title": "Logout",
+      "message": "Are you sure you want to logout?",
+      "cancel": "Cancel",
+      "confirm": "Logout"
+    },
+    "editProfileModal": {
+      "title": "Edit profile",
+      "name": "Name",
+      "namePlaceholder": "Enter your name",
+      "email": "Email",
+      "emailPlaceholder": "Enter your email",
+      "phone": "Phone",
+      "phonePlaceholder": "Phone number",
+      "save": "Save Profile",
+      "cancel": "Cancel",
+      "saving": "Saving...",
+      "saveSuccess": "Profile updated successfully",
+      "saveError": "Failed to update profile"
+    }
+  },
+  "share": {
+    "sheetTitle": "Shared Message",
+    "defaultAuthor": "August User",
+    "followUpQuestion": "Have a follow up question?",
+    "talkToAugust": "Talk To August",
+    "loading": "Loading shared message...",
+    "errorTitle": "Unable to load shared message",
+    "errorDescription": "This link may have expired or is invalid.",
+    "goToAugust": "Go to August",
+    "cta": {
+      "imageAlt": "Ask your own health questions",
+      "signUp": "Sign up",
+      "downloadApp": "Download App"
+    }
+  }
+}

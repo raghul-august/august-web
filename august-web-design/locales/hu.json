@@ -1,0 +1,141 @@
+{
+  "common": {
+    "loadingChats": "Csevegéseinek betöltése...",
+    "refreshPage": "Oldal frissítése",
+    "signUp": "Regisztráció",
+    "openMenu": "Menü megnyitása",
+    "menu": "Menü",
+    "downloadApp": "App letöltése",
+    "termsOfService": "Szolgáltatási feltételek",
+    "privacyPolicy": "Adatvédelmi irányelvek",
+    "loggingOut": "Kijelentkezés...",
+    "logout": "Kijelentkezés",
+    "back": "Vissza",
+    "continue": "Folytatás",
+    "edit": "Szerkesztés",
+    "legalPrefix": "Folytatással elfogadja a",
+    "and": "és",
+    "termsShort": "feltételek",
+    "privacyShort": "adatvédelmi irányelvek",
+    "error": "Hiba",
+    "tryAgain": "Újrapróbálkozás",
+    "loginRequired": "Jelentkezzen be a csevegés folytatásához.",
+    "language": "Nyelv",
+    "languageEnglish": "Angol",
+    "languageFrench": "Francia",
+    "changeLanguage": "Nyelv váltása",
+    "profile": "Profil",
+    "login": "Bejelentkezés"
+  },
+  "chat": {
+    "initFailed": "A munkamenet inicializálása sikertelen. Kérjük, frissítse az oldalt.",
+    "genericError": "Valami hiba történt. Kérjük, frissítse az oldalt.",
+    "emptyStateHeading": "Hogy érzed magad?",
+    "processing": {
+      "reading": "Dokumentumát olvassa...",
+      "understanding": "A részletek megértése...",
+      "summarising": "Összefoglalva mindent..."
+    },
+    "scrollToBottom": "Görgessen le",
+    "input": {
+      "placeholder": "Kérdezz bármit",
+      "disclaimer": "Augusztus hibázhat. Konzultáljon orvosával",
+      "invalidFileType": "Kérjük, válasszon ki egy érvényes kép (JPEG, PNG, GIF, WebP) vagy PDF fájlt.",
+      "waitForUploads": "Kérjük, várja meg, amíg a fájlok feltöltése befejeződik.",
+      "removeFailedUploads": "Néhány fájl feltöltése sikertelen volt. Kérjük, távolítsa el őket, és próbálja meg újra.",
+      "uploadFailed": "Feltöltés sikertelen"
+    },
+    "attachments": {
+      "imageAlt": "Csatolmány",
+      "pdfDefault": "PDF dokumentum",
+      "pdfCta": "Kattintson a megtekintéshez",
+      "defaultCta": "Melléklet megtekintése",
+      "audioFallback": "A böngészője nem támogatja a hang elemet."
+    }
+  },
+  "auth": {
+    "heroAlt": "Próbáld meg augusztusban, ingyen",
+    "welcomeAlt": "Üdv újra augusztusban",
+    "signup": {
+      "description": "Az Ön AI egészségügyi társa, orvosok által építve. Azonnali válaszokat kaphat, megértheti a leleteket, és tisztán láthat.",
+      "trusted": "6 millió felhasználó bízik bennünk világszerte.",
+      "memoryTransfer": "Jelentkezzen be egészségügyi emlékei importálásához",
+      "memoryTransferSuccess": "Frissítettem az emlékezetedet. Mit tanultál éppen rólam?"
+    },
+    "welcome": {
+      "copy": "Üdvözöljük újra!\nJelentkezzen be a folytatáshoz az Augusztusban"
+    },
+    "continueWithPhone": "Folytatás telefonnal",
+    "phoneStep": {
+      "title": "Adja meg a telefonszámát",
+      "subtitle": "Elküldünk egy ellenőrző kódot",
+      "searchPlaceholder": "Ország keresése...",
+      "phonePlaceholder": "Telefonszám"
+    },
+    "otpStep": {
+      "title": "Telefonszám megerősítése",
+      "subtitle": "Írja be az ellenőrző kódot, amelyet a következő címre küldtünk:",
+      "resendWithTimer": "Nem kapta meg a kódot? Újraküldés ({{seconds}})",
+      "resend": "Nem kapta meg a kódot? Újraküldés"
+    },
+    "errors": {
+      "enterPhone": "Kérjük, adja meg a telefonszámát",
+      "sendOtp": "Nem sikerült elküldeni az OTP-t. Kérjük, próbálja újra.",
+      "sendOtpInvalid": "Nem sikerült elküldeni az OTP-t. Kérjük, ellenőrizze telefonszámát.",
+      "enterOtp": "Kérjük, adja meg a 6 számjegyű kódot",
+      "invalidOtp": "Érvénytelen kód. Kérjük, próbálja újra.",
+      "oauthGeneric": "Sikertelen bejelentkezés. Kérjük, próbálja újra.",
+      "googleUserInfo": "Nem sikerült lekérni a Google felhasználói adatait",
+      "googleCancelled": "A Google bejelentkezés megszakadt vagy sikertelen volt.",
+      "appleUnavailable": "Az Apple bejelentkezés nem érhető el",
+      "appleUnavailableSdk": "Az Apple bejelentkezés nem érhető el. Az Apple JS SDK nincs betöltve.",
+      "appleCredential": "Nem sikerült lekérni az Apple hitelesítő adatait",
+      "appleFailed": "Az Apple bejelentkezés sikertelen. Kérjük, próbálja újra."
+    },
+    "oauth": {
+      "google": "Folytatás a Google-lal",
+      "apple": "Folytatás Apple-lel"
+    },
+    "tryOtherOptions": "Próbáljon ki más lehetőségeket"
+  },
+  "errorBoundary": {
+    "title": "Valami hiba történt",
+    "description": "Váratlan hiba történt. Kérjük, próbálja meg újra.",
+    "tryAgain": "Újrapróbálkozás",
+    "refreshPage": "Oldal frissítése"
+  },
+  "sidebar": {
+    "tabs": {
+      "chat": "Csevegés",
+      "records": "Rekordok",
+      "explore": "Egészségügyi Könyvtár",
+      "nutrition": "Táplálkozás"
+    },
+    "download": {
+      "title": "Letöltés applikációhoz való hozzáféréshez",
+      "cta": "Töltse le az alkalmazást most",
+      "chatDescription": "Folytasd a beszélgetést AI egészségügyi útmutatóddal az August alkalmazásban.",
+      "recordsDescription": "August mobilalkalmazással:\n• Megtekintheti és kezelheti adatait\n• Megoszthatja orvosával\n• Pontos egészségügyi betekintést kaphat",
+      "exploreDescription": "Augusztus személyre szabott egészségügyi cikkeket, blogokat és egyéb információkat válogat össze neked.",
+      "nutritionDescription": "Szokások követése. Életfunkciók figyelése. Haladásod megtekintése – mindez egy helyen.",
+      "chatTitle": "Letöltés applikációhoz való hozzáféréshez",
+      "recordsTitle": "Minden egészségügyi dokumentum egy helyen",
+      "exploreTitle": "Válogatott egészségügyi cikkek és blogok",
+      "nutritionTitle": "Ami számít, azt kövesd, ami számít, azt fejleszd"
+    },
+    "downloadAppButton": "App letöltése",
+    "tooltips": {
+      "chat": "Csevegés Augusttal",
+      "records": "Egészségügyi nyilvántartásai kezelése",
+      "explore": "Egészségügyi Könyvtár felfedezése",
+      "nutrition": "Étrend és táplálkozás kezelése",
+      "insurance": "Fájl biztosítási fellebbezés",
+      "costEstimator": "Egészségügyi szolgáltatások legolcsóbb árainak megtalálása",
+      "billAnalyser": "Számlám áttekintése",
+      "showFullMenu": "Teljes menü megjelenítése",
+      "hideFullMenu": "Teljes menü elrejtése",
+      "manageAccount": "Fiókbeállítások kezelése"
+    },
+    "takeAugustWithYou": "Vidd magaddal augusztust"
+  }
+}

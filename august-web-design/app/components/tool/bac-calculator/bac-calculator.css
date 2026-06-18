@@ -1,0 +1,216 @@
+.bac-section-label {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: 0.04em;
+}
+
+.bac-result-stack .tool-table-card {
+  background: var(--surface-elevated);
+  border: 1px solid var(--border);
+  padding: 20px 22px;
+}
+
+/* ── Drinks step ─────────────────────────────────────────────────────── */
+
+.bac-drinks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bac-drink-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  background: var(--surface-elevated);
+}
+
+.bac-drink-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  grid-column: 1 / -1;
+}
+
+.bac-drink-label {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.bac-drink-title {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.bac-drink-helper {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+}
+
+.bac-drink-remove {
+  border: none;
+  background: transparent;
+  color: var(--text-tertiary);
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.8125rem;
+  transition: color 0.15s, background 0.15s;
+}
+
+.bac-drink-remove:hover {
+  color: var(--text-primary);
+  background: var(--surface-subtle);
+}
+
+.bac-drink-fields {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  grid-column: 1 / -1;
+}
+
+.bac-add-drink {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.bac-add-drink-label {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.bac-preset-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+@media (min-width: 520px) {
+  .bac-preset-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.bac-preset-chip {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  border: 1px solid var(--border-subtle);
+  background: var(--surface-elevated);
+  border-radius: 12px;
+  padding: 10px 12px;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.bac-preset-chip:hover {
+  border-color: var(--brand-primary);
+  background: var(--brand-subtle);
+}
+
+.bac-preset-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.bac-preset-helper {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  line-height: 1.4;
+}
+
+.bac-drinks-empty {
+  padding: 18px;
+  border: 1px dashed var(--border-subtle);
+  border-radius: 12px;
+  text-align: center;
+  color: var(--text-tertiary);
+  font-size: 0.875rem;
+}
+
+/* ── Result panel (BAC-specific) ───────────────────────────────────── */
+
+.bac-level-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  width: fit-content;
+  background : var(--brand-subtle);
+}
+
+.bac-level-tag--neutral {
+  background: var(--surface-subtle);
+  color: var(--text-secondary);
+}
+.bac-level-tag--info {
+  background: var(--brand-subtle);
+  color: var(--brand-primary);
+}
+.bac-level-tag--caution {
+  background: #FFF4D6;
+  color: #8A6300;
+}
+.bac-level-tag--warning {
+  background: #FFE3CB;
+  color: #8A4500;
+}
+.bac-level-tag--danger {
+  background: #FBD9D2;
+  color: #8A2A1C;
+}
+.bac-level-tag--critical {
+  background: #2A1A1A;
+  color: #FFB8AB;
+}
+
+.bac-meta-row {
+  margin-top: 8px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  flex-wrap: wrap;
+}
+
+.bac-meta-row strong {
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* Separated variant — flat rows divided by border-top, mirroring the
+   meta rows under "Estimated BAC". Used for the "Drinks counted" list. */
+.bac-table--separated {
+  gap: 0;
+}
+.bac-table--separated .tool-table-row {
+  padding: 12px 0;
+  border: none;
+  border-top: 1px solid var(--border-subtle);
+  border-radius: 0;
+  background: transparent;
+}

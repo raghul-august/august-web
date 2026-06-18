@@ -1,0 +1,25 @@
+
+.macro-calc-card :is(input, select).tool-input:focus,
+.macro-calc-card :is(input, select).tool-input:focus-visible {
+  border-color: var(--brand-primary);
+  box-shadow: 0 0 0 3px rgba(32, 110, 85, 0.18);
+  outline: none;
+  outline-offset: 0;
+}
+
+
+.macro-calc-card select.tool-input {
+  padding-right: 36px;
+  text-overflow: ellipsis;
+}
+
+.macro-calc-card .tool-chip:focus,
+.macro-calc-card .tool-chip:focus-visible {
+  outline: none;
+  outline-offset: 0;
+  box-shadow: 0 0 0 3px rgba(32, 110, 85, 0.18);
+}
+
+.macro-split-select {
+  width: 100%;
+}

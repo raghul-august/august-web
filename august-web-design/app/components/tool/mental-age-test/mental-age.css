@@ -1,0 +1,13 @@
+.add-border-top {
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.add-border-top:first-child {
+  border-top: 1px solid transparent;
+}
+
+.add-border-top:last-child {
+  padding-bottom: 0px;
+}

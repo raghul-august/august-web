@@ -1,0 +1,141 @@
+{
+  "common": {
+    "loadingChats": "Carregando suas conversas...",
+    "refreshPage": "Atualizar página",
+    "signUp": "Cadastre-se",
+    "openMenu": "Abrir menu",
+    "menu": "Menu",
+    "downloadApp": "Baixar App",
+    "termsOfService": "Termos de Serviço",
+    "privacyPolicy": "Política de Privacidade",
+    "loggingOut": "Saindo...",
+    "logout": "Sair",
+    "back": "Voltar",
+    "continue": "Continuar",
+    "edit": "Editar",
+    "legalPrefix": "Ao continuar, você concorda com nossos",
+    "and": "e",
+    "termsShort": "termos",
+    "privacyShort": "política de privacidade",
+    "error": "Erro",
+    "tryAgain": "Tentar Novamente",
+    "loginRequired": "Por favor, faça login para continuar conversando.",
+    "language": "Linguagem",
+    "languageEnglish": "Inglês",
+    "languageFrench": "Francês",
+    "changeLanguage": "Mudar idioma",
+    "profile": "Perfil",
+    "login": "Entrar"
+  },
+  "chat": {
+    "initFailed": "Falha ao inicializar a sessão. Por favor, atualize a página.",
+    "genericError": "Ocorreu um erro. Por favor, atualize a página.",
+    "emptyStateHeading": "Como você está se sentindo?",
+    "processing": {
+      "reading": "Lendo seu documento...",
+      "understanding": "Entendendo os detalhes...",
+      "summarising": "Resumindo tudo..."
+    },
+    "scrollToBottom": "Rolar para baixo",
+    "input": {
+      "placeholder": "Pergunte qualquer coisa",
+      "disclaimer": "Agosto pode cometer erros. Confirme com um médico",
+      "invalidFileType": "Por favor, selecione um arquivo de imagem válido (JPEG, PNG, GIF, WebP) ou PDF.",
+      "waitForUploads": "Por favor, aguarde o término do upload dos arquivos.",
+      "removeFailedUploads": "Alguns arquivos não foram enviados. Por favor, remova-os e tente novamente.",
+      "uploadFailed": "Upload falhou"
+    },
+    "attachments": {
+      "imageAlt": "Anexo",
+      "pdfDefault": "Documento PDF",
+      "pdfCta": "Clique para ver",
+      "defaultCta": "Ver anexo",
+      "audioFallback": "Seu navegador não suporta o elemento de áudio."
+    }
+  },
+  "auth": {
+    "heroAlt": "Experimente agosto, grátis",
+    "welcomeAlt": "Bem-vindo de volta a agosto",
+    "signup": {
+      "description": "Seu companheiro de saúde com IA, criado por médicos. Obtenha respostas instantâneas, entenda laudos de exames e encontre clareza.",
+      "trusted": "Confiado por 6 milhões de usuários em todo o mundo.",
+      "memoryTransfer": "Faça login para importar suas memórias de saúde",
+      "memoryTransferSuccess": "Eu atualizei sua memória. O que você acabou de aprender sobre mim?"
+    },
+    "welcome": {
+      "copy": "Bem-vindo de volta!\nFaça login para continuar no August"
+    },
+    "continueWithPhone": "Continuar com Telefone",
+    "phoneStep": {
+      "title": "Digite seu número de telefone",
+      "subtitle": "Enviaremos um código de verificação para você",
+      "searchPlaceholder": "Pesquisar país...",
+      "phonePlaceholder": "Número de telefone"
+    },
+    "otpStep": {
+      "title": "Verifique seu telefone",
+      "subtitle": "Digite o código de verificação enviado para",
+      "resendWithTimer": "Não recebeu um código? Reenviar ({{seconds}})",
+      "resend": "Não recebeu um código? Reenviar"
+    },
+    "errors": {
+      "enterPhone": "Por favor, digite seu número de telefone",
+      "sendOtp": "Falha ao enviar OTP. Por favor, tente novamente.",
+      "sendOtpInvalid": "Falha ao enviar OTP. Por favor, verifique seu número de telefone.",
+      "enterOtp": "Por favor, insira o código de 6 dígitos",
+      "invalidOtp": "Código inválido. Por favor, tente novamente.",
+      "oauthGeneric": "Falha ao entrar. Por favor, tente novamente.",
+      "googleUserInfo": "Falha ao obter informações do usuário do Google",
+      "googleCancelled": "O login do Google foi cancelado ou falhou.",
+      "appleUnavailable": "O Início de Sessão com a Apple não está disponível",
+      "appleUnavailableSdk": "O Início de Sessão com a Apple não está disponível. O SDK JavaScript da Apple não foi carregado.",
+      "appleCredential": "Falha ao obter credencial da Apple",
+      "appleFailed": "O login com a Apple falhou. Por favor, tente novamente."
+    },
+    "oauth": {
+      "google": "Continuar com o Google",
+      "apple": "Continuar com a Apple"
+    },
+    "tryOtherOptions": "Experimente outras opções"
+  },
+  "errorBoundary": {
+    "title": "Ocorreu um erro",
+    "description": "Ocorreu um erro inesperado. Por favor, tente novamente.",
+    "tryAgain": "Tentar Novamente",
+    "refreshPage": "Atualizar Página"
+  },
+  "sidebar": {
+    "tabs": {
+      "chat": "Bate-papo",
+      "records": "Registros",
+      "explore": "Biblioteca de Saúde",
+      "nutrition": "Nutrição"
+    },
+    "download": {
+      "title": "Baixe o app para acessar",
+      "cta": "Baixe o App Agora",
+      "chatDescription": "Mantenha a conversa fluindo com seu guia de saúde de IA no aplicativo August.",
+      "recordsDescription": "Com o Aplicativo Móvel August:\n• Visualize e gerencie seus registros\n• Compartilhe com seu médico\n• Obtenha insights precisos sobre sua saúde",
+      "exploreDescription": "August curadoria de artigos de saúde, blogs e outras informações personalizadas para você.",
+      "nutritionDescription": "Acompanhe hábitos. Monitore sinais vitais. Veja seu progresso - tudo em um só lugar.",
+      "chatTitle": "Baixe o app para acessar",
+      "recordsTitle": "Todos os Registros de Saúde em um só lugar",
+      "exploreTitle": "Artigos e Blogs de Saúde Selecionados",
+      "nutritionTitle": "Acompanhe o que importa, melhore o que conta"
+    },
+    "downloadAppButton": "Baixar App",
+    "tooltips": {
+      "chat": "Bate-papo com August",
+      "records": "Gerencie seus registros de saúde",
+      "explore": "Explore a Biblioteca de Saúde",
+      "nutrition": "Gerenciar dieta e nutrição",
+      "insurance": "Apelação de seguro de arquivo",
+      "costEstimator": "Encontre o menor preço para serviços de saúde",
+      "billAnalyser": "Revisar Minha Conta",
+      "showFullMenu": "Mostrar menu completo",
+      "hideFullMenu": "Ocultar menu completo",
+      "manageAccount": "Gerenciar configurações da conta"
+    },
+    "takeAugustWithYou": "Leve agosto com você"
+  }
+}

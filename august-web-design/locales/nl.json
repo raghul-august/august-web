@@ -1,0 +1,141 @@
+{
+  "common": {
+    "loadingChats": "Uw chats worden geladen...",
+    "refreshPage": "Pagina vernieuwen",
+    "signUp": "Aanmelden",
+    "openMenu": "Open menu",
+    "menu": "Menu",
+    "downloadApp": "App downloaden",
+    "termsOfService": "Gebruiksvoorwaarden",
+    "privacyPolicy": "Privacybeleid",
+    "loggingOut": "Uitloggen...",
+    "logout": "Afmelden",
+    "back": "Terug",
+    "continue": "Doorgaan",
+    "edit": "Bewerken",
+    "legalPrefix": "Door verder te gaan gaat u akkoord met onze",
+    "and": "en",
+    "termsShort": "voorwaarden",
+    "privacyShort": "privacybeleid",
+    "error": "Fout",
+    "tryAgain": "Opnieuw proberen",
+    "loginRequired": "Log alstublieft in om verder te chatten.",
+    "language": "Taal",
+    "languageEnglish": "Engels",
+    "languageFrench": "Frans",
+    "changeLanguage": "Taal wijzigen",
+    "profile": "Profiel",
+    "login": "Inloggen"
+  },
+  "chat": {
+    "initFailed": "Sessie initialiseren mislukt. Vernieuw de pagina.",
+    "genericError": "Er ging iets mis. Vernieuw de pagina.",
+    "emptyStateHeading": "Hoe voel je je?",
+    "processing": {
+      "reading": "Uw document lezen...",
+      "understanding": "De details begrijpen...",
+      "summarising": "Samenvattend alles..."
+    },
+    "scrollToBottom": "Naar beneden scrollen",
+    "input": {
+      "placeholder": "Vraag alles",
+      "disclaimer": "August kan fouten maken. Raadpleeg een arts",
+      "invalidFileType": "Selecteer alstublieft een geldig afbeeldingsbestand (JPEG, PNG, GIF, WebP) of PDF-bestand.",
+      "waitForUploads": "Wacht alstublieft tot het uploaden van bestanden is voltooid.",
+      "removeFailedUploads": "Sommige bestanden konden niet worden geüpload. Verwijder ze en probeer het opnieuw.",
+      "uploadFailed": "Upload mislukt"
+    },
+    "attachments": {
+      "imageAlt": "Bijlage",
+      "pdfDefault": "PDF-document",
+      "pdfCta": "Klik om te bekijken",
+      "defaultCta": "Bijlage bekijken",
+      "audioFallback": "Uw browser ondersteunt het audio-element niet."
+    }
+  },
+  "auth": {
+    "heroAlt": "Probeer augustus, gratis",
+    "welcomeAlt": "Welkom terug in augustus",
+    "signup": {
+      "description": "Uw AI-gezondheidsbegeleider, gebouwd door artsen. Krijg directe antwoorden, begrijp laboratoriumrapporten en vind duidelijkheid.",
+      "trusted": "Vertrouwd door 6 miljoen gebruikers wereldwijd.",
+      "memoryTransfer": "Log in om uw gezondheidsherinneringen te importeren",
+      "memoryTransferSuccess": "Ik heb je geheugen bijgewerkt. Wat heb je zojuist over mij geleerd?"
+    },
+    "welcome": {
+      "copy": "Welkom terug!\nMeld u aan om verder te gaan naar August"
+    },
+    "continueWithPhone": "Doorgaan met telefoon",
+    "phoneStep": {
+      "title": "Voer uw telefoonnummer in",
+      "subtitle": "We sturen je een verificatiecode",
+      "searchPlaceholder": "Zoek land...",
+      "phonePlaceholder": "Telefoonnummer"
+    },
+    "otpStep": {
+      "title": "Telefoon verifiëren",
+      "subtitle": "Voer de verificatiecode in die is verzonden naar",
+      "resendWithTimer": "Geen code ontvangen? Opnieuw verzenden ({{seconden}})",
+      "resend": "Geen code ontvangen? Opnieuw verzenden"
+    },
+    "errors": {
+      "enterPhone": "Voer uw telefoonnummer in",
+      "sendOtp": "OTP kon niet worden verzonden. Probeer het opnieuw.",
+      "sendOtpInvalid": "OTP kon niet worden verzonden. Controleer uw telefoonnummer.",
+      "enterOtp": "Voer de 6-cijferige code in",
+      "invalidOtp": "Ongeldige code. Probeer het opnieuw.",
+      "oauthGeneric": "Aanmelden mislukt. Probeer het opnieuw.",
+      "googleUserInfo": "Kon Google-gebruikersinformatie niet ophalen",
+      "googleCancelled": "Google-aanmelding is geannuleerd of mislukt.",
+      "appleUnavailable": "Apple Sign-in is niet beschikbaar",
+      "appleUnavailableSdk": "Apple Sign-in is niet beschikbaar. Apple JS SDK niet geladen.",
+      "appleCredential": "Apple-referentie niet verkregen",
+      "appleFailed": "Apple-aanmelding mislukt. Probeer het opnieuw."
+    },
+    "oauth": {
+      "google": "Doorgaan met Google",
+      "apple": "Doorgaan met Apple"
+    },
+    "tryOtherOptions": "Probeer andere opties"
+  },
+  "errorBoundary": {
+    "title": "Er ging iets mis",
+    "description": "Er is een onverwachte fout opgetreden. Probeer het opnieuw.",
+    "tryAgain": "Opnieuw proberen",
+    "refreshPage": "Pagina vernieuwen"
+  },
+  "sidebar": {
+    "tabs": {
+      "chat": "Chat",
+      "records": "Records",
+      "explore": "Gezondheidsbibliotheek",
+      "nutrition": "Voeding"
+    },
+    "download": {
+      "title": "Download app om toegang te krijgen",
+      "cta": "Download App Nu",
+      "chatDescription": "Houd het gesprek gaande met je AI-gezondheidsgids in de August-app.",
+      "recordsDescription": "Met de August Mobiele App:\n• Bekijk en beheer uw gegevens\n• Deel met uw arts\n• Krijg nauwkeurige gezondheidsinzichten",
+      "exploreDescription": "August stelt gezondheidsartikelen, blogs en andere informatie persoonlijk voor u samen.",
+      "nutritionDescription": "Volg gewoontes. Monitor vitale functies. Zie je voortgang - allemaal op één plek.",
+      "chatTitle": "Download app om toegang te krijgen",
+      "recordsTitle": "Alle gezondheidsdossiers op één plek",
+      "exploreTitle": "Samengestelde Gezondheidsartikelen en Blogs",
+      "nutritionTitle": "Volg wat ertoe doet, verbeter wat telt"
+    },
+    "downloadAppButton": "App downloaden",
+    "tooltips": {
+      "chat": "Chat met August",
+      "records": "Beheer uw medische dossiers",
+      "explore": "Gezondheidsbibliotheek verkennen",
+      "nutrition": "Beheer dieet & voeding",
+      "insurance": "Bestand verzekeringsbezwaar",
+      "costEstimator": "Vind de laagste prijs voor gezondheidsdiensten",
+      "billAnalyser": "Bekijk mijn factuur",
+      "showFullMenu": "Volledig menu weergeven",
+      "hideFullMenu": "Volledig menu verbergen",
+      "manageAccount": "Accountinstellingen beheren"
+    },
+    "takeAugustWithYou": "Neem augustus mee"
+  }
+}

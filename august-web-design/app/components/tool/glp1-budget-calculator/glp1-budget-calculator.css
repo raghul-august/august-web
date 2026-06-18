@@ -1,0 +1,66 @@
+/* GLP-1 Budget Calculator - scoped styles.
+   Layout/nav/result styles come from app/styles/tool-calculator.css
+   and shared atomic classes in tool-shared.css. Only tool-specific
+   pieces (currency input, expense grid, tier dot) live here. */
+
+/* --- Currency input --- */
+.bc-currency-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.bc-currency-input .bc-currency-prefix {
+  position: absolute;
+  left: 12px;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.bc-currency-input input.tool-input {
+  padding-left: 24px;
+}
+
+/* --- Expenses layout --- */
+.bc-expense-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.bc-expense-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bc-expense-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 14px;
+}
+
+@media (max-width: 520px) {
+  .bc-expense-grid { grid-template-columns: 1fr; }
+}
+
+/* --- Tier dot (used in result panel) --- */
+.bc-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+.bc-dot-green  { background: var(--brand-primary); }
+.bc-dot-yellow { background: var(--warning); }
+.bc-dot-red    { background: var(--danger); }
+
+.bc-tier-check {
+  color: var(--brand-primary);
+  font-weight: 500;
+}

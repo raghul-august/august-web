@@ -1,0 +1,22 @@
+/* Implantation Calculator — scoped focus harmonisation.
+ *
+ * tool-shared.css's `.tool-input:focus-visible` adds a heavy 2px outline on
+ * top of the soft box-shadow ring. This file flattens the focus look to a
+ * single soft green glow so the input fields match the reference styling
+ * used by other August calculators (macro, etc.).
+ */
+
+.implantation-calc-card :is(input, select).tool-input:focus,
+.implantation-calc-card :is(input, select).tool-input:focus-visible {
+  border-color: var(--brand-primary);
+  box-shadow: 0 0 0 3px rgba(32, 110, 85, 0.18);
+  outline: none;
+  outline-offset: 0;
+}
+
+.implantation-calc-card .tool-chip:focus,
+.implantation-calc-card .tool-chip:focus-visible {
+  outline: none;
+  outline-offset: 0;
+  box-shadow: 0 0 0 3px rgba(32, 110, 85, 0.18);
+}

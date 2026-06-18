@@ -1,0 +1,45 @@
+.add-border-top {
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 10px;
+}
+
+.add-border-top:first-child {
+  border-top: 1px solid transparent;
+}
+
+.add-border-top:last-child {
+  padding-bottom: 0px;
+}
+
+.attachment-grid {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  max-width: 280px;
+  margin: 0 auto;
+  border-radius: 14px;
+  background:
+    linear-gradient(to right, transparent calc(50% - 0.5px), var(--border-subtle) calc(50% - 0.5px), var(--border-subtle) calc(50% + 0.5px), transparent calc(50% + 0.5px)),
+    linear-gradient(to bottom, transparent calc(50% - 0.5px), var(--border-subtle) calc(50% - 0.5px), var(--border-subtle) calc(50% + 0.5px), transparent calc(50% + 0.5px)),
+    var(--surface-subtle);
+  border: 1px solid var(--border-subtle);
+}
+
+.attachment-grid-label {
+  position: absolute;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  font-weight: 500;
+}
+
+.attachment-grid-dot {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  background: var(--brand-primary);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--brand-primary) 25%, transparent);
+  transform: translate(-50%, -50%);
+}

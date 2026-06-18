@@ -1,0 +1,89 @@
+/* Symptoms Checker — tool-specific styles only.
+   Most layout/animation/typography comes from tool-tokens.css + tool-shared.css. */
+
+.sc-question-enter {
+  --tool-fade-y: 20px;
+  animation: toolFadeIn 0.5s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+/* Inline urgency chip used in lists / secondary surfaces */
+.sc-urgency-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  width: fit-content;
+}
+.sc-urgency-pill--info {
+  background: var(--brand-subtle);
+  color: var(--brand-primary);
+}
+.sc-urgency-pill--neutral {
+  background: var(--surface-subtle);
+  color: var(--text-secondary);
+}
+.sc-urgency-pill--caution {
+  background: #FFF4D6;
+  color: #8A6300;
+}
+.sc-urgency-pill--warning {
+  background: #FBD9D2;
+  color: #8A2A1C;
+}
+
+/* Hero visual on the results screen — gives the urgency band the same visual
+   weight as the ScoreRing has in other quiz tools (no numeric score here). */
+.sc-urgency-hero {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.sc-urgency-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1.5px solid currentColor;
+  opacity: 0.25;
+}
+.sc-urgency-hero::after {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border-radius: inherit;
+  background: currentColor;
+  opacity: 0.12;
+}
+.sc-urgency-hero > svg {
+  position: relative;
+  z-index: 1;
+  width: 56px;
+  height: 56px;
+}
+.sc-urgency-hero--info { color: var(--brand-primary); }
+.sc-urgency-hero--neutral { color: var(--text-secondary); }
+.sc-urgency-hero--caution { color: #B8860B; }
+.sc-urgency-hero--warning { color: #B33A2A; }
+
+/* Clean list divider — first row flush, subsequent rows get a subtle line.
+   Mirrors anger-management-test's add-border-top pattern. */
+.sc-row {
+  border-top: 1px solid var(--border-subtle);
+  padding: 12px 14px;
+}
+.sc-row:first-child {
+  border-top: 1px solid transparent;
+  padding-top: 0;
+}
+.sc-row:last-child {
+  padding-bottom: 0;
+}

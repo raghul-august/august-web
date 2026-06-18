@@ -1,0 +1,203 @@
+/*
+ * Sleep Calculator — tool-specific styles only.
+ * Layout, form grid, nav, and result panel base styles come from
+ * /app/styles/tool-calculator.css. Only the bits unique to the sleep
+ * calculator live here: the time-picker row, advanced toggle, and the
+ * "best pick" highlight applied to the recommended cycle row.
+ */
+
+.sleep-calc-card {
+  /* Use the wider 720px card so the time picker + AM/PM row breathes. */
+  max-width: 720px;
+}
+
+/* ── Time picker row ────────────────────────────────────────────────── */
+
+.sleep-time-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.sleep-time-picker {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  flex: 0 0 auto;
+}
+
+.sleep-time-select {
+  width: auto;
+  min-width: 76px;
+  font-variant-numeric: tabular-nums;
+}
+
+.sleep-time-colon {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.sleep-period-group {
+  flex: 0 0 auto;
+}
+
+.sleep-mode-group {
+  width: 100%;
+  max-width: 100%;
+}
+
+.sleep-calc-card .sleep-mode-group {
+  width: 100%;
+}
+
+.sleep-mode-group .tool-chip {
+  flex: 1 1 0;
+  text-align: center;
+  justify-content: center;
+}
+
+/* ── Advanced settings toggle + panel ───────────────────────────────── */
+
+.sleep-advanced-toggle {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  font: inherit;
+  font-size: 0.8125rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  padding: 4px 0;
+  align-self: flex-start;
+}
+
+.sleep-advanced-toggle:hover {
+  color: var(--brand-primary);
+}
+
+.sleep-advanced-chevron {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(-45deg) translate(-1px, -1px);
+  transition: transform 0.2s ease;
+}
+
+.sleep-advanced-chevron--open {
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.sleep-advanced-panel {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sleep-advanced-note {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ── Result panel additions ─────────────────────────────────────────── */
+
+.sleep-result-primary {
+  align-items: flex-start;
+}
+
+.sleep-result-value-row {
+  font-variant-numeric: tabular-nums;
+}
+
+.sleep-best-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  background: var(--brand-subtle);
+  color: var(--brand-primary);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  width: fit-content;
+}
+
+.sleep-result-meta strong {
+  font-variant-numeric: tabular-nums;
+}
+
+.sleep-error {
+  margin: 0;
+  text-align: center;
+}
+
+/* ── Cycle table rows ───────────────────────────────────────────────── */
+
+.sleep-table-row .tool-calc-table-label {
+  font-variant-numeric: tabular-nums;
+  font-size: 0.95rem;
+}
+
+.sleep-table-row--best {
+  background: var(--brand-subtle);
+  border-color: transparent;
+  border-top-color: transparent;
+}
+
+.sleep-table-row--best + .sleep-table-row {
+  border-top-color: var(--border-subtle);
+}
+
+.sleep-table-row--best .tool-calc-table-label {
+  color: var(--brand-primary);
+  font-weight: 500;
+}
+
+.sleep-table-best-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  border-radius: 9999px;
+  background: var(--brand-primary);
+  color: var(--text-inverse, #fff);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.sleep-table-rec-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  border-radius: 9999px;
+  background: var(--brand-subtle);
+  color: var(--brand-primary);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 480px) {
+  .sleep-time-row {
+    gap: 10px;
+  }
+  .sleep-time-select {
+    min-width: 64px;
+    font-size: 16px;
+  }
+  .sleep-best-pill {
+    font-size: 0.7rem;
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "common": {
+    "loadingChats": "Đang tải các cuộc trò chuyện của bạn...",
+    "refreshPage": "Làm mới trang",
+    "signUp": "Đăng ký",
+    "openMenu": "Mở menu",
+    "menu": "Thực đơn",
+    "downloadApp": "Tải xuống ứng dụng",
+    "termsOfService": "Điều khoản dịch vụ",
+    "privacyPolicy": "Chính sách bảo mật",
+    "loggingOut": "Đang đăng xuất...",
+    "logout": "Đăng xuất",
+    "back": "Quay lại",
+    "continue": "Tiếp tục",
+    "edit": "Chỉnh sửa",
+    "legalPrefix": "Bằng cách tiếp tục, bạn đồng ý với",
+    "and": "và",
+    "termsShort": "điều khoản",
+    "privacyShort": "chính sách bảo mật",
+    "error": "Lỗi",
+    "tryAgain": "Thử lại",
+    "loginRequired": "Vui lòng đăng nhập để tiếp tục trò chuyện.",
+    "language": "Ngôn ngữ",
+    "languageEnglish": "Tiếng Anh",
+    "languageFrench": "Tiếng Pháp",
+    "changeLanguage": "Đổi ngôn ngữ",
+    "profile": "Hồ sơ",
+    "login": "Đăng nhập"
+  },
+  "chat": {
+    "initFailed": "Không thể khởi tạo phiên. Vui lòng làm mới trang.",
+    "genericError": "Đã xảy ra lỗi. Vui lòng làm mới trang.",
+    "emptyStateHeading": "Bạn cảm thấy thế nào?",
+    "processing": {
+      "reading": "Đang đọc tài liệu của bạn...",
+      "understanding": "Hiểu rõ chi tiết...",
+      "summarising": "Tóm tắt mọi thứ..."
+    },
+    "scrollToBottom": "Cuộn xuống dưới",
+    "input": {
+      "placeholder": "Hỏi bất cứ điều gì",
+      "disclaimer": "August có thể mắc sai lầm. Hãy xác nhận với bác sĩ",
+      "invalidFileType": "Vui lòng chọn một tệp hình ảnh hợp lệ (JPEG, PNG, GIF, WebP) hoặc tệp PDF.",
+      "waitForUploads": "Vui lòng đợi tệp tải lên hoàn tất.",
+      "removeFailedUploads": "Một số tệp đã không tải lên được. Vui lòng xóa chúng và thử lại.",
+      "uploadFailed": "Tải lên thất bại"
+    },
+    "attachments": {
+      "imageAlt": "Tệp đính kèm",
+      "pdfDefault": "Tài liệu PDF",
+      "pdfCta": "Nhấp để xem",
+      "defaultCta": "Xem tệp đính kèm",
+      "audioFallback": "Trình duyệt của bạn không hỗ trợ phần tử âm thanh."
+    }
+  },
+  "auth": {
+    "heroAlt": "Thử tháng 8, miễn phí",
+    "welcomeAlt": "Chào mừng trở lại tháng Tám",
+    "signup": {
+      "description": "Người bạn đồng hành sức khỏe AI của bạn, được xây dựng bởi các bác sĩ. Nhận câu trả lời tức thì, hiểu kết quả xét nghiệm và tìm kiếm sự rõ ràng.",
+      "trusted": "Được tin cậy bởi 6 triệu người dùng trên toàn thế giới.",
+      "memoryTransferSuccess": "Tôi đã cập nhật bộ nhớ của bạn. Bạn vừa học được gì về tôi?"
+    },
+    "welcome": {
+      "copy": "Chào mừng trở lại!\nĐăng nhập để tiếp tục đến August"
+    },
+    "continueWithPhone": "Tiếp tục với Điện thoại",
+    "phoneStep": {
+      "title": "Nhập số điện thoại của bạn",
+      "subtitle": "Chúng tôi sẽ gửi cho bạn một mã xác minh",
+      "searchPlaceholder": "Tìm kiếm quốc gia...",
+      "phonePlaceholder": "Số điện thoại"
+    },
+    "otpStep": {
+      "title": "Xác minh điện thoại của bạn",
+      "subtitle": "Nhập mã xác minh đã gửi đến",
+      "resendWithTimer": "Không nhận được mã? Gửi lại ({{giây}})",
+      "resend": "Không nhận được mã? Gửi lại"
+    },
+    "errors": {
+      "enterPhone": "Vui lòng nhập số điện thoại của bạn",
+      "sendOtp": "Không gửi được OTP. Vui lòng thử lại.",
+      "sendOtpInvalid": "Không gửi được OTP. Vui lòng kiểm tra lại số điện thoại của bạn.",
+      "enterOtp": "Vui lòng nhập mã gồm 6 chữ số",
+      "invalidOtp": "Mã không hợp lệ. Vui lòng thử lại.",
+      "oauthGeneric": "Đăng nhập thất bại. Vui lòng thử lại.",
+      "googleUserInfo": "Không lấy được thông tin người dùng Google",
+      "googleCancelled": "Đăng nhập Google đã bị hủy hoặc thất bại.",
+      "appleUnavailable": "Đăng nhập bằng Apple không khả dụng",
+      "appleUnavailableSdk": "Apple Sign In không khả dụng. Apple JS SDK chưa được tải.",
+      "appleCredential": "Không lấy được thông tin xác thực của Apple",
+      "appleFailed": "Đăng nhập Apple thất bại. Vui lòng thử lại."
+    },
+    "oauth": {
+      "google": "Tiếp tục với Google",
+      "apple": "Tiếp tục với Apple"
+    },
+    "tryOtherOptions": "Thử các tùy chọn khác"
+  },
+  "errorBoundary": {
+    "title": "Đã xảy ra lỗi",
+    "description": "Chúng tôi đã gặp một lỗi không mong muốn. Vui lòng thử lại.",
+    "tryAgain": "Thử lại",
+    "refreshPage": "Làm mới trang"
+  },
+  "sidebar": {
+    "tabs": {
+      "chat": "Trò chuyện",
+      "records": "Bản ghi",
+      "explore": "Thư viện Sức khỏe",
+      "nutrition": "Dinh dưỡng"
+    },
+    "download": {
+      "title": "Tải ứng dụng để truy cập",
+      "cta": "Tải ứng dụng ngay",
+      "chatDescription": "Tiếp tục cuộc trò chuyện với hướng dẫn sức khỏe AI của bạn trong ứng dụng August.",
+      "recordsDescription": "Với Ứng dụng Di động August:\n• Xem và quản lý hồ sơ của bạn\n• Chia sẻ với bác sĩ của bạn\n• Nhận thông tin chi tiết chính xác về sức khỏe",
+      "exploreDescription": "August tuyển chọn các bài báo, blog và thông tin sức khỏe được cá nhân hóa cho bạn.",
+      "nutritionDescription": "Theo dõi thói quen. Giám sát các chỉ số sinh tồn. Xem tiến trình của bạn - tất cả ở một nơi.",
+      "chatTitle": "Tải ứng dụng để truy cập",
+      "recordsTitle": "Tất cả Hồ sơ Sức khỏe ở một nơi",
+      "exploreTitle": "Bài viết và Blog Chăm sóc Sức khỏe được tuyển chọn",
+      "nutritionTitle": "Theo dõi những gì quan trọng, cải thiện những gì có giá trị"
+    },
+    "downloadAppButton": "Tải xuống ứng dụng",
+    "tooltips": {
+      "chat": "Trò chuyện với August",
+      "records": "Quản lý hồ sơ sức khỏe của bạn",
+      "explore": "Khám phá Thư viện Sức khỏe",
+      "nutrition": "Quản lý chế độ ăn uống & dinh dưỡng",
+      "insurance": "Tập tin kháng cáo bảo hiểm",
+      "costEstimator": "Tìm giá thấp nhất cho dịch vụ y tế",
+      "billAnalyser": "Xem hóa đơn của tôi",
+      "showFullMenu": "Hiển thị toàn bộ menu",
+      "hideFullMenu": "Ẩn toàn bộ menu",
+      "manageAccount": "Quản lý cài đặt tài khoản"
+    },
+    "takeAugustWithYou": "Mang tháng Tám theo bạn"
+  }
+}

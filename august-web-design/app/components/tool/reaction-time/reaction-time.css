@@ -1,0 +1,197 @@
+/* Reaction Time — tool-specific styles only.
+   Layout/typography come from tool-tokens.css + tool-shared.css.
+   Keep this file thin; only add tool-unique rules here. */
+
+.rt-stage {
+  /* Full-width canvas the user clicks. Border-radius matches other tool cards. */
+  position: relative;
+  width: 100%;
+  min-height: 420px;
+  border-radius: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 48px 28px;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.12s ease;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+@media (min-width: 640px) {
+  .rt-stage {
+    min-height: 520px;
+  }
+}
+
+.rt-stage--ready {
+  background: var(--brand-primary);
+  color: #ffffff;
+}
+
+.rt-stage--waiting {
+  background: #B8453C; /* danger token equivalent */
+  color: #ffffff;
+}
+
+.rt-stage--go {
+  background: #2EBE7B;
+  color: #ffffff;
+  animation: rtGoPulse 0.4s ease-out;
+}
+
+.rt-stage--result {
+  background: var(--brand-primary);
+  color: #ffffff;
+}
+
+.rt-stage--too-soon {
+  background: #6B7280;
+  color: #ffffff;
+}
+
+@keyframes rtGoPulse {
+  from { transform: scale(0.985); }
+  to   { transform: scale(1); }
+}
+
+.rt-stage-icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  margin-bottom: 18px;
+}
+
+.rt-stage-title {
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  margin: 0;
+}
+
+@media (min-width: 640px) {
+  .rt-stage-title {
+    font-size: 2.1rem;
+  }
+}
+
+.rt-stage-subtitle {
+  margin: 10px 0 0;
+  font-size: 0.95rem;
+  font-weight: 400;
+  opacity: 0.85;
+  max-width: 380px;
+}
+
+.rt-stage-time {
+  font-size: 3.5rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  margin: 0;
+}
+
+@media (min-width: 640px) {
+  .rt-stage-time {
+    font-size: 4.5rem;
+  }
+}
+
+.rt-stage-time-unit {
+  font-size: 1.3rem;
+  font-weight: 400;
+  opacity: 0.8;
+  margin-left: 6px;
+}
+
+.rt-trial-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 22px;
+}
+
+.rt-trial-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.28);
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.rt-trial-dot--done {
+  background: #ffffff;
+}
+
+.rt-trial-dot--current {
+  background: #ffffff;
+  transform: scale(1.4);
+}
+
+.rt-stage-enter {
+  --tool-fade-y: 12px;
+  animation: toolFadeIn 0.35s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+.rt-trial-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(78px, 1fr));
+  gap: 10px;
+}
+
+.rt-trial-pill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 10px;
+  border-radius: 12px;
+  background: var(--surface-subtle);
+  border: 1px solid var(--border-subtle);
+  font-variant-numeric: tabular-nums;
+}
+
+.rt-trial-pill-label {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin-bottom: 4px;
+}
+
+.rt-trial-pill-value {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.rt-trial-pill--best .rt-trial-pill-value {
+  color: var(--brand-primary);
+}
+
+.add-border-top{
+  border-top : 1px solid var(--border-subtle);
+  padding-top : 15px;
+  padding-bottom : 10px;
+}
+
+.add-border-top:first-child{
+  border-top : 1px solid transparent;
+
+}
+
+.add-border-top:last-child{
+  padding-bottom:0px;
+}
+

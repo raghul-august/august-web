@@ -1,0 +1,150 @@
+.bd-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.bd-view-toggle {
+  display: flex;
+  gap: 4px;
+  background: var(--surface-subtle);
+  border-radius: 8px;
+  padding: 3px;
+}
+
+.bd-toggle-btn {
+  padding: 6px 20px;
+  border-radius: 4px;
+  border: none;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  cursor: pointer;
+  background: transparent;
+  color: var(--text-secondary);
+  transition: all 0.2s;
+}
+
+.bd-toggle-btn--active {
+  background: var(--surface-elevated);
+  color: var(--text-primary);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.bd-svg-container {
+  width: 240px;
+  height: 480px;
+}
+
+.bd-svg-container svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Body outline */
+.bd-outline {
+  fill: url(#bd-bodyFill);
+  stroke: var(--border);
+  stroke-width: 1.5;
+  filter: url(#bd-bodyShadow);
+}
+
+/* Zone paths */
+.bd-zone {
+  cursor: pointer;
+  outline: none;
+}
+
+.bd-zone path {
+  fill: url(#bd-zoneDefault);
+  stroke: rgba(193, 188, 178, 0.6);
+  stroke-width: 0.6;
+  fill-opacity: 0.4;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bd-zone:hover path,
+.bd-zone:focus-visible path {
+  fill: url(#bd-zoneHover);
+  stroke: var(--brand-primary);
+  stroke-width: 1;
+  fill-opacity: 0.6;
+  filter: url(#bd-zoneGlow);
+}
+
+.bd-zone--selected path {
+  fill: url(#bd-zoneSelected);
+  stroke: var(--brand-primary);
+  stroke-width: 1.5;
+  fill-opacity: 0.55;
+  filter: url(#bd-zoneGlow);
+  animation: bd-breathe 3s ease-in-out infinite;
+}
+
+.bd-zone--selected:hover path,
+.bd-zone--selected:focus-visible path {
+  fill-opacity: 0.7;
+}
+
+/* Zone label tooltip */
+.bd-zone-label-bg {
+  fill: var(--text-primary);
+  opacity: 0;
+  transition: opacity 0.25s;
+  pointer-events: none;
+  filter: url(#bd-labelShadow);
+}
+
+.bd-zone-label-text {
+  fill: var(--text-inverse, #FFFFFF);
+  font-size: 40px;
+  font-weight: 500;
+  text-anchor: middle;
+  dominant-baseline: central;
+  letter-spacing: 0.02em;
+  opacity: 0;
+  transition: opacity 0.25s;
+  pointer-events: none;
+}
+
+.bd-zone:hover .bd-zone-label-bg,
+.bd-zone:hover .bd-zone-label-text,
+.bd-zone:focus-visible .bd-zone-label-bg,
+.bd-zone:focus-visible .bd-zone-label-text {
+  opacity: 1;
+}
+
+/* Pulse on select */
+@keyframes bd-pulse {
+  0% { stroke-width: 1.5; }
+  50% { stroke-width: 3; }
+  100% { stroke-width: 1.5; }
+}
+
+.bd-zone--pulse path {
+  animation: bd-pulse 0.5s ease;
+}
+
+/* Breathing glow on selected */
+@keyframes bd-breathe {
+  0%, 100% { fill-opacity: 0.45; }
+  50% { fill-opacity: 0.6; }
+}
+
+/* Focus ring */
+.bd-zone:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bd-zone--selected path { animation: none; }
+  .bd-zone--pulse path { animation: none; }
+}
+
+@media (max-width: 480px) {
+  .bd-svg-container {
+    width: 200px;
+    height: 400px;
+  }
+}

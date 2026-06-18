@@ -1,0 +1,141 @@
+{
+  "common": {
+    "loadingChats": "Naglo-load ng iyong mga chat...",
+    "refreshPage": "I-refresh ang pahina",
+    "signUp": "Mag-sign Up",
+    "openMenu": "Buksan ang menu",
+    "menu": "Menu",
+    "downloadApp": "I-download ang App",
+    "termsOfService": "Mga Tuntunin ng Serbisyo",
+    "privacyPolicy": "Patakaran sa Pagkapribado",
+    "loggingOut": "Nagla-logout...",
+    "logout": "Lumabas",
+    "back": "Bumalik",
+    "continue": "Magpatuloy",
+    "edit": "I-edit",
+    "legalPrefix": "Sa pagpapatuloy sumasang-ayon ka sa aming",
+    "and": "at",
+    "termsShort": "mga tuntunin",
+    "privacyShort": "patakaran sa privacy",
+    "error": "Kamalian",
+    "tryAgain": "Subukang Muli",
+    "loginRequired": "Mangyaring mag-log in upang magpatuloy sa pakikipag-chat.",
+    "language": "Wika",
+    "languageEnglish": "Ingles",
+    "languageFrench": "Pranses",
+    "changeLanguage": "Baguhin ang wika",
+    "profile": "Profile",
+    "login": "Mag-log in"
+  },
+  "chat": {
+    "initFailed": "Hindi napagana ang sesyon. Paki-refresh ang pahina.",
+    "genericError": "Nagkaroon ng problema. Paki-refresh ang pahina.",
+    "emptyStateHeading": "Kumusta ang pakiramdam mo?",
+    "processing": {
+      "reading": "Binabasa ang iyong dokumento...",
+      "understanding": "Pag-unawa sa mga detalye...",
+      "summarising": "Sa pagbubuod ng lahat..."
+    },
+    "scrollToBottom": "Mag-scroll sa ibaba",
+    "input": {
+      "placeholder": "Magtanong ng kahit ano",
+      "disclaimer": "Maaaring magkamali si August. Kumonsulta sa doktor.",
+      "invalidFileType": "Pumili ng isang balidong imahe (JPEG, PNG, GIF, WebP) o PDF file.",
+      "waitForUploads": "Pakihintay na matapos ang pag-upload ng mga file.",
+      "removeFailedUploads": "May ilang mga file na hindi na-upload. Paki-alis ang mga ito at subukang muli.",
+      "uploadFailed": "Hindi na-upload"
+    },
+    "attachments": {
+      "imageAlt": "Kalakip",
+      "pdfDefault": "Dokumento ng PDF",
+      "pdfCta": "I-click upang tingnan",
+      "defaultCta": "Tingnan ang kalakip",
+      "audioFallback": "Hindi sinusuportahan ng iyong browser ang audio element."
+    }
+  },
+  "auth": {
+    "heroAlt": "Subukan ang Agosto, libre",
+    "welcomeAlt": "Maligayang pagbabalik sa Agosto",
+    "signup": {
+      "description": "Ang iyong AI health companion, ginawa ng mga doktor. Makakuha ng agarang sagot, unawain ang mga lab report, at makahanap ng kalinawan.",
+      "trusted": "Pinagkakatiwalaan ng 6 Milyong gumagamit sa buong mundo.",
+      "memoryTransfer": "Mag-log in upang i-import ang iyong mga alaala sa kalusugan",
+      "memoryTransferSuccess": "Na-update ko ang iyong memorya. Ano ang natutunan mo tungkol sa akin ngayon?"
+    },
+    "welcome": {
+      "copy": "Maligayang pagbabalik!\nMag-sign in upang magpatuloy sa Agosto"
+    },
+    "continueWithPhone": "Magpatuloy gamit ang Telepono",
+    "phoneStep": {
+      "title": "Ilagay ang iyong numero ng telepono",
+      "subtitle": "Padadalhan ka namin ng verification code",
+      "searchPlaceholder": "Maghanap ng bansa...",
+      "phonePlaceholder": "Numero ng telepono"
+    },
+    "otpStep": {
+      "title": "I-verify ang iyong telepono",
+      "subtitle": "Ilagay ang verification code na ipinadala sa",
+      "resendWithTimer": "Hindi nakatanggap ng code? Ipadala muli ({{segundo}})",
+      "resend": "Hindi nakatanggap ng code? Ipadala muli"
+    },
+    "errors": {
+      "enterPhone": "Pakilagay ang iyong numero ng telepono",
+      "sendOtp": "Hindi maipadala ang OTP. Pakisubukan muli.",
+      "sendOtpInvalid": "Hindi maipadala ang OTP. Pakisuri ang iyong numero ng telepono.",
+      "enterOtp": "Ilagay ang 6-digit na code",
+      "invalidOtp": "Hindi balido ang code. Pakisubukan muli.",
+      "oauthGeneric": "Hindi matagumpay ang pag-sign in. Pakisubukang muli.",
+      "googleUserInfo": "Hindi makuha ang impormasyon ng Google user",
+      "googleCancelled": "Kinansela o nabigo ang pag-sign in sa Google.",
+      "appleUnavailable": "Hindi available ang Apple Sign In",
+      "appleUnavailableSdk": "Hindi available ang Apple Sign In. Hindi na-load ang Apple JS SDK.",
+      "appleCredential": "Hindi makuha ang Apple credential",
+      "appleFailed": "Hindi matagumpay ang pag-sign in sa Apple. Pakisubukang muli."
+    },
+    "oauth": {
+      "google": "Magpatuloy gamit ang Google",
+      "apple": "Magpatuloy gamit ang Apple"
+    },
+    "tryOtherOptions": "Subukan ang iba pang mga opsyon"
+  },
+  "errorBoundary": {
+    "title": "Nagkaroon ng mali",
+    "description": "Nagkaroon kami ng hindi inaasahang error. Pakisubukang muli.",
+    "tryAgain": "Subukang Muli",
+    "refreshPage": "I-refresh ang Pahina"
+  },
+  "sidebar": {
+    "tabs": {
+      "chat": "Pakikipag-usap",
+      "records": "Mga Tala",
+      "explore": "Aklatang Pangkalusugan",
+      "nutrition": "Nutrisyon"
+    },
+    "download": {
+      "title": "I-download ang app para ma-access",
+      "cta": "I-download ang App Ngayon",
+      "chatDescription": "Ipagpatuloy ang pag-uusap sa iyong AI health guide sa August app.",
+      "recordsDescription": "Gamit ang August Mobile App:\n• Tingnan at pamahalaan ang iyong mga tala\n• Ibahagi sa iyong doktor\n• Makakuha ng tumpak na mga insight sa kalusugan",
+      "exploreDescription": "Si August ay nag-curate ng mga artikulo sa kalusugan, blog, at iba pang impormasyon na personalized para sa iyo.",
+      "nutritionDescription": "Subaybayan ang mga gawi. Bantayan ang mga mahahalagang palatandaan. Tingnan ang iyong pag-unlad - lahat sa isang lugar.",
+      "chatTitle": "I-download ang app para ma-access",
+      "recordsTitle": "Lahat ng Health Records sa isang lugar",
+      "exploreTitle": "Mga Piniling Artikulo sa Kalusugan, at mga Blog",
+      "nutritionTitle": "Subaybayan ang mahalaga, pagbutihin ang mahalaga"
+    },
+    "downloadAppButton": "I-download ang App",
+    "tooltips": {
+      "chat": "Makipag-chat kay August",
+      "records": "Pamahalaan ang iyong mga talaan sa kalusugan",
+      "explore": "Galugarin ang Health Library",
+      "nutrition": "Pamahalaan ang diyeta at nutrisyon",
+      "insurance": "Maghain ng apela sa insurance",
+      "costEstimator": "Hanapin ang pinakamababang presyo para sa mga serbisyong pangkalusugan",
+      "billAnalyser": "Suriin ang Aking Bayarin",
+      "showFullMenu": "Ipakita ang buong menu",
+      "hideFullMenu": "Itago ang buong menu",
+      "manageAccount": "Pamahalaan ang mga setting ng account"
+    },
+    "takeAugustWithYou": "Isama mo si Agosto"
+  }
+}

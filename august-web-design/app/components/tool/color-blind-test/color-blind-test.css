@@ -1,0 +1,119 @@
+/* Color Blind Test — tool-specific styles. */
+
+.cbt-plate-wrapper {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto 24px;
+  aspect-ratio: 1 / 1;
+  background: var(--surface-elevated, #ffffff);
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+.cbt-plate-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.cbt-plate-fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface-subtle, #f4f5f5);
+  color: var(--text-tertiary, #767f7c);
+  font-size: 0.85rem;
+}
+
+.cbt-options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  width: 100%;
+}
+
+.cbt-option-tile {
+  background: var(--surface-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  padding: 14px 16px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cbt-option-tile:hover {
+  background: var(--brand-subtle);
+  border-color: var(--brand-primary);
+  color: var(--text-primary);
+}
+
+.cbt-option-tile[data-selected="true"] {
+  background: var(--brand-subtle);
+  border-color: var(--brand-primary);
+  color: var(--text-primary);
+}
+
+.cbt-option-tile:active {
+  transform: scale(0.98);
+}
+
+.cbt-calibration-list {
+  list-style: disc;
+  padding-left: 18px;
+  margin: 8px 0 0;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.cbt-calibration-list li {
+  margin-bottom: 4px;
+}
+
+.cbt-plate-prompt {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-tertiary);
+  margin: 0 0 16px;
+}
+
+@media (max-width: 480px) {
+  .cbt-plate-wrapper {
+    max-width: 260px;
+  }
+  .cbt-options-grid {
+    gap: 8px;
+  }
+  .cbt-option-tile {
+    padding: 12px 10px;
+    font-size: 0.95rem;
+    min-height: 48px;
+  }
+}
+
+.add-border-top {
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.add-border-top:first-child {
+  border-top: 1px solid transparent;
+}
+
+.add-border-top:last-child {
+  padding-bottom: 0px;
+}
+

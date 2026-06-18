@@ -1,0 +1,223 @@
+/* body-fat-calculator.css */
+
+.bfc-two-col {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  align-items: stretch;
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px 48px;
+}
+
+.bfc-two-col > .tool-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bfc-two-col > div {
+  display: flex;
+  flex-direction: column;
+}
+.bfc-two-col > div > .tool-card {
+  flex: 1;
+}
+@media (max-width: 768px) {
+  .bfc-two-col { grid-template-columns: 1fr; padding: 0 16px 40px; gap: 16px; }
+}
+
+.bfc-toggle-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+.bfc-toggle-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.bfc-toggle-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-tertiary);
+}
+.bfc-section-heading {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  margin: 20px 0 10px;
+}
+
+.bfc-field-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 12px;
+  margin-top: 16px;
+}
+
+.bfc-army-hint {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  margin: -4px 0 12px;
+}
+
+.bfc-card-footer {
+  display: flex;
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+/* compact inputs inside the BFC card */
+.bfc-two-col .tool-input {
+  padding: 9px 16px;
+  font-size: 13px;
+  min-height: 38px;
+  border-radius: 9999px;
+}
+
+
+/* number + badge row */
+.bfc-bf-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 8px 0 4px;
+  flex-wrap: wrap;
+}
+
+@keyframes bfcNumIn {
+  from { opacity: 0.35; transform: translateY(5px); }
+  to   { opacity: 1;    transform: translateY(0); }
+}
+
+.bfc-bf-number {
+  font-size: clamp(2.25rem, 5vw, 2.75rem);
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  margin: 0;
+  animation: bfcNumIn 0.25s ease-out;
+}
+
+.bfc-result-sub {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  margin-bottom: 12px;
+}
+
+.bfc-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.bfc-badge--essential { background: var(--info-50);    color: var(--info-700); }
+.bfc-badge--athletes  { background: var(--success-50); color: var(--success-700); }
+.bfc-badge--fitness   { background: var(--success-50); color: var(--success-700); }
+.bfc-badge--average   { background: var(--warning-50); color: var(--warning-700); }
+.bfc-badge--obese     { background: var(--danger-50);  color: var(--danger-700); }
+.bfc-badge--pass      { background: var(--success-50); color: var(--success-700); }
+.bfc-badge--fail      { background: var(--danger-50);  color: var(--danger-700); }
+
+.bfc-spectrum-wrap { position: relative; margin: 16px 0 8px; }
+
+.bfc-spectrum-bar { display: flex; height: 8px; border-radius: 9999px; overflow: hidden; }
+.bfc-spectrum-bar__seg { flex: 1; }
+.bfc-spectrum-bar__seg--essential { background: var(--info); }
+.bfc-spectrum-bar__seg--athletes  { background: var(--success); }
+.bfc-spectrum-bar__seg--fitness   { background: var(--success-700); }
+.bfc-spectrum-bar__seg--average   { background: var(--warning); }
+.bfc-spectrum-bar__seg--obese     { background: var(--danger); }
+
+.bfc-spectrum-pointer {
+  position: absolute;
+  top: -7px;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 7px solid var(--text-primary);
+  transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bfc-spectrum-labels { display: flex; margin-top: 4px; }
+.bfc-spectrum-labels span {
+  flex: 1;
+  font-size: 0.625rem;
+  color: var(--text-tertiary);
+  text-align: center;
+}
+
+.bfc-data-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 8px 0;
+  gap: 8px;
+}
+.bfc-data-row__label { font-size: 0.8125rem; color: var(--text-secondary); }
+.bfc-data-row__value { font-size: 0.875rem; font-weight: 500; color: var(--text-primary); text-align: right; }
+
+.bfc-bmi-note { font-size: 0.7rem; color: var(--text-tertiary); margin-top: 10px; line-height: 1.5; }
+
+.bfc-verdict-block { border-radius: 12px; padding: 16px; margin: 12px 0; }
+.bfc-verdict-block--pass { background: var(--success-50); }
+.bfc-verdict-block--fail { background: var(--danger-50); }
+.bfc-verdict-label {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.bfc-verdict-margin-note { font-size: 0.75rem; color: var(--text-secondary); margin-top: 8px; }
+
+.bfc-threshold-wrap { margin: 12px 0 4px; }
+.bfc-threshold-bar {
+  position: relative;
+  height: 8px;
+  background: var(--surface-subtle);
+  border-radius: 9999px;
+  overflow: hidden;
+}
+.bfc-threshold-bar__fill { height: 100%; border-radius: 9999px; transition: width 0.3s ease; }
+.bfc-threshold-bar__fill--pass { background: var(--success); }
+.bfc-threshold-bar__fill--fail { background: var(--danger); }
+.bfc-threshold-bar__tick {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--text-primary);
+}
+.bfc-threshold-note { font-size: 0.6875rem; color: var(--text-tertiary); margin-top: 2px; }
+
+.bfc-pending {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 160px;
+  gap: 8px;
+}
+.bfc-pending__dash { font-size: 3rem; color: var(--text-disabled); line-height: 1; }
+.bfc-pending__text { font-size: 0.8125rem; color: var(--text-tertiary); text-align: center; max-width: 200px; }
+
+.bfc-result-panel { animation: toolFadeIn 0.25s ease; }
+.bfc-divider { border: none; border-top: 1px solid var(--border-subtle); margin: 16px 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  .bfc-bf-number { animation: none; }
+  .bfc-spectrum-pointer { transition: none; }
+  .bfc-threshold-bar__fill { transition: none; }
+}

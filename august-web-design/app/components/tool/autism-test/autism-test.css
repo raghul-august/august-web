@@ -1,0 +1,29 @@
+/* Pill highlighting that the score meets the published NHS referral cut-off */
+.autism-cutoff-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: var(--brand-subtle);
+  color: var(--brand-primary);
+}
+
+.add-border-top{
+  border-top : 1px solid var(--border-subtle);
+  padding-top : 15px;
+  padding-bottom : 10px;
+}
+
+.add-border-top:first-child{
+  border-top : 1px solid transparent;
+
+}
+
+.add-border-top:last-child{
+  padding-bottom:0px;
+}

@@ -1,0 +1,304 @@
+/* GLP-1 Titration Calculator - scoped styles.
+   Shared tokens, .accent-gradient, and @keyframes toolFadeIn are in tool-shared.css */
+
+.tc-form-helper {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+}
+
+/* Customization section */
+.tc-customize-section {
+  background: var(--surface-subtle, #F3F1EB);
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 16px;
+}
+.tc-customize-title {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  color: var(--text-tertiary);
+  margin-bottom: 12px;
+}
+.tc-toggle-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+@media (max-width: 600px) {
+  .tc-toggle-grid { grid-template-columns: 1fr; }
+}
+.tc-toggle-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.tc-toggle-checkbox {
+  width: 36px;
+  height: 20px;
+  border-radius: 9999px;
+  border: 1.5px solid var(--border);
+  background: var(--surface-elevated);
+  position: relative;
+  flex-shrink: 0;
+  transition: background 0.2s ease, border-color 0.2s ease;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+.tc-toggle-checkbox::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--text-tertiary);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+.tc-toggle-checkbox:checked {
+  background: var(--brand-primary);
+  border-color: var(--brand-primary);
+}
+.tc-toggle-checkbox:checked::after {
+  transform: translateX(16px);
+  background: var(--text-inverse);
+}
+.tc-toggle-checkbox:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 2px;
+}
+.tc-toggle-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.tc-toggle-label {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+.tc-toggle-desc {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+}
+
+/* Conditional target dose field */
+.tc-target-field {
+  margin-top: 12px;
+  animation: toolFadeIn 0.3s ease both;
+}
+
+/* Results container */
+.tc-results {
+  animation: toolFadeIn 0.4s ease both;
+}
+
+/* Alert banner */
+.tc-alert-banner {
+  background: var(--info-50, #E5EEF2);
+  color: var(--info-700, #2A4A55);
+  border-radius: 12px;
+  padding: 14px 18px;
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  margin-bottom: 20px;
+  border: 1px solid var(--border-subtle);
+}
+.tc-alert-title {
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+/* Schedule rows */
+.tc-schedule-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.tc-schedule-row {
+  background: var(--surface-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  animation: toolFadeIn 0.4s ease both;
+}
+.tc-schedule-row:nth-child(2) { animation-delay: 0.04s; }
+.tc-schedule-row:nth-child(3) { animation-delay: 0.08s; }
+.tc-schedule-row:nth-child(4) { animation-delay: 0.12s; }
+.tc-schedule-row:nth-child(5) { animation-delay: 0.16s; }
+.tc-schedule-row:nth-child(6) { animation-delay: 0.2s; }
+.tc-schedule-row--maintenance {
+  background: var(--brand-subtle, #E8F2ED);
+  border-color: var(--brand-primary);
+}
+
+.tc-schedule-week {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  min-width: 100px;
+}
+.tc-schedule-dose {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  background: var(--surface-subtle, #F3F1EB);
+  color: var(--text-primary);
+}
+.tc-schedule-row--maintenance .tc-schedule-dose {
+  background: var(--brand-primary);
+  color: var(--text-inverse);
+}
+.tc-maintenance-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  background: var(--success-50, #E8F2ED);
+  color: var(--success-700, #2A5A48);
+  border: 1px solid var(--success, #3D8168);
+}
+.tc-schedule-metrics {
+  margin-left: auto;
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.tc-schedule-units {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+.tc-schedule-volume {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Notes section */
+.tc-notes-section {
+  margin-top: 20px;
+  padding: 16px 18px;
+  background: var(--surface-page, #FAF9F5);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+}
+.tc-notes-title {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+.tc-notes-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.tc-notes-item {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  padding-left: 16px;
+  position: relative;
+}
+.tc-notes-item::before {
+  content: "\2022";
+  position: absolute;
+  left: 0;
+  color: var(--text-tertiary);
+}
+
+/* FDA guidelines box */
+.tc-fda-box {
+  margin-top: 20px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.tc-fda-header {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  padding: 14px 18px;
+  background: var(--surface-page, #FAF9F5);
+  border-bottom: 1px solid var(--border-subtle);
+}
+.tc-fda-content {
+  padding: 14px 18px;
+  background: var(--surface-elevated);
+}
+.tc-fda-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.tc-fda-item {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  padding-left: 16px;
+  position: relative;
+}
+.tc-fda-item::before {
+  content: "\2022";
+  position: absolute;
+  left: 0;
+  color: var(--brand-primary);
+}
+.tc-fda-med-summary {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-subtle);
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+}
+.tc-fda-med-name {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+
+/* Reset link */
+.tc-reset-link {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.8125rem;
+  color: var(--text-tertiary);
+  text-decoration: underline;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+.tc-reset-link:hover {
+  color: var(--text-secondary);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .tc-schedule-row,
+  .tc-results,
+  .tc-target-field { animation: none; }
+}

@@ -1,0 +1,243 @@
+/* Pill Identifier — tool-specific styles. Tokens come from tool-tokens.css;
+   shared utilities (.tool-btn, .tool-input, etc.) live in tool-shared.css.
+   Only the pill swatch/shape visuals and color/shape grids stay here. */
+
+/* ── Imprint suggestions dropdown ─────────────────────────────────────── */
+
+.pill-suggest-panel {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  z-index: 30;
+  max-height: 320px;
+  overflow-y: auto;
+  background: var(--surface-elevated);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 6px;
+  animation: toolFadeIn 0.18s ease;
+  --tool-fade-y: 4px;
+}
+
+.pill-suggest-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 8px 10px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  color: var(--text-primary);
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.12s ease;
+}
+
+.pill-suggest-option:hover,
+.pill-suggest-option:focus-visible {
+  background: var(--surface-subtle);
+  outline: none;
+}
+
+/* ── Pill visual (color-shape rendering, no licensed images) ─────────── */
+
+.pill-visual {
+  flex: 0 0 auto;
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pill-visual__pill {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 -3px 6px rgba(0, 0, 0, 0.12),
+    0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.pill-visual__pill--round { border-radius: 50%; }
+.pill-visual__pill--oval { border-radius: 50%; width: 72px; height: 52px; }
+.pill-visual__pill--capsule {
+  border-radius: 999px;
+  width: 72px;
+  height: 32px;
+  overflow: hidden;
+}
+.pill-visual__pill--rectangle { border-radius: 6px; width: 56px; height: 36px; }
+.pill-visual__pill--three-sided { clip-path: polygon(50% 0%, 0% 100%, 100% 100%); }
+.pill-visual__pill--four-sided { transform: rotate(45deg); border-radius: 8px; }
+.pill-visual__pill--five-sided { clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%); }
+.pill-visual__pill--six-sided { clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); }
+.pill-visual__pill--eight-sided { clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%); }
+.pill-visual__pill--heart {
+  clip-path: path("M32 56 C 8 38, 0 24, 14 12 C 22 6, 30 12, 32 18 C 34 12, 42 6, 50 12 C 64 24, 56 38, 32 56 Z");
+}
+.pill-visual__pill--kidney { border-radius: 60% 60% 60% 60% / 90% 90% 30% 30%; }
+.pill-visual__pill--egg { border-radius: 60% 60% 50% 50% / 70% 70% 40% 40%; }
+.pill-visual__pill--barrel { border-radius: 18px; width: 36px; height: 64px; }
+
+.pill-visual__capsule-half {
+  position: absolute;
+  inset: 0 50% 0 0;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.pill-visual__imprint {
+  position: relative;
+  z-index: 1;
+  font-size: 9px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.55);
+  letter-spacing: 0.02em;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.45);
+  max-width: 90%;
+  text-align: center;
+  line-height: 1.1;
+  transform: rotate(0deg);
+}
+
+.pill-visual__pill--four-sided .pill-visual__imprint {
+  transform: rotate(-45deg);
+}
+
+/* ── Results grid ─────────────────────────────────────────────────────── */
+
+.pill-results-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+@media (min-width: 640px) {
+  .pill-results-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.pill-results-grid .pill-card {
+  height: 100%;
+}
+
+.pill-results-grid .pill-card__body {
+  flex: 1;
+}
+
+/* ── Result card (extends .tool-card from tool-shared.css) ────────────── */
+
+.pill-card {
+  --tool-fade-y: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 14px;
+  border-radius: 18px;
+  max-width: 420px;
+  margin: 0 auto;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.03),
+    0 4px 16px rgba(0, 0, 0, 0.04);
+}
+
+.pill-results-grid .pill-card {
+  max-width: none;
+}
+
+.pill-card .pill-visual {
+  width: 100%;
+  height: 96px;
+  padding: 4px 0;
+}
+
+.pill-card__body {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.pill-card__title-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 2px;
+}
+
+.pill-card__title {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 0;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+
+.pill-card__strength {
+  font-size: 0.85rem;
+  color: var(--brand-primary);
+  background: var(--brand-subtle);
+  padding: 2px 10px;
+  border-radius: 9999px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.pill-card__use {
+  font-size: 0.82rem;
+  color: var(--text-tertiary);
+  margin: 0 0 12px;
+  line-height: 1.5;
+}
+
+.pill-card__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 14px;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.pill-card__grid > div { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.pill-card__grid dt {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-tertiary);
+  font-weight: 500;
+}
+.pill-card__grid dd {
+  font-size: 0.82rem;
+  color: var(--text-primary);
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.pill-card__body--centered {
+  text-align: center;
+  align-items: center;
+}
+
+.pill-card__body--centered .pill-card__title-row {
+  justify-content: center;
+}
+
+.pill-card__empty-copy {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0 0 14px;
+  max-width: 360px;
+}

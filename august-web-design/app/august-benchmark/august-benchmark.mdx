@@ -1,0 +1,71 @@
+# India's own Health AI, August tops the US Medical Licensing Examination (USMLE), with 94.8%
+
+August AI, the larger-language-model based artificial intelligence behind the August Health Companion available on Whatsapp has achieved a score of 94.8% in the USMLE. August AI has been developed by Beyond, a HealthTech startup based out of Bangalore, India. This result means August has scored the highest in the USMLE of all AIs that have been benchmarked on it. It scored higher than OpenAI’s GPT-4 (87.8%), Google MedPaLM 2 (86.5%) and OpenEvidence (90%) to name a few. This result demonstrates the capabilities of the August AI (and AI in general) and its ability to revolutionise healthcare for the every day individual.
+
+![August AI performance comparison showing August at 94.8%, Open Evidence at 93.7%, GPT-4 at 83.7%, Anthropic Claude 2 at 66.5%, and ChatGPT at 58.7%](https://framerusercontent.com/images/VwTodBg3RxBXj8SnTaNaAxSTgJc.png)
+
+At Beyond, we are focused on enabling high quality health information and support for everyone. Given that August has done **9.3%** better than GPT-4 on application of clinical knowledge in a clinical setting and **4.3%** better than GPT-4 on ability to manage patients in an unsupervised setting, the results give us a strong indicator that we are heading in the right direction.
+
+
+
+## Significance of the USMLE Benchmark
+
+The [United States Medical Licensing Examination (USMLE)](https://www.usmle.org/) is a multi-step examination for medical licensure in the United States. It is one of the most rigorous and challenging exams for aspiring physicians, designed to test both the foundational knowledge and clinical skills required to practice medicine safely and effectively.
+<br/> 
+The USMLE has 3 steps:
+
+1. **USMLE Step 1**: Assesses the foundational understanding of basic medical science. This step is often regarded as the most challenging, with its emphasis on the integration of various medical disciplines.
+
+2. **USMLE Step 2 CK (Clinical Knowledge)**: Focuses on the application of medical knowledge and skills in clinical settings. It ensures that the test-taker has the requisite knowledge to provide care under supervision.
+
+3. **USMLE Step 3**: The final hurdle, this step evaluates the test-taker's ability to practice medicine independently. It covers both the application of medical knowledge and the understanding of biomedical and clinical science essential for unsupervised practice.
+<br/> 
+It is critical that the development of health related AI is guided by trust and explainability. As such, measuring an AI’s performance on medical knowledge as compared to a human is an extremely important step. Clinicians that give the USMLE require approximately 60% to clear the USMLE. Our standard for an AI (both internally at Beyond and as perceived by users) is that end-state a health AI should be exceedingly accurate in terms of medical knowledge to be an effective partner for both clinicians and users.
+
+## Methodology
+
+We used the standard USMLE Sample Examination from 2022, which has been used to generate the benchmarks for ChatGPT[[1]](https://pmc.ncbi.nlm.nih.gov/articles/PMC9931230/), GPT-4[[2]](https://arxiv.org/abs/2303.13375), Claude 2[[3]](https://www-files.anthropic.com/production/images/Model-Card-Claude-2.pdf) and other health AIs. The dataset can be found here. The dataset was used as is and the questions were fed in one at a time into the August AI engine.
+
+![Detailed methodology section showing test structure and evaluation process](https://framerusercontent.com/images/KDjmK0fsd8d7o7x9pgC3o6r8o.png)
+
+For the purpose of this test, we removed any user facing safeguards that we’ve implemented into the August AI. The user facing version is designed to be a health information platform for everyday individuals and hence limits its capabilities considerably.
+<br/>
+The output was recorded for each response and evaluated by a human evaluator. The role of the human evaluator was to simply mark the responses as correct or incorrect. The outputs from the run can be found below, along with the evaluation from the human evaluator.
+
++ [Step 1](https://docs.google.com/spreadsheets/d/1iWrt6h6uOzH4eMJDr-5MyN84BTJAuzQsx2-qOcXCLZw/edit)
+
++ [Step 2 (CK)](https://docs.google.com/spreadsheets/d/1-6hIuMQANGhh2BABVEeKELrbX3uJrdwKrb3PxwuhgZI/edit?pli=1&gid=0#gid=0)
+
++ [Step 3](https://docs.google.com/spreadsheets/d/1HfQY_rp3vfZFabfFlxmsrNG6ShOiuxFZ2HEgVw6N8qw/edit?gid=0#gid=0)
+
+
+
+## Results
+
+August scored a blended **94.77%** across all three steps, while scoring **96.8%** in step 1, **92.66%** in step 2 and **95.1%** in Step 3.
+
+![August AI performance comparison showing August at 94.8%, Open Evidence at 93.7%, GPT-4 at 83.7%, Anthropic Claude 2 at 66.5%, and ChatGPT at 58.7%](https://framerusercontent.com/images/bbSIWYUJQ2duwifn0Nj8FrmUGKw.png)
+
+
+Our results were also extremely token optimized, using significantly less tokens than the ensemble reasoning method MedPaLM used to achieve its results in the USMLE. Our estimate is that the system used 15x less tokens than the stated methodology used by MedPaLM[5].
+<br/>
+
+## About August AI
+
+The August AI engine is a large-language-model powered health AI that has been designed to provide high quality health information and support to individuals. August is multi-modal, supporting audio, text and PDF Lab reports as input while providing output in text format.
+
+The core August engine uses a simpler version of ensemble reasoning to generate high quality outputs on health related questions. The version used is designed to be hyper optimized in token usage while producing high quality results well above the current capabilities of models like OpenAI GPT-4 and Google MedPaLM.
+
+The August AI is available free for use on [Whatsapp](https://api.whatsapp.com/send/?phone=918738030604&text=Hi+August&type=phone_number&app_absent=0).
+
+## What's next
+
+We’re a team of 5 people building August. This achievement is great validation for our vision with August and the magic that a dedicated team can do. We’re focused on ensuring quality health information is available to anyone that needs it. There are over 800k people that have interacted with August since it’s launch and we’re working with this core group to optimise August for their needs.
+
+Our current resourcing makes it inefficient to run benchmarks that have over 1000 questions, however we will be running more such benchmarks on August in the future as things evolve.
+<br/>
+
+## Get in touch
+
+You can contact us at [contact@augusthealth.com](mailto:anuruddh@getbeyondhealth.com.)
+ 

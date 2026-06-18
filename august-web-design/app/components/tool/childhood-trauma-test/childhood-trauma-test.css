@@ -1,0 +1,60 @@
+/* Childhood Trauma Test Styles — tool-specific only */
+/* Shared landing styles are in tool-shared.css */
+
+/* fadeInUp replaced by toolFadeIn; consumers set --tool-fade-y: 20px */
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Question screen CSS animations */
+.ct-question-enter {
+  --tool-fade-y: 20px;
+  animation: toolFadeIn 0.5s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+.ct-question-buttons-enter {
+  --tool-fade-y: 20px;
+  animation: toolFadeIn 0.4s ease-out 0.2s both;
+}
+
+.ct-btn-enter-0 {
+  --tool-fade-y: 20px;
+  animation: toolFadeIn 0.3s ease-out 0.3s both;
+}
+
+.ct-btn-enter-1 {
+  --tool-fade-y: 20px;
+  animation: toolFadeIn 0.3s ease-out 0.4s both;
+}
+
+/* Progress bar transition */
+.ct-progress-fill {
+  transition: width 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Results page hover states */
+.ct-cta-primary:hover {
+  background: var(--brand-primary-pressed);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(32, 110, 85, 0.35);
+}
+
+.ct-cta-secondary:hover {
+  background: #e9f1ee;
+  transform: translateY(-1px);
+}
+
+/* Responsive - Tablet */
+@media (max-width: 768px) {
+  .ct-result-score {
+    font-size: 4rem !important;
+  }
+}
+
+/* Responsive - Mobile */
+@media (max-width: 480px) {
+  .ct-result-score {
+    font-size: 3.5rem !important;
+  }
+}

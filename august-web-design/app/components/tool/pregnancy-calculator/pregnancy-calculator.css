@@ -1,0 +1,263 @@
+/* Overrides & unique rules for the pregnancy calculator.
+   Base layout, nav, form-grid, result panel, and table styles live in
+   app/styles/tool-calculator.css — imported via the route layout. */
+
+/* ── Section label override (smaller, secondary colour) ────────────── */
+
+.preg-section-label {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+/* ── Method picker select ──────────────────────────────────────────── */
+
+.preg-method-select {
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8' fill='none' stroke='currentColor' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'><polyline points='1 1.5 6 6.5 11 1.5'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 12px 8px;
+  padding-right: 36px;
+  cursor: pointer;
+}
+
+/* ── Result primary override (tighter gap) ─────────────────────────── */
+
+.preg-result-primary {
+  gap: 8px;
+}
+
+/* ── Trimester tag ─────────────────────────────────────────────────── */
+
+.preg-trimester-tag {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  border: 1px solid var(--border-subtle);
+  background: var(--brand-subtle);
+  color: var(--brand-primary);
+  margin-bottom: 4px;
+}
+
+.preg-trimester-tag--t1 {
+  background: color-mix(in srgb, var(--brand-primary) 12%, transparent);
+}
+
+.preg-trimester-tag--t2 {
+  background: color-mix(in srgb, var(--brand-primary) 18%, transparent);
+}
+
+.preg-trimester-tag--t3 {
+  background: color-mix(in srgb, var(--brand-primary) 26%, transparent);
+}
+
+/* ── Value row override (adds flex-wrap) ───────────────────────────── */
+
+.preg-value-row {
+  flex-wrap: wrap;
+}
+
+/* ── Value override (smaller size for due-date display) ────────────── */
+
+.preg-value {
+  font-size: 1.85rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+/* ── Result description override ───────────────────────────────────── */
+
+.preg-result-desc {
+  font-size: 0.9375rem;
+  line-height: 1.55;
+}
+
+.preg-result-desc strong {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+/* ── Progress bar ──────────────────────────────────────────────────── */
+
+.preg-progress-track {
+  margin-top: 12px;
+  position: relative;
+  height: 8px;
+  background: var(--surface-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.preg-progress-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  background: var(--brand-primary);
+  border-radius: 999px;
+  transition: width 0.5s ease;
+}
+
+.preg-progress-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+}
+
+/* ── Meta row override (tighter spacing) ───────────────────────────── */
+
+.preg-meta-row {
+  margin-top: 4px;
+  padding-top: 10px;
+}
+
+.preg-meta-row strong {
+  font-size: 0.9375rem;
+}
+
+/* ── Table row accent (uses border-color instead of --active) ──────── */
+
+.preg-table-row--accent {
+  border-color: var(--brand-primary);
+  background: var(--brand-subtle);
+}
+
+/* ── Table cell value override ─────────────────────────────────────── */
+
+.tool-calc-table-cell-value strong {
+  font-size: 0.9375rem;
+}
+
+/* ── Milestone timeline ────────────────────────────────────────────── */
+
+.preg-milestone-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 4px;
+}
+
+.preg-milestone-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 22px 1fr auto;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 10px 4px 10px 4px;
+}
+
+.preg-milestone-row::before {
+  content: "";
+  position: absolute;
+  left: 14px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--border-subtle);
+  z-index: 0;
+}
+
+.preg-milestone-row:first-child::before {
+  top: 18px;
+}
+
+.preg-milestone-row:last-child::before {
+  bottom: calc(100% - 18px);
+}
+
+.preg-milestone-dot {
+  position: relative;
+  z-index: 1;
+  width: 12px;
+  height: 12px;
+  margin-top: 6px;
+  margin-left: 10px;
+  border-radius: 50%;
+  background: var(--surface-elevated);
+  border: 2px solid var(--border-subtle);
+  flex-shrink: 0;
+}
+
+@media (min-width: 720px) {
+  .preg-milestone-dot {
+    margin-left: 6px;
+  }
+}
+
+.preg-milestone-row--reached .preg-milestone-dot {
+  background: var(--brand-primary);
+  border-color: var(--brand-primary);
+}
+
+.preg-milestone-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.preg-milestone-head {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.preg-milestone-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.preg-milestone-week {
+  font-size: 0.6875rem;
+  color: var(--text-tertiary);
+  letter-spacing: 0.03em;
+}
+
+.preg-milestone-helper {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  line-height: 1.4;
+}
+
+.preg-milestone-date {
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  white-space: nowrap;
+  align-self: center;
+}
+
+.preg-milestone-date strong {
+  font-weight: 500;
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+}
+
+.preg-milestone-row--reached .preg-milestone-date strong {
+  color: var(--text-primary);
+}
+
+@media (max-width: 480px) {
+  .preg-milestone-row {
+    grid-template-columns: 22px 1fr auto;
+    padding: 8px 0;
+  }
+  .preg-milestone-helper {
+    font-size: 0.7rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .preg-progress-fill {
+    transition: none;
+  }
+}

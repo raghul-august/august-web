@@ -1,0 +1,547 @@
+/* IF Calculator scoped styles. Builds on tool-tokens.css + tool-shared.css
+ * + tool-calculator.css. Adds protocol radio cards, the time stepper,
+ * the schedule timeline, and the milestone rows. */
+
+.if-calc-card :is(input, select).tool-input:focus,
+.if-calc-card :is(input, select).tool-input:focus-visible {
+  border-color: var(--brand-primary);
+  box-shadow: 0 0 0 3px rgba(32, 110, 85, 0.18);
+  outline: none;
+  outline-offset: 0;
+}
+
+.if-calc-card .tool-chip:focus,
+.if-calc-card .tool-chip:focus-visible {
+  outline: none;
+  outline-offset: 0;
+  box-shadow: 0 0 0 3px rgba(32, 110, 85, 0.18);
+}
+
+/* ── Protocol radio cards ────────────────────────────────────────────── */
+
+.if-protocol-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.if-protocol-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  background: var(--surface-elevated);
+  cursor: pointer;
+  transition: border-color 160ms ease, background-color 160ms ease, box-shadow 160ms ease;
+}
+
+.if-protocol-card:hover {
+  border-color: var(--border);
+  background: var(--surface-subtle);
+}
+
+.if-protocol-card[aria-checked="true"] {
+  border-color: var(--brand-primary);
+  background: var(--brand-subtle);
+  box-shadow: 0 0 0 1px var(--brand-primary) inset;
+}
+
+.if-protocol-radio {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+}
+
+.if-protocol-card[aria-checked="true"] .if-protocol-radio {
+  border-color: var(--brand-primary);
+}
+
+.if-protocol-card[aria-checked="true"] .if-protocol-radio::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--brand-primary);
+}
+
+.if-protocol-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.if-protocol-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.if-protocol-label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.if-protocol-desc {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.if-difficulty-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  text-transform: uppercase;
+}
+
+.if-difficulty-badge--beginner {
+  background: var(--success-50);
+  color: var(--success-700);
+}
+.if-difficulty-badge--intermediate {
+  background: var(--info-50);
+  color: var(--info-700);
+}
+.if-difficulty-badge--advanced {
+  background: var(--warning-50);
+  color: var(--warning-700);
+}
+.if-difficulty-badge--expert {
+  background: var(--danger-50);
+  color: var(--danger-700);
+}
+
+/* ── Time stepper ────────────────────────────────────────────────────── */
+
+.if-time-stepper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 8px 0 4px;
+}
+
+.if-time-step-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+  border: 1px solid var(--border);
+  background: var(--surface-elevated);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: background-color 140ms ease, border-color 140ms ease;
+}
+
+.if-time-step-btn:hover {
+  background: var(--surface-subtle);
+  border-color: var(--border-strong);
+}
+
+.if-time-step-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.if-time-display {
+  min-width: 110px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.if-calc-card select.tool-input {
+  padding-right: 36px;
+  text-overflow: ellipsis;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path fill='none' stroke='%231C1917' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' d='M1 1.5l5 5 5-5'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+}
+
+.if-time-preset-select {
+  width: 100%;
+  margin-top: 4px;
+}
+
+.if-time-helper {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-tertiary);
+  margin: 8px 0 0;
+}
+
+/* ── Results panel ───────────────────────────────────────────────────── */
+
+.if-result-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.if-protocol-summary {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.if-protocol-summary-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.if-protocol-summary-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+}
+
+.if-protocol-summary-name {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.if-protocol-summary-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  width: 100%;
+}
+
+.if-window-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+@media (min-width: 520px) {
+  .if-window-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.if-window-card {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 16px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  background: var(--surface-elevated);
+}
+
+.if-window-card--eat {
+  background: var(--success-50);
+  border-color: var(--success-50);
+}
+
+.if-window-card--fast {
+  background: var(--info-50);
+  border-color: var(--info-50);
+}
+
+.if-window-icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 9999px;
+  background: var(--surface-elevated);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+}
+
+.if-window-card--eat .if-window-icon {
+  color: var(--success-700);
+}
+
+.if-window-card--fast .if-window-icon {
+  color: var(--info-700);
+}
+
+.if-window-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.if-window-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+}
+
+.if-window-value {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.if-window-helper {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+/* ── Schedule timeline ───────────────────────────────────────────────── */
+
+.if-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.if-section-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.if-section-caption {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.if-schedule {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--surface-elevated);
+}
+
+.if-schedule-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.if-schedule-row:last-child {
+  border-bottom: none;
+}
+
+.if-schedule-time {
+  flex-shrink: 0;
+  min-width: 80px;
+  font-weight: 500;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.if-schedule-label {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* ── Milestones ──────────────────────────────────────────────────────── */
+
+.if-milestones {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.if-milestone {
+  display: flex;
+  gap: 12px;
+  padding: 14px 16px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  background: var(--surface-elevated);
+}
+
+.if-milestone--reached {
+  border-color: var(--success-50);
+  background: var(--success-50);
+}
+
+.if-milestone-icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 9999px;
+  background: var(--surface-elevated);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+}
+
+.if-milestone--reached .if-milestone-icon {
+  color: var(--success-700);
+  background: var(--surface-elevated);
+}
+
+.if-milestone-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.if-milestone-head {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media (max-width: 520px) {
+  .if-milestone-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+}
+
+.if-milestone-label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.if-milestone-approx {
+  font-size: 0.8rem;
+  color: var(--text-tertiary);
+  font-variant-numeric: tabular-nums;
+}
+
+.if-milestone-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+.if-milestone-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.if-milestone-status--reached {
+  color: var(--success-700);
+}
+
+.if-milestone-status--beyond {
+  color: var(--text-tertiary);
+}
+
+/* ── Protocol info meta ──────────────────────────────────────────────── */
+
+.if-protocol-info {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  padding: 16px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  background: var(--surface-elevated);
+}
+
+@media (min-width: 520px) {
+  .if-protocol-info {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.if-protocol-info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.if-protocol-info-key {
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+}
+
+.if-protocol-info-value {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+/* ── 5:2 result card ─────────────────────────────────────────────────── */
+
+.if-cr-card {
+  padding: 18px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  background: var(--surface-elevated);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.if-cr-headline {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.if-cr-body {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.if-cr-target {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  background: var(--brand-subtle);
+  color: var(--brand-primary);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+

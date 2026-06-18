@@ -1,0 +1,37 @@
+.add-border-top{
+  border-top : 1px solid var(--border-subtle);
+  padding-top : 15px;
+  padding-bottom : 10px;
+}
+
+.add-border-top:first-child{
+  border-top : 1px solid transparent;
+
+}
+
+.add-border-top:last-child{
+  padding-bottom:0px;
+}
+
+.detox-status-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.detox-status-badge--clear {
+  background: var(--brand-subtle);
+  color: var(--brand-primary);
+}
+
+.detox-status-badge--borderline {
+  background: var(--warning-50);
+  color: var(--warning-700);
+}
+
+.detox-status-badge--detectable {
+  background: var(--danger-50);
+  color: var(--danger-700);
+}

@@ -1,0 +1,147 @@
+/* Pregnancy Weight Gain Calculator — scoped styles (.pwg-* prefix).
+   Shared tokens and @keyframes toolFadeIn live in tool-shared.css / tool-tokens.css.
+   Form layout mirrors bmr-calculator for consistency. */
+
+/* ── Height + Weight + Week row (mirrors .bmr-hwa-row) ── */
+.pwg-hwa-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 16px;
+}
+.pwg-hwa-row > .tool-form-group:first-child { grid-column: 1 / -1; }
+@media (min-width: 520px) {
+  .pwg-hwa-row { grid-template-columns: 1fr 1fr 1fr; }
+  .pwg-hwa-row > .tool-form-group:first-child { grid-column: auto; }
+}
+
+/* ── Current weight field — match the width of the Height column ── */
+.pwg-cur-weight-wrap {
+  max-width: calc(33.333% - 11px);
+}
+@media (max-width: 519px) {
+  .pwg-cur-weight-wrap { max-width: 100%; }
+}
+
+/* ── Submit footer ── */
+.pwg-form-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+/* BMI badge row */
+.pwg-bmi-row { display: flex; align-items: center; gap: 12px; margin: 8px 0; }
+.pwg-bmi-number {
+  font-size: 2.75rem;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  color: var(--text-primary);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+.pwg-bmi-badge {
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  background: var(--brand-subtle, #e8f2ed);
+  color: var(--brand-primary);
+}
+.pwg-bmi-descriptor { font-size: 0.875rem; color: var(--text-secondary); margin: 4px 0 0; line-height: 1.5; }
+
+/* Status callout */
+.pwg-status { border-left: 4px solid var(--border-subtle); padding-left: 16px; }
+.pwg-status--ok   { border-left-color: var(--success, #3D8168); background: var(--success-50, #e7f2ee); }
+.pwg-status--above { border-left-color: var(--warning, #C68E2A); background: var(--warning-50, #faf2de); }
+.pwg-status--below { border-left-color: var(--info, #1F7AC2);    background: var(--info-50, #e5eef2); }
+.pwg-status-heading { font-size: 1.125rem; font-weight: 500; color: var(--text-primary); margin: 0 0 6px; }
+.pwg-status-body { font-size: 0.875rem; color: var(--text-secondary); margin: 0; line-height: 1.6; }
+.pwg-status-pill {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  background: var(--surface-subtle, var(--surface-elevated));
+  border: 1px solid var(--border-subtle);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+/* Total range */
+.pwg-range-value { font-size: 1.875rem; font-weight: 500; letter-spacing: -0.03em; color: var(--text-primary); margin: 8px 0 2px; }
+.pwg-range-sub { font-size: 0.8125rem; color: var(--text-secondary); margin: 0; }
+.pwg-trimester-inline {
+  font-size: 0.8125rem;
+  color: var(--text-tertiary);
+  margin: 8px 0 0;
+}
+
+/* Chart wrapper */
+.pwg-chart { width: 100%; overflow: hidden; border-radius: 8px; margin: 4px 0; }
+.pwg-chart svg { display: block; width: 100%; height: auto; }
+.pwg-chart-caption { font-size: 0.75rem; color: var(--text-tertiary); text-align: center; margin-top: 6px; }
+
+/* Week table */
+.pwg-tbl { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+.pwg-tbl th {
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  color: var(--text-tertiary);
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+.pwg-tbl td { padding: 9px 12px; color: var(--text-secondary); border-bottom: 1px solid var(--border-subtle); font-variant-numeric: tabular-nums; }
+.pwg-tbl tr:last-child td { border-bottom: none; }
+.pwg-tbl tr.pwg-row-current td { background: var(--brand-subtle, #e8f2ed); color: var(--text-primary); font-weight: 500; }
+.pwg-tbl .pwg-here-label { font-size: 0.75rem; color: var(--brand-primary); margin-left: 6px; }
+.pwg-table-toggle {
+  background: none;
+  border: none;
+  color: var(--brand-primary);
+  font-size: 0.875rem;
+  cursor: pointer;
+  padding: 10px 0;
+  font-weight: 500;
+  font-family: inherit;
+}
+.pwg-table-toggle:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Edge consult card */
+.pwg-consult-card { border-left: 4px solid var(--info, #1F7AC2); background: var(--info-50, #e5eef2); }
+.pwg-consult-heading { font-size: 1.0625rem; font-weight: 500; color: var(--text-primary); margin: 0 0 8px; }
+.pwg-consult-body { font-size: 0.875rem; color: var(--text-secondary); margin: 0 0 16px; line-height: 1.6; }
+
+/* Recalculate link */
+.pwg-recalc-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--brand-primary);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  margin-bottom: 4px;
+  font-family: inherit;
+  text-decoration: none;
+}
+.pwg-recalc-link:hover { text-decoration: underline; }
+.pwg-recalc-link:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .pwg-dot, .pwg-status, .pwg-bmi-badge { transition: none; }
+}

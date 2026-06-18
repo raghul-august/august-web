@@ -1,0 +1,2304 @@
+{
+  "acetaminophen": {
+    "name": "Acetaminophen",
+    "conditions": [
+      "Pain/Inflammation",
+      "Fever"
+    ],
+    "drugClass": "Pain Reliever/Fever Reducer",
+    "prescription": {
+      "dose": "500 mg tablet",
+      "sig": "Take 2 tablets by mouth every 4 to 6 hours as needed for pain or fever. Do not exceed 10 tablets in 24 hours.",
+      "dispense": "100 tablets \u00b7 10-day supply",
+      "refills": "0 remaining",
+      "prescribedDaysAgo": 11,
+      "prescriber": "Dr. John Doe",
+      "credential": "NPI 1487201930",
+      "packaging": "Pill bottle"
+    },
+    "brandName": "TYLENOL",
+    "doseForm": "Tablet",
+    "packaging_image": "transparent_tablet_prescription_vial_.webp"
+  },
+  "apixaban": {
+    "name": "Apixaban",
+    "image": "apixaban.webp",
+    "conditions": [
+      "Atrial Fibrillation",
+      "DVT/PE"
+    ],
+    "drugClass": "Factor Xa Inhibitor",
+    "prescription": {
+      "dose": "5 mg tablet",
+      "sig": "Take 1 tablet by mouth twice daily.",
+      "dispense": "60 tablets \u00b7 30-day supply",
+      "refills": "0 remaining",
+      "prescribedDaysAgo": 210,
+      "prescriber": "Dr. John Doe",
+      "credential": "NPI 1487201930",
+      "packaging": "Pill bottle"
+    },
+    "brandName": "ELIQUIS",
+    "doseForm": "Tablet",
+    "packaging_image": "transparent_tablet_prescription_vial_.webp"
+  },
+  "aspirin": {
+    "name": "Aspirin",
+    "conditions": [
+      "Cardiovascular Disease Prevention",
+      "Pain/Fever"
+    ],
+    "drugClass": "Anti-coagulation/Anti-platelet",
+    "prescription": {
+      "dose": "81 mg tablet",
+      "sig": "Take 1 tablet by mouth once daily with food.",
+      "dispense": "30 tablets \u00b7 30-day supply",
+      "refills": "0 remaining",
+      "prescribedDaysAgo": 28,
+      "prescriber": "Dr. John Doe",
+      "credential": "NPI 1487201930",
+      "packaging": "Pill bottle"
+    },
+    "packaging_image": "transparent_tablet_prescription_vial_.webp",
+    "doseForm": "Tablet"
+  },
+  "atenolol": {
+    "name": "Atenolol",
+    "conditions": [
+      "Hypertension",
+      "Cardiovascular Disease and Prevention"
+    ],
+    "drugClass": "Beta-1 Selective Adrenoreceptor Blocker",
+    "prescription": {
+      "dose": "50 mg tablet",
+      "sig": "Take 1 tablet by mouth once daily.",
+      "dispense": "30 tablets \u00b7 30-day supply",
+      "refills": "0 remaining",
+      "prescribedDaysAgo": 28,
+      "prescriber": "Dr. John Doe",
+      "credential": "NPI 1487201930",
+      "packaging": "Pill bottle"
+    },
+    "brandName": "TENORMIN",
+    "doseForm": "Tablet",
+    "packaging_image": "transparent_tablet_prescription_vial_.webp"
+  },
+  "atorvastatin": {
+    "name": "Atorvastatin",
+    "conditions": [
+      "Hyperlipidemia",
+      "Cardiovascular Disease and Prevention"
+    ],
+    "drugClass": "HMG-CoA Reductase Inhibitor",
+    "prescription": {
+      "dose": "20 mg tablet",
+      "sig": "Take 1 tablet by mouth once daily in the evening.",
+      "dispense": "30 tablets \u00b7 30-day supply",
+      "refills": "0 remaining",
+      "prescribedDaysAgo": 28,
+      "prescriber": "Dr. John Doe",
+      "credential": "NPI 1487201930",
+      "packaging": "Pill bottle"
+    },
+    "brandName": "LIPITOR",
+    "doseForm": "Tablet",
+    "packaging_image": "transparent_tablet_prescription_vial_.webp"
+  },
+  "bimatoprost": {
+    "name": "Bimatoprost",
+    "conditions": [
+      "Glaucoma"
+    ],
+    "drugClass": "Ocular",
+    "prescription": {
+      "dose": "0.01% ophthalmic solution",
+      "sig": "Instill 1 drop in the affected eye(s) once daily in the evening.",
+      "dispense": "1 bottle (2.5 mL) \u00b7 30-day supply",
+      "refills": "0 remaining",
+      "prescribedDaysAgo": 28,
+      "prescriber": "Dr. John Doe",
+      "credential": "NPI 1487201930",
+      "packaging": "Dropper bottle"
+    },
+    "packaging_image": "opaque-eye-drops.webp",
+    "doseForm": "Liquid"
+  },
+  "bisoprolol": {
+    "name": "Bisoprolol",
+    "conditions": [
+      "Hypertension",
+      "Heart Failure"
+    ],
+    "drugClass": "Beta-1 Selective Adrenoceptor Blocker",
+    "prescription": {
+      "dose": "5 mg tablet",
+      "sig": "Take 1 tablet by mouth once daily.",
+      "dispense": "30 tablets \u00b7 30-day supply",
+      "refills": "0 remaining",
+      "prescribedDaysAgo": 27,
+      "prescriber": "Dr. John Doe",
+      "credential": "NPI 1487201930",
+      "packaging": "Pill bottle"
+    },
+    "brandName": "ZEBETA",
+    "doseForm": "Tablet",
+    "packaging_image": "transparent_tablet_prescription_vial_.webp"
+  },
+  "bupropion": {
+    "name": "Bupropion",
+    "image": "bupropion.webp",
+    "conditions": [
+      "Anxiety/Depression",
+      "Smoking Cessation"
+    ],
+    "drugClass": "Aminoketone Antidepressant",
+    "prescription": {
+      "dose": "150 mg SR tablet",
+      "sig": "Take 1 tablet by mouth twice daily.",
+      "dispense": "60 tablets \u00b7 30-day supply",
+      "refills": "0 remaining",
+      "prescribedDaysAgo": 28,
+      "prescriber": "Dr. John Doe",
+      "credential": "NPI 1487201930",
+      "packaging": "Pill bottle"
+    },
+    "brandName": "WELLBUTRIN SR",
+    "doseForm": "Tablet",
+    "packaging_image": "transparent_tablet_prescription_vial_.webp"
+  },
+  "carvedilol": {
+    "name": "Carvedilol",
+    "conditions": [
+      "Heart Failure",
+      "Hypertension"
+    ],
+    "drugClass": "Alpha/Beta-Adrenergic Blocker",
+    "prescription": {
+      "dose": "6.25 mg tablet",
+      "sig": "Take 1 tablet by mouth twice daily with food.",
+      "dispense": "60 tablets \u00b7 30-day supply",
+      "refills": "0 remaining",
+      "prescribedDaysAgo": 29,
+      "prescriber": "Dr. John Doe",
+      "credential": "NPI 1487201930",
+      "packaging": "Pill bottle"
+    },
+    "brandName": "COREG",
+    "doseForm": "Tablet",
+    "packaging_image": "transparent_tablet_prescription_vial_.webp"
+  },
+  "cetirizine": {
+    "name": "Cetirizine",
+    "conditions": [
+      "Allergic Rhinitis",
+      "Urticaria"
+    ],
+    "drugClass": "Inflammation/Pain",
+    "prescription": {
+      "dose": "10 mg tablet",
+      "sig": "Take 1 tablet by mouth once daily.",
+      "dispense": "30 tablets \u00b7 30-day supply",
+      "refills": "0 remaining",
+      "prescribedDaysAgo": 26,
+      "prescriber": "Dr. John Doe",
+      "credential": "NPI 1487201930",
+      "packaging": "Pill bottle"
+    },
+    "packaging_image": "transparent_tablet_prescription_vial_.webp",
+    "doseForm": "Tablet"
+  },
+  "famotidine": {
+    "name": "Famotidine",
+    "image": "famotidine.webp",
+    "conditions": [
+      "GERD",
+      "Peptic Ulcer"
+    ],
+    "drugClass": "GI/Nutrition",
+    "prescription": {
+      "dose": "20 mg tablet",
+      "sig": "Take 1 tablet by mouth twice daily, 30 minutes before meals.",
+      "dispense": "60 tablets \u00b7 30-day supply",
+      "refills": "0 remaining",
+      "prescribedDaysAgo": 27,
+      "prescriber": "Dr. John Doe",
+      "credential": "NPI 1487201930",
+      "packaging": "Pill bottle"
+    },
+    "doseForm": "Tablet",
+    "packaging_image": "transparent_tablet_prescription_vial_.webp"
+  },
+  "flecainide": {
+    "name": "Flecainide",
+    "image": "flecainide.webp",
+    "conditions": [
+      "Arrhythmia"
+    ],
+    "drugClass": "Antiarrhythmic",
+    "prescription": {
+      "dose": "50 mg tablet",
+      "sig": "Starting dose 50-100 mg every 12 hours. Max 300-400 mg/day.",
+      "dispense": "60 tablets \u00b7 30-day supply",
+      "refills": "0 remaining",
+      "prescribedDaysAgo": 41,
+      "prescriber": "Dr. John Doe",
+      "credential": "NPI 1487201930",
+      "packaging": "Pill bottle"
+    },
+    "brandName": "TAMBOCOR",
+    "doseForm": "Tablet",
+    "packaging_image": "transparent_tablet_prescription_vial_.webp"
+  },
+  "irbesartan": {
+    "name": "Irbesartan",
+    "conditions": [
+      "Hypertension",
+      "Cardiovascular Disease and Prevention"
+    ],
+    "drugClass": "ARB",
+    "prescription": {
+      "dose": "150 mg tablet",
+      "sig": "Take 1 tablet by mouth once daily.",
+      "dispense": "30 tablets \u00b7 30-day supply",
+      "refills": "0 remaining",
+      "prescribedDaysAgo": 28,
+      "prescriber": "Dr. John Doe",
+      "credential": "NPI 1487201930",
+      "packaging": "Pill bottle"
+    },
+    "brandName": "AVAPRO",
+    "doseForm": "Tablet",
+    "packaging_image": "transparent_tablet_prescription_vial_.webp"
+  },
+  "labetalol": {
+    "name": "Labetalol",
+    "conditions": [
+      "Hypertension"
+    ],
+    "drugClass": "Alpha/Beta Blocker",
+    "prescription": {
+      "dose": "100 mg tablet",
+      "sig": "Take 1 tablet by mouth twice daily.",
+      "dispense": "60 tablets \u00b7 30-day supply",
+      "refills": "0 remaining",
+      "prescribedDaysAgo": 28,
+      "prescriber": "Dr. John Doe",
+      "credential": "NPI 1487201930",
+      "packaging": "Pill bottle"
+    },
+    "brandName": "TRANDATE",
+    "doseForm": "Tablet",
+    "packaging_image": "transparent_tablet_prescription_vial_.webp"
+  },
+  "lidocaine_patch": {
+    "name": "Lidocaine Patch",
+    "conditions": [
+      "Local Anesthesia",
+      "Pain"
+    ],
+    "drugClass": "Inflammation/Pain",
+    "prescription": {
+      "dose": "5% patch",
+      "sig": "Apply 1 patch to affected area once daily; remove after 12 hours.",
+      "dispense": "30 patches \u00b7 30-day supply",
+      "refills": "0 remaining",
+      "prescribedDaysAgo": 27,
+      "prescriber": "Dr. John Doe",
+      "credential": "NPI 1487201930",
+      "packaging": "Carton"
+    },
+    "packaging_image": "patch_pouch.webp",
+    "doseForm": "Patch"
+  },
+  "losartan": {
+    "name": "Losartan",
+    "conditions": [
+      "Hypertension",
+      "Cardiovascular Disease and Prevention"
+    ],
+    "drugClass": "ARB",
+    "prescription": {
+      "dose": "50 mg tablet",
+      "sig": "Take 1 tablet by mouth once daily.",
+      "dispense": "30 tablets \u00b7 30-day supply",
+      "refills": "0 remaining",
+      "prescribedDaysAgo": 28,
+      "prescriber": "Dr. John Doe",
+      "credential": "NPI 1487201930",
+      "packaging": "Pill bottle"
+    },
+    "brandName": "COZAAR",
+    "doseForm": "Tablet",
+    "packaging_image": "transparent_tablet_prescription_vial_.webp"
+  },
+  "lovastatin": {
+    "name": "Lovastatin",
+    "conditions": [
+      "Hyperlipidemia",
+      "Cardiovascular Disease and Prevention"
+    ],
+    "drugClass": "HMG-CoA Reductase Inhibitor",
+    "prescription": {
+      "dose": "20 mg tablet",
+      "sig": "Take 1 tablet by mouth once daily with the evening meal.",
+      "dispense": "30 tablets \u00b7 30-day supply",
+      "refills": "0 remaining",
+      "prescribedDaysAgo": 32,
+      "prescriber": "Dr. John Doe",
+      "credential": "NPI 1487201930",
+      "packaging": "Pill bottle"
+    },
+    "brandName": "MEVACOR",
+    "doseForm": "Tablet",
+    "packaging_image": "transparent_tablet_prescription_vial_.webp"
+  },
+  "metformin": {
+    "name": "Metformin",
+    "image": "metformin.webp",
+    "conditions": [
+      "Diabetes",
+      "PCOS"
+    ],
+    "drugClass": "Biguanide",
+    "prescription": {
+      "dose": "500 mg tablet",
+      "sig": "Take 1 tablet by mouth twice daily with meals.",
+      "dispense": "60 tablets \u00b7 30-day supply",
+      "refills": "0 remaining",
+      "prescribedDaysAgo": 27,
+      "prescriber": "Dr. John Doe",
+      "credential": "NPI 1487201930",
+      "packaging": "Pill bottle"
+    },
+    "brandName": "GLUCOPHAGE",
+    "doseForm": "Tablet",
+    "packaging_image": "transparent_tablet_prescription_vial_.webp"
+  },
+  "metoprolol": {
+    "name": "Metoprolol",
+    "conditions": [
+      "Hypertension",
+      "Cardiovascular Disease and Prevention"
+    ],
+    "drugClass": "Beta-Adrenergic Blocker",
+    "prescription": {
+      "dose": "25 mg tartrate tablet",
+      "sig": "Take 1 tablet by mouth twice daily.",
+      "dispense": "60 tablets \u00b7 30-day supply",
+      "refills": "0 remaining",
+      "prescribedDaysAgo": 27,
+      "prescriber": "Dr. John Doe",
+      "credential": "NPI 1487201930",
+      "packaging": "Pill bottle"
+    },
+    "brandName": "LOPRESSOR",
+    "doseForm": "Tablet",
+    "packaging_image": "transparent_tablet_prescription_vial_.webp"
+  },
+  "montelukast": {
+    "name": "Montelukast",
+    "conditions": [
+      "Asthma",
+      "Allergic Rhinitis"
+    ],
+    "drugClass": "Leukotriene Receptor Antagonist",
+    "prescription": {
+      "dose": "10 mg tablet",
+      "sig": "Take 1 tablet by mouth once daily in the evening.",
+      "dispense": "30 tablets \u00b7 30-day supply",
+      "refills": "0 remaining",
+      "prescribedDaysAgo": 27,
+      "prescriber": "Dr. John Doe",
+      "credential": "NPI 1487201930",
+      "packaging": "Pill bottle"
+    },
+    "brandName": "SINGULAIR",
+    "doseForm": "Tablet",
+    "packaging_image": "transparent_tablet_prescription_vial_.webp"
+  },
+  "nebivolol": {
+    "name": "Nebivolol",
+    "conditions": [
+      "Hypertension",
+      "Heart Failure"
+    ],
+    "drugClass": "Beta-Adrenergic Blocker",
+    "prescription": {
+      "dose": "5 mg tablet",
+      "sig": "Take 1 tablet by mouth once daily.",
+      "dispense": "30 tablets \u00b7 30-day supply",
+      "refills": "0 remaining",
+      "prescribedDaysAgo": 28,
+      "prescriber": "Dr. John Doe",
+      "credential": "NPI 1487201930",
+      "packaging": "Pill bottle"
+    },
+    "brandName": "BYSTOLIC",
+    "doseForm": "Tablet",
+    "packaging_image": "transparent_tablet_prescription_vial_.webp"
+  },
+  "olmesartan": {
+    "name": "Olmesartan",
+    "conditions": [
+      "Hypertension"
+    ],
+    "drugClass": "ARB",
+    "prescription": {
+      "dose": "20 mg tablet",
+      "sig": "Take 1 tablet by mouth once daily.",
+      "dispense": "30 tablets \u00b7 30-day supply",
+      "refills": "0 remaining",
+      "prescribedDaysAgo": 26,
+      "prescriber": "Dr. John Doe",
+      "credential": "NPI 1487201930",
+      "packaging": "Pill bottle"
+    },
+    "brandName": "BENICAR",
+    "doseForm": "Tablet",
+    "packaging_image": "transparent_tablet_prescription_vial_.webp"
+  },
+  "pravastatin": {
+    "name": "Pravastatin",
+    "conditions": [
+      "Hyperlipidemia",
+      "Cardiovascular Disease and Prevention"
+    ],
+    "drugClass": "HMG-CoA Reductase Inhibitor",
+    "prescription": {
+      "dose": "40 mg tablet",
+      "sig": "Take 1 tablet by mouth once daily at bedtime.",
+      "dispense": "30 tablets \u00b7 30-day supply",
+      "refills": "0 remaining",
+      "prescribedDaysAgo": 27,
+      "prescriber": "Dr. John Doe",
+      "credential": "NPI 1487201930",
+      "packaging": "Pill bottle"
+    },
+    "brandName": "PRAVACHOL",
+    "doseForm": "Tablet",
+    "packaging_image": "transparent_tablet_prescription_vial_.webp"
+  },
+  "propranolol": {
+    "name": "Propranolol",
+    "conditions": [
+      "Hypertension",
+      "Migraine/Anxiety/Tremor"
+    ],
+    "drugClass": "Beta Blocker",
+    "prescription": {
+      "dose": "80 mg extended-release capsule",
+      "sig": "Take 1 capsule by mouth once daily at bedtime.",
+      "dispense": "30 capsules \u00b7 30-day supply",
+      "refills": "0 remaining",
+      "prescribedDaysAgo": 28,
+      "prescriber": "Dr. John Doe",
+      "credential": "NPI 1487201930",
+      "packaging": "Pill bottle"
+    },
+    "brandName": "INNOPRAN XL",
+    "doseForm": "Capsule",
+    "packaging_image": "opaque_prescription_vial_.webp"
+  },
+  "rosuvastatin": {
+    "name": "Rosuvastatin",
+    "conditions": [
+      "Hyperlipidemia",
+      "Cardiovascular Disease and Prevention"
+    ],
+    "drugClass": "HMG-CoA Reductase Inhibitor",
+    "prescription": {
+      "dose": "10 mg tablet",
+      "sig": "Take 1 tablet by mouth once daily.",
+      "dispense": "30 tablets \u00b7 30-day supply",
+      "refills": "0 remaining",
+      "prescribedDaysAgo": 28,
+      "prescriber": "Dr. John Doe",
+      "credential": "NPI 1487201930",
+      "packaging": "Pill bottle"
+    },
+    "brandName": "CRESTOR",
+    "doseForm": "Tablet",
+    "packaging_image": "transparent_tablet_prescription_vial_.webp"
+  },
+  "simvastatin": {
+    "name": "Simvastatin",
+    "conditions": [
+      "Hyperlipidemia",
+      "Cardiovascular Disease and Prevention"
+    ],
+    "drugClass": "HMG-CoA Reductase Inhibitor",
+    "prescription": {
+      "dose": "20 mg tablet",
+      "sig": "Take 1 tablet by mouth once daily in the evening.",
+      "dispense": "30 tablets \u00b7 30-day supply",
+      "refills": "0 remaining",
+      "prescribedDaysAgo": 29,
+      "prescriber": "Dr. John Doe",
+      "credential": "NPI 1487201930",
+      "packaging": "Pill bottle"
+    },
+    "brandName": "ZOCOR",
+    "doseForm": "Tablet",
+    "packaging_image": "transparent_tablet_prescription_vial_.webp"
+  },
+  "telmisartan": {
+    "name": "Telmisartan",
+    "conditions": [
+      "Hypertension",
+      "Cardiovascular Disease and Prevention"
+    ],
+    "drugClass": "ARB",
+    "prescription": {
+      "dose": "40 mg tablet",
+      "sig": "Take 1 tablet by mouth once daily.",
+      "dispense": "30 tablets \u00b7 30-day supply",
+      "refills": "0 remaining",
+      "prescribedDaysAgo": 29,
+      "prescriber": "Dr. John Doe",
+      "credential": "NPI 1487201930",
+      "packaging": "Pill bottle"
+    },
+    "brandName": "MICARDIS",
+    "doseForm": "Tablet",
+    "packaging_image": "transparent_tablet_prescription_vial_.webp"
+  },
+  "timolol": {
+    "name": "Timolol",
+    "conditions": [
+      "Glaucoma",
+      "Ocular Hypertension"
+    ],
+    "drugClass": "Beta Blocker",
+    "prescription": {
+      "dose": "0.5% ophthalmic solution",
+      "sig": "Instill 1 drop in affected eye(s) twice daily.",
+      "dispense": "5 milliliters \u00b7 30-day supply",
+      "refills": "0 remaining",
+      "prescribedDaysAgo": 27,
+      "prescriber": "Dr. John Doe",
+      "credential": "NPI 1487201930",
+      "packaging": "Dropper bottle"
+    },
+    "brandName": "TIMOPTIC",
+    "doseForm": "Liquid",
+    "packaging_image": "opaque-eye-drops.webp"
+  },
+  "valsartan": {
+    "name": "Valsartan",
+    "conditions": [
+      "Hypertension",
+      "Cardiovascular Disease and Prevention"
+    ],
+    "drugClass": "ARB",
+    "prescription": {
+      "dose": "80 mg tablet",
+      "sig": "Take 1 tablet by mouth once daily.",
+      "dispense": "30 tablets \u00b7 30-day supply",
+      "refills": "0 remaining",
+      "prescribedDaysAgo": 27,
+      "prescriber": "Dr. John Doe",
+      "credential": "NPI 1487201930",
+      "packaging": "Pill bottle"
+    },
+    "brandName": "DIOVAN",
+    "doseForm": "Tablet",
+    "packaging_image": "transparent_tablet_prescription_vial_.webp"
+  },
+  "albuterol": {
+    "name": "Albuterol",
+    "conditions": [
+      "Asthma",
+      "COPD"
+    ],
+    "drugClass": "Beta-2 Adrenergic Agonist",
+    "brandName": "PROAIR HFA",
+    "doseForm": "Aerosol"
+  },
+  "albuterol-ipratropium": {
+    "name": "Albuterol; Ipratropium",
+    "conditions": [
+      "Asthma",
+      "COPD"
+    ],
+    "drugClass": "Inflammation/Pain"
+  },
+  "alendronate": {
+    "name": "Alendronate",
+    "conditions": [
+      "Osteoporosis",
+      "Paget Disease"
+    ],
+    "drugClass": "Bisphosphonate",
+    "brandName": "FOSAMAX",
+    "doseForm": "Tablet"
+  },
+  "allopurinol": {
+    "name": "Allopurinol",
+    "conditions": [
+      "Gout",
+      "Hyperuricemia"
+    ],
+    "drugClass": "Xanthine Oxidase Inhibitor",
+    "brandName": "ZYLOPRIM",
+    "doseForm": "Tablet"
+  },
+  "amlodipine": {
+    "name": "Amlodipine",
+    "conditions": [
+      "Hypertension",
+      "Cardiovascular Disease and Prevention"
+    ],
+    "drugClass": "Calcium Channel Blocker",
+    "brandName": "NORVASC",
+    "doseForm": "Tablet"
+  },
+  "amlodipine-benazepril": {
+    "name": "Amlodipine; Benazepril",
+    "conditions": [
+      "Hypertension",
+      "Cardiovascular Disease and Prevention"
+    ],
+    "drugClass": "Cardiovascular"
+  },
+  "ascorbic-acid": {
+    "name": "Ascorbic Acid",
+    "conditions": [
+      "Cardiovascular Disease Prevention",
+      "Supplement"
+    ],
+    "drugClass": "GI/Nutrition"
+  },
+  "azelastine": {
+    "name": "Azelastine",
+    "conditions": [
+      "Allergies"
+    ],
+    "drugClass": "Antihistamine",
+    "brandName": "ASTELIN",
+    "doseForm": "Spray"
+  },
+  "baclofen": {
+    "name": "Baclofen",
+    "conditions": [
+      "Back Pain",
+      "Muscle Spasm"
+    ],
+    "drugClass": "Muscle Relaxant and Antispastic",
+    "brandName": "LIORESAL",
+    "doseForm": "Injectable"
+  },
+  "benazepril": {
+    "name": "Benazepril",
+    "conditions": [
+      "Hypertension",
+      "Heart Failure"
+    ],
+    "drugClass": "ACE Inhibitor",
+    "brandName": "LOTENSIN",
+    "doseForm": "Tablet"
+  },
+  "benzonatate": {
+    "name": "Benzonatate",
+    "conditions": [
+      "Cough"
+    ],
+    "drugClass": "Inflammation/Pain"
+  },
+  "bisacodyl": {
+    "name": "Bisacodyl",
+    "conditions": [
+      "Constipation"
+    ],
+    "drugClass": "GI/Nutrition",
+    "prescription": {
+      "dose": "5 mg tablet",
+      "sig": "Take 1 tablet by mouth once daily as needed for constipation.",
+      "dispense": "30 tablets \u00b7 30-day supply",
+      "refills": "0 remaining",
+      "prescribedDaysAgo": 21,
+      "prescriber": "Dr. John Doe",
+      "credential": "NPI 1487201930",
+      "packaging": "Pill bottle"
+    },
+    "doseForm": "Tablet",
+    "packaging_image": "transparent_tablet_prescription_vial_.webp"
+  },
+  "brimonidine": {
+    "name": "Brimonidine",
+    "conditions": [
+      "Glaucoma",
+      "Ocular Hypertension"
+    ],
+    "drugClass": "Alpha-2 Adrenergic Agonist",
+    "brandName": "ALPHAGAN P",
+    "doseForm": "Liquid"
+  },
+  "brompheniramine-dextromethorphan-pseudoephedrine": {
+    "name": "Brompheniramine; Dextromethorphan; Pseudoephedrine",
+    "conditions": [
+      "Cough/Cold"
+    ],
+    "drugClass": "Inflammation/Pain"
+  },
+  "budesonide": {
+    "name": "Budesonide",
+    "conditions": [
+      "Inflammatory Disease",
+      "Auto-immune"
+    ],
+    "drugClass": "Corticosteroid",
+    "brandName": "ENTOCORT EC",
+    "doseForm": "Capsule"
+  },
+  "budesonide-formoterol": {
+    "name": "Budesonide; Formoterol",
+    "conditions": [
+      "Asthma",
+      "COPD"
+    ],
+    "drugClass": "Inflammation/Pain"
+  },
+  "buspirone": {
+    "name": "Buspirone",
+    "conditions": [
+      "Anxiety/Depression"
+    ],
+    "drugClass": "Mental Health and Brain Health"
+  },
+  "calcitriol": {
+    "name": "Calcitriol",
+    "conditions": [
+      "Vitamin D Deficiency"
+    ],
+    "drugClass": "Vitamin D Analog",
+    "brandName": "VECTICAL",
+    "doseForm": "Ointment"
+  },
+  "calcium": {
+    "name": "Calcium",
+    "conditions": [
+      "Calcium Replacement"
+    ],
+    "drugClass": "",
+    "brandName": ""
+  },
+  "calcium-phosphate-cholecalciferol": {
+    "name": "Calcium Phosphate; Cholecalciferol",
+    "conditions": [
+      "Calcium Replacement",
+      "Vitamin D Deficiency"
+    ],
+    "drugClass": "GI/Nutrition"
+  },
+  "celecoxib": {
+    "name": "Celecoxib",
+    "conditions": [
+      "Pain",
+      "Anti-inflammatory"
+    ],
+    "drugClass": "Inflammation/Pain",
+    "prescription": {
+      "dose": "200 mg capsule",
+      "sig": "Take 1 capsule by mouth once daily with food.",
+      "dispense": "30 capsules \u00b7 30-day supply",
+      "refills": "0 remaining",
+      "prescribedDaysAgo": 24,
+      "prescriber": "Dr. John Doe",
+      "credential": "NPI 1487201930",
+      "packaging": "Pill bottle"
+    },
+    "brandName": "CELEBREX",
+    "doseForm": "Capsule",
+    "packaging_image": "opaque_prescription_vial_.webp"
+  },
+  "chlorhexidine": {
+    "name": "Chlorhexidine",
+    "conditions": [
+      "Gingivitis",
+      "Periodontitis"
+    ],
+    "drugClass": "Inflammation/Pain",
+    "prescription": {
+      "dose": "0.12% oral rinse",
+      "sig": "Swish 15 mL in mouth for 30 seconds twice daily, then spit out.",
+      "dispense": "473 milliliters \u00b7 16-day supply",
+      "refills": "0 remaining",
+      "prescribedDaysAgo": 17,
+      "prescriber": "Dr. John Doe",
+      "credential": "NPI 1487201930",
+      "packaging": "Oral rinse bottle"
+    },
+    "brandName": "PERIDEX",
+    "doseForm": "Liquid",
+    "packaging_image": "transparent-oral-rinse.webp"
+  },
+  "chlorthalidone": {
+    "name": "Chlorthalidone",
+    "conditions": [
+      "Hypertension"
+    ],
+    "drugClass": "Thiazide-like Diuretic",
+    "brandName": "THALITONE",
+    "doseForm": "Tablet"
+  },
+  "cholecalciferol": {
+    "name": "Cholecalciferol",
+    "conditions": [
+      "Vitamin D Deficiency"
+    ],
+    "drugClass": "",
+    "brandName": ""
+  },
+  "citalopram": {
+    "name": "Citalopram",
+    "conditions": [
+      "Depression",
+      "Anxiety"
+    ],
+    "drugClass": "SSRI",
+    "brandName": "CELEXA",
+    "doseForm": "Tablet"
+  },
+  "clobetasol": {
+    "name": "Clobetasol",
+    "conditions": [
+      "Inflammatory Disease"
+    ],
+    "drugClass": "Topical Corticosteroid",
+    "brandName": "CLOBEX",
+    "doseForm": "Lotion"
+  },
+  "clopidogrel": {
+    "name": "Clopidogrel",
+    "conditions": [
+      "Cardiovascular Disease and Prevention"
+    ],
+    "drugClass": "P2Y12 Platelet Inhibitor",
+    "brandName": "PLAVIX",
+    "doseForm": "Tablet"
+  },
+  "colchicine": {
+    "name": "Colchicine",
+    "conditions": [
+      "Gout"
+    ],
+    "drugClass": "Anti-gout Alkaloid",
+    "brandName": "COLCRYS",
+    "doseForm": "Tablet"
+  },
+  "cyanocobalamin": {
+    "name": "Cyanocobalamin",
+    "conditions": [
+      "Vitamin B12 Deficiency",
+      "Pernicious Anemia"
+    ],
+    "drugClass": "Vitamin B12",
+    "brandName": "NASCOBAL",
+    "doseForm": "Spray"
+  },
+  "cyclobenzaprine": {
+    "name": "Cyclobenzaprine",
+    "conditions": [
+      "Muscle Spasm"
+    ],
+    "drugClass": "Muscle Relaxant",
+    "brandName": "AMRIX",
+    "doseForm": "Capsule"
+  },
+  "cyproheptadine": {
+    "name": "Cyproheptadine",
+    "conditions": [
+      "Inflammatory Disease"
+    ],
+    "drugClass": "Antihistamine",
+    "brandName": "PERIACTIN",
+    "doseForm": "Tablet"
+  },
+  "dapagliflozin": {
+    "name": "Dapagliflozin",
+    "conditions": [
+      "Diabetes"
+    ],
+    "drugClass": "SGLT2 Inhibitor",
+    "brandName": "FARXIGA",
+    "doseForm": "Tablet"
+  },
+  "desogestrel-ethinyl-estradiol": {
+    "name": "Desogestrel; Ethinyl Estradiol",
+    "conditions": [
+      "Birth Control"
+    ],
+    "drugClass": "Women's Health"
+  },
+  "desvenlafaxine": {
+    "name": "Desvenlafaxine",
+    "conditions": [
+      "Depression",
+      "Anxiety"
+    ],
+    "drugClass": "SNRI",
+    "brandName": "PRISTIQ",
+    "doseForm": "Tablet"
+  },
+  "dexamethasone": {
+    "name": "Dexamethasone",
+    "conditions": [
+      "Inflammation",
+      "Allergy"
+    ],
+    "drugClass": "Corticosteroid",
+    "brandName": "HEMADY",
+    "doseForm": "Tablet"
+  },
+  "diclofenac": {
+    "name": "Diclofenac",
+    "conditions": [
+      "Inflammation",
+      "Pain"
+    ],
+    "drugClass": "NSAID",
+    "brandName": "VOLTAREN ARTHRITIS PAIN",
+    "doseForm": "Gel"
+  },
+  "dicyclomine": {
+    "name": "Dicyclomine",
+    "conditions": [
+      "Irritable Bowel Syndrome"
+    ],
+    "drugClass": "GI/Nutrition",
+    "prescription": {
+      "dose": "20 mg tablet",
+      "sig": "Take 1 tablet by mouth four times daily as needed for abdominal cramping.",
+      "dispense": "120 tablets \u00b7 30-day supply",
+      "refills": "0 remaining",
+      "prescribedDaysAgo": 23,
+      "prescriber": "Dr. John Doe",
+      "credential": "NPI 1487201930",
+      "packaging": "Pill bottle"
+    },
+    "brandName": "BENTYL",
+    "doseForm": "Tablet",
+    "packaging_image": "transparent_tablet_prescription_vial_.webp"
+  },
+  "diltiazem": {
+    "name": "Diltiazem",
+    "conditions": [
+      "Hypertension",
+      "Cardiovascular Disease and Prevention"
+    ],
+    "drugClass": "Calcium Channel Blocker",
+    "brandName": "CARDIZEM",
+    "doseForm": "Tablet"
+  },
+  "diphenhydramine": {
+    "name": "Diphenhydramine",
+    "conditions": [
+      "Inflammation",
+      "Insomnia"
+    ],
+    "drugClass": "Antihistamine",
+    "brandName": "ADVIL PM",
+    "doseForm": "Capsule"
+  },
+  "docusate": {
+    "name": "Docusate",
+    "conditions": [
+      "Constipation"
+    ],
+    "drugClass": "GI/Nutrition",
+    "prescription": {
+      "dose": "100 mg capsule",
+      "sig": "Take 1 capsule by mouth twice daily as needed for constipation.",
+      "dispense": "60 capsules \u00b7 30-day supply",
+      "refills": "0 remaining",
+      "prescribedDaysAgo": 22,
+      "prescriber": "Dr. John Doe",
+      "credential": "NPI 1487201930",
+      "packaging": "Pill bottle"
+    },
+    "brandName": "COLACE",
+    "doseForm": "Capsule",
+    "packaging_image": "opaque_prescription_vial_.webp"
+  },
+  "donepezil": {
+    "name": "Donepezil",
+    "conditions": [
+      "Alzheimer Disease",
+      "Dementia"
+    ],
+    "drugClass": "Acetylcholinesterase Inhibitor",
+    "brandName": "ARICEPT",
+    "doseForm": "Tablet"
+  },
+  "dorzolamide": {
+    "name": "Dorzolamide",
+    "conditions": [
+      "Glaucoma",
+      "Ocular Hypertension"
+    ],
+    "drugClass": "Carbonic Anhydrase Inhibitor",
+    "brandName": "COSOPT",
+    "doseForm": "Liquid"
+  },
+  "dorzolamide-timolol": {
+    "name": "Dorzolamide; Timolol",
+    "conditions": [
+      "Glaucoma",
+      "Ocular Hypertension"
+    ],
+    "drugClass": "Ocular"
+  },
+  "doxazosin": {
+    "name": "Doxazosin",
+    "conditions": [
+      "Hypertension",
+      "Benign Prostatic Hyperplasia"
+    ],
+    "drugClass": "Alpha-1 Blocker",
+    "brandName": "CARDURA",
+    "doseForm": "Tablet"
+  },
+  "doxepin": {
+    "name": "Doxepin",
+    "conditions": [
+      "Anxiety/Depression",
+      "Insomnia"
+    ],
+    "drugClass": "Tricyclic Antidepressant",
+    "brandName": "SILENOR",
+    "doseForm": "Tablet"
+  },
+  "drospirenone-ethinyl-estradiol": {
+    "name": "Drospirenone; Ethinyl Estradiol",
+    "conditions": [
+      "Contraception"
+    ],
+    "drugClass": "Women's Health"
+  },
+  "duloxetine": {
+    "name": "Duloxetine",
+    "conditions": [
+      "Anxiety/Depression",
+      "Neuropathic Pain"
+    ],
+    "drugClass": "SNRI",
+    "brandName": "CYMBALTA",
+    "doseForm": "Capsule"
+  },
+  "dutasteride": {
+    "name": "Dutasteride",
+    "conditions": [
+      "Benign Prostatic Hyperplasia"
+    ],
+    "drugClass": "5-Alpha Reductase Inhibitor",
+    "brandName": "AVODART",
+    "doseForm": "Capsule"
+  },
+  "empagliflozin": {
+    "name": "Empagliflozin",
+    "conditions": [
+      "Diabetes",
+      "Heart Failure"
+    ],
+    "drugClass": "SGLT2 Inhibitor",
+    "brandName": "JARDIANCE",
+    "doseForm": "Tablet"
+  },
+  "enalapril": {
+    "name": "Enalapril",
+    "conditions": [
+      "Hypertension",
+      "Heart Failure"
+    ],
+    "drugClass": "ACE Inhibitor",
+    "brandName": "VASOTEC",
+    "doseForm": "Tablet"
+  },
+  "ergocalciferol": {
+    "name": "Ergocalciferol",
+    "conditions": [
+      "Vitamin D Deficiency"
+    ],
+    "drugClass": "",
+    "brandName": ""
+  },
+  "escitalopram": {
+    "name": "Escitalopram",
+    "conditions": [
+      "Depression",
+      "Anxiety"
+    ],
+    "drugClass": "SSRI",
+    "brandName": "LEXAPRO",
+    "doseForm": "Tablet"
+  },
+  "esomeprazole": {
+    "name": "Esomeprazole",
+    "conditions": [
+      "GERD",
+      "Peptic Ulcer"
+    ],
+    "drugClass": "Proton Pump Inhibitor",
+    "brandName": "NEXIUM",
+    "doseForm": "Capsule"
+  },
+  "estradiol": {
+    "name": "Estradiol",
+    "conditions": [
+      "Menopause",
+      "Hypogonadism"
+    ],
+    "drugClass": "Estrogen",
+    "brandName": "ESTRACE",
+    "doseForm": "Cream"
+  },
+  "ethinyl-estradiol-etonogestrel": {
+    "name": "Ethinyl Estradiol; Etonogestrel",
+    "conditions": [
+      "Contraception",
+      "Hormonal Imbalance"
+    ],
+    "drugClass": "Women's Health"
+  },
+  "ethinyl-estradiol-levonorgestrel": {
+    "name": "Ethinyl Estradiol; Levonorgestrel",
+    "conditions": [
+      "Contraception",
+      "Hormonal Imbalance"
+    ],
+    "drugClass": "Women's Health"
+  },
+  "ethinyl-estradiol-norelgestromin": {
+    "name": "Ethinyl Estradiol; Norelgestromin",
+    "conditions": [
+      "Contraception",
+      "Hormonal Imbalance"
+    ],
+    "drugClass": "Women's Health"
+  },
+  "ethinyl-estradiol-norethindrone": {
+    "name": "Ethinyl Estradiol; Norethindrone",
+    "conditions": [
+      "Contraception",
+      "Hormonal Imbalance"
+    ],
+    "drugClass": "Women's Health"
+  },
+  "ethinyl-estradiol-norgestimate": {
+    "name": "Ethinyl Estradiol; Norgestimate",
+    "conditions": [
+      "Contraception",
+      "Hormonal Imbalance"
+    ],
+    "drugClass": "Women's Health"
+  },
+  "ethinyl-estradiol-norgestrel": {
+    "name": "Ethinyl Estradiol; Norgestrel",
+    "conditions": [
+      "Contraception",
+      "Hormonal Imbalance"
+    ],
+    "drugClass": "Women's Health"
+  },
+  "etodolac": {
+    "name": "Etodolac",
+    "conditions": [
+      "Inflammation"
+    ],
+    "drugClass": "NSAID",
+    "brandName": "LODINE",
+    "doseForm": "Tablet"
+  },
+  "ezetimibe": {
+    "name": "Ezetimibe",
+    "conditions": [
+      "Hyperlipidemia"
+    ],
+    "drugClass": "Cholesterol Absorption Inhibitor",
+    "brandName": "ZETIA",
+    "doseForm": "Tablet"
+  },
+  "fenofibrate": {
+    "name": "Fenofibrate",
+    "conditions": [
+      "Hyperlipidemia"
+    ],
+    "drugClass": "Fibrate",
+    "brandName": "LIPOFEN",
+    "doseForm": "Capsule"
+  },
+  "ferrous-sulfate": {
+    "name": "Ferrous Sulfate",
+    "conditions": [
+      "Iron Deficiency",
+      "Anemia"
+    ],
+    "drugClass": "",
+    "brandName": ""
+  },
+  "fexofenadine": {
+    "name": "Fexofenadine",
+    "conditions": [
+      "Inflammation",
+      "Allergies"
+    ],
+    "drugClass": "Antihistamine",
+    "brandName": "ALLEGRA ALLERGY",
+    "doseForm": "Tablet"
+  },
+  "finasteride": {
+    "name": "Finasteride",
+    "conditions": [
+      "Benign Prostatic Hyperplasia",
+      "Male Pattern Baldness"
+    ],
+    "drugClass": "5-Alpha Reductase Inhibitor",
+    "brandName": "PROSCAR",
+    "doseForm": "Tablet"
+  },
+  "fluoxetine": {
+    "name": "Fluoxetine",
+    "conditions": [
+      "Anxiety/Depression",
+      "OCD"
+    ],
+    "drugClass": "SSRI",
+    "brandName": "PROZAC",
+    "doseForm": "Capsule"
+  },
+  "fluticasone": {
+    "name": "Fluticasone",
+    "conditions": [
+      "Allergic Rhinitis",
+      "Asthma"
+    ],
+    "drugClass": "Allergy Symptom Reliever",
+    "brandName": "FLONASE",
+    "doseForm": "Spray"
+  },
+  "fluticasone-salmeterol": {
+    "name": "Fluticasone; Salmeterol",
+    "conditions": [
+      "Asthma",
+      "COPD"
+    ],
+    "drugClass": "Inflammation/Pain"
+  },
+  "fluticasone-umeclidinium-vilanterol": {
+    "name": "Fluticasone; Umeclidinium; Vilanterol",
+    "conditions": [
+      "Asthma",
+      "COPD"
+    ],
+    "drugClass": "Inflammation/Pain"
+  },
+  "fluticasone-vilanterol": {
+    "name": "Fluticasone; Vilanterol",
+    "conditions": [
+      "Asthma",
+      "COPD"
+    ],
+    "drugClass": "Inflammation/Pain"
+  },
+  "folic_acid": {
+    "name": "Folic Acid",
+    "conditions": [
+      "Folic Acid Deficiency",
+      "Pregnancy"
+    ],
+    "drugClass": "GI/Nutrition",
+    "prescription": {
+      "dose": "1 mg tablet",
+      "sig": "Take 1 tablet by mouth once daily.",
+      "dispense": "30 tablets \u00b7 30-day supply",
+      "refills": "0 remaining",
+      "prescribedDaysAgo": 25,
+      "prescriber": "Dr. John Doe",
+      "credential": "NPI 1487201930",
+      "packaging": "Pill bottle"
+    },
+    "doseForm": "Tablet",
+    "packaging_image": "transparent_tablet_prescription_vial_.webp"
+  },
+  "furosemide": {
+    "name": "Furosemide",
+    "conditions": [
+      "Heart Failure",
+      "Edema/Hypertension"
+    ],
+    "drugClass": "Loop Diuretic",
+    "brandName": "LASIX",
+    "doseForm": "Tablet"
+  },
+  "glimepiride": {
+    "name": "Glimepiride",
+    "conditions": [
+      "Diabetes"
+    ],
+    "drugClass": "Sulfonylurea",
+    "brandName": "AMARYL",
+    "doseForm": "Tablet"
+  },
+  "glipizide": {
+    "name": "Glipizide",
+    "conditions": [
+      "Diabetes"
+    ],
+    "drugClass": "Sulfonylurea",
+    "brandName": "GLUCOTROL XL",
+    "doseForm": "Tablet"
+  },
+  "hydralazine": {
+    "name": "Hydralazine",
+    "conditions": [
+      "Hypertension",
+      "Heart Failure"
+    ],
+    "drugClass": "Vasodilator",
+    "brandName": "APRESOLINE",
+    "doseForm": "Tablet"
+  },
+  "hydrochlorothiazide": {
+    "name": "Hydrochlorothiazide",
+    "conditions": [
+      "Hypertension",
+      "Edema"
+    ],
+    "drugClass": "Thiazide Diuretic",
+    "brandName": "MICROZIDE",
+    "doseForm": "Capsule"
+  },
+  "hydrochlorothiazide-lisinopril": {
+    "name": "Hydrochlorothiazide; Lisinopril",
+    "conditions": [
+      "Hypertension",
+      "Cardiovascular Disease and Prevention"
+    ],
+    "drugClass": "Cardiovascular"
+  },
+  "hydrochlorothiazide-losartan": {
+    "name": "Hydrochlorothiazide; Losartan",
+    "conditions": [
+      "Hypertension",
+      "Cardiovascular Disease and Prevention"
+    ],
+    "drugClass": "Cardiovascular"
+  },
+  "hydrochlorothiazide-triamterene": {
+    "name": "Hydrochlorothiazide; Triamterene",
+    "conditions": [
+      "Hypertension",
+      "Cardiovascular Disease and Prevention"
+    ],
+    "drugClass": "Cardiovascular"
+  },
+  "hydrocortisone": {
+    "name": "Hydrocortisone",
+    "conditions": [
+      "Inflammation",
+      "Adrenal Insufficiency"
+    ],
+    "drugClass": "Corticosteroid",
+    "brandName": "CORTEF",
+    "doseForm": "Tablet"
+  },
+  "hydroquinone": {
+    "name": "Hydroquinone",
+    "conditions": [
+      "Pigmentation",
+      "Wound Healing"
+    ],
+    "drugClass": "Skin Depigmenting Agent",
+    "brandName": "HYDROQUINONE",
+    "doseForm": "Cream"
+  },
+  "hydroxychloroquine": {
+    "name": "Hydroxychloroquine",
+    "conditions": [
+      "Rheumatoid Arthritis",
+      "Lupus"
+    ],
+    "drugClass": "Antimalarial",
+    "brandName": "PLAQUENIL",
+    "doseForm": "Tablet"
+  },
+  "hydroxyzine": {
+    "name": "Hydroxyzine",
+    "conditions": [
+      "Anxiety/Insomnia",
+      "Allergy"
+    ],
+    "drugClass": "Antihistamine/Anxiolytic",
+    "brandName": "VISTARIL",
+    "doseForm": "Capsule"
+  },
+  "ibuprofen": {
+    "name": "Ibuprofen",
+    "conditions": [
+      "Pain",
+      "Inflammation"
+    ],
+    "drugClass": "Inflammation/Pain",
+    "prescription": {
+      "dose": "600 mg tablet",
+      "sig": "Take 1 tablet by mouth every 6 hours as needed for pain or inflammation.",
+      "dispense": "60 tablets \u00b7 15-day supply",
+      "refills": "0 remaining",
+      "prescribedDaysAgo": 19,
+      "prescriber": "Dr. John Doe",
+      "credential": "NPI 1487201930",
+      "packaging": "Pill bottle"
+    },
+    "brandName": "ADVIL",
+    "doseForm": "Tablet",
+    "packaging_image": "transparent_tablet_prescription_vial_.webp"
+  },
+  "icosapent-ethyl": {
+    "name": "Icosapent Ethyl",
+    "conditions": [
+      "Hyperlipidemia"
+    ],
+    "drugClass": "Lipid-Regulating Agent",
+    "brandName": "VASCEPA",
+    "doseForm": "Capsule"
+  },
+  "indomethacin": {
+    "name": "Indomethacin",
+    "conditions": [
+      "Inflammation"
+    ],
+    "drugClass": "Inflammation/Pain",
+    "prescription": {
+      "dose": "25 mg capsule",
+      "sig": "Take 1 capsule by mouth three times daily with food as needed for inflammation.",
+      "dispense": "90 capsules \u00b7 30-day supply",
+      "refills": "0 remaining",
+      "prescribedDaysAgo": 20,
+      "prescriber": "Dr. John Doe",
+      "credential": "NPI 1487201930",
+      "packaging": "Pill bottle"
+    },
+    "brandName": "INDOCIN",
+    "doseForm": "Capsule",
+    "packaging_image": "opaque_prescription_vial_.webp"
+  },
+  "ipratropium": {
+    "name": "Ipratropium",
+    "conditions": [
+      "COPD",
+      "Rhinorrhea"
+    ],
+    "drugClass": "Anticholinergic",
+    "brandName": "ATROVENT HFA",
+    "doseForm": "Aerosol"
+  },
+  "ketorolac": {
+    "name": "Ketorolac",
+    "conditions": [
+      "Inflammation",
+      "Pain"
+    ],
+    "drugClass": "NSAID",
+    "brandName": "SPRIX",
+    "doseForm": "Spray"
+  },
+  "ketotifen": {
+    "name": "Ketotifen",
+    "conditions": [
+      "Inflammation",
+      "Conjunctivitis"
+    ],
+    "drugClass": "Ocular"
+  },
+  "lactobacillus-acidophilus": {
+    "name": "Lactobacillus Acidophilus",
+    "conditions": [
+      "Dietary Supplement",
+      "Gastroenteritis"
+    ],
+    "drugClass": "GI/Nutrition"
+  },
+  "lactulose": {
+    "name": "Lactulose",
+    "conditions": [
+      "Constipation",
+      "Hepatic Encephalopathy"
+    ],
+    "drugClass": "GI/Nutrition",
+    "prescription": {
+      "dose": "10 g/15 mL solution",
+      "sig": "Take 30 mL by mouth once daily as needed for constipation.",
+      "dispense": "946 milliliters \u00b7 30-day supply",
+      "refills": "0 remaining",
+      "prescribedDaysAgo": 18,
+      "prescriber": "Dr. John Doe",
+      "credential": "NPI 1487201930",
+      "packaging": "Oral liquid bottle"
+    },
+    "doseForm": "Liquid",
+    "packaging_image": "transparent-oral-liquid-bottle.webp"
+  },
+  "latanoprost": {
+    "name": "Latanoprost",
+    "conditions": [
+      "Glaucoma",
+      "Ocular Hypertension"
+    ],
+    "drugClass": "Ocular",
+    "prescription": {
+      "dose": "0.005% ophthalmic solution",
+      "sig": "Instill 1 drop in the affected eye(s) once daily in the evening.",
+      "dispense": "1 bottle (2.5 mL) \u00b7 30-day supply",
+      "refills": "0 remaining",
+      "prescribedDaysAgo": 26,
+      "prescriber": "Dr. John Doe",
+      "credential": "NPI 1487201930",
+      "packaging": "Dropper bottle"
+    },
+    "brandName": "XALATAN",
+    "doseForm": "Liquid",
+    "packaging_image": "opaque-eye-drops.webp"
+  },
+  "levocetirizine": {
+    "name": "Levocetirizine",
+    "conditions": [
+      "Allergic Rhinitis",
+      "Urticaria"
+    ],
+    "drugClass": "Inflammation/Pain",
+    "prescription": {
+      "dose": "5 mg tablet",
+      "sig": "Take 1 tablet by mouth once daily in the evening.",
+      "dispense": "30 tablets \u00b7 30-day supply",
+      "refills": "0 remaining",
+      "prescribedDaysAgo": 27,
+      "prescriber": "Dr. John Doe",
+      "credential": "NPI 1487201930",
+      "packaging": "Pill bottle"
+    },
+    "brandName": "XYZAL",
+    "doseForm": "Tablet",
+    "packaging_image": "transparent_tablet_prescription_vial_.webp"
+  },
+  "levothyroxine": {
+    "name": "Levothyroxine",
+    "conditions": [
+      "Hypothyroidism",
+      "Goiter"
+    ],
+    "drugClass": "Thyroid Hormone",
+    "brandName": "SYNTHROID",
+    "doseForm": "Tablet"
+  },
+  "linaclotide": {
+    "name": "Linaclotide",
+    "conditions": [
+      "Constipation",
+      "Irritable Bowel"
+    ],
+    "drugClass": "GI/Nutrition",
+    "prescription": {
+      "dose": "145 mcg capsule",
+      "sig": "Take 1 capsule by mouth once daily at least 30 minutes before the first meal.",
+      "dispense": "30 capsules \u00b7 30-day supply",
+      "refills": "0 remaining",
+      "prescribedDaysAgo": 27,
+      "prescriber": "Dr. John Doe",
+      "credential": "NPI 1487201930",
+      "packaging": "Pill bottle"
+    },
+    "brandName": "LINZESS",
+    "doseForm": "Capsule",
+    "packaging_image": "opaque_prescription_vial_.webp"
+  },
+  "linagliptin": {
+    "name": "Linagliptin",
+    "conditions": [
+      "Diabetes"
+    ],
+    "drugClass": "Metabolic",
+    "prescription": {
+      "dose": "5 mg tablet",
+      "sig": "Take 1 tablet by mouth once daily.",
+      "dispense": "30 tablets \u00b7 30-day supply",
+      "refills": "0 remaining",
+      "prescribedDaysAgo": 29,
+      "prescriber": "Dr. John Doe",
+      "credential": "NPI 1487201930",
+      "packaging": "Pill bottle"
+    },
+    "brandName": "TRADJENTA",
+    "doseForm": "Tablet",
+    "packaging_image": "transparent_tablet_prescription_vial_.webp"
+  },
+  "lisinopril": {
+    "name": "Lisinopril",
+    "conditions": [
+      "Hypertension",
+      "Heart Failure"
+    ],
+    "drugClass": "ACE Inhibitor",
+    "brandName": "ZESTRIL",
+    "doseForm": "Tablet"
+  },
+  "loperamide": {
+    "name": "Loperamide",
+    "conditions": [
+      "Diarrhea"
+    ],
+    "drugClass": "GI/Nutrition",
+    "prescription": {
+      "dose": "2 mg capsule",
+      "sig": "Take 1 capsule by mouth after each loose stool as needed for diarrhea. Do not exceed 8 capsules in 24 hours.",
+      "dispense": "30 capsules \u00b7 7-day supply",
+      "refills": "0 remaining",
+      "prescribedDaysAgo": 16,
+      "prescriber": "Dr. John Doe",
+      "credential": "NPI 1487201930",
+      "packaging": "Pill bottle"
+    },
+    "brandName": "IMODIUM",
+    "doseForm": "Capsule",
+    "packaging_image": "opaque_prescription_vial_.webp"
+  },
+  "loratadine": {
+    "name": "Loratadine",
+    "conditions": [
+      "Allergic Rhinitis",
+      "Urticaria"
+    ],
+    "drugClass": "Inflammation/Pain",
+    "prescription": {
+      "dose": "10 mg tablet",
+      "sig": "Take 1 tablet by mouth once daily.",
+      "dispense": "30 tablets \u00b7 30-day supply",
+      "refills": "0 remaining",
+      "prescribedDaysAgo": 28,
+      "prescriber": "Dr. John Doe",
+      "credential": "NPI 1487201930",
+      "packaging": "Pill bottle"
+    },
+    "brandName": "CLARITIN",
+    "doseForm": "Tablet",
+    "packaging_image": "transparent_tablet_prescription_vial_.webp"
+  },
+  "magnesium-salts": {
+    "name": "Magnesium Salts",
+    "conditions": [
+      "Magnesium Supplement",
+      "Constipation"
+    ],
+    "drugClass": "",
+    "brandName": ""
+  },
+  "meclizine": {
+    "name": "Meclizine",
+    "conditions": [
+      "Vertigo",
+      "Motion Sickness"
+    ],
+    "drugClass": "Mental Health and Brain Health",
+    "prescription": {
+      "dose": "25 mg tablet",
+      "sig": "Take 1 tablet by mouth every 8 hours as needed for dizziness or motion sickness.",
+      "dispense": "30 tablets \u00b7 10-day supply",
+      "refills": "0 remaining",
+      "prescribedDaysAgo": 14,
+      "prescriber": "Dr. John Doe",
+      "credential": "NPI 1487201930",
+      "packaging": "Pill bottle"
+    },
+    "brandName": "ANTIVERT",
+    "doseForm": "Tablet",
+    "packaging_image": "transparent_tablet_prescription_vial_.webp"
+  },
+  "medroxyprogesterone": {
+    "name": "Medroxyprogesterone",
+    "conditions": [
+      "Contraception",
+      "Hormonal Imbalance"
+    ],
+    "drugClass": "Progestin",
+    "brandName": "DEPO-PROVERA",
+    "doseForm": "Injectable"
+  },
+  "melatonin": {
+    "name": "Melatonin",
+    "conditions": [
+      "Insomnia"
+    ],
+    "drugClass": "",
+    "brandName": ""
+  },
+  "meloxicam": {
+    "name": "Meloxicam",
+    "conditions": [
+      "Inflammation",
+      "Pain"
+    ],
+    "drugClass": "NSAID",
+    "brandName": "QAMZOVA",
+    "doseForm": "Injectable"
+  },
+  "memantine": {
+    "name": "Memantine",
+    "conditions": [
+      "Alzheimer Disease",
+      "Dementia"
+    ],
+    "drugClass": "NMDA Receptor Antagonist",
+    "brandName": "NAMENDA",
+    "doseForm": "Tablet"
+  },
+  "mesalamine": {
+    "name": "Mesalamine",
+    "conditions": [
+      "Ulcerative Colitis/Crohn's",
+      "Inflammation"
+    ],
+    "drugClass": "Aminosalicylate",
+    "brandName": "LIALDA",
+    "doseForm": "Tablet"
+  },
+  "methocarbamol": {
+    "name": "Methocarbamol",
+    "conditions": [
+      "Muscle Spasm"
+    ],
+    "drugClass": "Muscle Relaxant",
+    "brandName": "ATMEKSI",
+    "doseForm": "Liquid"
+  },
+  "methylprednisolone": {
+    "name": "Methylprednisolone",
+    "conditions": [
+      "Inflammation",
+      "Allergy"
+    ],
+    "drugClass": "Corticosteroid",
+    "brandName": "MEDROL",
+    "doseForm": "Tablet"
+  },
+  "metoclopramide": {
+    "name": "Metoclopramide",
+    "conditions": [
+      "Nausea/Gastroparesis",
+      "GERD"
+    ],
+    "drugClass": "GI/Nutrition",
+    "prescription": {
+      "dose": "10 mg tablet",
+      "sig": "Take 1 tablet by mouth up to four times daily before meals and at bedtime as needed for nausea.",
+      "dispense": "60 tablets \u00b7 15-day supply",
+      "refills": "0 remaining",
+      "prescribedDaysAgo": 15,
+      "prescriber": "Dr. John Doe",
+      "credential": "NPI 1487201930",
+      "packaging": "Pill bottle"
+    },
+    "brandName": "REGLAN",
+    "doseForm": "Tablet",
+    "packaging_image": "transparent_tablet_prescription_vial_.webp"
+  },
+  "mirabegron": {
+    "name": "Mirabegron",
+    "conditions": [
+      "Overactive Bladder"
+    ],
+    "drugClass": "Beta-3 Adrenergic Agonist",
+    "brandName": "MYRBETRIQ",
+    "doseForm": "Tablet"
+  },
+  "mometasone": {
+    "name": "Mometasone",
+    "conditions": [
+      "Allergic Rhinitis",
+      "Asthma"
+    ],
+    "drugClass": "Inflammation/Pain",
+    "prescription": {
+      "dose": "50 mcg nasal spray",
+      "sig": "Use 2 sprays in each nostril once daily.",
+      "dispense": "1 bottle \u00b7 30-day supply",
+      "refills": "0 remaining",
+      "prescribedDaysAgo": 27,
+      "prescriber": "Dr. John Doe",
+      "credential": "NPI 1487201930",
+      "packaging": "Nasal spray bottle"
+    },
+    "brandName": "NASONEX",
+    "doseForm": "Spray",
+    "packaging_image": "opaque-nasal-spray.webp"
+  },
+  "nabumetone": {
+    "name": "Nabumetone",
+    "conditions": [
+      "Inflammation",
+      "Pain"
+    ],
+    "drugClass": "NSAID",
+    "brandName": "RELAFEN",
+    "doseForm": "Tablet"
+  },
+  "naproxen": {
+    "name": "Naproxen",
+    "conditions": [
+      "Pain",
+      "Inflammation"
+    ],
+    "drugClass": "NSAID",
+    "brandName": "NAPROSYN",
+    "doseForm": "Tablet"
+  },
+  "niacin": {
+    "name": "Niacin",
+    "conditions": [
+      "Hyperlipidemia",
+      "Niacin Deficiency"
+    ],
+    "drugClass": "Nicotinic Acid",
+    "brandName": "NIASPAN",
+    "doseForm": "Tablet"
+  },
+  "nifedipine": {
+    "name": "Nifedipine",
+    "conditions": [
+      "Hypertension",
+      "Angina"
+    ],
+    "drugClass": "Calcium Channel Blocker",
+    "brandName": "PROCARDIA XL",
+    "doseForm": "Tablet"
+  },
+  "nitroglycerin": {
+    "name": "Nitroglycerin",
+    "conditions": [
+      "Angina",
+      "Heart Failure"
+    ],
+    "drugClass": "Nitrate Vasodilator",
+    "brandName": "NITROLINGUAL PUMPSPRAY",
+    "doseForm": "Spray"
+  },
+  "norethindrone": {
+    "name": "Norethindrone",
+    "conditions": [
+      "Contraception",
+      "Hormonal Imbalance"
+    ],
+    "drugClass": "Progestin",
+    "brandName": "AYGESTIN",
+    "doseForm": "Tablet"
+  },
+  "nortriptyline": {
+    "name": "Nortriptyline",
+    "conditions": [
+      "Depression",
+      "Neuropathic Pain"
+    ],
+    "drugClass": "Tricyclic Antidepressant",
+    "brandName": "PAMELOR",
+    "doseForm": "Capsule"
+  },
+  "olopatadine": {
+    "name": "Olopatadine",
+    "conditions": [
+      "Inflammation",
+      "Conjunctivitis"
+    ],
+    "drugClass": "Antihistamine",
+    "brandName": "PATADAY",
+    "doseForm": "Liquid"
+  },
+  "omega-3-acid-ethyl-esters": {
+    "name": "Omega-3-acid Ethyl Esters",
+    "conditions": [
+      "Hyperlipidemia",
+      "Cardiovascular Disease and Prevention"
+    ],
+    "drugClass": "Cardiovascular"
+  },
+  "omeprazole": {
+    "name": "Omeprazole",
+    "conditions": [
+      "GERD",
+      "Peptic Ulcer"
+    ],
+    "drugClass": "Proton Pump Inhibitor",
+    "brandName": "PRILOSEC",
+    "doseForm": "Capsule"
+  },
+  "ondansetron": {
+    "name": "Ondansetron",
+    "conditions": [
+      "Nausea",
+      "Vomiting"
+    ],
+    "drugClass": "5-HT3 Antagonist",
+    "brandName": "ZOFRAN",
+    "doseForm": "Tablet"
+  },
+  "oxybutynin": {
+    "name": "Oxybutynin",
+    "conditions": [
+      "Overactive Bladder"
+    ],
+    "drugClass": "Anticholinergic",
+    "brandName": "OXYTROL",
+    "doseForm": "Patch"
+  },
+  "pancrelipase": {
+    "name": "Pancrelipase (Amylase; Lipase; Protease)",
+    "conditions": [
+      "Enzyme Replacement"
+    ],
+    "drugClass": "GI/Nutrition"
+  },
+  "pantoprazole": {
+    "name": "Pantoprazole",
+    "conditions": [
+      "GERD",
+      "Peptic Ulcer"
+    ],
+    "drugClass": "Proton Pump Inhibitor",
+    "brandName": "PROTONIX",
+    "doseForm": "Tablet"
+  },
+  "paroxetine": {
+    "name": "Paroxetine",
+    "conditions": [
+      "Depression",
+      "Anxiety"
+    ],
+    "drugClass": "SSRI",
+    "brandName": "PAXIL",
+    "doseForm": "Tablet"
+  },
+  "phenazopyridine": {
+    "name": "Phenazopyridine",
+    "conditions": [
+      "Inflammation"
+    ],
+    "drugClass": "Urinary Analgesic",
+    "brandName": "PYRIDIUM",
+    "doseForm": "Tablet"
+  },
+  "pioglitazone": {
+    "name": "Pioglitazone",
+    "conditions": [
+      "Diabetes"
+    ],
+    "drugClass": "Thiazolidinedione",
+    "brandName": "ACTOS",
+    "doseForm": "Tablet"
+  },
+  "polyethylene-glycol-3350": {
+    "name": "Polyethylene Glycol 3350 with Electrolytes",
+    "conditions": [
+      "Constipation"
+    ],
+    "drugClass": "GI/Nutrition"
+  },
+  "pramipexole": {
+    "name": "Pramipexole",
+    "conditions": [
+      "Parkinson's",
+      "Restless Leg Syndrome"
+    ],
+    "drugClass": "Dopamine Agonist",
+    "brandName": "MIRAPEX ER",
+    "doseForm": "Tablet"
+  },
+  "prednisolone": {
+    "name": "Prednisolone",
+    "conditions": [
+      "Inflammation",
+      "Allergy"
+    ],
+    "drugClass": "Corticosteroid",
+    "brandName": "ORAPRED ODT",
+    "doseForm": "Tablet"
+  },
+  "prednisone": {
+    "name": "Prednisone",
+    "conditions": [
+      "Inflammation",
+      "Allergy"
+    ],
+    "drugClass": "Corticosteroid",
+    "brandName": "DELTASONE",
+    "doseForm": "Tablet"
+  },
+  "progesterone": {
+    "name": "Progesterone",
+    "conditions": [
+      "Hormone Replacement",
+      "Infertility"
+    ],
+    "drugClass": "Progestin",
+    "brandName": "PROMETRIUM",
+    "doseForm": "Capsule"
+  },
+  "promethazine": {
+    "name": "Promethazine",
+    "conditions": [
+      "Nausea",
+      "Allergy"
+    ],
+    "drugClass": "Phenothiazine Antihistamine",
+    "brandName": "PHENERGAN",
+    "doseForm": "Tablet"
+  },
+  "ramipril": {
+    "name": "Ramipril",
+    "conditions": [
+      "Hypertension",
+      "Cardiovascular Disease and Prevention"
+    ],
+    "drugClass": "ACE Inhibitor",
+    "brandName": "ALTACE",
+    "doseForm": "Capsule"
+  },
+  "riboflavin": {
+    "name": "Riboflavin",
+    "conditions": [
+      "Vitamin Replacement"
+    ],
+    "drugClass": "",
+    "brandName": ""
+  },
+  "rimegepant": {
+    "name": "Rimegepant",
+    "conditions": [
+      "Migraine/Headache"
+    ],
+    "drugClass": "CGRP Receptor Antagonist",
+    "brandName": "NURTEC ODT",
+    "doseForm": "Tablet"
+  },
+  "rivaroxaban": {
+    "name": "Rivaroxaban",
+    "conditions": [
+      "Atrial Fibrillation",
+      "DVT/PE"
+    ],
+    "drugClass": "Factor Xa Inhibitor",
+    "brandName": "XARELTO",
+    "doseForm": "Tablet"
+  },
+  "rizatriptan": {
+    "name": "Rizatriptan",
+    "conditions": [
+      "Migraine/Headache"
+    ],
+    "drugClass": "5-HT1B/1D Agonist (Triptan)",
+    "brandName": "MAXALT",
+    "doseForm": "Tablet"
+  },
+  "ropinirole": {
+    "name": "Ropinirole",
+    "conditions": [
+      "Parkinson Disease",
+      "Restless Leg Syndrome"
+    ],
+    "drugClass": "Dopamine Agonist",
+    "brandName": "REQUIP",
+    "doseForm": "Tablet"
+  },
+  "sacubitril-valsartan": {
+    "name": "Sacubitril; Valsartan",
+    "conditions": [
+      "Heart Failure",
+      "Cardiovascular Disease and Prevention"
+    ],
+    "drugClass": "Cardiovascular"
+  },
+  "senna-docusate": {
+    "name": "Senna; Docusate",
+    "conditions": [
+      "Constipation"
+    ],
+    "drugClass": "GI/Nutrition"
+  },
+  "sertraline": {
+    "name": "Sertraline",
+    "conditions": [
+      "Depression/Anxiety",
+      "PTSD"
+    ],
+    "drugClass": "SSRI",
+    "brandName": "ZOLOFT",
+    "doseForm": "Tablet"
+  },
+  "sildenafil": {
+    "name": "Sildenafil",
+    "conditions": [
+      "Erectile Dysfunction",
+      "Pulmonary Hypertension"
+    ],
+    "drugClass": "PDE5 Inhibitor",
+    "brandName": "VIAGRA",
+    "doseForm": "Tablet"
+  },
+  "sitagliptin": {
+    "name": "Sitagliptin",
+    "conditions": [
+      "Diabetes"
+    ],
+    "drugClass": "DPP-4 Inhibitor",
+    "brandName": "JANUVIA",
+    "doseForm": "Tablet"
+  },
+  "sodium-fluoride": {
+    "name": "Sodium Fluoride",
+    "conditions": [
+      "Dental Health"
+    ],
+    "drugClass": "Fluoride",
+    "brandName": "PREVIDENT",
+    "doseForm": "Gel"
+  },
+  "solifenacin": {
+    "name": "Solifenacin",
+    "conditions": [
+      "Overactive Bladder"
+    ],
+    "drugClass": "Antimuscarinic",
+    "brandName": "VESICARE",
+    "doseForm": "Tablet"
+  },
+  "spironolactone": {
+    "name": "Spironolactone",
+    "conditions": [
+      "Heart Failure",
+      "Hypertension"
+    ],
+    "drugClass": "Aldosterone Antagonist",
+    "brandName": "ALDACTONE",
+    "doseForm": "Tablet"
+  },
+  "sucralfate": {
+    "name": "Sucralfate",
+    "conditions": [
+      "Gastroenteritis/Ulcers"
+    ],
+    "drugClass": "GI Protectant",
+    "brandName": "CARAFATE",
+    "doseForm": "Liquid"
+  },
+  "tadalafil": {
+    "name": "Tadalafil",
+    "conditions": [
+      "Erectile Dysfunction/BPH",
+      "Pulmonary Hypertension"
+    ],
+    "drugClass": "PDE5 Inhibitor",
+    "brandName": "CIALIS",
+    "doseForm": "Tablet"
+  },
+  "tamsulosin": {
+    "name": "Tamsulosin",
+    "conditions": [
+      "Benign Prostatic Hyperplasia",
+      "Kidney Stones"
+    ],
+    "drugClass": "Alpha-1 Blocker",
+    "brandName": "FLOMAX",
+    "doseForm": "Capsule"
+  },
+  "terazosin": {
+    "name": "Terazosin",
+    "conditions": [
+      "Hypertension",
+      "BPH"
+    ],
+    "drugClass": "Alpha-1 Blocker",
+    "brandName": "HYTRIN",
+    "doseForm": "Capsule"
+  },
+  "thyroid": {
+    "name": "Thyroid",
+    "conditions": [
+      "Thyroid Disease"
+    ],
+    "drugClass": "Thyroid Hormone",
+    "brandName": "ARMOUR THYROID",
+    "doseForm": "Tablet"
+  },
+  "ticagrelor": {
+    "name": "Ticagrelor",
+    "conditions": [
+      "Cardiovascular Disease and Prevention"
+    ],
+    "drugClass": "P2Y12 Platelet Inhibitor",
+    "brandName": "BRILINTA",
+    "doseForm": "Tablet"
+  },
+  "tiotropium": {
+    "name": "Tiotropium",
+    "conditions": [
+      "COPD",
+      "Asthma"
+    ],
+    "drugClass": "Anticholinergic",
+    "brandName": "SPIRIVA",
+    "doseForm": "Aerosol"
+  },
+  "tizanidine": {
+    "name": "Tizanidine",
+    "conditions": [
+      "Muscle Spasm/MS"
+    ],
+    "drugClass": "Alpha-2 Adrenergic Agonist",
+    "brandName": "ZANAFLEX",
+    "doseForm": "Capsule"
+  },
+  "torsemide": {
+    "name": "Torsemide",
+    "conditions": [
+      "Hypertension",
+      "Edema"
+    ],
+    "drugClass": "Loop Diuretic",
+    "brandName": "SOAANZ",
+    "doseForm": "Tablet"
+  },
+  "triamcinolone": {
+    "name": "Triamcinolone",
+    "conditions": [
+      "Inflammation",
+      "Allergy"
+    ],
+    "drugClass": "Corticosteroid",
+    "brandName": "KENALOG-10",
+    "doseForm": "Injectable"
+  },
+  "venlafaxine": {
+    "name": "Venlafaxine",
+    "conditions": [
+      "Depression",
+      "Anxiety"
+    ],
+    "drugClass": "SNRI",
+    "brandName": "EFFEXOR XR",
+    "doseForm": "Capsule"
+  },
+  "verapamil": {
+    "name": "Verapamil",
+    "conditions": [
+      "Hypertension",
+      "Cardiovascular Disease and Prevention"
+    ],
+    "drugClass": "Calcium Channel Blocker",
+    "brandName": "CALAN SR",
+    "doseForm": "Capsule"
+  },
+  "vitamin-e": {
+    "name": "Vitamin E",
+    "conditions": [
+      "Vitamin E Deficiency"
+    ],
+    "drugClass": "",
+    "brandName": ""
+  }
+}

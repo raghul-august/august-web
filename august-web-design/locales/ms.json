@@ -1,0 +1,140 @@
+{
+  "common": {
+    "loadingChats": "Memuatkan perbualan anda...",
+    "refreshPage": "Segarkan halaman",
+    "signUp": "Daftar",
+    "openMenu": "Buka menu",
+    "menu": "Menu",
+    "downloadApp": "Muat Turun Apl",
+    "termsOfService": "Terma Perkhidmatan",
+    "privacyPolicy": "Dasar Privasi",
+    "loggingOut": "Sedang log keluar...",
+    "logout": "Log keluar",
+    "back": "Kembali",
+    "continue": "Teruskan",
+    "edit": "Edit",
+    "legalPrefix": "Dengan meneruskan, anda bersetuju dengan",
+    "and": "dan",
+    "termsShort": "terma",
+    "privacyShort": "dasar privasi",
+    "error": "Ralat",
+    "tryAgain": "Cuba Lagi",
+    "loginRequired": "Sila log masuk untuk terus berbual.",
+    "language": "Bahasa",
+    "languageEnglish": "Bahasa Melayu",
+    "languageFrench": "Perancis",
+    "changeLanguage": "Tukar bahasa",
+    "profile": "Profil",
+    "login": "Log masuk"
+  },
+  "chat": {
+    "initFailed": "Gagal memulakan sesi. Sila segarkan semula halaman.",
+    "genericError": "Sesuatu telah berlaku kesilapan. Sila segarkan semula halaman.",
+    "emptyStateHeading": "Apa khabar?",
+    "processing": {
+      "reading": "Membaca dokumen anda...",
+      "understanding": "Memahami butiran...",
+      "summarising": "Merumuskan segalanya..."
+    },
+    "scrollToBottom": "Tatal ke bawah",
+    "input": {
+      "placeholder": "Tanya apa sahaja",
+      "disclaimer": "Ogos mungkin membuat kesilapan. Sahkan dengan doktor",
+      "invalidFileType": "Sila pilih fail imej (JPEG, PNG, GIF, WebP) atau PDF yang sah.",
+      "waitForUploads": "Sila tunggu sehingga fail selesai dimuat naik.",
+      "removeFailedUploads": "Sesetengah fail gagal dimuat naik. Sila alih keluarkannya dan cuba lagi.",
+      "uploadFailed": "Muat naik gagal"
+    },
+    "attachments": {
+      "imageAlt": "Lampiran",
+      "pdfDefault": "Dokumen PDF",
+      "pdfCta": "Klik untuk melihat",
+      "defaultCta": "Lihat lampiran",
+      "audioFallback": "Pelayar anda tidak menyokong elemen audio."
+    }
+  },
+  "auth": {
+    "heroAlt": "Cuba Ogos, percuma",
+    "welcomeAlt": "Selamat kembali ke Ogos",
+    "signup": {
+      "description": "Rakan kesihatan AI anda, dibina oleh doktor. Dapatkan jawapan segera, fahami laporan makmal, dan dapatkan kejelasan.",
+      "trusted": "Dipercayai oleh 6 Juta pengguna di seluruh dunia.",
+      "memoryTransfer": "Log masuk untuk mengimport kenangan kesihatan anda",
+      "memoryTransferSuccess": "Saya telah mengemas kini ingatan anda. Apa yang baru sahaja anda pelajari tentang saya?"
+    },
+    "welcome": {
+      "copy": "Selamat kembali!\nLog masuk untuk meneruskan ke Ogos"
+    },
+    "continueWithPhone": "Teruskan dengan Telefon",
+    "phoneStep": {
+      "title": "Masukkan nombor telefon anda",
+      "subtitle": "Kami akan menghantar kod pengesahan kepada anda",
+      "searchPlaceholder": "Cari negara...",
+      "phonePlaceholder": "Nombor telefon"
+    },
+    "otpStep": {
+      "title": "Sahkan telefon anda",
+      "subtitle": "Masukkan kod pengesahan yang dihantar ke",
+      "resendWithTimer": "Tidak menerima kod? Hantar semula ({{seconds}})",
+      "resend": "Tidak menerima kod? Hantar semula"
+    },
+    "errors": {
+      "enterPhone": "Sila masukkan nombor telefon anda",
+      "sendOtp": "Gagal menghantar OTP. Sila cuba lagi.",
+      "sendOtpInvalid": "Gagal menghantar OTP. Sila semak nombor telefon anda.",
+      "enterOtp": "Sila masukkan kod 6 digit",
+      "invalidOtp": "Kod tidak sah. Sila cuba lagi.",
+      "oauthGeneric": "Gagal log masuk. Sila cuba lagi.",
+      "googleUserInfo": "Gagal mendapatkan maklumat pengguna Google",
+      "googleCancelled": "Log masuk Google dibatalkan atau gagal.",
+      "appleUnavailable": "Log masuk Apple tidak tersedia",
+      "appleUnavailableSdk": "Log masuk Apple tidak tersedia. SDK Apple JS tidak dimuat.",
+      "appleCredential": "Gagal mendapatkan kelayakan Apple",
+      "appleFailed": "Log masuk Apple gagal. Sila cuba lagi."
+    },
+    "oauth": {
+      "google": "Teruskan dengan Google",
+      "apple": "Teruskan dengan Apple"
+    },
+    "tryOtherOptions": "Cuba pilihan lain"
+  },
+  "errorBoundary": {
+    "title": "Sesuatu telah berlaku",
+    "description": "Kami menghadapi ralat yang tidak dijangka. Sila cuba lagi.",
+    "tryAgain": "Cuba Lagi",
+    "refreshPage": "Segarkan Halaman"
+  },
+  "sidebar": {
+    "tabs": {
+      "chat": "Sembang",
+      "records": "Rekod",
+      "explore": "Perpustakaan Kesihatan",
+      "nutrition": "Nutrisi"
+    },
+    "download": {
+      "title": "Muat turun aplikasi untuk mengakses",
+      "cta": "Muat Turun Aplikasi Sekarang",
+      "chatDescription": "Teruskan perbualan dengan panduan kesihatan AI anda dalam aplikasi Ogos.",
+      "recordsDescription": "Dengan Aplikasi Mudah Alih August:\n• Lihat dan urus rekod anda\n• Kongsi dengan doktor anda\n• Dapatkan pandangan kesihatan yang tepat",
+      "exploreDescription": "August menyusun artikel kesihatan, blog dan maklumat lain yang diperibadikan untuk anda.",
+      "nutritionDescription": "Jejaki tabiat. Pantau tanda vital. Lihat kemajuan anda - semuanya di satu tempat.",
+      "chatTitle": "Muat turun aplikasi untuk mengakses",
+      "recordsTitle": "Semua Rekod Kesihatan di satu tempat",
+      "exploreTitle": "Artikel Kesihatan Pilihan, dan Blog",
+      "nutritionTitle": "Jejaki apa yang penting, perbaiki apa yang dikira"
+    },
+    "downloadAppButton": "Muat Turun Apl",
+    "tooltips": {
+      "chat": "Berbual dengan August",
+      "records": "Urus rekod kesihatan anda",
+      "explore": "Jelajahi Perpustakaan Kesihatan",
+      "nutrition": "Urus diet & nutrisi",
+      "insurance": "Rayu fail insurans",
+      "costEstimator": "Cari harga terendah untuk perkhidmatan kesihatan",
+      "showFullMenu": "Tunjukkan menu penuh",
+      "hideFullMenu": "Sembunyikan menu penuh",
+      "manageAccount": "Urus tetapan akaun"
+    },
+    "takeAugustWithYou": "Bawa Ogos bersama anda"
+  }
+}

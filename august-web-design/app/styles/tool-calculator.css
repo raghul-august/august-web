@@ -1,0 +1,457 @@
+/*
+ * Shared calculator-wizard styles.
+ *
+ * Layout, navigation, form grid, result panel, and table styles used by
+ * step-form calculators (Heart Age, and any future calculators that migrate
+ * to this base). Tool-specific files only need to add their unique pieces
+ * (custom rows, badges, semantic colors, etc.).
+ *
+ * Depends on tokens from tool-tokens.css and atomic classes from
+ * tool-shared.css (.tool-card, .tool-input, .tool-chip*, .tool-btn*, etc.).
+ */
+
+.tool-calc-section-label {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  letter-spacing: 0.04em;
+}
+
+.tool-calc-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 24px 32px;
+}
+
+.tool-calc-wrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.tool-calc-disclaimer {
+  text-align: center;
+  font-size: 0.8125rem;
+  color: var(--text-tertiary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.tool-calc-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.tool-calc-step-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tool-calc-step-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* ── Form grid ──────────────────────────────────────────────────────── */
+
+.tool-calc-form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px 16px;
+}
+
+@media (min-width: 520px) {
+  .tool-calc-form-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.tool-calc-form-grid .tool-calc-form-span-2 {
+  grid-column: 1 / -1;
+}
+
+.tool-calc-hwa-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 12px;
+}
+
+@media (min-width: 520px) {
+  .tool-calc-hwa-row {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.tool-calc-ft-in-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.tool-calc-ft-in-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.tool-calc-ft-in-input {
+  width: 100%;
+  padding-right: 28px;
+}
+
+.tool-calc-ft-in-suffix {
+  position: absolute;
+  right: 10px;
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  pointer-events: none;
+}
+
+.tool-calc-error-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/*
+ * Combo input — a single visually-bordered control containing multiple
+ * sub-inputs separated by a vertical divider. Used for unit pairs like
+ * feet|inches where the two values logically belong to one measurement.
+ * Mirrors .tool-input border/focus styling so the box reads as one field.
+ */
+
+.tool-calc-combo-input {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  background: var(--surface-elevated);
+  padding: 0 12px;
+  min-height: 38px;
+  font-size: 15px;
+  color: var(--text-primary);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.tool-calc-combo-input:focus-within {
+  border-color: var(--brand-primary);
+  box-shadow: 0 0 0 3px rgba(32, 110, 85, 0.18);
+}
+
+.tool-calc-combo-input[aria-invalid="true"] {
+  border-color: var(--danger, #dc3545);
+}
+
+.tool-calc-combo-segment {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.tool-calc-combo-input__field {
+  flex: 1 1 0;
+  min-width: 0;
+  width: 100%;
+  border: none;
+  background: transparent;
+  padding: 8px 0;
+  font: inherit;
+  color: inherit;
+  outline: none;
+  text-align: left;
+}
+
+.tool-calc-combo-input__field::placeholder {
+  color: var(--text-tertiary);
+}
+
+.tool-calc-combo-input__suffix {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+  user-select: none;
+  flex: 0 0 auto;
+}
+
+.tool-calc-combo-input__divider {
+  flex: 0 0 auto;
+  margin: 0 10px;
+  width: 1px;
+  background: var(--border-subtle);
+}
+
+@media (max-width: 520px) {
+  .tool-calc-combo-input {
+    min-height: 36px;
+    font-size: 16px;
+  }
+}
+
+/* ── Wizard nav + progress dots ─────────────────────────────────────── */
+
+.tool-calc-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.tool-calc-nav .tool-btn {
+  flex: 0 1 auto;
+  min-width: 0;
+  padding-inline: 20px;
+}
+
+.tool-calc-dots {
+  display: flex;
+  gap: 6px;
+  flex: 0 0 auto;
+}
+
+@media (max-width: 420px) {
+  .tool-calc-nav {
+    gap: 10px;
+  }
+  .tool-calc-nav .tool-btn {
+    flex: 1 1 0;
+    padding-inline: 2px;
+    padding-right: 10px;
+    padding-left: 18px;
+    font-size: 15px;
+  }
+  .tool-calc-dots {
+    order: -1;
+    flex-basis: 100%;
+    justify-content: center;
+    margin-bottom: 4px;
+  }
+}
+
+.tool-calc-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--border-subtle);
+  transition: background 0.2s;
+}
+
+.tool-calc-dot--active {
+  background: var(--brand-primary);
+}
+
+.tool-calc-dot--completed {
+  background: var(--brand-primary);
+  opacity: 0.5;
+}
+
+.tool-calc-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ── Chip and input sizing inside the card ──────────────────────────── */
+
+.tool-calc-card .tool-chip--active {
+  background: var(--brand-subtle);
+  color: var(--brand-primary);
+  border-color: var(--brand-primary);
+}
+
+.tool-calc-card .tool-chip-group--connected {
+  border-radius: 10px;
+}
+
+.tool-calc-card .tool-chip-group--connected .tool-chip {
+  padding: 9px 16px;
+  font-size: 13px;
+  min-height: 38px;
+}
+
+.tool-calc-card .tool-input {
+  padding: 8px 12px;
+  font-size: 15px;
+  min-height: 38px;
+}
+
+@media (max-width: 520px) {
+  .tool-calc-card .tool-chip-group--connected .tool-chip {
+    padding: 8px 14px;
+    font-size: 13px;
+    min-height: 36px;
+  }
+  .tool-calc-card .tool-input {
+    padding: 8px 12px;
+    font-size: 16px;
+    min-height: 36px;
+  }
+}
+
+/* ── Result panel ───────────────────────────────────────────────────── */
+
+.tool-calc-result-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  --tool-fade-y: 6px;
+  animation: toolFadeIn 0.35s ease;
+}
+
+.tool-calc-result-primary {
+  position: relative;
+  background: var(--surface-elevated);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tool-calc-value-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.tool-calc-value {
+  font-size: 2.75rem;
+  font-weight: 500;
+  line-height: 1.05;
+  color: var(--text-primary);
+  letter-spacing: -0.0409em;
+}
+
+.tool-calc-value-unit {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.tool-calc-result-desc {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.tool-calc-meta-row {
+  margin-top: 8px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  flex-wrap: wrap;
+}
+
+.tool-calc-meta-row strong {
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.no-border-top {
+  border-top: 1px solid transparent;
+  margin-top: 1px;
+}
+
+.tool-calc-table-card {
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tool-calc-table-caption {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-tertiary);
+}
+
+.tool-calc-table {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tool-calc-table-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  background: var(--surface-elevated);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.tool-calc-table-row:first-child {
+  border-top: 1px solid transparent;
+}
+
+.tool-calc-table-row--active {
+  border-color: var(--brand-primary);
+  background: var(--brand-subtle);
+}
+
+.tool-calc-table-cell-label {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.tool-calc-table-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.tool-calc-table-helper {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+}
+
+.tool-calc-table-cell-value {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.tool-calc-table-cell-value strong {
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.tool-calc-table-unit {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tool-calc-result-stack {
+    animation: none;
+  }
+}

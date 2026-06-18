@@ -1,0 +1,141 @@
+{
+  "common": {
+    "loadingChats": "טוען את הצ'אטים שלך...",
+    "refreshPage": "רענן דף",
+    "signUp": "הרשמה",
+    "openMenu": "פתח תפריט",
+    "menu": "תפריט",
+    "downloadApp": "הורד אפליקציה",
+    "termsOfService": "תנאי שימוש",
+    "privacyPolicy": "מדיניות פרטיות",
+    "loggingOut": "מתנתק...",
+    "logout": "התנתק",
+    "back": "אחורה",
+    "continue": "המשך",
+    "edit": "ערוך",
+    "legalPrefix": "בהמשך אתה מסכים ל",
+    "and": "ו",
+    "termsShort": "תנאים",
+    "privacyShort": "מדיניות פרטיות",
+    "error": "שגיאה",
+    "tryAgain": "נסה שוב",
+    "loginRequired": "אנא התחבר/י כדי להמשיך בצ'אט.",
+    "language": "שפה",
+    "languageEnglish": "אנגלית",
+    "languageFrench": "צרפתית",
+    "changeLanguage": "שנה שפה",
+    "profile": "פרופיל",
+    "login": "התחבר"
+  },
+  "chat": {
+    "initFailed": "נכשל אתחול הסשן. אנא רענן את הדף.",
+    "genericError": "אירעה שגיאה. אנא רענן את הדף.",
+    "emptyStateHeading": "מה שלומך?",
+    "processing": {
+      "reading": "קורא את המסמך שלך...",
+      "understanding": "הבנת הפרטים...",
+      "summarising": "לסיכום הכל..."
+    },
+    "scrollToBottom": "גלול למטה",
+    "input": {
+      "placeholder": "שאלו כל דבר",
+      "disclaimer": "אוגוסט עלול לטעות. יש לאשר עם רופא",
+      "invalidFileType": "אנא בחר קובץ תמונה תקין (JPEG, PNG, GIF, WebP) או קובץ PDF.",
+      "waitForUploads": "אנא המתן לסיום העלאת הקבצים.",
+      "removeFailedUploads": "קובץ אחד או יותר נכשלו בהעלאה. אנא הסר אותם ונסה שוב.",
+      "uploadFailed": "העלאה נכשלה"
+    },
+    "attachments": {
+      "imageAlt": "קובץ מצורף",
+      "pdfDefault": "מסמך PDF",
+      "pdfCta": "לחץ לצפייה",
+      "defaultCta": "הצג קובץ מצורף",
+      "audioFallback": "הדפדפן שלך אינו תומך באלמנט האודיו."
+    }
+  },
+  "auth": {
+    "heroAlt": "נסה אוגוסט, בחינם",
+    "welcomeAlt": "ברוכים השבים לאוגוסט",
+    "signup": {
+      "description": "מלווה הבריאות האישי שלך מבוסס AI, שנבנה על ידי רופאים. קבל תשובות מיידיות, הבן דוחות מעבדה, ומצא בהירות.",
+      "trusted": "מהימנים על ידי 6 מיליון משתמשים ברחבי העולם.",
+      "memoryTransfer": "התחבר כדי לייבא את זיכרונות הבריאות שלך",
+      "memoryTransferSuccess": "עדכנתי את הזיכרון שלך. מה למדת עלי עכשיו?"
+    },
+    "welcome": {
+      "copy": "ברוכים השבים!\nהתחברו כדי להמשיך אל אוגוסט"
+    },
+    "continueWithPhone": "המשך עם טלפון",
+    "phoneStep": {
+      "title": "הכנס את מספר הטלפון שלך",
+      "subtitle": "נשלח לך קוד אימות",
+      "searchPlaceholder": "חפש מדינה...",
+      "phonePlaceholder": "מספר טלפון"
+    },
+    "otpStep": {
+      "title": "אמת את הטלפון שלך",
+      "subtitle": "הכנס את קוד האימות שנשלח ל",
+      "resendWithTimer": "לא קיבלת קוד? שלח שוב ({{seconds}})",
+      "resend": "לא קיבלת קוד? שלח שוב"
+    },
+    "errors": {
+      "enterPhone": "אנא הכנס את מספר הטלפון שלך",
+      "sendOtp": "נכשל שליחת OTP. אנא נסה שוב.",
+      "sendOtpInvalid": "נכשל שליחת OTP. אנא בדוק את מספר הטלפון שלך.",
+      "enterOtp": "אנא הכנס את הקוד בן 6 ספרות",
+      "invalidOtp": "קוד לא תקין. אנא נסה שוב.",
+      "oauthGeneric": "כניסה נכשלה. אנא נסה שוב.",
+      "googleUserInfo": "נכשל קבלת פרטי משתמש Google",
+      "googleCancelled": "כניסה ל-Google בוטלה או נכשלה.",
+      "appleUnavailable": "כניסה באמצעות Apple אינה זמינה",
+      "appleUnavailableSdk": "כניסה באמצעות Apple אינה זמינה. ערכת ה-SDK של Apple JS לא נטענה.",
+      "appleCredential": "נכשל קבלת אישור Apple",
+      "appleFailed": "כניסה ל-Apple נכשלה. אנא נסה שוב."
+    },
+    "oauth": {
+      "google": "המשך עם גוגל",
+      "apple": "המשך עם Apple"
+    },
+    "tryOtherOptions": "נסה אפשרויות אחרות"
+  },
+  "errorBoundary": {
+    "title": "אירעה שגיאה",
+    "description": "נתקלנו בשגיאה בלתי צפויה. אנא נסה שוב.",
+    "tryAgain": "נסה שוב",
+    "refreshPage": "רענן דף"
+  },
+  "sidebar": {
+    "tabs": {
+      "chat": "צ'אט",
+      "records": "רשומות",
+      "explore": "ספריית בריאות",
+      "nutrition": "תזונה"
+    },
+    "download": {
+      "title": "הורד אפליקציה כדי לגשת",
+      "cta": "הורד את האפליקציה עכשיו",
+      "chatDescription": "המשך את השיחה עם מדריך הבריאות הבינה המלאכותית שלך באפליקציית אוגוסט.",
+      "recordsDescription": "עם אפליקציית August Mobile:\n• צפו בנתונים שלכם ונהלו אותם\n• שתפו עם הרופא שלכם\n• קבלו תובנות בריאותיות מדויקות",
+      "exploreDescription": "אוגוסט אוצר מאמרים, בלוגים ומידע נוסף בתחום הבריאות המותאמים אישית עבורך.",
+      "nutritionDescription": "עקוב אחר הרגלים. נטר מדדים חיוניים. ראה את ההתקדמות שלך - הכל במקום אחד.",
+      "chatTitle": "הורד אפליקציה כדי לגשת",
+      "recordsTitle": "כל רשומות הבריאות במקום אחד",
+      "exploreTitle": "מאמרים ובלוגים בנושאי בריאות שנבחרו בקפידה",
+      "nutritionTitle": "עקוב אחר מה שחשוב, שפר את מה שנספר"
+    },
+    "downloadAppButton": "הורד אפליקציה",
+    "tooltips": {
+      "chat": "צ'אט עם אוגוסט",
+      "records": "נהל את רשומות הבריאות שלך",
+      "explore": "ספריית בריאות",
+      "nutrition": "נהל תזונה ותזונה",
+      "insurance": "ערעור ביטוח קובץ",
+      "costEstimator": "מצא את המחיר הנמוך ביותר עבור שירותי בריאות",
+      "billAnalyser": "בדוק את החשבון שלי",
+      "showFullMenu": "הצג תפריט מלא",
+      "hideFullMenu": "הסתר תפריט מלא",
+      "manageAccount": "נהל הגדרות חשבון"
+    },
+    "takeAugustWithYou": "קח את אוגוסט איתך"
+  }
+}

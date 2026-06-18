@@ -1,0 +1,114 @@
+[
+    {
+      "tablet_name": "Acetaminophen",
+      "tablet_description": "white round biconvex tablet with smooth edges, uncoated",
+      "tablet_imprint": "APA",
+      "tablet_finish": "matte, fine chalky surface",
+      "score_line": "single score line on one face"
+    },
+    {
+      "tablet_name": "Ascorbic Acid",
+      "tablet_description": "white to pale yellow round flat-faced tablet with beveled edges",
+      "tablet_imprint": "VC",
+      "tablet_finish": "matte, slightly granular",
+      "score_line": "no score line"
+    },
+    {
+      "tablet_name": "Aspirin",
+      "tablet_description": "white round biconvex tablet, uncoated with a faint vinegary odor",
+      "tablet_imprint": "ASP",
+      "tablet_finish": "matte, crystalline and slightly coarse",
+      "score_line": "single score line on one face"
+    },
+    {
+      "tablet_name": "Bisacodyl",
+      "tablet_description": "yellow round enteric-coated tablet, biconvex with a smooth polished shell",
+      "tablet_imprint": "BIS",
+      "tablet_finish": "glossy, hard sugar/enteric coat",
+      "score_line": "no score line"
+    },
+    {
+      "tablet_name": "Cetirizine",
+      "tablet_description": "white oval/oblong film-coated tablet with smooth rounded edges",
+      "tablet_imprint": "CTZ",
+      "tablet_finish": "glossy, smooth film coat",
+      "score_line": "no score line"
+    },
+    {
+      "tablet_name": "Dicyclomine",
+      "tablet_description": "blue round biconvex tablet with smooth edges, uncoated",
+      "tablet_imprint": "DIC",
+      "tablet_finish": "matte, lightly powdery",
+      "score_line": "no score line"
+    },
+    {
+      "tablet_name": "Famotidine",
+      "tablet_description": "beige to tan round film-coated tablet, biconvex with rounded edges",
+      "tablet_imprint": "FAM",
+      "tablet_finish": "semi-glossy, smooth film coat",
+      "score_line": "no score line"
+    },
+    {
+      "tablet_name": "Folic Acid",
+      "tablet_description": "yellow to orange-yellow round flat-faced tablet with beveled edges",
+      "tablet_imprint": "FA",
+      "tablet_finish": "matte, slightly granular",
+      "score_line": "single score line on one face"
+    },
+    {
+      "tablet_name": "Ibuprofen",
+      "tablet_description": "white to off-white round biconvex film-coated tablet, smooth edges",
+      "tablet_imprint": "IBU",
+      "tablet_finish": "glossy, smooth film coat",
+      "score_line": "no score line"
+    },
+    {
+      "tablet_name": "Lactobacillus Acidophilus",
+      "tablet_description": "off-white to tan round biconvex tablet with a faint dairy odor, uncoated",
+      "tablet_imprint": "LAC",
+      "tablet_finish": "matte, slightly powdery and uneven",
+      "score_line": "no score line"
+    },
+    {
+      "tablet_name": "Levocetirizine",
+      "tablet_description": "white oval/oblong film-coated tablet with smooth rounded edges",
+      "tablet_imprint": "LCZ",
+      "tablet_finish": "glossy, smooth film coat",
+      "score_line": "single score line on one face"
+    },
+    {
+      "tablet_name": "Linagliptin",
+      "tablet_description": "round film-coated tablet, pale red/pink, biconvex with rounded edges",
+      "tablet_imprint": "LGP",
+      "tablet_finish": "glossy, smooth film coat",
+      "score_line": "no score line"
+    },
+    {
+      "tablet_name": "Loperamide",
+      "tablet_description": "light green round film-coated tablet, biconvex with smooth edges",
+      "tablet_imprint": "LOP",
+      "tablet_finish": "semi-glossy, smooth film coat",
+      "score_line": "no score line"
+    },
+    {
+      "tablet_name": "Loratadine",
+      "tablet_description": "white round biconvex tablet with smooth edges, uncoated",
+      "tablet_imprint": "LOR",
+      "tablet_finish": "matte, fine and slightly chalky",
+      "score_line": "single score line on one face"
+    },
+    {
+      "tablet_name": "Meclizine",
+      "tablet_description": "two-tone round flat-faced tablet (often blue/white or yellow), beveled edges",
+      "tablet_imprint": "MEC",
+      "tablet_finish": "matte, slightly powdery",
+      "score_line": "single score line on one face"
+    },
+    {
+      "tablet_name": "Metoclopramide",
+      "tablet_description": "white round biconvex tablet with smooth edges, uncoated",
+      "tablet_imprint": "MCP",
+      "tablet_finish": "matte, fine and lightly powdery",
+      "score_line": "single score line on one face"
+    }
+  ]

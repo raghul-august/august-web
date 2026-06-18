@@ -1,0 +1,33 @@
+/* Personality Disorder Test — tool-specific styles only.
+   Layout/animation/typography comes from tool-tokens.css + tool-shared.css.
+   Keep this file thin; only add tool-unique rules here. */
+
+.pdt-question-enter {
+  --tool-fade-y: 20px;
+  animation: toolFadeIn 0.5s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+.pdt-band-row {
+  border-top: 1px solid var(--border-subtle);
+  padding: 10px 0;
+}
+
+.pdt-band-row:first-child {
+  border-top: 1px solid transparent;
+  padding-top: 0;
+}
+
+.add-border-top{
+  border-top : 1px solid var(--border-subtle);
+  padding-top : 15px;
+  padding-bottom : 10px;
+}
+
+.add-border-top:first-child{
+  border-top : 1px solid transparent;
+
+}
+
+.add-border-top:last-child{
+  padding-bottom:0px;
+}

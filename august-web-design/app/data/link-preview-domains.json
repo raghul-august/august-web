@@ -1,0 +1,48 @@
+{
+  "domains": [
+    {
+      "domain": "app.meetaugust.ai",
+      "params": {
+        "navigateWithWeb": true,
+        "passTokens": true,
+        "hideTopPadding": true
+      }
+    },
+    {
+      "domain": "meetaugust.ai",
+      "params": {}
+    },
+    {
+      "domain": "amidying.today",
+      "params": {}
+    },
+    {
+      "domain": "bankruptcyavoider.com",
+      "params": {
+        "navigateWithWeb": true,
+        "hideTopPadding": true,
+        "openExternalLinks": true
+      }
+    },
+    {
+      "domain": "medicalcostestimator.com",
+      "params": {
+        "navigateWithWeb": true,
+        "hideTopPadding": true,
+        "openExternalLinks": true
+      }
+    },
+    {
+      "domain": "panicbutton.life",
+      "params": {}
+    },
+    {
+      "domain": "panicmeter.live",
+      "params": {}
+    },
+    {
+      "domain": "the2amdoctor.com",
+      "params": {}
+    }
+  ]
+}

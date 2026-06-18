@@ -1,0 +1,65 @@
+/* Tool design-token aliases — runtime CSS vars for shared tool components.
+   Imported by ToolLayout so tokens load only on tool routes.
+   Mirrors AUGUST-WEB-DESIGN-SYSTEM.md sections 3 (color), 6 (radii), 11 (motion). */
+
+:root {
+  /* ── Surface ────────────────────────────────────────────── */
+  --surface-page:     #FAF9F5;   /* default page bg, NEVER pure white */
+  --surface-elevated: #FFFFFF;   /* cards, inputs, elevated panels */
+  --surface-subtle:   #F3F1EB;   /* hover states, secondary rows */
+
+  /* ── Text ───────────────────────────────────────────────── */
+  --text-primary:   #141515;     /* body & headings, NEVER pure #000 */
+  --text-secondary: #5A554A;     /* supporting copy, descriptions */
+  --text-tertiary:  #7A7468;     /* metadata, timestamps, captions */
+  --text-disabled:  #A8A39A;     /* disabled states */
+  --text-inverse:   #FFFFFF;     /* text on sage or dark surfaces */
+  --text-brand:     #206E55;     /* linked text, brand accents */
+
+  /* ── Brand (Sage) ───────────────────────────────────────── */
+  --brand-primary:         #206E55;  /* primary CTAs, wordmark, key accents */
+  --brand-primary-hover:   #408A6C;  /* hover state */
+  --brand-primary-pressed: #1A5A46;  /* active/pressed */
+  --brand-subtle:          #E8F2ED;  /* soft brand backgrounds, badges */
+
+  /* ── Border (default = 1px border, NOT shadow on cards) ── */
+  --border-subtle: #E5E2DA;      /* default card borders */
+  --border:        #D1CDC2;      /* inputs, dividers */
+  --border-strong: #A8A39A;      /* focused or emphasized borders */
+
+  /* ── Semantic state (muted, never bright) ──────────────── */
+  --success:     #3D8168;
+  --success-50:  #E8F2ED;
+  --success-700: #2A5A48;
+  --warning:     #C68E2A;
+  --warning-50:  #FAF2DE;
+  --warning-700: #8A621D;
+  --danger:      #B8453C;
+  --danger-50:   #F7E5E3;
+  --danger-700:  #802F28;
+  --info:        #3D6B7A;
+  --info-50:     #E5EEF2;
+  --info-700:    #2A4A55;
+
+  /* ── Legacy aliases (back-compat for already-migrated code) ── */
+  --tool-bg:          var(--surface-page);
+  --tool-accent:      var(--brand-primary);
+  --tool-accent-dark: var(--brand-primary-pressed);
+  --tool-radius:      16px;       /* rounded-lg, default card radius */
+  --tool-fade-y:      8px;        /* default translateY for toolFadeIn */
+}
+
+/* Per-category bg overrides. Set on a wrapping element via data-tool-category="…"
+   so a parent layout can scope the background without a global <style> inject. */
+[data-tool-category="quiz"] {
+  --tool-bg: var(--surface-page);
+}
+
+[data-tool-category="calculator"] {
+  --tool-bg: var(--surface-page);
+}
+
+/* Apply var(--tool-bg) to body when a tool page is mounted. */
+body:has([data-tool-category]) {
+  background: var(--tool-bg);
+}

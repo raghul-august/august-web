@@ -1,0 +1,141 @@
+{
+  "common": {
+    "loadingChats": "チャットを読み込んでいます...",
+    "refreshPage": "ページを更新",
+    "signUp": "サインアップ",
+    "openMenu": "メニューを開く",
+    "menu": "メニュー",
+    "downloadApp": "アプリをダウンロード",
+    "termsOfService": "利用規約",
+    "privacyPolicy": "プライバシーポリシー",
+    "loggingOut": "ログアウトしています...",
+    "logout": "ログアウト",
+    "back": "戻る",
+    "continue": "続行",
+    "edit": "編集",
+    "legalPrefix": "続行することにより、お客様は当社の",
+    "and": "と",
+    "termsShort": "利用規約",
+    "privacyShort": "プライバシーポリシー",
+    "error": "エラー",
+    "tryAgain": "もう一度試す",
+    "loginRequired": "チャットを続けるにはログインしてください。",
+    "language": "言語",
+    "languageEnglish": "英語",
+    "languageFrench": "フランス",
+    "changeLanguage": "言語を変更",
+    "profile": "プロフィール",
+    "login": "ログイン"
+  },
+  "chat": {
+    "initFailed": "セッションの初期化に失敗しました。ページを再読み込みしてください。",
+    "genericError": "問題が発生しました。ページを更新してください。",
+    "emptyStateHeading": "お元気ですか？",
+    "processing": {
+      "reading": "ドキュメントを読み込んでいます...",
+      "understanding": "詳細を理解する...",
+      "summarising": "要約すると…"
+    },
+    "scrollToBottom": "一番下までスクロール",
+    "input": {
+      "placeholder": "何でも聞いてください",
+      "disclaimer": "8月は間違いを犯す可能性があります。医師に確認してください。",
+      "invalidFileType": "有効な画像（JPEG、PNG、GIF、WebP）またはPDFファイルを選択してください。",
+      "waitForUploads": "ファイルをアップロードし終えるまでお待ちください。",
+      "removeFailedUploads": "一部のファイルがアップロードに失敗しました。削除してもう一度お試しください。",
+      "uploadFailed": "アップロードに失敗しました"
+    },
+    "attachments": {
+      "imageAlt": "添付",
+      "pdfDefault": "PDFドキュメント",
+      "pdfCta": "クリックして表示",
+      "defaultCta": "添付ファイルを表示",
+      "audioFallback": "お使いのブラウザはオーディオ要素をサポートしていません。"
+    }
+  },
+  "auth": {
+    "heroAlt": "8月を無料でお試しください",
+    "welcomeAlt": "おかえりなさい、8月",
+    "signup": {
+      "description": "医師が開発したAIヘルスコンパニオン。即座に回答を得て、検査結果を理解し、明確な情報を手に入れましょう。",
+      "trusted": "世界中の600万人のユーザーに信頼されています。",
+      "memoryTransfer": "健康の思い出をインポートするにはログインしてください",
+      "memoryTransferSuccess": "あなたの記憶を更新しました。あなたは私について何を学びましたか？"
+    },
+    "welcome": {
+      "copy": "おかえりなさい！\nAugust を続けるにはサインインしてください。"
+    },
+    "continueWithPhone": "電話で続行",
+    "phoneStep": {
+      "title": "電話番号を入力してください",
+      "subtitle": "確認コードをお送りします",
+      "searchPlaceholder": "国を検索...",
+      "phonePlaceholder": "電話番号"
+    },
+    "otpStep": {
+      "title": "電話番号を確認する",
+      "subtitle": "に送信された確認コードを入力してください",
+      "resendWithTimer": "コードが届きませんか？ 再送信 ({{seconds}})",
+      "resend": "コードが届きませんか？再送信"
+    },
+    "errors": {
+      "enterPhone": "電話番号を入力してください",
+      "sendOtp": "OTPの送信に失敗しました。もう一度お試しください。",
+      "sendOtpInvalid": "OTPの送信に失敗しました。電話番号をご確認ください。",
+      "enterOtp": "6桁のコードを入力してください",
+      "invalidOtp": "無効なコードです。もう一度お試しください。",
+      "oauthGeneric": "サインインに失敗しました。もう一度お試しください。",
+      "googleUserInfo": "Googleユーザー情報の取得に失敗しました",
+      "googleCancelled": "Googleへのサインインがキャンセルされたか、失敗しました。",
+      "appleUnavailable": "Apple Sign In は利用できません",
+      "appleUnavailableSdk": "Apple Sign In は利用できません。Apple JS SDK が読み込まれていません。",
+      "appleCredential": "Apple認証情報の取得に失敗しました",
+      "appleFailed": "Appleへのサインインに失敗しました。もう一度お試しください。"
+    },
+    "oauth": {
+      "google": "Googleで続行",
+      "apple": "Appleで続ける"
+    },
+    "tryOtherOptions": "他のオプションを試す"
+  },
+  "errorBoundary": {
+    "title": "エラーが発生しました",
+    "description": "予期せぬエラーが発生しました。もう一度お試しください。",
+    "tryAgain": "もう一度試す",
+    "refreshPage": "ページを更新"
+  },
+  "sidebar": {
+    "tabs": {
+      "chat": "チャット",
+      "records": "記録",
+      "explore": "ヘルスライブラリ",
+      "nutrition": "栄養"
+    },
+    "download": {
+      "title": "ダウンロードしてアクセス",
+      "cta": "今すぐアプリをダウンロード",
+      "chatDescription": "AugustアプリでAIヘルスガイドとの会話を続けましょう。",
+      "recordsDescription": "Augustモバイルアプリで：\n• 記録の表示と管理\n• 医師との共有\n• 正確な健康インサイトの取得",
+      "exploreDescription": "Augustは、あなたに合わせた健康に関する記事、ブログ、その他の情報を厳選します。",
+      "nutritionDescription": "習慣を記録する。バイタルサインを監視する。進捗状況を確認する - すべてを1か所で行えます。",
+      "chatTitle": "ダウンロードしてアクセス",
+      "recordsTitle": "すべての健康記録を1か所に",
+      "exploreTitle": "厳選された健康記事とブログ",
+      "nutritionTitle": "重要なものを追跡し、価値のあるものを改善する"
+    },
+    "downloadAppButton": "アプリをダウンロード",
+    "tooltips": {
+      "chat": "Augustとチャット",
+      "records": "健康記録を管理する",
+      "explore": "ヘルスライブラリを探す",
+      "nutrition": "食事と栄養を管理する",
+      "insurance": "ファイル保険異議申し立て",
+      "costEstimator": "健康サービスを最安値で探す",
+      "billAnalyser": "請求書を確認する",
+      "showFullMenu": "全メニューを表示",
+      "hideFullMenu": "メニューを非表示",
+      "manageAccount": "アカウント設定を管理"
+    },
+    "takeAugustWithYou": "オーガストを連れて行って"
+  }
+}

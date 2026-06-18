@@ -1,0 +1,53 @@
+PAGES to make META tags for 
+
+1. Home page 
+    <title> Your Trusted Health Library (common.title?)
+    <description> learn about medications, diseases, symptoms ..... their causes and treatments. Access reliable, up-to-date medical information to make informed decisions about your health
+2. each of the category pages 
+    <title> Tests and procedures 
+    <desciption> Find detailed information about medical tests and procedures, including what to expect and how to prepare.
+
+    <title> conditions and diseases
+    <desciption> Explore detailed information about medical conditions and diseases, their symptoms, causes, and treatments.
+
+    <title> Medications and Supplements
+    <desciption> Access comprehensive information about prescription medications, over-the-counter drugs, and dietary supplements.
+
+    <title>Symptoms
+    <desciption> Identify and understand various symptoms, their potential causes, and when to seek medical care.
+3. index pages 
+    <title>conditions by the letter 'a'
+    <description>learn about conditions and diseases starting with the letter a 
+
+not found page?
+
+
+title:  Health Library: Up-to-Date Medical Information
+description: "Discover comprehensive insights on medications, diseases, symptoms, and treatments. Access reliable, expert medical content to make informed health decisions."
+
+title: Medical Tests & Procedures: What to Expect & How to Prepare
+description: "Explore detailed guides on medical tests and procedures. Learn what to expect, how to prepare, and get answers to your healthcare questions."
+
+title: Diseases & Conditions: Symptoms, Causes, & Treatments
+description: "Find in-depth information about medical conditions and diseases. Understand symptoms, causes, and treatments to effectively manage your health."
+
+title:Medications & Supplements: Expert Advice & Reliable Information
+description: "Access comprehensive data on prescription drugs, over-the-counter medications, and dietary supplements. Get trusted advice and detailed insights for your health and wellness."
+
+title:Symptoms: Causes, Insights, & When to Seek Help
+description: "Identify and understand common symptoms, their potential causes, and know when to seek professional medical help. Get expert insights on managing your health."
+
+title: Medical Conditions A to Z: Explore Our Complete Guide
+description: "Browse detailed insights on medical diseases and conditions. Learn about symptoms, causes, and treatment options to stay informed." 
+
+title:Conditions Starting with "${letter}": Comprehensive Medical Information
+description: "Browse detailed insights on medical conditions and diseases. Learn about symptoms, causes, and treatment options to stay informed."
+
+title:Medications Starting with "${letter}": Comprehensive Medical Information
+description: "Browse detailed insights on drugs and medications. Get trusted advice and detailed insights for your health."
+
+title:Symptoms Starting with "${letter}": Comprehensive Medical Information
+description: "Browse detailed insights into symptoms. Understand symptoms, causes, and treatments to effectively manage your health."
+
+title:Medical Test Procedures Starting with "${letter}": Comprehensive Medical Information
+description: "Browse detailed guides on medical tests and procedures. Get trusted advice and detailed insights for your health."

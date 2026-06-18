@@ -1,0 +1,79 @@
+@import "tailwindcss";
+@config "../tailwind.config.mjs";
+
+/* ── Inter Display font (global) ── */
+@font-face {
+  font-family: "Inter Display";
+  src: url("/fonts/inter-display-300.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter Display";
+  src: url("/fonts/inter-display-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter Display";
+  src: url("/fonts/inter-display-500.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --background: #FAF9F5;
+  --foreground: #171717;
+  --lib-bg-primary: #FAF9F5;
+  --lib-bg-white: #FAF9F5;
+  --lib-text-primary: #111111;
+  --lib-text-secondary: #767f7c;
+  --lib-accent: #206E55;
+  --lib-accent-light: #e9f1ee;
+  --lib-border: #E8EAE8;
+  --lib-radius-card: 16px;
+  --lib-radius-pill: 100px;
+  --lib-shadow-card: rgba(150,150,150,0.1) 0px 3px 7px 0px, rgba(150,150,150,0.09) 0px 13px 13px 0px, rgba(150,150,150,0.05) 0px 30px 18px 0px, rgba(150,150,150,0.01) 0px 53px 21px 0px, rgba(150,150,150,0) 0px 83px 23px 0px;
+  --lib-shadow-subtle: rgba(0,0,0,0) 0px 45px 13px 0px, rgba(0,0,0,0) 0px 29px 11px 0px, rgba(0,0,0,0.02) 0px 16px 10px 0px, rgba(0,0,0,0.03) 0px 7px 7px 0px, rgba(0,0,0,0.03) 0px 2px 4px 0px;
+}
+
+/* Dark mode disabled — branded site uses consistent cream background */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: "Inter Display", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+}
+
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+.bg-dot-grid {
+  background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.lime-highlight {
+  background-color: #bef264;
+  padding: 2px 8px;
+  border-radius: 8px;
+}
+}

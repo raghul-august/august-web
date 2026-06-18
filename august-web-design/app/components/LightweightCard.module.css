@@ -1,0 +1,56 @@
+.card {
+  height: 100%;
+  transition: all 0.3s ease;
+  border-radius: 16px;
+  background-color: #fff;
+  padding: 24px 16px;
+  box-shadow: var(--lib-shadow-subtle);
+  border: 1px solid var(--lib-border, #E8EAE8);
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card:hover {
+  box-shadow: var(--lib-shadow-card);
+}
+
+.cardContent {
+  padding: 0;
+}
+
+.cardContent h3 {
+  font-weight: 500;
+  margin: 0 0 8px 0;
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+.cardContent p {
+  margin: 0;
+  color: #666;
+  font-size: 0.875rem;
+  line-height: 1.43;
+}
+
+/* Featured blog cards */
+.cardContent .blogTitle {
+  font-weight: 500;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.3;
+  margin-bottom: 16px;
+  font-size: 1.25rem;
+}
+
+.cardContent .blogDescription {
+  color: #666;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 0.875rem;
+  line-height: 1.43;
+}

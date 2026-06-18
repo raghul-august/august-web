@@ -1,0 +1,232 @@
+/* ============================================================
+   Telehealth landing — design tokens + base + animations.
+   Everything is scoped under .telehealth-scope so the August
+   design-system tokens never leak into the rest of the site.
+   Tokens ported verbatim from the UI-kit (tokens/*.css) and the
+   base/responsive rules from the kit's index.html shell.
+   ============================================================ */
+
+.telehealth-scope {
+  /* ---- Brand green ---- */
+  --aug-green-700: #1a5a46;
+  --aug-green-600: #206e55;
+  --aug-green-500: #3d8168;
+  --aug-green-400: #408a6c;
+  --aug-green-100: #e8f2ed;
+  --aug-green-050: #f5faf7;
+
+  /* ---- Warm neutrals (stone) ---- */
+  --aug-cream:     #faf9f5;
+  --aug-white:     #ffffff;
+  --aug-sand:      #f3f1eb;
+  --aug-ink:       #141515;
+  --aug-stone-700: #5a554a;
+  --aug-stone-600: #635e54;
+  --aug-stone-400: #a8a39a;
+  --aug-border:    #d1cdc2;
+  --aug-border-subtle: #e5e2da;
+
+  /* ---- Category accents ---- */
+  --aug-accent-brand:   #206e55; --aug-accent-brand-bg:   #f5faf7;
+  --aug-accent-blue:    #3d6b7a; --aug-accent-blue-bg:    #f3f7f9;
+  --aug-accent-tan:     #7a5a2e; --aug-accent-tan-bg:     #f9f5ee;
+  --aug-accent-plum:    #6b3d5c; --aug-accent-plum-bg:    #f8f3f6;
+  --aug-accent-neutral: #5a554a; --aug-accent-neutral-bg: #f3f1eb;
+
+  /* ---- Semantic aliases ---- */
+  --surface-page:     var(--aug-cream);
+  --surface-elevated: var(--aug-white);
+  --surface-subtle:   var(--aug-sand);
+
+  --text-primary:   var(--aug-ink);
+  --text-secondary: var(--aug-stone-700);
+  --text-tertiary:  var(--aug-stone-600);
+  --text-disabled:  var(--aug-stone-400);
+  --text-inverse:   #ffffff;
+  --text-brand:     var(--aug-green-600);
+
+  --brand-primary:         var(--aug-green-600);
+  --brand-primary-hover:   var(--aug-green-400);
+  --brand-primary-pressed: var(--aug-green-700);
+  --brand-subtle:          var(--aug-green-100);
+
+  --border:        var(--aug-border);
+  --border-subtle: var(--aug-border-subtle);
+  --border-strong: var(--aug-stone-400);
+
+  --selection-bg: #206e5533;
+
+  /* ---- Typography ---- */
+  --font-sans: "Inter Display", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --tracking-eyebrow: 0.14em;
+  --leading-tight: 1.1;
+  --leading-snug: 1.15;
+  --leading-normal: 1.6;
+  --text-eyebrow: 12px;
+  --text-xs: 13px;
+
+  /* ---- Spacing / layout ---- */
+  --section-pad: clamp(56px, 7vw, 80px);
+  --gutter: clamp(18px, 5vw, 40px);
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-2xl: 24px;
+  --radius-pill: 9999px;
+  --shadow-sm: 0 1px 2px #0000000a;
+  --shadow-md: 0 4px 12px #0000000f;
+  --shadow-lg: 0 12px 32px #00000014;
+  --shadow-card: 0 1px 4px #00000008, 0 4px 12px #0000000a;
+  --shadow-card-hover: 0 2px 8px #0000000a, 0 6px 16px #0000000d;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-fast: 0.16s;
+  --dur-med: 0.3s;
+  --dur-slow: 0.7s;
+  --maxw: 1200px;
+  --nav-height: 72px;
+
+  /* ---- Base ---- */
+  font-family: "Inter Display", var(--font-sans);
+  color: var(--text-primary);
+  background: var(--surface-page);
+  line-height: 1.6;
+  font-size: 15px;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: clip;
+}
+
+.telehealth-scope *,
+.telehealth-scope *::before,
+.telehealth-scope *::after { box-sizing: border-box; }
+
+.telehealth-scope h1,
+.telehealth-scope h2,
+.telehealth-scope h3,
+.telehealth-scope h4 {
+  font-family: "Inter Display", var(--font-sans);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.telehealth-scope ::selection { background: var(--selection-bg); }
+.telehealth-scope .aug-hero-sub-mobile-br { display: none; }
+
+/* ── Hero entrance animations ── */
+@keyframes augHeroFadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes augHeroPillDrop {
+  from { opacity: 0; transform: translateY(-10px) scale(0.92); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+.telehealth-scope .aug-hero-eyebrow { animation: augHeroFadeUp 0.6s var(--ease-out) 0.1s both; }
+.telehealth-scope .aug-hero-h1      { animation: augHeroFadeUp 0.6s var(--ease-out) 0.2s both; }
+.telehealth-scope .aug-hero-sub     { animation: augHeroFadeUp 0.6s var(--ease-out) 0.3s both; }
+.telehealth-scope .aug-hero-composer{ animation: augHeroFadeUp 0.6s var(--ease-out) 0.4s both; }
+.telehealth-scope .aug-hero-badges  { animation: augHeroPillDrop 0.5s var(--ease-spring) 0.55s both; }
+
+/* ── Questions marquee ── */
+@keyframes augQScroll { from { transform: translateX(0); } to { transform: translateX(calc(-50% - 9px)); } }
+@keyframes augQScrollRev { from { transform: translateX(calc(-50% - 9px)); } to { transform: translateX(0); } }
+.telehealth-scope .aug-qmarquee:hover .aug-qrow { animation-play-state: paused; }
+
+/* ── Scroll-triggered animations ── */
+.telehealth-scope [data-anim] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+}
+.telehealth-scope [data-anim].aug-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.telehealth-scope [data-stagger] > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s var(--ease-out), transform 0.5s var(--ease-out);
+}
+.telehealth-scope [data-stagger].aug-visible > * { opacity: 1; transform: translateY(0); }
+.telehealth-scope [data-stagger].aug-visible > *:nth-child(1) { transition-delay: 0.05s; }
+.telehealth-scope [data-stagger].aug-visible > *:nth-child(2) { transition-delay: 0.10s; }
+.telehealth-scope [data-stagger].aug-visible > *:nth-child(3) { transition-delay: 0.15s; }
+.telehealth-scope [data-stagger].aug-visible > *:nth-child(4) { transition-delay: 0.20s; }
+.telehealth-scope [data-stagger].aug-visible > *:nth-child(5) { transition-delay: 0.25s; }
+.telehealth-scope [data-stagger].aug-visible > *:nth-child(6) { transition-delay: 0.30s; }
+.telehealth-scope [data-stagger].aug-visible > *:nth-child(7) { transition-delay: 0.35s; }
+.telehealth-scope [data-stagger].aug-visible > *:nth-child(8) { transition-delay: 0.40s; }
+
+/* ── Responsive — Tablet (≤1024) ── */
+@media (max-width: 1023.98px) {
+  .telehealth-scope .aug-navlinks { display: none !important; }
+  .telehealth-scope .aug-hamburger { display: flex !important; }
+  .telehealth-scope .aug-nav-cta { display: none !important; }
+
+  .telehealth-scope .aug-treat-grid { grid-template-columns: repeat(2,1fr) !important; }
+  .telehealth-scope .aug-cap-grid { grid-template-columns: 1fr 1fr !important; }
+  .telehealth-scope .aug-testi-grid { grid-template-columns: 1fr !important; }
+  .telehealth-scope .aug-steps { grid-template-columns: 1fr !important; gap: 16px !important; }
+
+  .telehealth-scope .aug-hero-h1 { font-size: clamp(28px,4.4vw,36px) !important; }
+
+  .telehealth-scope .aug-human { grid-template-columns: 1fr !important; }
+
+  .telehealth-scope .aug-cta-content { max-width: 80% !important; }
+
+  .telehealth-scope .aug-pricing { grid-template-columns: 1fr 1fr !important; max-width: 100% !important; }
+}
+
+/* ── Responsive — Mobile (≤640) ── */
+@media (max-width: 640px) {
+  .telehealth-scope .aug-treat-grid { grid-template-columns: 1fr 1fr !important; }
+  .telehealth-scope .aug-treat-grid a { aspect-ratio: 2 / 3 !important; }
+  .telehealth-scope .aug-human-img { display: none !important; }
+  .telehealth-scope .aug-cap-grid { grid-template-columns: 1fr !important; }
+  .telehealth-scope .aug-testi-grid { grid-template-columns: 1fr !important; }
+  .telehealth-scope .aug-steps { grid-template-columns: 1fr !important; gap: 14px !important; }
+
+  .telehealth-scope .aug-pricing { grid-template-columns: 1fr !important; }
+
+  .telehealth-scope .aug-footgrid { grid-template-columns: 1fr 1fr !important; row-gap: 32px !important; }
+
+  .telehealth-scope .aug-cta-content { max-width: 100% !important; padding: 32px 24px !important; }
+  .telehealth-scope .aug-cta-overlay { background: rgba(172,146,116,0.85) !important; }
+
+  .telehealth-scope .aug-hero-h1 { font-size: clamp(28px,8vw,40px) !important; }
+  .telehealth-scope .aug-hero-h1 br { display: none; }
+  .telehealth-scope .aug-hero-sub br { display: none; }
+  .telehealth-scope .aug-hero-sub-mobile-br { display: inline !important; }
+  .telehealth-scope .aug-hero-badges { flex-direction: row !important; flex-wrap: wrap !important; justify-content: center !important; gap: 6px 16px !important; }
+}
+
+/* ── Responsive — Small mobile (≤400) ── */
+@media (max-width: 400px) {
+  .telehealth-scope .aug-treat-grid { grid-template-columns: 1fr !important; }
+  .telehealth-scope .aug-treat-grid a { aspect-ratio: 3 / 4 !important; }
+  .telehealth-scope .aug-footgrid { grid-template-columns: 1fr !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .telehealth-scope *,
+  .telehealth-scope *::before,
+  .telehealth-scope *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .telehealth-scope [data-anim],
+  .telehealth-scope [data-stagger] > * { opacity: 1; transform: none; }
+  .telehealth-scope .aug-qrow { animation: none !important; }
+}

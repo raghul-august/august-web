@@ -1,0 +1,141 @@
+{
+  "common": {
+    "loadingChats": "Se încarcă conversațiile...",
+    "refreshPage": "Reîmprospătează pagina",
+    "signUp": "Înregistrare",
+    "openMenu": "Deschide meniul",
+    "menu": "Meniu",
+    "downloadApp": "Descărcați aplicația",
+    "termsOfService": "Termeni și Condiții",
+    "privacyPolicy": "Politica de confidențialitate",
+    "loggingOut": "Deconectare...",
+    "logout": "Ieșire",
+    "back": "Înapoi",
+    "continue": "Continuă",
+    "edit": "Edit",
+    "legalPrefix": "Continuând, sunteți de acord cu termenii noștri",
+    "and": "și",
+    "termsShort": "termeni",
+    "privacyShort": "politică de confidențialitate",
+    "error": "Eroare",
+    "tryAgain": "Încearcă din nou",
+    "loginRequired": "Vă rugăm să vă autentificați pentru a continua conversația.",
+    "language": "Limbă",
+    "languageEnglish": "Engleză",
+    "languageFrench": "Franceză",
+    "changeLanguage": "Schimbă limba",
+    "profile": "Profil",
+    "login": "Autentificare"
+  },
+  "chat": {
+    "initFailed": "Eroare la inițializarea sesiunii. Vă rugăm reîncărcați pagina.",
+    "genericError": "A apărut o eroare. Vă rugăm reîncărcați pagina.",
+    "emptyStateHeading": "Ce mai faci?",
+    "processing": {
+      "reading": "Se citește documentul dumneavoastră...",
+      "understanding": "Înțelegerea detaliilor...",
+      "summarising": "Rezumatul tuturor..."
+    },
+    "scrollToBottom": "Derulați la fund",
+    "input": {
+      "placeholder": "Întreabă orice",
+      "disclaimer": "August poate face greșeli. Confirmați cu un medic",
+      "invalidFileType": "Selectați o imagine validă (JPEG, PNG, GIF, WebP) sau un fișier PDF.",
+      "waitForUploads": "Așteptați finalizarea încărcării fișierelor.",
+      "removeFailedUploads": "Unele fișiere nu au putut fi încărcate. Vă rugăm să le eliminați și să încercați din nou.",
+      "uploadFailed": "Încărcare eșuată"
+    },
+    "attachments": {
+      "imageAlt": "Atașament",
+      "pdfDefault": "Document PDF",
+      "pdfCta": "Click to view",
+      "defaultCta": "Vizualizați atașamentul",
+      "audioFallback": "Browserul dumneavoastră nu suportă elementul audio."
+    }
+  },
+  "auth": {
+    "heroAlt": "Încearcă august, gratuit",
+    "welcomeAlt": "Bun venit înapoi în august",
+    "signup": {
+      "description": "Partenerul tău AI pentru sănătate, creat de medici. Obține răspunsuri instantanee, înțelege rezultatele analizelor și găsește claritate.",
+      "trusted": "Încredere acordată de 6 milioane de utilizatori din întreaga lume.",
+      "memoryTransfer": "Conectați-vă pentru a vă importa amintirile despre sănătate",
+      "memoryTransferSuccess": "Mi-am actualizat memoria. Ce ai învățat despre mine?"
+    },
+    "welcome": {
+      "copy": "Bun venit înapoi!\nAutentificați-vă pentru a continua la August"
+    },
+    "continueWithPhone": "Continuă cu telefonul",
+    "phoneStep": {
+      "title": "Introduceți numărul dvs. de telefon",
+      "subtitle": "Vă vom trimite un cod de verificare",
+      "searchPlaceholder": "Căutați țară...",
+      "phonePlaceholder": "Număr de telefon"
+    },
+    "otpStep": {
+      "title": "Verifică-ți telefonul",
+      "subtitle": "Introduceți codul de verificare trimis la",
+      "resendWithTimer": "Nu ați primit un cod? Retrimiteți ({{seconds}})",
+      "resend": "Nu ați primit un cod? Retrimiteți"
+    },
+    "errors": {
+      "enterPhone": "Vă rugăm să introduceți numărul dumneavoastră de telefon",
+      "sendOtp": "Nu s-a putut trimite OTP. Vă rugăm să încercați din nou.",
+      "sendOtpInvalid": "Nu s-a putut trimite OTP. Vă rugăm să verificați numărul de telefon.",
+      "enterOtp": "Vă rugăm să introduceți codul de 6 cifre",
+      "invalidOtp": "Cod invalid. Vă rugăm să încercați din nou.",
+      "oauthGeneric": "Autentificare eșuată. Vă rugăm să încercați din nou.",
+      "googleUserInfo": "Eroare la obținerea informațiilor despre utilizatorul Google",
+      "googleCancelled": "Autentificarea Google a fost anulată sau a eșuat.",
+      "appleUnavailable": "Autentificarea cu Apple nu este disponibilă",
+      "appleUnavailableSdk": "Autentificarea cu Apple nu este disponibilă. SDK-ul JavaScript Apple nu a fost încărcat.",
+      "appleCredential": "Nu s-a putut obține acreditarea Apple",
+      "appleFailed": "Autentificarea Apple a eșuat. Vă rugăm să încercați din nou."
+    },
+    "oauth": {
+      "google": "Continuă cu Google",
+      "apple": "Continuă cu Apple"
+    },
+    "tryOtherOptions": "Încearcă alte opțiuni"
+  },
+  "errorBoundary": {
+    "title": "A apărut o eroare",
+    "description": "Am întâmpinat o eroare neașteptată. Vă rugăm să încercați din nou.",
+    "tryAgain": "Încearcă din nou",
+    "refreshPage": "Reîmprospătează pagina"
+  },
+  "sidebar": {
+    "tabs": {
+      "chat": "Conversație",
+      "records": "Înregistrări",
+      "explore": "Bibliotecă de Sănătate",
+      "nutrition": "Nutriție"
+    },
+    "download": {
+      "title": "Descărcați aplicația pentru a accesa",
+      "cta": "Descarcă aplicația acum",
+      "chatDescription": "Păstrează conversația activă cu ghidul tău AI pentru sănătate în aplicația August.",
+      "recordsDescription": "Cu aplicația mobilă August:\n• Vizualizați și gestionați-vă înregistrările\n• Partajați cu medicul dumneavoastră\n• Obțineți informații precise despre sănătate",
+      "exploreDescription": "August curățează articole de sănătate, bloguri și alte informații personalizate pentru tine.",
+      "nutritionDescription": "Urmărește obiceiuri. Monitorizează semnele vitale. Vezi-ți progresul - totul într-un singur loc.",
+      "chatTitle": "Descărcați aplicația pentru a accesa",
+      "recordsTitle": "Toate dosarele medicale într-un singur loc",
+      "exploreTitle": "Articole și bloguri de sănătate selectate",
+      "nutritionTitle": "Urmărește ce contează, îmbunătățește ce contează"
+    },
+    "downloadAppButton": "Descărcați aplicația",
+    "tooltips": {
+      "chat": "Chat cu August",
+      "records": "Gestionează-ți dosarele medicale",
+      "explore": "Explorează Biblioteca de Sănătate",
+      "nutrition": "Gestionați dieta și nutriția",
+      "insurance": "Depune apel asigurare",
+      "costEstimator": "Găsește cel mai mic preț pentru servicii medicale",
+      "billAnalyser": "Revizuiește factura mea",
+      "showFullMenu": "Afișează meniul complet",
+      "hideFullMenu": "Ascunde meniul complet",
+      "manageAccount": "Gestionați setările contului"
+    },
+    "takeAugustWithYou": "Luați-l pe August cu dumneavoastră"
+  }
+}

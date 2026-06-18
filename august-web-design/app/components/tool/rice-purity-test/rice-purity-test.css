@@ -1,0 +1,57 @@
+/* Rice Purity Test Styles — tool-specific only */
+
+.add-border-top {
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.add-border-top:first-child {
+  border-top: 1px solid transparent;
+}
+
+.add-border-top:last-child {
+  padding-bottom: 0px;
+}
+
+/* Checkbox items */
+.rp-checkbox-item {
+  transition: all 0.2s ease;
+}
+
+.rp-checkbox-item:hover {
+  background: var(--surface-elevated);
+  transform: translateX(4px);
+}
+
+.rp-checkbox-item.checked {
+  background: var(--brand-subtle);
+  border-color: var(--brand-primary);
+}
+
+/* Carousel */
+.rp-carousel-track {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.rp-carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.rp-carousel-slide:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.rp-carousel-nav:hover {
+  background: var(--surface-elevated);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .rp-carousel-nav {
+    display: none !important;
+  }
+}
+

@@ -1,0 +1,8 @@
+/* Eating Disorder Test — tool-specific styles only.
+   Layout/animation/typography comes from tool-tokens.css + tool-shared.css.
+   Keep this file thin; only add tool-unique rules here. */
+
+.edt-question-enter {
+  --tool-fade-y: 20px;
+  animation: toolFadeIn 0.5s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
