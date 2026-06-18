@@ -5,11 +5,6 @@
 
 import { useCallback } from "react";
 import { useRouter } from "next/navigation";
-import { LockSimpleIcon, ShieldCheckIcon, StethoscopeIcon } from "@phosphor-icons/react/ssr";
-import type { Icon } from "@phosphor-icons/react";
-
-import { CONSULT_PRICE_LABEL } from "@/lib/config";
-
 import { chatHrefWithMessage } from "../constants";
 import { trackTelehealthStart } from "../analytics";
 import Composer from "./Composer";
@@ -19,12 +14,6 @@ const PROMPTS = [
   "Is it safe to take melatonin every night?",
   "Could I be a candidate for GLP-1 weight loss?",
   "My doctor recommended surgery. What are my options?",
-];
-
-const BADGES: { Icon: Icon; t: string }[] = [
-  { Icon: LockSimpleIcon, t: "HIPAA secured" },
-  { Icon: ShieldCheckIcon, t: "Data is never sold" },
-  { Icon: StethoscopeIcon, t: "Board Certified MD doctors" },
 ];
 
 export default function Hero() {
@@ -103,43 +92,14 @@ export default function Hero() {
             margin: "0 auto 28px",
           }}
         >
-          Start with August for free, anytime. See a board-certified doctor{" "}
+          Start with August for free, anytime. See a board-certified
           <br />
-          for as low as {CONSULT_PRICE_LABEL}.
-          <br className="aug-hero-sub-mobile-br" /> No insurance, no waiting room.
+          MD doctor when you need it.
         </p>
 
         {/* Composer with rotating example prompt */}
         <div className="aug-hero-composer" style={{ maxWidth: 620, margin: "0 auto" }}>
           <Composer placeholders={PROMPTS} cta="Get started" secureNote="" onSend={go} />
-        </div>
-
-        <div
-          className="aug-hero-badges"
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "center",
-            gap: "12px 22px",
-            marginTop: 22,
-          }}
-        >
-          {BADGES.map(({ Icon, t }) => (
-            <span
-              key={t}
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 7,
-                fontSize: 13,
-                fontWeight: 500,
-                color: "var(--text-secondary)",
-              }}
-            >
-              <Icon style={{ color: "var(--brand-primary)", fontSize: "1.05rem" }} aria-hidden />
-              {t}
-            </span>
-          ))}
         </div>
       </div>
     </section>

@@ -6,6 +6,7 @@ import LandingFooter from "@/app/components/website/landing/LandingFooter";
 import { CONSULT_PRICE_LABEL } from "@/lib/config";
 
 import Hero from "./components/Hero";
+import TrustPanel from "./components/TrustPanel";
 import Treatments from "./components/Treatments";
 import HumanDoctors from "./components/HumanDoctors";
 import Questions from "./components/Questions";
@@ -52,6 +53,7 @@ export default async function TelehealthPage() {
       <div className="telehealth-scope">
         <main>
           <Hero />
+          <TrustPanel />
           <Treatments />
           <HumanDoctors />
           <Questions />

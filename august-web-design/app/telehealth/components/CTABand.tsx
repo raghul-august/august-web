@@ -27,7 +27,7 @@ export default function CTABand() {
           }}
         >
           <Image
-            src={sharedAsset("cta-bg.webp")}
+            src="/images/telehealth/cta-bg.png"
             alt=""
             fill
             sizes="(max-width: 1200px) 100vw, 1120px"
