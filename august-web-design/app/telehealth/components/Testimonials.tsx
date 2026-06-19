@@ -9,12 +9,12 @@ import { StarIcon, ArrowRightIcon } from "@phosphor-icons/react/ssr";
 import SectionHead from "./SectionHead";
 
 const QUOTES = [
-  { name: "Patricia", photo: "/images/telehealth/testi-1.png", pos: "center 20%", text: "The whole process was incredibly easy. I didn\u2019t sit in a waiting room or rearrange my day. The physician actually listened, and my prescription was sent the same day." },
-  { name: "Patrick", photo: "/images/telehealth/testi-2.png", pos: "center 25%", text: "Best online doctor experience I\u2019ve had. A few questions, then I was talking with a real doctor. Prescriptions sent to my local pharmacy within the hour." },
-  { name: "Angela", photo: "/images/telehealth/testi-4.png", pos: "center 60%", text: "A very insightful, thorough evaluation. I felt like August gave me more attention and listened better than any doctor I\u2019ve seen in the past five years." },
-  { name: "Jodella", photo: "/images/telehealth/testi-6.png", pos: "center 15%", text: "$39, no joke, did exactly what other companies charge $129 for. A friendly doctor who called in my medicine in minutes." },
-  { name: "Molly", photo: "/images/telehealth/testi-3.png", pos: "center 25%", text: "Five stars. Very helpful. The AI confirmed I\u2019d only strained a muscle, so I didn\u2019t even need the doctor today." },
-  { name: "Sam", photo: "/images/telehealth/testi-5.png", pos: "center 30%", text: "It\u2019s 4:39am and I was worried about my health. I\u2019m so glad I had this to help me think it through calmly." },
+  { name: "Female, 18\u201329 year old", photo: "/images/telehealth/testi-1.png", pos: "center 20%", text: "The whole process was incredibly easy. I didn\u2019t sit in a waiting room or rearrange my day. The physician actually listened, and my prescription was sent the same day." },
+  { name: "Male, 30\u201339 year old", photo: "/images/telehealth/testi-2.png", pos: "center 25%", text: "Best online doctor experience I\u2019ve had. A few questions, then I was talking with a real doctor. Prescriptions sent to my local pharmacy within the hour." },
+  { name: "Female, 40\u201349 year old", photo: "/images/telehealth/testi-4.png", pos: "center 60%", text: "A very insightful, thorough evaluation. I felt like August gave me more attention and listened better than any doctor I\u2019ve seen in the past five years." },
+  { name: "Male, 50\u201359 year old", photo: "/images/telehealth/testi-m-50-59.png", pos: "center 25%", text: "$39, no joke, did exactly what other companies charge $129 for. A friendly doctor who called in my medicine in minutes." },
+  { name: "Female, 60\u201369 year old", photo: "/images/telehealth/testi-f-60-69.png", pos: "center 100%", scale: 1.12, text: "Five stars. Very helpful. The AI confirmed I\u2019d only strained a muscle, so I didn\u2019t even need the doctor today." },
+  { name: "Male, 40\u201349 year old", photo: "/images/telehealth/testi-5.png", pos: "center 30%", text: "It\u2019s 4:39am and I was worried about my health. I\u2019m so glad I had this to help me think it through calmly." },
 ];
 
 function TestiCard({ q }: { q: (typeof QUOTES)[number] }) {
@@ -44,7 +44,12 @@ function TestiCard({ q }: { q: (typeof QUOTES)[number] }) {
         alt=""
         fill
         sizes="(max-width: 640px) 85vw, (max-width: 1024px) 50vw, 33vw"
-        style={{ objectFit: "cover", objectPosition: q.pos }}
+        style={{
+          objectFit: "cover",
+          objectPosition: q.pos,
+          transform: (q as { scale?: number }).scale ? `scale(${(q as { scale?: number }).scale})` : undefined,
+          transformOrigin: "center center",
+        }}
       />
       {/* Dark gradient overlay */}
       <div
@@ -120,7 +125,8 @@ export default function Testimonials() {
   const trackRef = useRef<HTMLDivElement>(null);
   const [cardWidth, setCardWidth] = useState(0);
   const [visibleCount, setVisibleCount] = useState(3);
-  const gap = 20;
+  const [gap, setGap] = useState(20);
+  const [peekPad, setPeekPad] = useState(0); // centres the active card on mobile so neighbours peek
   const maxOffset = QUOTES.length - visibleCount;
 
   const prev = useCallback(() => setOffset((o) => Math.max(0, o - 1)), []);
@@ -145,8 +151,14 @@ export default function Testimonials() {
       const containerW = trackRef.current.parentElement?.offsetWidth ?? 0;
       const isMobile = containerW <= 500;
       const count = isMobile ? 1 : 3;
+      const g = isMobile ? 12 : 20;
+      // On mobile the card is narrower than the viewport so the neighbouring
+      // cards peek at the edges (signals it's swipeable).
+      const cw = isMobile ? containerW - 64 : (containerW - g * (count - 1)) / count;
       setVisibleCount(count);
-      setCardWidth((containerW - gap * (count - 1)) / count);
+      setGap(g);
+      setCardWidth(cw);
+      setPeekPad(isMobile ? Math.max(0, (containerW - cw) / 2) : 0);
       setOffset((o) => Math.min(o, QUOTES.length - count));
     };
     measure();
@@ -154,12 +166,12 @@ export default function Testimonials() {
     return () => window.removeEventListener("resize", measure);
   }, []);
 
-  const translateX = -(offset * (cardWidth + gap));
+  const translateX = peekPad - offset * (cardWidth + gap);
 
   return (
-    <section style={{ background: "var(--surface-elevated)", padding: "var(--section-pad) 0" }}>
+    <section style={{ background: "var(--surface-page)", padding: "var(--section-pad) 0" }}>
       <div style={{ maxWidth: "var(--maxw)", margin: "0 auto", padding: "0 var(--gutter)" }}>
-        <div data-anim="fade-up">
+        <div data-anim="zoom">
           <SectionHead
             center
             eyebrow="From happy users"
@@ -190,7 +202,7 @@ export default function Testimonials() {
               }}
             >
               {QUOTES.map((q) => (
-                <div key={q.name} style={{ flex: `0 0 ${cardWidth}px`, minWidth: 0 }}>
+                <div key={q.photo} style={{ flex: `0 0 ${cardWidth}px`, minWidth: 0 }}>
                   <TestiCard q={q} />
                 </div>
               ))}

@@ -71,7 +71,7 @@ export default function Capabilities() {
   return (
     <section style={{ background: "var(--surface-elevated)", padding: "var(--section-pad) 0" }}>
       <div style={{ maxWidth: "var(--maxw)", margin: "0 auto", padding: "0 var(--gutter)" }}>
-        <div data-anim="fade-up">
+        <div data-anim="rise">
           <SectionHead
             center
             eyebrow="What August does"

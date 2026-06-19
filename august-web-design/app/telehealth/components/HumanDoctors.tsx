@@ -1,10 +1,10 @@
-/* "Best of both worlds" — AI + human doctors band with lifestyle image. */
+/* "Always cared for by an expert" — AI + human doctors band with lifestyle image. */
 
 import Image from "next/image";
 import {
-  StethoscopeIcon,
-  MapPinIcon,
+  LinkIcon,
   ChatCircleDotsIcon,
+  HandHeartIcon,
   ShieldCheckIcon,
   ArrowRightIcon,
 } from "@phosphor-icons/react/ssr";
@@ -16,14 +16,14 @@ import { CHAT_HREF } from "../constants";
 import Button from "./Button";
 
 const STATS: { Icon: Icon; t: string; c: string; bg: string }[] = [
-  { Icon: StethoscopeIcon, t: "Board-certified physicians", c: "var(--aug-accent-brand)", bg: "var(--aug-accent-brand-bg)" },
-  { Icon: MapPinIcon, t: "Available in 50 states + DC", c: "var(--aug-accent-blue)", bg: "var(--aug-accent-blue-bg)" },
-  { Icon: ChatCircleDotsIcon, t: "Follow-up with your doctor anytime", c: "var(--aug-accent-plum)", bg: "var(--aug-accent-plum-bg)" },
+  { Icon: LinkIcon, t: "Connect your EHR, share the complete picture with your doctor", c: "var(--aug-accent-brand)", bg: "var(--aug-accent-brand-bg)" },
+  { Icon: ChatCircleDotsIcon, t: "Follow-up with your doctor anytime", c: "var(--aug-accent-blue)", bg: "var(--aug-accent-blue-bg)" },
+  { Icon: HandHeartIcon, t: "Get proactive post-consult support", c: "var(--aug-accent-plum)", bg: "var(--aug-accent-plum-bg)" },
 ];
 
 export default function HumanDoctors() {
   return (
-    <section style={{ background: "var(--surface-page)", padding: "var(--section-pad) 0" }}>
+    <section style={{ background: "var(--surface-elevated)", padding: "var(--section-pad) 0" }}>
       <div style={{ maxWidth: "var(--maxw)", margin: "0 auto", padding: "0 var(--gutter)" }}>
         <div
           className="aug-human"
@@ -34,7 +34,7 @@ export default function HumanDoctors() {
             gap: "clamp(32px,5vw,64px)",
           }}
         >
-          <div data-anim="fade-up">
+          <div data-anim="fade-left">
             <div
               className="th-eyebrow"
               style={{
@@ -47,7 +47,7 @@ export default function HumanDoctors() {
                 marginBottom: 20,
               }}
             >
-              Best of both worlds
+              Always cared for by an expert
             </div>
             <h2
               style={{
@@ -58,7 +58,7 @@ export default function HumanDoctors() {
                 margin: "0 0 18px",
               }}
             >
-              Intelligent answers in seconds. Real doctors when you need them.
+              Care from top doctors you can trust
             </h2>
             <p
               style={{
@@ -69,9 +69,8 @@ export default function HumanDoctors() {
                 maxWidth: "52ch",
               }}
             >
-              By the time you meet one of our doctors, they already know your history, your symptoms,
-              and what you need. Less time explaining. More time getting better, starting from{" "}
-              {CONSULT_PRICE_LABEL} a visit.
+              Every treatment and prescription is given by a board-certified, MD-level physician
+              licensed in your state.
             </p>
             <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
               {STATS.map(({ Icon, t, c, bg }) => (
@@ -106,7 +105,7 @@ export default function HumanDoctors() {
           {/* Lifestyle image */}
           <div
             className="aug-human-img"
-            data-anim="fade-up"
+            data-anim="fade-right"
             style={{
               position: "relative",
               borderRadius: "var(--radius-2xl)",
@@ -117,11 +116,11 @@ export default function HumanDoctors() {
             }}
           >
             <Image
-              src="https://assets.getbeyondhealth.com/telehealth-landing/doctor-2.jpeg"
+              src="/images/telehealth/human-doctor.png"
               alt=""
               fill
               sizes="(max-width: 1024px) 100vw, 50vw"
-              style={{ objectFit: "cover", objectPosition: "center 20%" }}
+              style={{ objectFit: "cover", objectPosition: "center top" }}
             />
             <span
               style={{
@@ -133,17 +132,17 @@ export default function HumanDoctors() {
                 gap: 8,
                 padding: "9px 16px",
                 borderRadius: "var(--radius-pill)",
-                background: "rgba(255,255,255,0.85)",
-                backdropFilter: "blur(16px)",
-                WebkitBackdropFilter: "blur(16px)",
-                border: "1px solid rgba(255,255,255,0.5)",
-                boxShadow: "var(--shadow-sm)",
+                background: "rgba(20,21,21,0.32)",
+                backdropFilter: "blur(20px) saturate(160%)",
+                WebkitBackdropFilter: "blur(20px) saturate(160%)",
+                border: "1px solid rgba(255,255,255,0.22)",
+                boxShadow: "0 4px 24px rgba(0,0,0,0.22), inset 0 1px 0 rgba(255,255,255,0.18)",
                 fontSize: 13,
-                fontWeight: 500,
-                color: "var(--text-primary)",
+                fontWeight: 400,
+                color: "#fff",
               }}
             >
-              <ShieldCheckIcon style={{ color: "var(--brand-primary)" }} aria-hidden /> Licensed in all 50
+              <ShieldCheckIcon style={{ color: "#fff" }} aria-hidden /> Licensed in all 50
               states + DC
             </span>
           </div>

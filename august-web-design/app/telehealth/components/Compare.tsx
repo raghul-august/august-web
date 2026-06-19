@@ -4,7 +4,7 @@
    Each slide: heading + sub + CTA on left, product mockup on right.
    Left/right arrows on sides, dot indicators at bottom. */
 
-import { useState, useCallback } from "react";
+import { useState, useEffect, useRef } from "react";
 import { ArrowRightIcon, PillIcon, SyringeIcon, Sparkle } from "@phosphor-icons/react/ssr";
 
 import { CONSULT_PRICE_LABEL } from "@/lib/config";
@@ -51,129 +51,204 @@ function MockupShell({ children }: { children: React.ReactNode }) {
   );
 }
 
+// Reveals `total` blocks one at a time on a continuous loop: build up beat by
+// beat → hold while fully shown → clear → rebuild. Keeps the mockup lively.
+// Honors reduced-motion by showing everything statically.
+function useStepReveal(total: number, gap = 480, hold = 2600, start = 250) {
+  const [shown, setShown] = useState(0);
+  useEffect(() => {
+    if (typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setShown(total);
+      return;
+    }
+    let n = 0;
+    let timer = window.setTimeout(function tick() {
+      n = n >= total ? 0 : n + 1; // reveal next block, or reset to blank after the hold
+      setShown(n);
+      const wait = n === total ? hold : n === 0 ? start : gap;
+      timer = window.setTimeout(tick, wait);
+    }, start);
+    return () => window.clearTimeout(timer);
+  }, [total, gap, hold, start]);
+  return shown;
+}
+
 function MockupChat() {
+  // A single looping timer drives a "conversation builds up" sequence:
+  // 0 = blank → 1 = user msg → 2 = typing dots → 3 = reply → 4 = chips → loop.
+  // Each visible element is conditionally rendered, so it animates in on mount
+  // and never reserves empty space (no gaps). A fixed-height column keeps the
+  // card from reflowing as messages are added.
+  const [step, setStep] = useState(0);
+
+  useEffect(() => {
+    if (typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setStep(4);
+      return;
+    }
+    const order = [1, 2, 3, 4, 5, 0];              // step values, in sequence (chips appear one by one)
+    const hold = [1200, 1500, 1400, 500, 2800, 500]; // 0.5s between the two reply messages
+    let i = 0;
+    let timer = window.setTimeout(function tick() {
+      setStep(order[i]);
+      const wait = hold[i];
+      i = (i + 1) % order.length;
+      timer = window.setTimeout(tick, wait);
+    }, 450);
+    return () => window.clearTimeout(timer);
+  }, []);
+
   return (
     <MockupShell>
-      {/* User bubble */}
-      <div style={{
-        background: "var(--brand-primary)",
-        color: "#fff",
-        borderRadius: "16px 16px 4px 16px",
-        padding: "10px 14px",
-        fontSize: 13,
-        fontWeight: 500,
-        lineHeight: 1.45,
-        marginBottom: 14,
-        marginLeft: "auto",
-        maxWidth: "88%",
-        width: "fit-content",
-      }}>
-        I&apos;ve had a sore throat for 3 days and a mild fever.
-      </div>
-
-      {/* August reply */}
-      <div style={{
-        background: "rgba(255,255,255,0.15)",
-        backdropFilter: "blur(20px)",
-        WebkitBackdropFilter: "blur(20px)",
-        border: "1px solid rgba(255,255,255,0.25)",
-        borderRadius: "16px 16px 16px 4px",
-        padding: "12px 14px",
-        fontSize: 13,
-        lineHeight: 1.55,
-        color: "var(--text-primary)",
-        marginBottom: 14,
-      }}>
-        <div style={{ marginBottom: 8 }}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/images/august-logo.svg" alt="August" width={40} height={12} style={{ display: "block", objectFit: "contain" }} />
-        </div>
-        I&apos;ll ask a few questions. How high has your fever been, and do you have difficulty swallowing?
-      </div>
-
-      {/* Quick-reply chips */}
-      <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-        {["Mild, around 100.4°F", "Yes, it hurts"].map((t) => (
-          <span key={t} style={{
-            background: "rgba(255,255,255,0.3)",
-            backdropFilter: "blur(12px)",
-            WebkitBackdropFilter: "blur(12px)",
-            border: "1px solid rgba(255,255,255,0.4)",
-            borderRadius: 20,
-            padding: "6px 14px",
-            fontSize: 12,
-            color: "var(--text-secondary)",
-            fontWeight: 500,
+      <div className="aug-chatbody" style={{ display: "flex", flexDirection: "column", gap: 14, justifyContent: "flex-start" }}>
+        {/* 1 — User message */}
+        {step >= 1 && (
+          <div className="aug-msg-in" style={{
+            background: "var(--brand-primary)",
+            color: "#fff",
+            borderRadius: "16px 16px 4px 16px",
+            padding: "10px 14px",
+            fontSize: 13, fontWeight: 500, lineHeight: 1.45,
+            marginLeft: "auto", maxWidth: "88%", width: "fit-content",
           }}>
-            {t}
-          </span>
-        ))}
+            I&apos;ve had a sore throat for 3 days and a mild fever.
+          </div>
+        )}
+
+        {/* 2 — Typing indicator (only while August is "typing") */}
+        {step === 2 && (
+          <div className="aug-msg-in" aria-hidden style={{
+            display: "flex", alignItems: "center", gap: 5,
+            background: "rgba(255,255,255,0.15)",
+            backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)",
+            border: "1px solid rgba(255,255,255,0.25)",
+            borderRadius: "16px 16px 16px 4px",
+            padding: "12px 16px", width: "fit-content",
+          }}>
+            <span className="aug-chat-dot" />
+            <span className="aug-chat-dot" />
+            <span className="aug-chat-dot" />
+          </div>
+        )}
+
+        {/* 3 — August reply */}
+        {step >= 3 && (
+          <div className="aug-msg-in" style={{
+            background: "rgba(255,255,255,0.15)",
+            backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)",
+            border: "1px solid rgba(255,255,255,0.25)",
+            borderRadius: "16px 16px 16px 4px",
+            padding: "12px 14px",
+            fontSize: 13, lineHeight: 1.55, color: "var(--text-primary)",
+          }}>
+            <div style={{ marginBottom: 8 }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/images/august-logo.svg" alt="August" width={40} height={12} style={{ display: "block", objectFit: "contain" }} />
+            </div>
+            I&apos;ll ask a few questions. How high has your fever been, and do you have difficulty swallowing?
+          </div>
+        )}
+
+        {/* 4 — Quick-reply chips */}
+        {step >= 4 && (
+          <div style={{ display: "flex", flexDirection: "column", gap: 8, alignItems: "flex-end" }}>
+            {["Mild, around 100.4°F", "Yes, it hurts"].map((t, idx) =>
+              step >= 4 + idx ? (
+                <span key={t} className="aug-msg-in" style={{
+                  background: "var(--brand-primary)",
+                  color: "#fff",
+                  borderRadius: "16px 16px 4px 16px",
+                  padding: "10px 14px",
+                  fontSize: 13,
+                  fontWeight: 500,
+                  lineHeight: 1.45,
+                  maxWidth: "88%",
+                  width: "fit-content",
+                }}>
+                  {t}
+                </span>
+              ) : null,
+            )}
+          </div>
+        )}
       </div>
     </MockupShell>
   );
 }
 
 function MockupDoctor() {
+  const shown = useStepReveal(2);
   return (
     <MockupShell>
-      {/* Recommendation */}
-      <div style={{
-        display: "flex", alignItems: "flex-start", gap: 10,
-        marginBottom: 18, fontSize: 13, lineHeight: 1.55, color: "var(--text-primary)",
-      }}>
-        <Sparkle size={18} weight="regular" style={{ color: "var(--brand-primary)", flexShrink: 0, marginTop: 1 }} />
-        <span>Based on your symptoms, I recommend connecting you with a doctor.</span>
-      </div>
+      <div className="aug-docbody" style={{ display: "flex", flexDirection: "column", justifyContent: "flex-start" }}>
+        {/* Recommendation */}
+        {shown >= 1 && (
+          <div className="aug-msg-in" style={{
+            display: "flex", alignItems: "flex-start", gap: 10,
+            marginBottom: 18, fontSize: 13, lineHeight: 1.55, color: "var(--text-primary)",
+          }}>
+            <Sparkle size={18} weight="regular" style={{ color: "var(--brand-primary)", flexShrink: 0, marginTop: 1 }} />
+            <span>Based on your symptoms, I recommend connecting you with a doctor.</span>
+          </div>
+        )}
 
-      {/* Doctor card */}
-      <div style={{
-        background: "rgba(255,255,255,0.35)",
-        backdropFilter: "blur(20px)",
-        WebkitBackdropFilter: "blur(20px)",
-        border: "1px solid rgba(255,255,255,0.45)",
-        borderRadius: 16,
-        padding: 20,
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        gap: 10,
-      }}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/images/telehealth/doctor-sarah.png" alt="" style={{
-          width: 52, height: 52, borderRadius: "50%", objectFit: "cover", objectPosition: "center 20%",
-          border: "2px solid rgba(255,255,255,0.4)",
-        }} />
-        <div style={{ textAlign: "center" }}>
-          <div style={{ fontSize: 14, fontWeight: 600, color: "var(--text-primary)" }}>Dr. Sarah Mitchell</div>
-          <div style={{ fontSize: 12, color: "var(--text-tertiary)", marginTop: 2 }}>Board-certified physician</div>
-        </div>
-        <div style={{
-          border: "1px solid rgba(0,0,0,0.12)",
-          borderRadius: 10,
-          padding: "8px 20px", fontSize: 12, fontWeight: 500, marginTop: 4,
-          color: "var(--text-secondary)",
-        }}>
-          Starting from {CONSULT_PRICE_LABEL}
-        </div>
+        {/* Doctor card */}
+        {shown >= 2 && (
+          <div className="aug-msg-in" style={{
+            background: "rgba(255,255,255,0.35)",
+            backdropFilter: "blur(20px)",
+            WebkitBackdropFilter: "blur(20px)",
+            border: "1px solid rgba(255,255,255,0.45)",
+            borderRadius: 16,
+            padding: 20,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            gap: 10,
+          }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/telehealth/doctor-sarah.png" alt="" style={{
+              width: 52, height: 52, borderRadius: "50%", objectFit: "cover", objectPosition: "center 20%",
+              border: "2px solid rgba(255,255,255,0.4)",
+            }} />
+            <div style={{ textAlign: "center" }}>
+              <div style={{ fontSize: 14, fontWeight: 600, color: "var(--text-primary)" }}>Dr. Sarah Mitchell</div>
+              <div style={{ fontSize: 12, color: "var(--text-tertiary)", marginTop: 2 }}>Board-certified physician</div>
+            </div>
+            <div style={{
+              border: "1px solid rgba(0,0,0,0.12)",
+              borderRadius: 10,
+              padding: "8px 20px", fontSize: 12, fontWeight: 500, marginTop: 4,
+              color: "var(--text-secondary)",
+            }}>
+              Starting from {CONSULT_PRICE_LABEL}
+            </div>
+          </div>
+        )}
       </div>
     </MockupShell>
   );
 }
 
 function MockupPrescription() {
+  const shown = useStepReveal(3);
   return (
     <MockupShell>
+      <div style={{ display: "flex", flexDirection: "column", justifyContent: "flex-start", minHeight: 270 }}>
       {/* Recommendation */}
-      <div style={{
+      {shown >= 1 && (
+      <div className="aug-msg-in" style={{
         display: "flex", alignItems: "flex-start", gap: 10,
         marginBottom: 16, fontSize: 13, lineHeight: 1.55, color: "var(--text-primary)",
       }}>
         <Sparkle size={18} weight="regular" style={{ color: "var(--brand-primary)", flexShrink: 0, marginTop: 1 }} />
         <span>Based on your history, I recommend the following medications</span>
       </div>
+      )}
 
       {/* Prescription list */}
-      <div style={{
+      {shown >= 2 && (
+      <div className="aug-msg-in" style={{
         background: "rgba(255,255,255,0.35)",
         backdropFilter: "blur(20px)",
         WebkitBackdropFilter: "blur(20px)",
@@ -192,9 +267,11 @@ function MockupPrescription() {
           </div>
         </div>
       </div>
+      )}
 
       {/* Doctor stamp */}
-      <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+      {shown >= 3 && (
+      <div className="aug-msg-in" style={{ display: "flex", alignItems: "center", gap: 10 }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/images/telehealth/doctor-sarah.png" alt="" style={{
           width: 36, height: 36, borderRadius: "50%", objectFit: "cover", objectPosition: "center 20%",
@@ -204,6 +281,8 @@ function MockupPrescription() {
           <div style={{ fontSize: 12, color: "var(--text-tertiary)" }}>Dr. Sarah Mitchell</div>
           <div style={{ fontSize: 13, fontWeight: 600, color: "var(--text-primary)" }}>Approved your prescription</div>
         </div>
+      </div>
+      )}
       </div>
     </MockupShell>
   );
@@ -227,150 +306,126 @@ const SLIDES = [
   },
 ];
 
-function NavArrow({ direction, onClick, disabled }: { direction: "left" | "right"; onClick: () => void; disabled?: boolean }) {
-  return (
-    <button
-      onClick={onClick}
-      disabled={disabled}
-      aria-label={direction === "left" ? "Previous slide" : "Next slide"}
-      style={{
-        width: 40,
-        height: 40,
-        borderRadius: "50%",
-        background: "rgba(255,255,255,0.55)",
-        backdropFilter: "blur(12px)",
-        WebkitBackdropFilter: "blur(12px)",
-        border: "1px solid rgba(255,255,255,0.6)",
-        boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        cursor: disabled ? "default" : "pointer",
-        opacity: disabled ? 0.4 : 1,
-        transition: "all 0.2s ease",
-        flexShrink: 0,
-      }}
-    >
-      <ArrowRightIcon
-        size={16}
-        weight="bold"
-        style={{
-          color: "var(--text-primary)",
-          transform: direction === "left" ? "rotate(180deg)" : "none",
-        }}
-      />
-    </button>
-  );
-}
+const PEEK = 26;        // px each card peeks above the next
+const ANCHOR_AT = 0.78; // progress at which the last card is fully stacked (rest = hold)
 
 export default function Compare() {
-  const [active, setActive] = useState(0);
-  const slide = SLIDES[active];
+  const stackRef = useRef<HTMLDivElement>(null);
+  const pinRef = useRef<HTMLDivElement>(null);
+  const cardEls = useRef<(HTMLDivElement | null)[]>([]);
 
-  const prev = useCallback(() => setActive((i) => Math.max(0, i - 1)), []);
-  const next = useCallback(() => setActive((i) => Math.min(SLIDES.length - 1, i + 1)), []);
+  useEffect(() => {
+    const stack = stackRef.current;
+    const pin = pinRef.current;
+    if (!stack || !pin) return;
+    const N = SLIDES.length;
+    const ease = (t: number) => 1 - Math.pow(1 - t, 3);
+
+    let raf = 0;
+    const apply = () => {
+      raf = 0;
+      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const vh = window.innerHeight;
+      const totalScroll = stack.offsetHeight - pin.offsetHeight;
+      const top = stack.getBoundingClientRect().top;
+      const p = totalScroll > 0 ? Math.min(Math.max(-top / totalScroll, 0), 1) : 0;
+
+      cardEls.current.forEach((c, i) => {
+        if (!c) return;
+        if (reduce) {
+          // Static stacked layout — no scroll animation under reduced-motion.
+          c.style.transform = "none";
+          return;
+        }
+        if (i === 0) {
+          c.style.transform = "translateY(-50%)";
+          return;
+        }
+        const arrive = (i / (N - 1)) * ANCHOR_AT;
+        const start = Math.max(0, arrive - 0.36);
+        let y: number; // px offset added to the centred (-50%) base
+        if (p <= start) y = vh; // waiting off-screen below
+        else if (p >= arrive) y = i * PEEK; // stacked
+        else y = vh + (i * PEEK - vh) * ease((p - start) / (arrive - start));
+        c.style.transform = `translateY(calc(-50% + ${y.toFixed(1)}px))`;
+      });
+    };
+
+    const onScroll = () => { if (!raf) raf = requestAnimationFrame(apply); };
+    apply();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+      if (raf) cancelAnimationFrame(raf);
+    };
+  }, []);
 
   return (
-    <section style={{ background: "var(--surface-page)", padding: "var(--section-pad) 0" }}>
+    <section style={{ background: "var(--surface-elevated)", padding: "var(--section-pad) 0 clamp(110px,15vh,200px)" }}>
       <div style={{ maxWidth: "var(--maxw)", margin: "0 auto", padding: "0 var(--gutter)" }}>
         <div data-anim="fade-up">
           <SectionHead
             center
-            eyebrow="Care, not just answers"
+            eyebrow="Real care, not just answers"
             title="Healthcare that finally works for you"
-            sub="Healthcare has never felt this responsive, informed, and easy."
+            sub="From first question to care plan to prescription, in minutes."
           />
         </div>
+      </div>
 
-        {/* Slide with arrows */}
-        <div style={{ position: "relative" }}>
-          {/* Left arrow */}
-          <div className="aug-compare-arrows" style={{ position: "absolute", left: -56, top: "50%", transform: "translateY(-50%)", zIndex: 2 }}>
-            <NavArrow direction="left" onClick={prev} disabled={active === 0} />
-          </div>
+      {/* Scroll-driven stacking deck: a pinned frame fills the viewport while the
+          cards slide up and stack; the last card anchors with the others peeking. */}
+      <div className="aug-stack" ref={stackRef}>
+        <div className="aug-stack-pin" ref={pinRef}>
+          <div className="aug-stack-frame">
+            {SLIDES.map((slide, i) => (
+              <div
+                key={i}
+                ref={(el) => { cardEls.current[i] = el; }}
+                className="aug-stack-card aug-compare-slide"
+                style={{ zIndex: i + 1, transform: i === 0 ? "translateY(-50%)" : "translateY(calc(-50% + 1200px))" }}
+              >
+                {/* Left: text */}
+                <div style={{
+                  padding: "clamp(36px,5vw,56px) clamp(28px,4vw,48px)",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                }}>
+                  <h3 style={{
+                    fontSize: "clamp(24px,3.2vw,32px)",
+                    fontWeight: 500,
+                    letterSpacing: "-0.02em",
+                    lineHeight: 1.2,
+                    margin: "0 0 16px",
+                  }}>
+                    {slide.h}
+                  </h3>
+                  <p style={{
+                    fontSize: 15,
+                    lineHeight: 1.6,
+                    color: "var(--text-secondary)",
+                    margin: "0 0 24px",
+                    maxWidth: "42ch",
+                  }}>
+                    {slide.p}
+                  </p>
+                  <div>
+                    <Button as="a" href={CHAT_HREF} variant="primary" iconRight={<ArrowRightIcon aria-hidden />}>
+                      Get started
+                    </Button>
+                  </div>
+                </div>
 
-          {/* Right arrow */}
-          <div className="aug-compare-arrows" style={{ position: "absolute", right: -56, top: "50%", transform: "translateY(-50%)", zIndex: 2 }}>
-            <NavArrow direction="right" onClick={next} disabled={active === SLIDES.length - 1} />
-          </div>
-
-          {/* Slide card */}
-          <div
-            className="aug-compare-slide"
-            style={{
-              background: "var(--surface-elevated)",
-              border: "1px solid var(--border-subtle)",
-              borderRadius: "var(--radius-2xl)",
-              overflow: "hidden",
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              height: 480,
-              boxShadow: "0 4px 24px rgba(0,0,0,0.04), 0 1px 4px rgba(0,0,0,0.02)",
-            }}
-          >
-            {/* Left: text */}
-            <div style={{
-              padding: "clamp(36px,5vw,56px) clamp(28px,4vw,48px)",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-            }}>
-              <h3 style={{
-                fontSize: "clamp(24px,3.2vw,32px)",
-                fontWeight: 500,
-                letterSpacing: "-0.02em",
-                lineHeight: 1.2,
-                margin: "0 0 16px",
-              }}>
-                {slide.h}
-              </h3>
-              <p style={{
-                fontSize: 15,
-                lineHeight: 1.6,
-                color: "var(--text-secondary)",
-                margin: "0 0 24px",
-                maxWidth: "42ch",
-              }}>
-                {slide.p}
-              </p>
-              <div>
-                <Button
-                  as="a"
-                  href={CHAT_HREF}
-                  variant="primary"
-                  iconRight={<ArrowRightIcon aria-hidden />}
-                >
-                  Get started
-                </Button>
+                {/* Right: mockup */}
+                <div style={{ padding: "clamp(20px,3vw,32px)", overflow: "hidden" }}>
+                  <slide.Mockup />
+                </div>
               </div>
-            </div>
-
-            {/* Right: mockup */}
-            <div style={{ padding: "clamp(20px,3vw,32px)", overflow: "hidden" }}>
-              <slide.Mockup />
-            </div>
+            ))}
           </div>
-        </div>
-
-        {/* Dot indicators */}
-        <div style={{ display: "flex", justifyContent: "center", gap: 8, marginTop: 24 }}>
-          {SLIDES.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setActive(i)}
-              aria-label={`Go to slide ${i + 1}`}
-              style={{
-                width: i === active ? 24 : 8,
-                height: 8,
-                borderRadius: 4,
-                border: "none",
-                background: i === active ? "var(--brand-primary)" : "rgba(0,0,0,0.12)",
-                cursor: "pointer",
-                transition: "all 0.3s ease",
-                padding: 0,
-              }}
-            />
-          ))}
         </div>
       </div>
     </section>

@@ -1,11 +1,10 @@
-/* Trust panel — 5-column feature strip below the hero with 3D glassmorphic icons. */
+/* Trust panel — 4-column feature strip below the hero with 3D glassmorphic icons. */
 
 const ITEMS = [
-  { h: "HIPAA secured", p: "Your health data stays yours. Never sold, never shared.", icon: "/images/telehealth/trust-hipaa.png" },
-  { h: "Prescriptions & labs", p: "Prescribed by licensed doctors, sent to your pharmacy.", icon: "/images/telehealth/trust-rx.png" },
-  { h: "Insights that matter", p: "AI that connects your symptoms, history, and medications.", icon: "/images/telehealth/trust-insights.png" },
-  { h: "Care that adapts", p: "Your plan evolves as your health does. Never starting over.", icon: "/images/telehealth/trust-adapt.png" },
-  { h: "Real doctors, always", p: "Board-certified physicians in all 50 states + DC.", icon: "/images/telehealth/trust-doctors.png" },
+  { h: "HIPAA secured", p: "Your health data stays yours, encrypted end to end.", icon: "/images/telehealth/trust-hipaa.png" },
+  { h: "Real medical care", p: "See a doctor, get a prescription in minutes.", icon: "/images/telehealth/trust-insights.png" },
+  { h: "Board-certified doctors", p: "Top clinicians in all 50 states + DC.", icon: "/images/telehealth/trust-doctors.png" },
+  { h: "Your pharmacy, your way", p: "Prescriptions go to your preferred pharmacy.", icon: "/images/telehealth/trust-rx.png" },
 ];
 
 export default function TrustPanel() {
@@ -15,12 +14,13 @@ export default function TrustPanel() {
         <div
           className="aug-trust-panel"
           data-anim="fade-up"
+          data-stagger
           style={{
             background: "var(--surface-elevated)",
             border: "1px solid var(--border-subtle)",
             borderRadius: "var(--radius-xl)",
             display: "grid",
-            gridTemplateColumns: "repeat(5, 1fr)",
+            gridTemplateColumns: "repeat(4, 1fr)",
             padding: "clamp(28px,4vw,40px) clamp(20px,3vw,36px)",
             gap: 0,
           }}

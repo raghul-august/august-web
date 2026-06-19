@@ -77,42 +77,19 @@ function Composer({
           padding: 0,
         }}
       />
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          gap: 12,
-          marginTop: 12,
-          flexWrap: "wrap",
-        }}
-      >
-        {secureNote ? (
-          <span
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 7,
-              fontSize: 13,
-              color: "var(--text-secondary)",
-            }}
-          >
-            <LockSimpleIcon style={{ color: "var(--brand-primary)", fontSize: "1rem" }} aria-hidden />
-            {secureNote}
-          </span>
-        ) : (
-          <span />
-        )}
+      <div className="aug-composer-foot">
         <button
           type="button"
+          className="aug-composer-btn"
           onClick={() => onSend?.(value)}
           onMouseEnter={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
           style={{
-            display: "inline-flex",
+            display: "flex",
             alignItems: "center",
+            justifyContent: "center",
             gap: 6,
-            minHeight: 44,
+            minHeight: 48,
             padding: "12px 22px",
             fontFamily: "var(--font-sans)",
             fontSize: 15,
@@ -130,6 +107,21 @@ function Composer({
           {cta}
           <ArrowRightIcon aria-hidden />
         </button>
+        {secureNote ? (
+          <span
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 7,
+              fontSize: 13,
+              color: "var(--text-secondary)",
+            }}
+          >
+            <LockSimpleIcon style={{ color: "var(--brand-primary)", fontSize: "1rem" }} aria-hidden />
+            {secureNote}
+          </span>
+        ) : null}
       </div>
     </div>
   );

@@ -144,6 +144,42 @@
   animation: augGlare 8s ease-in-out infinite;
 }
 
+/* ── Compare carousel cross-slide transition ── */
+@keyframes augCompareIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.telehealth-scope .aug-compare-anim { animation: augCompareIn 0.5s var(--ease-out) both; }
+@media (prefers-reduced-motion: reduce) {
+  .telehealth-scope .aug-compare-anim { animation: none; }
+}
+
+/* ── Chat mockup: JS adds one message at a time; each just animates in ── */
+@keyframes augMsgIn {
+  from { opacity: 0; transform: translate3d(0, 10px, 0); }
+  to   { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+.telehealth-scope .aug-msg-in {
+  animation: augMsgIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+}
+@keyframes augChatDot {
+  0%, 60%, 100% { transform: translateY(0);    opacity: 0.35; }
+  30%           { transform: translateY(-5px); opacity: 1; }
+}
+.telehealth-scope .aug-chat-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--brand-primary); display: inline-block;
+  animation: augChatDot 1.1s ease-in-out infinite;
+}
+.telehealth-scope .aug-chat-dot:nth-child(2) { animation-delay: 0.15s; }
+.telehealth-scope .aug-chat-dot:nth-child(3) { animation-delay: 0.3s; }
+@media (prefers-reduced-motion: reduce) {
+  .telehealth-scope .aug-msg-in { animation: none; }
+  .telehealth-scope .aug-chat-dot { animation: none; }
+}
+
 /* ── Hero entrance animations ── */
 @keyframes augHeroFadeUp {
   from { opacity: 0; transform: translateY(24px); }
@@ -165,20 +201,110 @@
 @keyframes augQScrollRev { from { transform: translateX(calc(-50% - 9px)); } to { transform: translateX(0); } }
 .telehealth-scope .aug-qmarquee:hover .aug-qrow { animation-play-state: paused; }
 
-/* ── Scroll-triggered animations ── */
+/* ── Scroll-triggered animations ──
+   Calm, consistent fade-and-rise. All variants land in the same place; the
+   differences are kept subtle so the motion reads as polish, not spectacle. */
 .telehealth-scope [data-anim] {
   opacity: 0;
-  transform: translateY(28px);
+  transform: translateY(20px);
   transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+  will-change: opacity, transform;
 }
+/* Gentle directional / scale variants */
+.telehealth-scope [data-anim="fade-left"]  { transform: translateX(-22px); }
+.telehealth-scope [data-anim="fade-right"] { transform: translateX(22px); }
+.telehealth-scope [data-anim="zoom"]       { transform: scale(0.98); }
+.telehealth-scope [data-anim="blur"]       { transform: translateY(18px); }
+.telehealth-scope [data-anim="rise"]       { transform: translateY(28px); }
 .telehealth-scope [data-anim].aug-visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
+}
+
+/* ── Parallax layers ── */
+.telehealth-scope [data-parallax] { will-change: transform; }
+
+/* ── Scroll-driven stacking deck (Compare section) ──
+   A pinned frame fills the viewport; JS slides the cards up to stack, the last
+   anchoring with the others peeking. The tall .aug-stack provides the scroll
+   budget; because the pinned frame fills the screen the whole time, there is no
+   empty space — and the next section follows immediately when it releases. */
+.telehealth-scope .aug-stack {
+  position: relative;
+  height: 260vh; /* scroll budget for the stacking sequence */
+}
+.telehealth-scope .aug-stack-pin {
+  position: sticky;
+  top: clamp(80px, 11vh, 104px);
+  height: calc(100svh - clamp(80px, 11vh, 104px));
+  padding-inline: var(--gutter);
+}
+.telehealth-scope .aug-stack-frame {
+  position: relative;
+  height: 100%;
+  max-width: var(--maxw);
+  margin: 0 auto;
+}
+.telehealth-scope .aug-stack-card {
+  position: absolute;
+  top: 50%;            /* centred in the pinned frame (JS adds -50% + stack offset) */
+  left: 0;
+  right: 0;
+  height: clamp(440px, 72vh, 640px); /* fills most of the viewport so leftover space is minimal */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--surface-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  box-shadow: 0 12px 44px rgba(20, 21, 21, 0.10), 0 2px 8px rgba(20, 21, 21, 0.05);
+  will-change: transform;
+}
+/* Mobile / reduced-motion: drop the pin, show cards stacked in normal flow. */
+@media (prefers-reduced-motion: reduce) {
+  .telehealth-scope .aug-stack { height: auto; }
+  .telehealth-scope .aug-stack-pin { position: static; height: auto; }
+  .telehealth-scope .aug-stack-frame { height: auto; }
+  .telehealth-scope .aug-stack-card { position: relative; top: auto; height: auto; transform: none !important; margin-bottom: 20px; }
+}
+
+/* ── Chat mockup body: fixed height (so the card doesn't resize mid-animation),
+   responsive because mobile wraps the reply to more lines + stacks the chips. ── */
+.telehealth-scope .aug-chatbody { height: 296px; }
+.telehealth-scope .aug-docbody { height: 268px; }
+@media (max-width: 760px) {
+  .telehealth-scope .aug-chatbody { height: 340px; }
+  .telehealth-scope .aug-docbody { height: 290px; }
+}
+
+/* ── CTAs: full-width on mobile only, normal size on desktop ── */
+.telehealth-scope .aug-composer-foot { display: flex; flex-direction: column; gap: 10px; margin-top: 12px; align-items: flex-end; }
+.telehealth-scope .aug-composer-btn { width: auto; }
+@media (max-width: 760px) {
+  .telehealth-scope .aug-composer-foot { align-items: stretch; }
+  .telehealth-scope .aug-composer-btn { width: 100%; }
+  .telehealth-scope .aug-cta-btn { width: 100% !important; }
+  /* Centre the HIPAA note under the full-width button on mobile, tighter gap. */
+  .telehealth-scope .aug-cta-note { justify-content: center; margin-top: 10px !important; }
+}
+
+/* ── Scroll progress bar ── */
+.telehealth-scope .aug-scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  background: linear-gradient(90deg, var(--aug-green-600), #5cc49a 60%, var(--aug-green-400));
+  z-index: 9999;
+  pointer-events: none;
 }
 .telehealth-scope [data-stagger] > * {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.5s var(--ease-out), transform 0.5s var(--ease-out);
+  transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
 }
 .telehealth-scope [data-stagger].aug-visible > * { opacity: 1; transform: translateY(0); }
 .telehealth-scope [data-stagger].aug-visible > *:nth-child(1) { transition-delay: 0.05s; }
@@ -206,10 +332,15 @@
 
   .telehealth-scope .aug-hero-h1 { font-size: clamp(28px,4.4vw,36px) !important; }
 
-  .telehealth-scope .aug-compare-slide { grid-template-columns: 1fr !important; height: auto !important; }
-  .telehealth-scope .aug-compare-slide > div:last-child { min-height: 380px; }
+  /* Stack card goes 1-column (mockup on top, text below) but keeps its
+     viewport-fitting height so the scroll-stack still works on small screens. */
+  .telehealth-scope .aug-compare-slide { display: flex !important; flex-direction: column !important; }
+  .telehealth-scope .aug-compare-slide > div:first-child { order: 2; padding: 18px clamp(20px,5vw,32px) clamp(20px,5vw,28px) !important; flex: 0 0 auto; }
+  .telehealth-scope .aug-compare-slide > div:last-child { order: 1; flex: 1 1 0; overflow: hidden; }
 
-  .telehealth-scope .aug-human { grid-template-columns: 1fr !important; }
+  .telehealth-scope .aug-human { grid-template-columns: 1fr !important; gap: clamp(24px,6vw,40px) !important; }
+  /* Image becomes an appealing hero card above the text on small screens. */
+  .telehealth-scope .aug-human-img { order: -1; aspect-ratio: 4 / 3; min-height: 0 !important; }
 
   .telehealth-scope .aug-cta-content { max-width: 80% !important; }
 
@@ -222,13 +353,12 @@
   .telehealth-scope .aug-treat-grid a { aspect-ratio: 2 / 3 !important; }
   .telehealth-scope .aug-trust-panel { grid-template-columns: repeat(2,1fr) !important; row-gap: 20px !important; }
 
-  .telehealth-scope .aug-compare-slide { height: 780px !important; display: flex !important; flex-direction: column !important; }
-  .telehealth-scope .aug-compare-slide > div:first-child { order: 2; padding: 20px 24px 24px !important; flex: 0 0 auto; }
-  .telehealth-scope .aug-compare-slide > div:last-child { order: 1; flex: 1 1 0; overflow: hidden; }
+  /* Taller card on mobile so the 1-column mockup isn't cut off (still fits the pin). */
+  .telehealth-scope .aug-compare-slide { height: clamp(520px, 88vh, 760px) !important; }
+  .telehealth-scope .aug-compare-slide > div:first-child { padding: 16px 22px 22px !important; }
   .telehealth-scope .aug-compare-arrows { display: none !important; }
   .telehealth-scope .aug-testi-arrows { display: none !important; }
 
-  .telehealth-scope .aug-human-img { display: none !important; }
   .telehealth-scope .aug-cap-grid { grid-template-columns: 1fr !important; }
   .telehealth-scope .aug-testi-grid { grid-template-columns: 1fr !important; }
   .telehealth-scope .aug-steps { grid-template-columns: 1fr !important; gap: 14px !important; }
@@ -264,6 +394,7 @@
     transition-duration: 0.01ms !important;
   }
   .telehealth-scope [data-anim],
-  .telehealth-scope [data-stagger] > * { opacity: 1; transform: none; }
+  .telehealth-scope [data-stagger] > * { opacity: 1; transform: none; filter: none; }
+  .telehealth-scope [data-parallax] { transform: none !important; }
   .telehealth-scope .aug-qrow { animation: none !important; }
 }

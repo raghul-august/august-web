@@ -9,13 +9,6 @@ import { chatHrefWithMessage } from "../constants";
 import { trackTelehealthStart } from "../analytics";
 import Composer from "./Composer";
 
-const PROMPTS = [
-  "What does my cholesterol panel actually mean?",
-  "Is it safe to take melatonin every night?",
-  "Could I be a candidate for GLP-1 weight loss?",
-  "My doctor recommended surgery. What are my options?",
-];
-
 export default function Hero() {
   // No animation state lives here: the rotating placeholder owns its own ticker
   // inside a memoized leaf, so this Hero renders once. `go` is stable so the
@@ -36,6 +29,7 @@ export default function Hero() {
 
   return (
     <section
+      id="meet-august"
       style={{
         background: "var(--surface-page)",
         // Clear the site's fixed LandingNav (~96px) on both mobile and desktop.
@@ -47,6 +41,8 @@ export default function Hero() {
     >
       <div
         style={{
+          position: "relative",
+          zIndex: 1,
           maxWidth: 880,
           margin: "0 auto",
           padding: "0 var(--gutter)",
@@ -65,7 +61,7 @@ export default function Hero() {
             marginBottom: 16,
           }}
         >
-          Meet August
+          #1 Medical AI platform · Trusted by 8M users
         </div>
         <h1
           className="aug-hero-h1"
@@ -77,29 +73,41 @@ export default function Hero() {
             margin: "0 0 14px",
           }}
         >
-          Real medical care,
-          <br />
-          the moment <span className="aug-hero-glare">you need it</span>
+          Hi, <span className="aug-hero-glare">I’m August</span>
         </h1>
+        <h3
+          className="aug-hero-sub"
+          style={{
+            fontSize: "clamp(22px,3.2vw,30px)",
+            fontWeight: 500,
+            letterSpacing: "-0.01em",
+            lineHeight: 1.2,
+            color: "var(--text-primary)",
+            margin: "0 0 18px",
+          }}
+        >
+          Secure. Private. Built by doctors.
+        </h3>
         <p
           className="aug-hero-sub"
           style={{
-            fontSize: "clamp(17px,2.45vw,22px)",
+            fontSize: "clamp(15px,1.7vw,17px)",
             fontWeight: 400,
-            lineHeight: 1.5,
+            lineHeight: 1.55,
             color: "var(--text-secondary)",
-            maxWidth: "72ch",
+            maxWidth: "62ch",
             margin: "0 auto 28px",
           }}
         >
-          Start with August for free, anytime. See a board-certified
+          Get expert answers 24/7 with personalized management plans in seconds.
           <br />
-          MD doctor when you need it.
+          When you need treatment, get an instant consultation with licensed
+          doctors for prescriptions and more.
         </p>
 
         {/* Composer with rotating example prompt */}
         <div className="aug-hero-composer" style={{ maxWidth: 620, margin: "0 auto" }}>
-          <Composer placeholders={PROMPTS} cta="Get started" secureNote="" onSend={go} />
+          <Composer placeholder="I’m always here for you, ready when you are." cta="Start Chat" secureNote="" onSend={go} />
         </div>
       </div>
     </section>

@@ -7,11 +7,8 @@ import { CONSULT_PRICE_LABEL } from "@/lib/config";
 
 import Hero from "./components/Hero";
 import TrustPanel from "./components/TrustPanel";
-import Treatments from "./components/Treatments";
 import HumanDoctors from "./components/HumanDoctors";
-import Questions from "./components/Questions";
 import Compare from "./components/Compare";
-import Capabilities from "./components/Capabilities";
 import Pricing from "./components/Pricing";
 import Testimonials from "./components/Testimonials";
 import CTABand from "./components/CTABand";
@@ -52,15 +49,18 @@ export default async function TelehealthPage() {
       <LandingNav initialCountry={country} />
       <div className="telehealth-scope">
         <main>
+          {/* 1. Meet August */}
           <Hero />
           <TrustPanel />
-          <Treatments />
-          <HumanDoctors />
-          <Questions />
+          {/* 2. Care, not just answers */}
           <Compare />
-          <Capabilities />
-          <Pricing />
+          {/* 3. User testimonials */}
           <Testimonials />
+          {/* 4. Best of both worlds */}
+          <HumanDoctors />
+          {/* 5. Pricing */}
+          <Pricing />
+          {/* 6. Last banner */}
           <CTABand />
         </main>
       </div>

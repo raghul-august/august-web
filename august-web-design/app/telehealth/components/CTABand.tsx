@@ -1,3 +1,5 @@
+"use client";
+
 /* Closing CTA band over a warm lifestyle image. */
 
 import Image from "next/image";
@@ -5,10 +7,14 @@ import { ShieldCheckIcon, ArrowRightIcon } from "@phosphor-icons/react/ssr";
 
 import { CONSULT_PRICE_LABEL } from "@/lib/config";
 
-import { CHAT_HREF, sharedAsset } from "../constants";
 import Button from "./Button";
 
 export default function CTABand() {
+  const scrollToHero = (e: React.MouseEvent) => {
+    e.preventDefault();
+    document.getElementById("meet-august")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
     <section
       aria-label="Closing CTA"
@@ -45,7 +51,7 @@ export default function CTABand() {
           />
           <div
             className="aug-cta-content"
-            style={{ position: "relative", zIndex: 2, maxWidth: "55%", padding: "clamp(40px,7vw,72px) clamp(28px,5vw,56px)" }}
+            style={{ position: "relative", zIndex: 2, maxWidth: "55%", padding: "clamp(40px,7vw,72px) clamp(28px,5vw,56px)", transform: "translateY(clamp(20px,4vw,44px))" }}
           >
             <h2
               style={{
@@ -72,19 +78,22 @@ export default function CTABand() {
             </p>
             <Button
               as="a"
-              href={CHAT_HREF}
+              href="#meet-august"
+              onClick={scrollToHero}
               variant="primary"
+              className="aug-cta-btn"
               iconRight={<ArrowRightIcon aria-hidden />}
               style={{ background: "var(--text-inverse)", color: "var(--text-primary)", borderColor: "var(--text-inverse)" }}
             >
               Chat with August, free
             </Button>
             <div
+              className="aug-cta-note"
               style={{
                 display: "flex",
                 alignItems: "center",
                 gap: 6,
-                marginTop: 20,
+                marginTop: 12,
                 color: "rgba(255,255,255,0.8)",
                 fontSize: "var(--text-xs)",
               }}

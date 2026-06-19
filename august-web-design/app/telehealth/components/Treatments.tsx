@@ -129,7 +129,7 @@ function TreatmentCard({ title, desc, photo, pos }: { title: string; desc: strin
 
 export default function Treatments() {
   return (
-    <section style={{ background: "var(--surface-elevated)", padding: "var(--section-pad) 0" }}>
+    <section style={{ background: "var(--surface-page)", padding: "var(--section-pad) 0" }}>
       <div style={{ maxWidth: "var(--maxw)", margin: "0 auto", padding: "0 var(--gutter)" }}>
         <div data-anim="fade-up">
           <SectionHead
