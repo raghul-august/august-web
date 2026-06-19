@@ -17,10 +17,10 @@ const ITEMS = [
   { title: "Chronic Care", desc: "Ongoing support for blood pressure, cholesterol, thyroid and more. Never starting over.", photo: "treat-chronic-care.webp" },
   { title: "Prescription Refills", desc: "Refill maintenance medications online and have them sent to your pharmacy or door.", photo: "treat-rx-refills.webp" },
   { title: "Medication Management", desc: "One calm place to track, understand and safely adjust everything you take.", photo: "treat-med-mgmt.webp" },
-  { title: "Everyday & Urgent Care", desc: "From the sniffles to a sinus infection, with symptom checks and same-day treatment.", photo: "treat-urgent-care.webp" },
+  { title: "Everyday & Urgent Care", desc: "From the sniffles to a sinus infection, with symptom checks and same-day treatment.", photo: "treat-urgent-care.webp", pos: "65% center" },
 ];
 
-function TreatmentCard({ title, desc, photo }: { title: string; desc: string; photo: string }) {
+function TreatmentCard({ title, desc, photo, pos }: { title: string; desc: string; photo: string; pos?: string }) {
   const [hover, setHover] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -58,6 +58,7 @@ function TreatmentCard({ title, desc, photo }: { title: string; desc: string; ph
         sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 25vw"
         style={{
           objectFit: "cover",
+          objectPosition: pos || "center center",
           transform: hover ? "scale(1.04)" : "scale(1)",
           transition: "transform 0.5s var(--ease-out)",
         }}

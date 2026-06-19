@@ -26,6 +26,7 @@ function MockupShell({ children }: { children: React.ReactNode }) {
       justifyContent: "center",
       position: "relative",
       overflow: "hidden",
+      padding: "clamp(20px, 3vw, 32px)",
     }}>
       {/* Single subtle glow for depth — nothing more */}
       <div style={{ position: "absolute", top: "15%", right: "10%", width: 200, height: 200, borderRadius: "50%", background: "rgba(255,255,255,0.25)", filter: "blur(60px)", pointerEvents: "none" }} />
@@ -39,8 +40,8 @@ function MockupShell({ children }: { children: React.ReactNode }) {
         border: "1px solid rgba(255,255,255,0.4)",
         boxShadow: "0 8px 32px rgba(0,0,0,0.06)",
         padding: 24,
-        width: "82%",
-        maxWidth: 300,
+        width: "88%",
+        maxWidth: 320,
         position: "relative",
         zIndex: 1,
       }}>
@@ -211,17 +212,17 @@ function MockupPrescription() {
 const SLIDES = [
   {
     h: "Chat with August about your symptoms",
-    p: "Tell August how you\u2019re feeling in plain words. It listens, asks a few gentle questions, and helps make sense of your symptoms. Free, anytime.",
+    p: "Tell August how you\u2019re feeling in plain words. It listens, asks the right questions, and helps make sense of your symptoms.",
     Mockup: MockupChat,
   },
   {
     h: "See a licensed doctor, if you need one",
-    p: `If a doctor would help, we match you with a clinician licensed in your state. Starting from ${CONSULT_PRICE_LABEL}, no membership, no surprise bills.`,
+    p: `We match you with a clinician licensed in your state. Starting from ${CONSULT_PRICE_LABEL}, no membership, no surprise bills.`,
     Mockup: MockupDoctor,
   },
   {
     h: "Prescriptions without the waiting room",
-    p: "When appropriate, your prescription goes straight to your pharmacy, along with a clear care plan you can keep and revisit.",
+    p: "Your prescription goes straight to your pharmacy, along with a clear care plan you can keep and revisit anytime.",
     Mockup: MockupPrescription,
   },
 ];
@@ -327,7 +328,7 @@ export default function Compare() {
                 fontSize: 15,
                 lineHeight: 1.6,
                 color: "var(--text-secondary)",
-                margin: "0 0 32px",
+                margin: "0 0 24px",
                 maxWidth: "42ch",
               }}>
                 {slide.p}

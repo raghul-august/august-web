@@ -79,7 +79,7 @@ export default function Hero() {
         >
           Real medical care,
           <br />
-          the moment <span style={{ color: "var(--text-brand)" }}>you need it</span>
+          the moment <span className="aug-hero-glare">you need it</span>
         </h1>
         <p
           className="aug-hero-sub"

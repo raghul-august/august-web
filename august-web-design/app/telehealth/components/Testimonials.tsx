@@ -10,8 +10,8 @@ import SectionHead from "./SectionHead";
 
 const QUOTES = [
   { name: "Patricia", photo: "/images/telehealth/testi-1.png", pos: "center 20%", text: "The whole process was incredibly easy. I didn\u2019t sit in a waiting room or rearrange my day. The physician actually listened, and my prescription was sent the same day." },
-  { name: "Patrick", photo: "/images/telehealth/testi-2.png", pos: "center 15%", text: "Best online doctor experience I\u2019ve had. A few questions, then I was talking with a real doctor. Prescriptions sent to my local pharmacy within the hour." },
-  { name: "Angela", photo: "/images/telehealth/testi-4.png", pos: "center 20%", text: "A very insightful, thorough evaluation. I felt like August gave me more attention and listened better than any doctor I\u2019ve seen in the past five years." },
+  { name: "Patrick", photo: "/images/telehealth/testi-2.png", pos: "center 25%", text: "Best online doctor experience I\u2019ve had. A few questions, then I was talking with a real doctor. Prescriptions sent to my local pharmacy within the hour." },
+  { name: "Angela", photo: "/images/telehealth/testi-4.png", pos: "center 60%", text: "A very insightful, thorough evaluation. I felt like August gave me more attention and listened better than any doctor I\u2019ve seen in the past five years." },
   { name: "Jodella", photo: "/images/telehealth/testi-6.png", pos: "center 15%", text: "$39, no joke, did exactly what other companies charge $129 for. A friendly doctor who called in my medicine in minutes." },
   { name: "Molly", photo: "/images/telehealth/testi-3.png", pos: "center 25%", text: "Five stars. Very helpful. The AI confirmed I\u2019d only strained a muscle, so I didn\u2019t even need the doctor today." },
   { name: "Sam", photo: "/images/telehealth/testi-5.png", pos: "center 30%", text: "It\u2019s 4:39am and I was worried about my health. I\u2019m so glad I had this to help me think it through calmly." },
@@ -117,19 +117,37 @@ function NavArrow({ direction, onClick, disabled }: { direction: "left" | "right
 
 export default function Testimonials() {
   const [offset, setOffset] = useState(0);
-  const maxOffset = QUOTES.length - 3;
   const trackRef = useRef<HTMLDivElement>(null);
   const [cardWidth, setCardWidth] = useState(0);
+  const [visibleCount, setVisibleCount] = useState(3);
   const gap = 20;
+  const maxOffset = QUOTES.length - visibleCount;
 
   const prev = useCallback(() => setOffset((o) => Math.max(0, o - 1)), []);
-  const next = useCallback(() => setOffset((o) => Math.min(maxOffset, o + 1)), []);
+  const next = useCallback(() => setOffset((o) => Math.min(QUOTES.length - 1, o + 1)), []);
+
+  // Touch swipe
+  const touchStart = useRef(0);
+  const handleTouchStart = useCallback((e: React.TouchEvent) => {
+    touchStart.current = e.touches[0].clientX;
+  }, []);
+  const handleTouchEnd = useCallback((e: React.TouchEvent) => {
+    const diff = touchStart.current - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) next();
+      else prev();
+    }
+  }, [next, prev]);
 
   useEffect(() => {
     const measure = () => {
       if (!trackRef.current) return;
       const containerW = trackRef.current.parentElement?.offsetWidth ?? 0;
-      setCardWidth((containerW - gap * 2) / 3);
+      const isMobile = containerW <= 500;
+      const count = isMobile ? 1 : 3;
+      setVisibleCount(count);
+      setCardWidth((containerW - gap * (count - 1)) / count);
+      setOffset((o) => Math.min(o, QUOTES.length - count));
     };
     measure();
     window.addEventListener("resize", measure);
@@ -151,18 +169,16 @@ export default function Testimonials() {
         </div>
 
         <div style={{ position: "relative" }}>
-          {/* Left arrow */}
+          {/* Desktop arrows */}
           <div className="aug-testi-arrows" style={{ position: "absolute", left: -56, top: "50%", transform: "translateY(-50%)", zIndex: 2 }}>
             <NavArrow direction="left" onClick={prev} disabled={offset === 0} />
           </div>
-
-          {/* Right arrow */}
           <div className="aug-testi-arrows" style={{ position: "absolute", right: -56, top: "50%", transform: "translateY(-50%)", zIndex: 2 }}>
             <NavArrow direction="right" onClick={next} disabled={offset === maxOffset} />
           </div>
 
           {/* Sliding track */}
-          <div style={{ overflow: "hidden", borderRadius: "var(--radius-2xl)" }}>
+          <div style={{ overflow: "hidden", borderRadius: "var(--radius-2xl)" }} onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
             <div
               ref={trackRef}
               style={{
@@ -180,6 +196,7 @@ export default function Testimonials() {
               ))}
             </div>
           </div>
+
         </div>
 
         {/* Dot indicators */}

@@ -31,6 +31,7 @@ export default function CTABand() {
             alt=""
             fill
             sizes="(max-width: 1200px) 100vw, 1120px"
+            className="aug-cta-img"
             style={{ objectFit: "cover", objectPosition: "right center" }}
           />
           <div

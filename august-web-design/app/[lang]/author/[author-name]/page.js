@@ -50,8 +50,12 @@ export default async function AuthorPage({ params }) {
 }
 
 export async function generateStaticParams() {
-  const slugs = await getAllAuthorSlugs();
-  return slugs.map((slug) => ({
-    'author-name': slug,
-  }));
+  try {
+    const slugs = await getAllAuthorSlugs();
+    return slugs.map((slug) => ({
+      'author-name': slug,
+    }));
+  } catch {
+    return [];
+  }
 }

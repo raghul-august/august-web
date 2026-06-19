@@ -123,6 +123,27 @@
 .telehealth-scope ::selection { background: var(--selection-bg); }
 .telehealth-scope .aug-hero-sub-mobile-br { display: none; }
 
+/* ── Hero glare on "you need it" ── */
+@keyframes augGlare {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+.telehealth-scope .aug-hero-glare {
+  background: linear-gradient(
+    90deg,
+    var(--aug-green-600) 0%,
+    var(--aug-green-600) 35%,
+    #5cc49a 50%,
+    var(--aug-green-600) 65%,
+    var(--aug-green-600) 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: augGlare 8s ease-in-out infinite;
+}
+
 /* ── Hero entrance animations ── */
 @keyframes augHeroFadeUp {
   from { opacity: 0; transform: translateY(24px); }
@@ -186,7 +207,7 @@
   .telehealth-scope .aug-hero-h1 { font-size: clamp(28px,4.4vw,36px) !important; }
 
   .telehealth-scope .aug-compare-slide { grid-template-columns: 1fr !important; height: auto !important; }
-  .telehealth-scope .aug-compare-slide > div:last-child { min-height: 320px; }
+  .telehealth-scope .aug-compare-slide > div:last-child { min-height: 380px; }
 
   .telehealth-scope .aug-human { grid-template-columns: 1fr !important; }
 
@@ -201,9 +222,9 @@
   .telehealth-scope .aug-treat-grid a { aspect-ratio: 2 / 3 !important; }
   .telehealth-scope .aug-trust-panel { grid-template-columns: repeat(2,1fr) !important; row-gap: 20px !important; }
 
-  .telehealth-scope .aug-compare-slide { height: auto !important; }
-  .telehealth-scope .aug-compare-slide > div:first-child { order: 2; padding: 24px !important; }
-  .telehealth-scope .aug-compare-slide > div:last-child { order: 1; min-height: 280px; }
+  .telehealth-scope .aug-compare-slide { height: 780px !important; display: flex !important; flex-direction: column !important; }
+  .telehealth-scope .aug-compare-slide > div:first-child { order: 2; padding: 20px 24px 24px !important; flex: 0 0 auto; }
+  .telehealth-scope .aug-compare-slide > div:last-child { order: 1; flex: 1 1 0; overflow: hidden; }
   .telehealth-scope .aug-compare-arrows { display: none !important; }
   .telehealth-scope .aug-testi-arrows { display: none !important; }
 
@@ -218,6 +239,7 @@
 
   .telehealth-scope .aug-cta-content { max-width: 100% !important; padding: 32px 24px !important; }
   .telehealth-scope .aug-cta-overlay { background: rgba(172,146,116,0.85) !important; }
+  .telehealth-scope .aug-cta-img { object-position: 75% center !important; }
 
   .telehealth-scope .aug-hero-h1 { font-size: clamp(28px,8vw,40px) !important; }
   .telehealth-scope .aug-hero-h1 br { display: none; }
